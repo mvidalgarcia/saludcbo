@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const lang = 'en' as const;
+---
+<BaseLayout lang={lang} title="Cookie Policy | Salud CBO" description="Cookie policy for Salud CBO. Information about the cookies we use and how to manage them." noIndex>
+
+  <section class="bg-brand-50 py-16 border-b border-brand-100">
+    <div class="container-main max-w-3xl mx-auto">
+      <p class="eyebrow mb-3">Legal</p>
+      <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Cookie Policy</h1>
+      <p class="text-gray-500">Last updated: July 2025</p>
+    </div>
+  </section>
+
+  <section class="section-pad bg-white">
+    <div class="container-main max-w-3xl mx-auto prose prose-gray prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed max-w-none">
+
+      <h2>1. What are cookies?</h2>
+      <p>Cookies are small text files that websites store on your device when you visit them. They are used to remember your preferences, analyse site usage and improve your experience.</p>
+
+      <h2>2. Cookies we use</h2>
+      <p>This website uses only technically necessary cookies for its operation. We do not use analytics, advertising or third-party tracking cookies without your prior consent.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Cookie</th>
+            <th>Type</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>cookie_consent</code></td>
+            <td>Own / Technical</td>
+            <td>Stores your cookie preference</td>
+            <td>12 months</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Third-party cookies</h2>
+      <p>When you view embedded content from third-party services (such as Google Maps or Instagram posts), those services may set their own cookies. We display a consent block for these elements.</p>
+
+      <h2>4. Managing cookies</h2>
+      <p>You can configure your browser to reject or delete cookies. Please note that some site features may be affected.</p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:text-brand-700">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:text-brand-700">Mozilla Firefox</a></li>
+        <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:text-brand-700">Apple Safari</a></li>
+        <li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:text-brand-700">Microsoft Edge</a></li>
+      </ul>
+
+      <h2>5. More information</h2>
+      <p>For any questions about our use of cookies, please contact us at <a href="mailto:cbo.salud@gmail.com" class="text-brand-600 hover:text-brand-700">cbo.salud@gmail.com</a>.</p>
+      <p>See also our <a href="/en/privacy-policy" class="text-brand-600 hover:text-brand-700">Privacy Policy</a>.</p>
+
+    </div>
+  </section>
+
+</BaseLayout>

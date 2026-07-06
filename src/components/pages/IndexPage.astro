@@ -81,7 +81,8 @@ const testimonials = [
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {mainServices.map((svc, i) => {
           const tr = svc.data.translations[lang];
-          const href = `${base}/servicios/${svc.data.slug[lang]}`;
+          const svcBase = lang === 'en' ? '/en/services' : '/servicios';
+          const href = `${svcBase}/${svc.data.slug[lang]}`;
           return (
             <ServiceCard
               title={tr.title}

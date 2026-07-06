@@ -8,20 +8,19 @@ const lang = (Astro.currentLocale ?? 'en') as Lang;
 const t = useTranslations(lang);
 
 const services = await getCollection('services');
-const svc = services.find(s => s.id === 'entrenamiento')!;
+const svc = services.find(s => s.id === 'nutricion')!;
 const tr = svc.data.translations[lang];
 ---
-
 <ServicePage
   lang={lang}
-  serviceId="entrenamiento"
-  metaTitle={t('meta.entrenamiento.title')}
-  metaDescription={t('meta.entrenamiento.description')}
-  heroEyebrow={t('services.entrenamiento.hero.eyebrow')}
-  heroTitle={t('services.entrenamiento.hero.title')}
-  heroSubtitle={t('services.entrenamiento.hero.subtitle')}
+  serviceId="nutricion"
+  metaTitle={t('meta.nutricion.title')}
+  metaDescription={t('meta.nutricion.description')}
+  heroEyebrow={t('services.nutricion.hero.eyebrow')}
+  heroTitle={t('services.nutricion.hero.title')}
+  heroSubtitle={t('services.nutricion.hero.subtitle')}
   description={tr.description}
   tagline={tr.tagline}
   features={tr.features}
-  process={tr.process}
+  types={tr.types}
 />

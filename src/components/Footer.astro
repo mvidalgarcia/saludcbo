@@ -10,13 +10,16 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const base = lang === 'en' ? '/en' : '';
 
+const svcBase = lang === 'en' ? '/en/services' : '/servicios';
+const svcSlug = (es: string, en: string) => lang === 'en' ? en : es;
+
 const serviceLinks = [
-  { href: `${base}/servicios/entrenamiento`, label: t('nav.training') },
-  { href: `${base}/servicios/entrenamiento-online`, label: t('nav.trainingOnline') },
-  { href: `${base}/servicios/nutricion`, label: t('nav.nutrition') },
-  { href: `${base}/servicios/fisioterapia`, label: t('nav.physio') },
-  { href: `${base}/servicios/pilates`, label: t('nav.pilates') },
-  { href: `${base}/empresa-saludable`, label: t('nav.corporate') },
+  { href: `${svcBase}/${svcSlug('entrenamiento', 'training')}`, label: t('nav.training') },
+  { href: `${svcBase}/${svcSlug('entrenamiento-online', 'online-training')}`, label: t('nav.trainingOnline') },
+  { href: `${svcBase}/${svcSlug('nutricion', 'nutrition')}`, label: t('nav.nutrition') },
+  { href: `${svcBase}/${svcSlug('fisioterapia', 'physiotherapy')}`, label: t('nav.physio') },
+  { href: `${svcBase}/pilates`, label: t('nav.pilates') },
+  { href: lang === 'en' ? '/en/corporate-wellness' : '/empresa-saludable', label: t('nav.corporate') },
 ];
 
 const companyLinks = [
@@ -27,9 +30,9 @@ const companyLinks = [
 ];
 
 const legalLinks = [
-  { href: `${base}/aviso-legal`, label: t('footer.legalNotice') },
-  { href: `${base}/privacidad`, label: t('footer.privacyPolicy') },
-  { href: `${base}/cookies`, label: t('footer.cookiePolicy') },
+  { href: lang === 'en' ? '/en/legal-notice' : '/aviso-legal', label: t('footer.legalNotice') },
+  { href: lang === 'en' ? '/en/privacy-policy' : '/privacidad', label: t('footer.privacyPolicy') },
+  { href: lang === 'en' ? '/en/cookie-policy' : '/cookies', label: t('footer.cookiePolicy') },
 ];
 ---
 

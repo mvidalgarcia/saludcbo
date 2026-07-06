@@ -11,7 +11,6 @@ const services = await getCollection('services');
 const svc = services.find(s => s.id === 'entrenamiento-online')!;
 const tr = svc.data.translations[lang];
 ---
-
 <ServicePage
   lang={lang}
   serviceId="entrenamiento-online"

@@ -15,12 +15,15 @@ const alternatePath = getAlternatePath(Astro.url, alternateLang);
 const currentPath = Astro.url.pathname;
 const base = lang === 'en' ? '/en' : '';
 
+const svcBase = lang === 'en' ? '/en/services' : '/servicios';
+const svcSlug = (es: string, en: string) => lang === 'en' ? en : es;
+
 const services = [
-  { href: `${base}/servicios/entrenamiento`, label: t('nav.training'), icon: '🏋️' },
-  { href: `${base}/servicios/entrenamiento-online`, label: t('nav.trainingOnline'), icon: '📱' },
-  { href: `${base}/servicios/nutricion`, label: t('nav.nutrition'), icon: '🥗' },
-  { href: `${base}/servicios/fisioterapia`, label: t('nav.physio'), icon: '🤝' },
-  { href: `${base}/servicios/pilates`, label: t('nav.pilates'), icon: '🧘' },
+  { href: `${svcBase}/${svcSlug('entrenamiento', 'training')}`, label: t('nav.training'), icon: '🏋️' },
+  { href: `${svcBase}/${svcSlug('entrenamiento-online', 'online-training')}`, label: t('nav.trainingOnline'), icon: '📱' },
+  { href: `${svcBase}/${svcSlug('nutricion', 'nutrition')}`, label: t('nav.nutrition'), icon: '🥗' },
+  { href: `${svcBase}/${svcSlug('fisioterapia', 'physiotherapy')}`, label: t('nav.physio'), icon: '🤝' },
+  { href: `${svcBase}/pilates`, label: t('nav.pilates'), icon: '🧘' },
 ];
 ---
 
@@ -134,7 +137,7 @@ const services = [
       <a href={`${base}/equipo`} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.team')}</a>
       <a href={`${base}/centros`} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.centers')}</a>
       <a href={`${base}/contacto`} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.contact')}</a>
-      <a href={`${base}/empresa-saludable`} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.corporate')}</a>
+      <a href={lang === 'en' ? '/en/corporate-wellness' : '/empresa-saludable'} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.corporate')}</a>
 
       <hr class="my-2 border-gray-100" />
 
