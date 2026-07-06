@@ -1,0 +1,170 @@
+---
+import { useTranslations, getAlternatePath } from '../i18n/utils';
+import type { Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const alternateLang: Lang = lang === 'es' ? 'en' : 'es';
+const alternatePath = getAlternatePath(Astro.url, alternateLang);
+
+const currentPath = Astro.url.pathname;
+const base = lang === 'en' ? '/en' : '';
+
+const services = [
+  { href: `${base}/servicios/entrenamiento`, label: t('nav.training'), icon: '🏋️' },
+  { href: `${base}/servicios/entrenamiento-online`, label: t('nav.trainingOnline'), icon: '📱' },
+  { href: `${base}/servicios/nutricion`, label: t('nav.nutrition'), icon: '🥗' },
+  { href: `${base}/servicios/fisioterapia`, label: t('nav.physio'), icon: '🤝' },
+  { href: `${base}/servicios/pilates`, label: t('nav.pilates'), icon: '🧘' },
+];
+---
+
+<header
+  id="site-header"
+  class="fixed top-0 inset-x-0 z-50 bg-white border-b border-gray-100 transition-shadow duration-300"
+>
+  <div class="container-main">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+
+      <!-- Logo -->
+      <a href={base || '/'} class="flex items-center gap-2 shrink-0" aria-label="Salud CBO — Inicio">
+        <span class="text-brand-800 font-extrabold text-xl tracking-tight leading-none">
+          CBO<span class="text-gray-400 font-light text-base mx-1">·</span><span class="text-gray-800 font-semibold text-base">Salud</span>
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Navegación principal">
+
+        <!-- Servicios dropdown -->
+        <div class="relative group">
+          <button
+            class="flex items-center gap-1 text-gray-700 hover:text-brand-700 font-medium text-sm px-3 py-2 rounded-lg hover:bg-brand-50 transition-colors"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            {t('nav.services')}
+            <svg class="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Dropdown panel -->
+          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none group-hover:pointer-events-auto">
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden w-64">
+              {services.map(svc => (
+                <a
+                  href={svc.href}
+                  class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-700 transition-colors"
+                >
+                  <span class="text-base leading-none">{svc.icon}</span>
+                  <span class="font-medium">{svc.label}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <a href={`${base}/metodo`} class="text-gray-700 hover:text-brand-700 font-medium text-sm px-3 py-2 rounded-lg hover:bg-brand-50 transition-colors">{t('nav.method')}</a>
+        <a href={`${base}/equipo`} class="text-gray-700 hover:text-brand-700 font-medium text-sm px-3 py-2 rounded-lg hover:bg-brand-50 transition-colors">{t('nav.team')}</a>
+        <a href={`${base}/centros`} class="text-gray-700 hover:text-brand-700 font-medium text-sm px-3 py-2 rounded-lg hover:bg-brand-50 transition-colors">{t('nav.centers')}</a>
+        <a href={`${base}/contacto`} class="text-gray-700 hover:text-brand-700 font-medium text-sm px-3 py-2 rounded-lg hover:bg-brand-50 transition-colors">{t('nav.contact')}</a>
+      </nav>
+
+      <!-- Right side: lang switch + CTA + hamburger -->
+      <div class="flex items-center gap-3">
+        <!-- Language switcher -->
+        <a
+          href={alternatePath}
+          class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-brand-700 px-2.5 py-1.5 rounded-full border border-gray-200 hover:border-brand-300 transition-colors"
+          aria-label={`Switch to ${alternateLang === 'en' ? 'English' : 'Spanish'}`}
+        >
+          <span class="text-sm leading-none">{alternateLang === 'en' ? '🇬🇧' : '🇪🇸'}</span>
+          <span>{alternateLang.toUpperCase()}</span>
+        </a>
+
+        <!-- CTA -->
+        <a href={`${base}/contacto`} class="hidden sm:inline-flex btn-primary text-sm py-2 px-5">
+          {t('nav.cta')}
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button
+          id="menu-toggle"
+          class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label={lang === 'es' ? 'Abrir menú' : 'Open menu'}
+        >
+          <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden border-t border-gray-100 bg-white"
+    aria-hidden="true"
+  >
+    <nav class="container-main py-4 flex flex-col gap-1" aria-label="Menú móvil">
+      <!-- Services (flat list on mobile) -->
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest px-3 pt-2 pb-1">{t('nav.services')}</p>
+      {services.map(svc => (
+        <a href={svc.href} class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">
+          <span>{svc.icon}</span>
+          <span>{svc.label}</span>
+        </a>
+      ))}
+
+      <hr class="my-2 border-gray-100" />
+
+      <a href={`${base}/metodo`} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.method')}</a>
+      <a href={`${base}/equipo`} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.team')}</a>
+      <a href={`${base}/centros`} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.centers')}</a>
+      <a href={`${base}/contacto`} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.contact')}</a>
+      <a href={`${base}/empresa-saludable`} class="px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-xl transition-colors">{t('nav.corporate')}</a>
+
+      <hr class="my-2 border-gray-100" />
+
+      <div class="flex items-center gap-3 px-3 py-2">
+        <a href={alternatePath} class="text-sm font-semibold text-gray-500 hover:text-brand-700 transition-colors">
+          {alternateLang === 'en' ? '🇬🇧 EN' : '🇪🇸 ES'}
+        </a>
+        <a href={`${base}/contacto`} class="flex-1 text-center btn-primary text-sm py-2.5">
+          {t('nav.cta')}
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Spacer so content isn't hidden under fixed header -->
+<div class="h-16 lg:h-20" aria-hidden="true"></div>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden', !isOpen);
+    menu?.setAttribute('aria-hidden', String(!isOpen));
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    iconOpen?.classList.toggle('hidden', isOpen ?? false);
+    iconClose?.classList.toggle('hidden', !isOpen);
+  });
+</script>

@@ -1,0 +1,326 @@
+[
+  {
+    "id": "entrenamiento",
+    "icon": "dumbbell",
+    "order": 1,
+    "slug": { "es": "entrenamiento", "en": "training" },
+    "translations": {
+      "es": {
+        "title": "Entrenamiento Personal y Readaptación",
+        "shortTitle": "Entrenamiento",
+        "tagline": "Entrena de forma inteligente. Consigue resultados reales.",
+        "description": "Entrenamiento completamente individualizado basado en la evidencia científica. Trabajamos contigo de forma presencial con sesiones de 50 minutos, con seguimiento global online para todo el mes. No solo queremos que vengas a entrenar: también te acompañamos fuera del centro, planificando sesiones online, tareas de movilidad y sesiones aeróbicas. Cuidar tu salud y tu cuerpo en 360° durante todo el proceso.",
+        "features": [
+          "Valoración funcional inicial de movilidad y fuerza",
+          "Programa de entrenamiento completamente personalizado",
+          "Sesiones presenciales de 50 minutos",
+          "Seguimiento global online durante todo el mes",
+          "Readaptación de lesiones y ejercicio terapéutico",
+          "Planificación de sesiones online, movilidad y cardio",
+          "Revisiones periódicas del programa",
+          "Acceso a la App CBO con todo tu plan"
+        ],
+        "process": [
+          { "title": "Valoración inicial", "body": "Analizamos tu historial de salud, objetivos, nivel de condición física y posibles lesiones o limitaciones." },
+          { "title": "Diseño del programa", "body": "Creamos un programa de entrenamiento 100% a tu medida, con objetivos claros y progresión definida." },
+          { "title": "Entrenamiento y seguimiento", "body": "Entrenamos juntos en el centro y te acompañamos el resto del mes con tareas, movilidad y feedback continuo." },
+          { "title": "Revisión y ajuste", "body": "Revisamos periódicamente tu progreso y ajustamos el programa para que siempre estés avanzando." }
+        ]
+      },
+      "en": {
+        "title": "Personal Training & Injury Rehab",
+        "shortTitle": "Training",
+        "tagline": "Train intelligently. Get real results.",
+        "description": "Fully individualised training based on scientific evidence. We work with you in person with 50-minute sessions, plus comprehensive online monitoring throughout the month. We don't just want you to come and train — we also accompany you outside the centre, planning online sessions, mobility work and cardio. Looking after your health and your body 360° throughout the entire process.",
+        "features": [
+          "Initial functional mobility and strength assessment",
+          "Fully personalised training programme",
+          "50-minute in-person sessions",
+          "Comprehensive online monitoring throughout the month",
+          "Injury rehabilitation and therapeutic exercise",
+          "Planning of online sessions, mobility work and cardio",
+          "Periodic programme reviews",
+          "Access to the CBO App with your full plan"
+        ],
+        "process": [
+          { "title": "Initial assessment", "body": "We analyse your health history, goals, fitness level and any injuries or limitations." },
+          { "title": "Programme design", "body": "We create a training programme 100% tailored to you, with clear goals and defined progression." },
+          { "title": "Training & monitoring", "body": "We train together in the centre and accompany you throughout the rest of the month with tasks, mobility work and continuous feedback." },
+          { "title": "Review & adjustment", "body": "We periodically review your progress and adjust the programme so you're always moving forward." }
+        ]
+      }
+    }
+  },
+  {
+    "id": "entrenamiento-online",
+    "icon": "smartphone",
+    "order": 2,
+    "slug": { "es": "entrenamiento-online", "en": "online-training" },
+    "translations": {
+      "es": {
+        "title": "Entrenamiento Online",
+        "shortTitle": "Online",
+        "tagline": "Entrena desde donde estés, con el mismo nivel de seguimiento.",
+        "description": "A través de la App CBO llegamos a donde estés. Valoración inicial, planificación personalizada y seguimiento continuo de tu entrenador desde cualquier lugar. La misma calidad que el entrenamiento presencial, adaptada a tu horario y tus posibilidades.",
+        "features": [
+          "Acceso completo a la App CBO",
+          "Valoración inicial de movilidad y fuerza por vídeo",
+          "Programa de entrenamiento completamente personalizado",
+          "Sesiones de cardio, movilidad y fuerza planificadas",
+          "Seguimiento y feedback continuo del entrenador",
+          "Adaptación continua del programa según tu evolución",
+          "Comunicación directa con tu especialista",
+          "Registro de progreso y evolución"
+        ],
+        "process": [
+          { "title": "Contacto inicial", "body": "Nos cuentas tu objetivo y hacemos una valoración inicial a través de un cuestionario y un vídeo." },
+          { "title": "Planificación", "body": "Diseñamos tu programa de entrenamiento personalizado basándonos en los resultados de la valoración y tu objetivo." },
+          { "title": "Entrenamiento con app", "body": "Recibes tu programa en la App CBO con todas las sesiones detalladas: ejercicios, series, repeticiones y vídeos." },
+          { "title": "Seguimiento continuo", "body": "Tu entrenador revisa tu progreso, responde tus dudas y adapta el programa de forma continua." }
+        ]
+      },
+      "en": {
+        "title": "Online Training",
+        "shortTitle": "Online",
+        "tagline": "Train from anywhere, with the same level of support.",
+        "description": "Through the CBO App we reach wherever you are. Initial assessment, personalised planning and continuous trainer monitoring from anywhere. The same quality as in-person training, adapted to your schedule and circumstances.",
+        "features": [
+          "Full access to the CBO App",
+          "Initial mobility and strength assessment via video",
+          "Fully personalised training programme",
+          "Planned cardio, mobility and strength sessions",
+          "Continuous trainer monitoring and feedback",
+          "Continuous programme adaptation based on your progress",
+          "Direct communication with your specialist",
+          "Progress and evolution tracking"
+        ],
+        "process": [
+          { "title": "Initial contact", "body": "You tell us your goal and we do an initial assessment through a questionnaire and a mobility and strength video." },
+          { "title": "Planning", "body": "We design your personalised training programme based on the assessment results and your goal." },
+          { "title": "Training with the app", "body": "You receive your programme on the CBO App with all sessions detailed: exercises, sets, reps and explanatory videos." },
+          { "title": "Continuous monitoring", "body": "Your trainer reviews your progress, answers your questions and continuously adapts the programme." }
+        ]
+      }
+    }
+  },
+  {
+    "id": "nutricion",
+    "icon": "apple",
+    "order": 3,
+    "slug": { "es": "nutricion", "en": "nutrition" },
+    "translations": {
+      "es": {
+        "title": "Nutrición",
+        "shortTitle": "Nutrición",
+        "tagline": "Aprende a comer. Consigue tus objetivos sin pasar hambre.",
+        "description": "Plan dietético completamente individualizado, presencial y online. Nuestro enfoque se basa en la educación nutricional y la adherencia a largo plazo, no en restricciones insostenibles. Analizamos tu composición corporal, tu historial y tus preferencias para diseñar el plan que realmente funciona para ti.",
+        "features": [
+          "Entrevista y anamnesis nutricional completa",
+          "Revisión de análisis de sangre",
+          "Pruebas de composición corporal y antropometría",
+          "Plan dietético completamente individualizado",
+          "Acceso a la App CBO con tu plan y seguimiento",
+          "Lista de la compra y preparación de platos",
+          "Revisiones periódicas cada varias semanas",
+          "Seguimiento continuo semana a semana"
+        ],
+        "process": [
+          { "title": "Entrevista y valoración", "body": "Historia clínica, anamnesis nutricional, objetivo y revisión de análisis de sangre." },
+          { "title": "Composición corporal", "body": "Medición de la composición corporal y antropometría. Repetiremos esta valoración cada varias semanas." },
+          { "title": "Elaboración del plan", "body": "Diseño del tratamiento dietético individualizado con acceso a tu plan, lista de la compra y recetas." },
+          { "title": "Supervisión continua", "body": "Revisiones semana a semana para asegurarnos de que todo va bien y ajustar el plan cuando hace falta." }
+        ],
+        "types": [
+          { "title": "Pérdida de grasa y obesidad", "body": "Pérdida de grasa sostenible sin pasar hambre, educando tus hábitos para mantener los resultados." },
+          { "title": "Rendimiento deportivo", "body": "Optimización del rendimiento: periodización, hidratación y suplementación." },
+          { "title": "Educación nutricional", "body": "Aprende los fundamentos de la nutrición para tomar mejores decisiones en tu día a día." },
+          { "title": "Mejora de la salud", "body": "Control de patologías relacionadas con la dieta y mejora de parámetros analíticos." }
+        ]
+      },
+      "en": {
+        "title": "Nutrition",
+        "shortTitle": "Nutrition",
+        "tagline": "Learn to eat. Reach your goals without going hungry.",
+        "description": "Fully individualised diet plan, in-person and online. Our approach is based on nutritional education and long-term adherence, not unsustainable restrictions.",
+        "features": [
+          "Full interview and nutritional anamnesis",
+          "Blood test review",
+          "Body composition and anthropometric testing",
+          "Fully individualised diet plan",
+          "CBO App access with your plan and monitoring",
+          "Shopping list and meal preparation guidance",
+          "Periodic reviews every few weeks",
+          "Continuous week-by-week monitoring"
+        ],
+        "process": [
+          { "title": "Interview & assessment", "body": "Medical history, nutritional anamnesis, goal and blood test review." },
+          { "title": "Body composition", "body": "Body composition and anthropometric measurement, repeated every few weeks to track progress." },
+          { "title": "Plan design", "body": "Design of your individualised dietary treatment with access to your plan, shopping list and recipes." },
+          { "title": "Continuous monitoring", "body": "Week-by-week reviews to make sure everything is going well and to adjust the plan when needed." }
+        ],
+        "types": [
+          { "title": "Fat loss & obesity", "body": "Sustainable fat loss without going hungry, building habits to maintain results long-term." },
+          { "title": "Sports performance", "body": "Performance optimisation: periodisation, hydration and supplementation." },
+          { "title": "Nutritional education", "body": "Learn the fundamentals of nutrition to make better decisions every day." },
+          { "title": "Health improvement", "body": "Management of diet-related conditions and improvement of lab values." }
+        ]
+      }
+    }
+  },
+  {
+    "id": "fisioterapia",
+    "icon": "heart-pulse",
+    "order": 4,
+    "slug": { "es": "fisioterapia", "en": "physiotherapy" },
+    "translations": {
+      "es": {
+        "title": "Fisioterapia",
+        "shortTitle": "Fisioterapia",
+        "tagline": "Salud a través del movimiento.",
+        "description": "Ayudamos a personas de todas las edades a mejorar su salud y bienestar a través de la fisioterapia. Tratamiento del dolor, rehabilitación de lesiones, recuperación postquirúrgica, mejora de la movilidad y prevención.",
+        "features": [
+          "Valoración fisioterapéutica completa",
+          "Terapia manual y movilización articular",
+          "Kinesiotaping y vendaje funcional",
+          "Punción seca",
+          "Fisioterapia deportiva y traumatológica",
+          "Ejercicio terapéutico y rehabilitación",
+          "Recuperación postquirúrgica",
+          "Prevención de lesiones"
+        ],
+        "types": [
+          { "title": "Terapia manual, kinesiotaping y punción seca", "body": "Técnicas manuales avanzadas para el tratamiento del dolor y la recuperación de la movilidad articular." },
+          { "title": "Fisioterapia deportiva y traumatológica", "body": "Recuperación de lesiones deportivas para volver a la actividad en el menor tiempo posible." },
+          { "title": "Ejercicio terapéutico y rehabilitación", "body": "Programa de ejercicios específicos para la recuperación de lesiones y la mejora de la función física." },
+          { "title": "Prevención y bienestar", "body": "Evaluación y corrección de patrones de movimiento para prevenir lesiones y mejorar la calidad de vida." }
+        ]
+      },
+      "en": {
+        "title": "Physiotherapy",
+        "shortTitle": "Physio",
+        "tagline": "Health through movement.",
+        "description": "We help people of all ages improve their health and wellbeing through physiotherapy. Pain treatment, injury rehabilitation, post-surgical recovery, mobility improvement and prevention.",
+        "features": [
+          "Full physiotherapy assessment",
+          "Manual therapy and joint mobilisation",
+          "Kinesiotaping and functional bandaging",
+          "Dry needling",
+          "Sports and traumatological physiotherapy",
+          "Therapeutic exercise and rehabilitation",
+          "Post-surgical recovery",
+          "Injury prevention"
+        ],
+        "types": [
+          { "title": "Manual therapy, kinesiotaping & dry needling", "body": "Advanced manual techniques for pain treatment and restoration of joint mobility." },
+          { "title": "Sports & traumatological physiotherapy", "body": "Recovery from sports and traumatological injuries to return to activity as quickly as possible." },
+          { "title": "Therapeutic exercise & rehabilitation", "body": "Specific exercise programme for injury recovery and improvement of physical function." },
+          { "title": "Prevention & wellbeing", "body": "Assessment and correction of movement patterns to prevent injuries and improve quality of life." }
+        ]
+      }
+    }
+  },
+  {
+    "id": "pilates",
+    "icon": "person-standing",
+    "order": 5,
+    "slug": { "es": "pilates", "en": "pilates" },
+    "translations": {
+      "es": {
+        "title": "Pilates",
+        "shortTitle": "Pilates",
+        "tagline": "Control, fuerza y movilidad para tu cuerpo y tu mente.",
+        "description": "Clases de pilates individual y en grupos muy reducidos, con reformer y de suelo. Trabajamos el control del movimiento, la fuerza del core, la flexibilidad y la coordinación. Para todas las edades y niveles.",
+        "features": [
+          "Evaluación postural y de movimiento inicial",
+          "Pilates reformer",
+          "Pilates de suelo",
+          "Clases individuales completamente personalizadas",
+          "Grupos muy reducidos (máximo 4 personas)",
+          "Para todas las edades y niveles",
+          "Coordinación con fisioterapia cuando es necesario",
+          "Progresión adaptada a tu evolución"
+        ],
+        "types": [
+          { "title": "Pilates individual", "body": "Atención completamente personalizada. Diseñamos cada sesión en función de tus objetivos, nivel y necesidades." },
+          { "title": "Pilates en grupos reducidos", "body": "La motivación de entrenar en grupo con atención casi individual. Máximo 4 personas." },
+          { "title": "Pilates reformer", "body": "Utilizamos el reformer para ampliar las posibilidades de trabajo y añadir resistencia y soporte." },
+          { "title": "Pilates terapéutico", "body": "Coordinado con fisioterapia para incorporar el pilates como parte del proceso de rehabilitación." }
+        ]
+      },
+      "en": {
+        "title": "Pilates",
+        "shortTitle": "Pilates",
+        "tagline": "Control, strength and mobility for your body and mind.",
+        "description": "Individual and very small-group pilates classes, with reformer and mat work. We develop movement control, core strength, flexibility and coordination. For all ages and levels.",
+        "features": [
+          "Initial postural and movement assessment",
+          "Reformer pilates",
+          "Mat pilates",
+          "Fully personalised individual classes",
+          "Very small groups (maximum 4 people)",
+          "For all ages and levels",
+          "Coordination with physiotherapy when needed",
+          "Progression adapted to your evolution"
+        ],
+        "types": [
+          { "title": "Individual pilates", "body": "Completely personalised attention. We design each session according to your goals, level and specific needs." },
+          { "title": "Small-group pilates", "body": "The motivation of group training with almost individual attention. Maximum 4 people per session." },
+          { "title": "Reformer pilates", "body": "We use the reformer to expand the range of exercises and add resistance and support." },
+          { "title": "Therapeutic pilates", "body": "Coordinated with physiotherapy to incorporate pilates as part of the rehabilitation process." }
+        ]
+      }
+    }
+  },
+  {
+    "id": "empresa-saludable",
+    "icon": "building-2",
+    "order": 6,
+    "slug": { "es": "empresa-saludable", "en": "corporate-wellness" },
+    "translations": {
+      "es": {
+        "title": "Empresa Saludable",
+        "shortTitle": "Empresa",
+        "tagline": "Empleados sanos construyen empresas fuertes.",
+        "description": "Proporcionamos a los empleados las herramientas necesarias para mejorar su bienestar físico y mental a través de jornadas y programas de salud corporativos. Fomentamos, educamos, acompañamos e impulsamos la salud a través de la nutrición y el ejercicio físico.",
+        "features": [
+          "Jornadas de prevención del riesgo cardiovascular y metabólico",
+          "Consultas de nutrición y ejercicio 1:1 con el equipo",
+          "Programas de entrenamiento corporativos adaptados",
+          "Programas de nutrición para el equipo",
+          "Valoraciones de composición corporal colectivas",
+          "Talleres y charlas educativas sobre hábitos saludables",
+          "Adaptación a las necesidades de cada empresa",
+          "Seguimiento y medición de resultados"
+        ],
+        "types": [
+          { "title": "Jornadas de salud", "body": "Jornadas de prevención del riesgo cardiovascular y metabólico, con valoraciones individuales y talleres grupales." },
+          { "title": "Consultas individuales", "body": "Consultas de nutrición y ejercicio 1:1 para cada miembro del equipo, en el centro o en la empresa." },
+          { "title": "Programas de entrenamiento y nutrición", "body": "Programas colectivos adaptados a la oficina, al horario y a las posibilidades del equipo." },
+          { "title": "Formación en hábitos saludables", "body": "Talleres y charlas educativas para empoderar a los empleados con conocimientos sobre nutrición y ejercicio." }
+        ]
+      },
+      "en": {
+        "title": "Corporate Wellness",
+        "shortTitle": "Corporate",
+        "tagline": "Healthy employees build strong companies.",
+        "description": "We provide employees with the tools they need to improve their physical and mental wellbeing through corporate health programmes and events. We promote, educate, accompany and drive health through nutrition and physical exercise.",
+        "features": [
+          "Cardiovascular and metabolic risk prevention events",
+          "1:1 nutrition and exercise consultations for the team",
+          "Adapted corporate training programmes",
+          "Team nutrition programmes",
+          "Group body composition assessments",
+          "Workshops and educational talks on healthy habits",
+          "Adapted to each company's needs",
+          "Monitoring and measurement of results"
+        ],
+        "types": [
+          { "title": "Health events", "body": "Cardiovascular and metabolic risk prevention events, with individual assessments and group workshops." },
+          { "title": "Individual consultations", "body": "1:1 nutrition and exercise consultations for each team member, at our centre or at your company." },
+          { "title": "Training & nutrition programmes", "body": "Group training and nutrition programmes adapted to the office, schedule and team's possibilities." },
+          { "title": "Healthy habits training", "body": "Workshops and educational talks to empower employees with knowledge about nutrition, exercise and health." }
+        ]
+      }
+    }
+  }
+]

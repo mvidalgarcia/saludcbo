@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "siteName": "Salud CBO",
+    "home": {
+      "title": "Salud CBO | Personal Training, Physiotherapy, Nutrition & Pilates in Asturias",
+      "description": "Personal training, physiotherapy, nutrition and pilates centre in Lugones, Asturias. Evidence-based method, fully individualised. Two centres. In-person and online."
+    },
+    "metodo": {
+      "title": "The CBO Method | Salud CBO",
+      "description": "The CBO Method: evidence-based, fully individualised, 360° monitoring. Over 10 years helping more than 1,000 people reach their health goals."
+    },
+    "equipo": {
+      "title": "Our Team | Salud CBO",
+      "description": "Meet the Salud CBO team of specialists: personal trainers, physiotherapists, nutritionists and pilates instructors in Lugones, Asturias."
+    },
+    "centros": {
+      "title": "Our Centres | Salud CBO",
+      "description": "Two centres in Lugones, Asturias, 5 minutes from Oviedo. Free parking. In-person and online services."
+    },
+    "contacto": {
+      "title": "Contact | Salud CBO",
+      "description": "Get in touch with Salud CBO to request information about personal training, physiotherapy, nutrition and pilates in Lugones, Asturias."
+    },
+    "entrenamiento": {
+      "title": "Personal Training & Injury Rehab | Salud CBO",
+      "description": "Personal training, injury rehabilitation and small group training in Lugones, Asturias. Fully individualised, evidence-based."
+    },
+    "entrenamiento-online": {
+      "title": "Online Training | CBO App | Salud CBO",
+      "description": "Train from anywhere with the CBO App. Individualised programme, continuous monitoring and initial mobility and strength assessment."
+    },
+    "nutricion": {
+      "title": "Nutrition | Salud CBO",
+      "description": "In-person and online nutrition consultations in Lugones, Asturias. Individualised diet plans, body composition testing and continuous follow-up."
+    },
+    "fisioterapia": {
+      "title": "Physiotherapy | Salud CBO",
+      "description": "Sports physiotherapy, manual therapy and therapeutic exercise in Lugones, Asturias. Pain treatment, rehabilitation and injury prevention."
+    },
+    "pilates": {
+      "title": "Pilates | Salud CBO",
+      "description": "Individual and small-group pilates classes in Lugones, Asturias. Reformer pilates, movement control and flexibility improvement."
+    },
+    "empresa": {
+      "title": "Corporate Wellness | Salud CBO",
+      "description": "Corporate health and wellness programmes in Asturias. Nutrition and training for businesses. Healthier employees, stronger companies."
+    }
+  },
+  "nav": {
+    "services": "Services",
+    "training": "Personal Training",
+    "trainingOnline": "Online Training",
+    "nutrition": "Nutrition",
+    "physio": "Physiotherapy",
+    "pilates": "Pilates",
+    "method": "CBO Method",
+    "team": "Team",
+    "corporate": "Corporate Wellness",
+    "centers": "Centres",
+    "contact": "Contact",
+    "cta": "Book assessment"
+  },
+  "footer": {
+    "tagline": "Specialists in personal training, physiotherapy, nutrition and pilates in Lugones, Asturias.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy policy",
+    "legalNotice": "Legal notice",
+    "cookiePolicy": "Cookie policy",
+    "sitemap": "Sitemap",
+    "social": "Social media",
+    "followUs": "Follow us",
+    "copyright": "© Salud CBO (Carlos Bernardo Osoro)",
+    "funding": "Funded by the European Union – NextGenerationEU. Views expressed are solely those of the author and do not reflect those of the EU or the European Commission.",
+    "address": "P. El Castro, nave 2, Lugones (behind Tartiere Auto)",
+    "phone": "+34 667 828 851",
+    "email": "cbo.salud@gmail.com",
+    "freeParking": "Free parking",
+    "whatsapp": "WhatsApp"
+  },
+  "cta": {
+    "primary": "Book free assessment",
+    "secondary": "Learn about the CBO Method",
+    "whatsapp": "Chat on WhatsApp",
+    "call": "Call us",
+    "email": "Send us an email",
+    "learnMore": "Learn more",
+    "meetTeam": "Meet the team",
+    "seeServices": "See services",
+    "ourCenters": "Our centres",
+    "requestInfo": "Request information",
+    "downloadPdf": "Download free PDF"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Lugones, Asturias · Two centres · In-person & Online",
+      "heading1": "Specialists",
+      "heading2": "in your",
+      "headingAccent": "health",
+      "subtitle": "Personal training, physiotherapy, nutrition and pilates. Evidence-based method with full individualisation for real, lasting results.",
+      "stat1Value": "10+",
+      "stat1Label": "years of experience",
+      "stat2Value": "1,000+",
+      "stat2Label": "people helped",
+      "stat3Value": "4",
+      "stat3Label": "specialities"
+    },
+    "services": {
+      "eyebrow": "Our services",
+      "title": "A 360° approach to your health",
+      "subtitle": "Four integrated specialities under one shared method so you can achieve your goals efficiently, safely and sustainably."
+    },
+    "method": {
+      "eyebrow": "The method",
+      "title": "The CBO Method",
+      "description": "A proprietary system developed over more than a decade of top-level training and clinical experience. Not a standard programme — your programme.",
+      "p1Title": "Evidence-based",
+      "p1Desc": "Every decision is backed by the latest scientific research in training, nutrition and health.",
+      "p2Title": "Full individualisation",
+      "p2Desc": "We design your plan from scratch. Your history, your goals, your life. One-size-fits-all doesn't exist here.",
+      "p3Title": "360° monitoring",
+      "p3Desc": "We don't just accompany you in the centre. We track your progress and adjust your plan continuously."
+    },
+    "team": {
+      "eyebrow": "Our team",
+      "title": "Team CBO",
+      "description": "A team of highly qualified specialists, working in a coordinated way to give you truly integrated care.",
+      "cta": "Meet the team"
+    },
+    "centers": {
+      "eyebrow": "Our centres",
+      "title": "Two centres in Lugones",
+      "subtitle": "5 minutes from central Oviedo, with free parking.",
+      "cta": "See all centres"
+    },
+    "reviews": {
+      "eyebrow": "Reviews",
+      "title": "What our clients say",
+      "badge": "EXCELLENT",
+      "reviewCount": "Based on 19 Google reviews"
+    },
+    "instagram": {
+      "eyebrow": "Follow us",
+      "title": "@cbo.salud",
+      "subtitle": "Educational content on nutrition, training and health. Recipes, exercises and more."
+    },
+    "leadMagnet": {
+      "eyebrow": "Free download",
+      "title": "5 Fundamental Pillars for Burning Fat",
+      "description": "A practical, evidence-based guide. No tricks, no miracle diets. Just what actually works to lose fat and gain health.",
+      "cta": "Download free PDF"
+    },
+    "finalCta": {
+      "title": "Ready to start achieving your goals together?",
+      "subtitle": "Take the first step. Tell us your goal and we'll find the perfect plan for you.",
+      "ctaPhone": "Call us",
+      "ctaWhatsapp": "WhatsApp",
+      "ctaContact": "Request information"
+    }
+  },
+  "metodo": {
+    "hero": {
+      "eyebrow": "Our working method",
+      "title": "The CBO Method",
+      "subtitle": "Over 10 years of top-level training and clinical experience condensed into a system that puts people at the centre."
+    },
+    "intro": {
+      "title": "There is no perfect programme. There is the perfect programme for you.",
+      "body": "At CBO we don't work with standard protocols or magazine diets. We start with a deep analysis of who you are, where you're starting from and where you want to go. From there, we build your programme from scratch.",
+      "stat1Value": "10+ years",
+      "stat1Label": "developing the method",
+      "stat2Value": "1,000+",
+      "stat2Label": "people who have experienced it",
+      "stat3Value": "4",
+      "stat3Label": "integrated specialities"
+    },
+    "pillars": {
+      "eyebrow": "The three pillars",
+      "title": "What the CBO Method is based on",
+      "p1Title": "Scientific evidence",
+      "p1Body": "Our entire practice is grounded in the latest scientific research. We train continuously so that every decision we make is backed by data, not trends.",
+      "p2Title": "Individualisation",
+      "p2Body": "Your plan is yours and nobody else's. We analyse your health history, goals, starting level, preferences and limitations. With all that information, we design a programme completely tailored to you.",
+      "p3Title": "360° monitoring",
+      "p3Body": "The relationship with you doesn't start and end in the centre. We track your progress, carry out periodic reviews, adjust the programme when needed and are available to answer your questions at all times."
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "From first contact to results",
+      "step1Title": "First contact",
+      "step1Body": "You tell us your goal and we do an initial assessment to understand your starting point.",
+      "step2Title": "Programme design",
+      "step2Body": "We design your tailored training, nutrition or physiotherapy plan — or the combination you need.",
+      "step3Title": "Start & monitoring",
+      "step3Body": "We start working together with periodic reviews to make sure you're progressing and to adjust the plan when needed.",
+      "step4Title": "Lasting results",
+      "step4Body": "Our goal is not a one-off result, but to educate and accompany you so you maintain results long-term."
+    },
+    "app": {
+      "eyebrow": "CBO App",
+      "title": "Your progress, always at hand",
+      "body": "Through the CBO App you'll have access to your personalised plan, track your progress, check your training sessions, review your diet plan and communicate with your specialist. All in one place, from any device."
+    }
+  },
+  "equipo": {
+    "hero": {
+      "eyebrow": "The people behind the method",
+      "title": "Team CBO",
+      "subtitle": "A team of highly qualified specialists, working in a coordinated way to give you the comprehensive care you deserve."
+    },
+    "intro": {
+      "title": "We built CBO so it can grow with you",
+      "body": "CBO started as Carlos Bernardo's personal project, but always with a clear vision: to build a team of specialists capable of offering comprehensive, highest-quality care. Today we are a team of trainers, physiotherapists, nutritionists and pilates instructors who share the same philosophy and the same method."
+    },
+    "values": {
+      "eyebrow": "What defines us",
+      "title": "Our values",
+      "v1Title": "Continuous learning",
+      "v1Body": "We demand of ourselves to always be up to date with the latest scientific evidence in our fields.",
+      "v2Title": "Coordinated work",
+      "v2Body": "The team's specialists work in a coordinated way so that your care is truly comprehensive.",
+      "v3Title": "Closeness & commitment",
+      "v3Body": "Your progress matters to us. We are available, honest and committed to you from day one.",
+      "v4Title": "Real results",
+      "v4Body": "We don't promise what we can't deliver. We work for results that last."
+    },
+    "cta": {
+      "title": "Want to join our team?",
+      "body": "If you're a health and sport professional with top-level training who shares our philosophy, we'd love to meet you."
+    }
+  },
+  "centros": {
+    "hero": {
+      "eyebrow": "Where to find us",
+      "title": "Our Centres",
+      "subtitle": "Two centres in Lugones, Asturias. 5 minutes from central Oviedo, with free parking."
+    },
+    "parking": "Free parking",
+    "directions": "Get directions",
+    "services": "Available services",
+    "hours": "Opening hours"
+  },
+  "contacto": {
+    "hero": {
+      "eyebrow": "Let's talk",
+      "title": "Get in touch",
+      "subtitle": "If you want to be our next success story, tell us your goal and we'll help you achieve it."
+    },
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "address": "Address",
+    "or": "or"
+  },
+  "services": {
+    "entrenamiento": {
+      "title": "Personal Training & Injury Rehab",
+      "shortTitle": "Training",
+      "tagline": "Train intelligently. Get real results.",
+      "hero": {
+        "eyebrow": "Training",
+        "title": "Personal Training & Injury Rehab",
+        "subtitle": "Evidence-based methodology, 100% adapted to you. In-person, small-group and online training."
+      }
+    },
+    "entrenamiento-online": {
+      "title": "Online Training",
+      "shortTitle": "Online",
+      "tagline": "Train from anywhere, with the same level of support.",
+      "hero": {
+        "eyebrow": "CBO App",
+        "title": "Online Training",
+        "subtitle": "Access your personalised plan from anywhere via the CBO App, with continuous specialist monitoring."
+      }
+    },
+    "nutricion": {
+      "title": "Nutrition",
+      "shortTitle": "Nutrition",
+      "tagline": "Learn to eat. Reach your goals without going hungry.",
+      "hero": {
+        "eyebrow": "Nutrition",
+        "title": "Nutrition Consultation",
+        "subtitle": "Fully individualised diet plan, adapted to your characteristics, preferences and goals. In-person and online."
+      }
+    },
+    "fisioterapia": {
+      "title": "Physiotherapy",
+      "shortTitle": "Physio",
+      "tagline": "Health through movement.",
+      "hero": {
+        "eyebrow": "Physiotherapy",
+        "title": "Sports & Therapeutic Physiotherapy",
+        "subtitle": "Pain treatment, injury rehabilitation, post-surgical recovery and prevention. For all ages."
+      }
+    },
+    "pilates": {
+      "title": "Pilates",
+      "shortTitle": "Pilates",
+      "tagline": "Control, strength and mobility for your body and mind.",
+      "hero": {
+        "eyebrow": "Pilates",
+        "title": "Individual & Small-Group Pilates",
+        "subtitle": "Reformer and mat pilates. Individual or in very small groups for personalised attention."
+      }
+    },
+    "empresa": {
+      "title": "Corporate Wellness",
+      "shortTitle": "Corporate",
+      "tagline": "Healthy employees build strong companies.",
+      "hero": {
+        "eyebrow": "Corporate wellness",
+        "title": "Corporate Wellness",
+        "subtitle": "Corporate training and nutrition programmes to boost your team's health and performance."
+      }
+    }
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "siteName": "Salud CBO",
+    "home": {
+      "title": "Salud CBO | Entrenamiento, Fisioterapia, Nutrición y Pilates en Asturias",
+      "description": "Centro de entrenamiento personal, fisioterapia, nutrición y pilates en Lugones, Asturias. Método basado en evidencia científica e individualización total. Dos centros. Presencial y online."
+    },
+    "metodo": {
+      "title": "Método CBO | Salud CBO",
+      "description": "El Método CBO: evidencia científica, individualización y seguimiento 360°. Más de 10 años ayudando a más de 1.000 personas a alcanzar sus objetivos de salud."
+    },
+    "equipo": {
+      "title": "Equipo CBO | Salud CBO",
+      "description": "Conoce al equipo de especialistas de Salud CBO: entrenadores, fisioterapeutas, nutricionistas y profesores de pilates en Lugones, Asturias."
+    },
+    "centros": {
+      "title": "Nuestros Centros | Salud CBO",
+      "description": "Dos centros en Lugones, Asturias, a 5 minutos del centro de Oviedo. Aparcamiento gratuito. Servicios presenciales y online."
+    },
+    "contacto": {
+      "title": "Contacto | Salud CBO",
+      "description": "Contacta con Salud CBO para solicitar información sobre entrenamiento, fisioterapia, nutrición y pilates en Lugones, Asturias."
+    },
+    "entrenamiento": {
+      "title": "Entrenamiento Personal y Readaptación | Salud CBO",
+      "description": "Entrenamiento personal, readaptación de lesiones y grupos reducidos en Lugones, Asturias. Individualizado, basado en evidencia científica."
+    },
+    "entrenamiento-online": {
+      "title": "Entrenamiento Online | App CBO | Salud CBO",
+      "description": "Entrena desde donde estés con la App CBO. Planificación individualizada, seguimiento continuo y valoración inicial de movilidad y fuerza."
+    },
+    "nutricion": {
+      "title": "Nutrición | Salud CBO",
+      "description": "Consulta de nutrición presencial y online en Lugones, Asturias. Planes dietéticos individualizados, composición corporal y seguimiento continuo."
+    },
+    "fisioterapia": {
+      "title": "Fisioterapia | Salud CBO",
+      "description": "Fisioterapia deportiva, terapia manual y ejercicio terapéutico en Lugones, Asturias. Tratamiento del dolor, rehabilitación y prevención de lesiones."
+    },
+    "pilates": {
+      "title": "Pilates | Salud CBO",
+      "description": "Clases de pilates individual y en grupos reducidos en Lugones, Asturias. Pilates reformer, control del movimiento y mejora de la flexibilidad."
+    },
+    "empresa": {
+      "title": "Empresa Saludable | Salud CBO",
+      "description": "Programas de salud y bienestar corporativo en Asturias. Nutrición y entrenamiento para empresas. Empleados más sanos, empresas más fuertes."
+    }
+  },
+  "nav": {
+    "services": "Servicios",
+    "training": "Entrenamiento",
+    "trainingOnline": "Entrenamiento Online",
+    "nutrition": "Nutrición",
+    "physio": "Fisioterapia",
+    "pilates": "Pilates",
+    "method": "Método CBO",
+    "team": "Equipo",
+    "corporate": "Empresa Saludable",
+    "centers": "Centros",
+    "contact": "Contacto",
+    "cta": "Solicitar valoración"
+  },
+  "footer": {
+    "tagline": "Especialistas en entrenamiento, fisioterapia, nutrición y pilates en Lugones, Asturias.",
+    "services": "Servicios",
+    "company": "La empresa",
+    "legal": "Legal",
+    "privacyPolicy": "Política de privacidad",
+    "legalNotice": "Aviso legal",
+    "cookiePolicy": "Política de cookies",
+    "sitemap": "Mapa del sitio",
+    "social": "Redes sociales",
+    "followUs": "Síguenos",
+    "copyright": "© Salud CBO (Carlos Bernardo Osoro)",
+    "funding": "Financiado por la Unión Europea – NextGenerationEU. Los puntos de vista expresados son únicamente los del autor y no reflejan los de la UE o la Comisión Europea.",
+    "address": "P. El Castro, nave 2, Lugones (detrás de Tartiere Auto)",
+    "phone": "+34 667 828 851",
+    "email": "cbo.salud@gmail.com",
+    "freeParking": "Aparcamiento gratuito",
+    "whatsapp": "WhatsApp"
+  },
+  "cta": {
+    "primary": "Solicitar valoración gratuita",
+    "secondary": "Conocer el Método CBO",
+    "whatsapp": "Escríbenos por WhatsApp",
+    "call": "Llámanos",
+    "email": "Envíanos un email",
+    "learnMore": "Saber más",
+    "meetTeam": "Conocer el equipo",
+    "seeServices": "Ver servicios",
+    "ourCenters": "Nuestros centros",
+    "requestInfo": "Solicitar información",
+    "downloadPdf": "Descargar PDF gratuito"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Lugones, Asturias · Dos centros · Presencial y Online",
+      "heading1": "Especialistas",
+      "heading2": "en tu",
+      "headingAccent": "salud",
+      "subtitle": "Entrenamiento, fisioterapia, nutrición y pilates. Método basado en la evidencia científica e individualización total para conseguir resultados reales y duraderos.",
+      "stat1Value": "+10",
+      "stat1Label": "años de experiencia",
+      "stat2Value": "+1.000",
+      "stat2Label": "personas ayudadas",
+      "stat3Value": "4",
+      "stat3Label": "especialidades"
+    },
+    "services": {
+      "eyebrow": "Nuestros servicios",
+      "title": "Un enfoque 360° sobre tu salud",
+      "subtitle": "Cuatro especialidades integradas bajo un mismo método para que alcances tus objetivos de forma eficiente, segura y duradera."
+    },
+    "method": {
+      "eyebrow": "El método",
+      "title": "El Método CBO",
+      "description": "Un sistema de trabajo propio desarrollado a lo largo de más de una década de formación de primer nivel y experiencia clínica. No es un programa estándar — es tu programa.",
+      "p1Title": "Evidencia científica",
+      "p1Desc": "Cada decisión está respaldada por la investigación científica más actualizada en entrenamiento, nutrición y salud.",
+      "p2Title": "Individualización total",
+      "p2Desc": "Diseñamos tu plan desde cero. Tu historial, tus objetivos, tu vida. No existen programas de talla única.",
+      "p3Title": "Seguimiento 360°",
+      "p3Desc": "No te acompañamos solo en el centro. Monitorizamos tu evolución y ajustamos el plan de forma continua."
+    },
+    "team": {
+      "eyebrow": "Nuestro equipo",
+      "title": "Equipo CBO",
+      "description": "Un equipo de especialistas con formación de primer nivel, comprometidos con tu salud y coordinados para ofrecerte una atención integral.",
+      "cta": "Conocer el equipo"
+    },
+    "centers": {
+      "eyebrow": "Nuestros centros",
+      "title": "Dos centros en Lugones",
+      "subtitle": "A 5 minutos del centro de Oviedo, con aparcamiento gratuito.",
+      "cta": "Ver todos los centros"
+    },
+    "reviews": {
+      "eyebrow": "Opiniones",
+      "title": "Lo que dicen nuestros clientes",
+      "badge": "EXCELENTE",
+      "reviewCount": "Basado en 19 reseñas de Google"
+    },
+    "instagram": {
+      "eyebrow": "Síguenos",
+      "title": "@cbo.salud",
+      "subtitle": "Contenido educativo sobre nutrición, entrenamiento y salud. Recetas, ejercicios y mucho más."
+    },
+    "leadMagnet": {
+      "eyebrow": "Descarga gratuita",
+      "title": "5 Pilares fundamentales para quemar grasa",
+      "description": "Una guía práctica basada en evidencia científica. Sin trucos, sin dietas milagro. Solo lo que realmente funciona para perder grasa y ganar salud.",
+      "cta": "Descargar PDF gratuito"
+    },
+    "finalCta": {
+      "title": "¿Empezamos a conseguir metas juntos?",
+      "subtitle": "Da el primer paso. Cuéntanos tu objetivo y encontraremos el plan perfecto para ti.",
+      "ctaPhone": "Llámanos",
+      "ctaWhatsapp": "WhatsApp",
+      "ctaContact": "Solicitar información"
+    }
+  },
+  "metodo": {
+    "hero": {
+      "eyebrow": "Nuestro método de trabajo",
+      "title": "El Método CBO",
+      "subtitle": "Más de 10 años de formación de primer nivel y experiencia clínica destilados en un sistema de trabajo que pone a las personas en el centro."
+    },
+    "intro": {
+      "title": "No existe el programa perfecto. Existe el programa perfecto para ti.",
+      "body": "En CBO no trabajamos con protocolos estándar ni con dietas de revista. Partimos de un análisis profundo de quién eres, cuál es tu punto de partida y a dónde quieres llegar. A partir de ahí, construimos tu programa desde cero.",
+      "stat1Value": "+10 años",
+      "stat1Label": "desarrollando el método",
+      "stat2Value": "+1.000",
+      "stat2Label": "personas que lo han vivido",
+      "stat3Value": "4",
+      "stat3Label": "especialidades integradas"
+    },
+    "pillars": {
+      "eyebrow": "Los tres pilares",
+      "title": "En qué se basa el Método CBO",
+      "p1Title": "Evidencia científica",
+      "p1Body": "Toda nuestra práctica está fundamentada en la investigación científica más actualizada. Nos formamos continuamente para que cada decisión que tomemos esté respaldada por datos, no por tendencias ni por moda.",
+      "p2Title": "Individualización",
+      "p2Body": "Tu plan es tuyo y de nadie más. Analizamos tu historial de salud, tus objetivos, tu nivel de partida, tus preferencias y tus limitaciones. Con toda esa información, diseñamos un programa completamente adaptado a ti.",
+      "p3Title": "Seguimiento 360°",
+      "p3Body": "La relación contigo no empieza y termina en el centro. Monitorizamos tu evolución, hacemos revisiones periódicas, ajustamos el programa cuando hace falta y estamos disponibles para resolver tus dudas en todo momento."
+    },
+    "process": {
+      "eyebrow": "Cómo trabajamos",
+      "title": "Del primer contacto a los resultados",
+      "step1Title": "Primer contacto",
+      "step1Body": "Nos cuentas tu objetivo y hacemos una valoración inicial para entender tu punto de partida.",
+      "step2Title": "Diseño del programa",
+      "step2Body": "Diseñamos tu plan de entrenamiento, nutrición o fisioterapia — o la combinación que necesites — a medida.",
+      "step3Title": "Inicio y seguimiento",
+      "step3Body": "Empezamos a trabajar juntos con revisiones periódicas para asegurarnos de que avanzas y ajustar el plan cuando hace falta.",
+      "step4Title": "Resultados duraderos",
+      "step4Body": "Nuestro objetivo no es un resultado puntual, sino educarte y acompañarte para que mantengas los resultados a largo plazo."
+    },
+    "app": {
+      "eyebrow": "App CBO",
+      "title": "Tu evolución, siempre a mano",
+      "body": "A través de la App CBO tendrás acceso a tu plan personalizado, podrás registrar tu progreso, consultar tus sesiones de entrenamiento, revisar tu plan dietético y comunicarte con tu especialista. Todo en un solo lugar, desde cualquier dispositivo."
+    }
+  },
+  "equipo": {
+    "hero": {
+      "eyebrow": "Las personas detrás del método",
+      "title": "Equipo CBO",
+      "subtitle": "Un equipo de especialistas con formación de primer nivel, trabajando de forma coordinada para ofrecerte la atención integral que mereces."
+    },
+    "intro": {
+      "title": "Construimos CBO para que pueda crecer contigo",
+      "body": "CBO nació como el proyecto personal de Carlos Bernardo, pero siempre con una visión clara: construir un equipo de especialistas capaz de ofrecer atención integral de la más alta calidad. Hoy somos un equipo de entrenadores, fisioterapeutas, nutricionistas y profesores de pilates que comparten la misma filosofía y el mismo método."
+    },
+    "values": {
+      "eyebrow": "Lo que nos define",
+      "title": "Nuestros valores",
+      "v1Title": "Formación continua",
+      "v1Body": "Nos exigimos estar siempre al día con la última evidencia científica en nuestros campos.",
+      "v2Title": "Trabajo coordinado",
+      "v2Body": "Los especialistas del equipo trabajamos de forma coordinada para que tu atención sea verdaderamente integral.",
+      "v3Title": "Cercanía y compromiso",
+      "v3Body": "Tu progreso nos importa. Estamos disponibles, somos honestos y nos comprometemos contigo desde el primer día.",
+      "v4Title": "Resultados reales",
+      "v4Body": "No prometemos lo que no podemos cumplir. Trabajamos para que consigas resultados que se mantengan en el tiempo."
+    },
+    "cta": {
+      "title": "¿Quieres trabajar con nosotros?",
+      "body": "Si eres un profesional de la salud y el deporte con formación de primer nivel y compartes nuestra filosofía, nos encantaría conocerte."
+    }
+  },
+  "centros": {
+    "hero": {
+      "eyebrow": "Dónde encontrarnos",
+      "title": "Nuestros Centros",
+      "subtitle": "Dos centros en Lugones, Asturias. A 5 minutos del centro de Oviedo, con aparcamiento gratuito."
+    },
+    "parking": "Aparcamiento gratuito",
+    "directions": "Cómo llegar",
+    "services": "Servicios disponibles",
+    "hours": "Horario"
+  },
+  "contacto": {
+    "hero": {
+      "eyebrow": "Hablemos",
+      "title": "¿Hablamos?",
+      "subtitle": "Si quieres ser nuestro próximo caso de éxito, cuéntanos tu objetivo y te ayudamos a conseguirlo."
+    },
+    "phone": "Teléfono",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "address": "Dirección",
+    "or": "o"
+  },
+  "services": {
+    "entrenamiento": {
+      "title": "Entrenamiento Personal y Readaptación",
+      "shortTitle": "Entrenamiento",
+      "tagline": "Entrena de forma inteligente. Consigue resultados reales.",
+      "hero": {
+        "eyebrow": "Entrenamiento",
+        "title": "Entrenamiento Personal y Readaptación",
+        "subtitle": "Metodología basada en la evidencia científica, adaptada al 100% a ti. Entrenamiento presencial, en grupos reducidos y online."
+      }
+    },
+    "entrenamiento-online": {
+      "title": "Entrenamiento Online",
+      "shortTitle": "Online",
+      "tagline": "Entrena desde donde estés, con el mismo nivel de seguimiento.",
+      "hero": {
+        "eyebrow": "App CBO",
+        "title": "Entrenamiento Online",
+        "subtitle": "Accede a tu plan personalizado desde cualquier lugar a través de la App CBO, con seguimiento continuo de tu especialista."
+      }
+    },
+    "nutricion": {
+      "title": "Nutrición",
+      "shortTitle": "Nutrición",
+      "tagline": "Aprende a comer. Consigue tus objetivos sin pasar hambre.",
+      "hero": {
+        "eyebrow": "Nutrición",
+        "title": "Consulta de Nutrición",
+        "subtitle": "Plan dietético completamente individualizado, adaptado a tus características, preferencias y objetivos. Presencial y online."
+      }
+    },
+    "fisioterapia": {
+      "title": "Fisioterapia",
+      "shortTitle": "Fisioterapia",
+      "tagline": "Salud a través del movimiento.",
+      "hero": {
+        "eyebrow": "Fisioterapia",
+        "title": "Fisioterapia Deportiva y Terapéutica",
+        "subtitle": "Tratamiento del dolor, rehabilitación de lesiones, recuperación postquirúrgica y prevención. Para todas las edades."
+      }
+    },
+    "pilates": {
+      "title": "Pilates",
+      "shortTitle": "Pilates",
+      "tagline": "Control, fuerza y movilidad para tu cuerpo y tu mente.",
+      "hero": {
+        "eyebrow": "Pilates",
+        "title": "Pilates Individual y en Grupos Reducidos",
+        "subtitle": "Pilates reformer y de suelo. Individual o en grupos muy reducidos para un seguimiento personalizado."
+      }
+    },
+    "empresa": {
+      "title": "Empresa Saludable",
+      "shortTitle": "Empresa",
+      "tagline": "Empleados sanos construyen empresas fuertes.",
+      "hero": {
+        "eyebrow": "Bienestar corporativo",
+        "title": "Empresa Saludable",
+        "subtitle": "Programas de entrenamiento y nutrición corporativos para impulsar la salud y el rendimiento de tu equipo."
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+---
+// Blog stub — hidden from nav until launched
+// Remove `draft: true` entries and add to sitemap when ready to launch
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { Lang } from '../../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'es') as Lang;
+---
+
+<BaseLayout
+  lang={lang}
+  title="Blog | Salud CBO"
+  description="Artículos sobre entrenamiento, nutrición y salud basados en evidencia científica."
+  noIndex={true}
+>
+  <section class="section-pad bg-white text-center">
+    <div class="container-main max-w-xl mx-auto">
+      <h1 class="section-title mb-4">Blog — Próximamente</h1>
+      <p class="section-subtitle">Contenido educativo sobre entrenamiento, nutrición y salud. En construcción.</p>
+      <a href="/" class="btn-outline mt-8 inline-flex">← Volver al inicio</a>
+    </div>
+  </section>
+</BaseLayout>

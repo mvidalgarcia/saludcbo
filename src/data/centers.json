@@ -1,0 +1,52 @@
+[
+  {
+    "id": "centro-1",
+    "order": 1,
+    "address": "P. El Castro, nave 2, Lugones",
+    "city": "Lugones, Asturias",
+    "phone": "+34 667 828 851",
+    "email": "cbo.salud@gmail.com",
+    "mapUrl": "https://maps.google.com/?q=P.+El+Castro+nave+2+Lugones+Asturias",
+    "parking": true,
+    "services": ["entrenamiento", "entrenamiento-online", "nutricion", "fisioterapia", "pilates", "empresa-saludable"],
+    "hours": [
+      { "days": { "es": "Lunes a viernes", "en": "Monday to Friday" }, "time": "08:00 – 21:00" },
+      { "days": { "es": "Sábados", "en": "Saturday" }, "time": "09:00 – 14:00" },
+      { "days": { "es": "Domingos y festivos", "en": "Sundays & public holidays" }, "time": "Cerrado / Closed" }
+    ],
+    "translations": {
+      "es": {
+        "name": "CBO Health Training Center",
+        "description": "Nuestro centro principal en Lugones, detrás de Tartiere Auto. Equipado con zona de entrenamiento funcional, sala de fisioterapia, consulta de nutrición y estudio de pilates. Aparcamiento gratuito."
+      },
+      "en": {
+        "name": "CBO Health Training Center",
+        "description": "Our main centre in Lugones, behind Tartiere Auto. Equipped with a functional training area, physiotherapy room, nutrition consultation room and pilates studio. Free parking."
+      }
+    }
+  },
+  {
+    "id": "centro-2",
+    "order": 2,
+    "address": "Lugones (dirección pendiente de confirmar)",
+    "city": "Lugones, Asturias",
+    "phone": "+34 667 828 851",
+    "email": "cbo.salud@gmail.com",
+    "parking": true,
+    "services": ["fisioterapia", "pilates"],
+    "hours": [
+      { "days": { "es": "Lunes a viernes", "en": "Monday to Friday" }, "time": "Por confirmar" },
+      { "days": { "es": "Sábados", "en": "Saturday" }, "time": "Por confirmar" }
+    ],
+    "translations": {
+      "es": {
+        "name": "CBO Pilates & Fisioterapia",
+        "description": "Nuevo centro especializado en pilates reformer y fisioterapia. Espacio diseñado específicamente para la práctica del pilates y la rehabilitación. Detalles y horarios próximamente."
+      },
+      "en": {
+        "name": "CBO Pilates & Physiotherapy",
+        "description": "New centre specialising in reformer pilates and physiotherapy. Space designed for pilates practice and rehabilitation. Details and opening hours coming soon."
+      }
+    }
+  }
+]

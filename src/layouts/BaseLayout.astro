@@ -1,0 +1,111 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { useTranslations, getAlternatePath } from '../i18n/utils';
+import type { Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  image?: string;
+  noIndex?: boolean;
+}
+
+const { lang, title, description, image, noIndex = false } = Astro.props;
+const t = useTranslations(lang);
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const ogImage = image ?? '/og-image.jpg';
+const alternateLang: Lang = lang === 'es' ? 'en' : 'es';
+const alternatePath = getAlternatePath(Astro.url, alternateLang);
+const alternateUrl = new URL(alternatePath, Astro.site);
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang={lang === 'es' ? 'es-ES' : 'en-US'} href={canonicalUrl} />
+    <link rel="alternate" hreflang={alternateLang === 'es' ? 'es-ES' : 'en-US'} href={alternateUrl} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+    <meta property="og:site_name" content={t('meta.siteName')} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD LocalBusiness -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": ["HealthClub", "LocalBusiness"],
+      "name": "Salud CBO",
+      "url": "https://www.saludcbo.com",
+      "logo": "https://www.saludcbo.com/logo.svg",
+      "image": "https://www.saludcbo.com/og-image.jpg",
+      "description": "Centro de entrenamiento personal, fisioterapia, nutrición y pilates en Lugones, Asturias.",
+      "telephone": "+34667828851",
+      "email": "cbo.salud@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P. El Castro, nave 2",
+        "addressLocality": "Lugones",
+        "addressRegion": "Asturias",
+        "addressCountry": "ES"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 43.44, "longitude": -5.84 },
+      "priceRange": "€€",
+      "sameAs": [
+        "https://www.instagram.com/cbo.salud",
+        "https://www.linkedin.com/company/cbosalud"
+      ]
+    })} />
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 btn-primary z-[100]">
+      {lang === 'es' ? 'Ir al contenido principal' : 'Skip to main content'}
+    </a>
+
+    <Header lang={lang} />
+
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+
+    <Footer lang={lang} />
+    <WhatsAppButton lang={lang} />
+  </body>
+</html>

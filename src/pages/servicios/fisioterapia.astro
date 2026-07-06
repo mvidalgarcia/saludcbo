@@ -1,0 +1,27 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+import { useTranslations } from '../../i18n/utils';
+import type { Lang } from '../../i18n/utils';
+import { getCollection } from 'astro:content';
+
+const lang = (Astro.currentLocale ?? 'es') as Lang;
+const t = useTranslations(lang);
+
+const services = await getCollection('services');
+const svc = services.find(s => s.id === 'fisioterapia')!;
+const tr = svc.data.translations[lang];
+---
+
+<ServicePage
+  lang={lang}
+  serviceId="fisioterapia"
+  metaTitle={t('meta.fisioterapia.title')}
+  metaDescription={t('meta.fisioterapia.description')}
+  heroEyebrow={t('services.fisioterapia.hero.eyebrow')}
+  heroTitle={t('services.fisioterapia.hero.title')}
+  heroSubtitle={t('services.fisioterapia.hero.subtitle')}
+  description={tr.description}
+  tagline={tr.tagline}
+  features={tr.features}
+  types={tr.types}
+/>

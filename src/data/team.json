@@ -1,0 +1,22 @@
+[
+  {
+    "id": "carlos",
+    "order": 1,
+    "linkedin": "https://www.linkedin.com/in/carlos-bernardo-osoro-597a69241",
+    "instagram": "https://www.instagram.com/cbo.salud",
+    "translations": {
+      "es": {
+        "name": "Carlos Bernardo Osoro",
+        "role": "Fundador · Entrenador Personal y Nutricionista",
+        "credentials": "Graduado en CCAFD (Col. 67899) · Graduado en Dietética y Nutrición (Col. 2886)",
+        "bio": "Mi pasión es ayudar a las personas a mejorar y conseguir sus objetivos relacionados con el entrenamiento, la composición corporal y la nutrición, de la forma más eficiente, flexible, científica y segura. Fundé CBO con una misión clara: ofrecer atención integral de la más alta calidad, respaldada por la evidencia científica y adaptada al 100% a cada persona."
+      },
+      "en": {
+        "name": "Carlos Bernardo Osoro",
+        "role": "Founder · Personal Trainer & Nutritionist",
+        "credentials": "Graduate in Sports Sciences (Reg. 67899) · Graduate in Dietetics & Nutrition (Reg. 2886)",
+        "bio": "My passion is helping people improve and reach their goals related to training, body composition and nutrition, in the most efficient, flexible, scientific and safe way. I founded CBO with a clear mission: to offer the highest-quality comprehensive care, backed by scientific evidence and 100% tailored to each person."
+      }
+    }
+  }
+]

@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations } from '../../i18n/utils';
+import type { Lang } from '../../i18n/utils';
+import { getCollection } from 'astro:content';
+
+const lang = (Astro.currentLocale ?? 'es') as Lang;
+const t = useTranslations(lang);
+const base = lang === 'en' ? '/en' : '';
+
+const services = await getCollection('services');
+const empresa = services.find(s => s.id === 'empresa-saludable');
+const tr = empresa?.data.translations[lang];
+---
+
+<BaseLayout lang={lang} title={t('meta.empresa.title')} description={t('meta.empresa.description')}>
+
+  <section class="bg-brand-950 py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="container-main relative text-center max-w-3xl mx-auto">
+      <p class="eyebrow-light mb-5">{t('services.empresa.hero.eyebrow')}</p>
+      <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-6">{t('services.empresa.hero.title')}</h1>
+      <p class="text-brand-200 text-xl leading-relaxed mb-10">{t('services.empresa.hero.subtitle')}</p>
+      <a href={`${base}/contacto`} class="btn-primary text-base py-3.5 px-8">{t('cta.requestInfo')}</a>
+    </div>
+  </section>
+
+  <section class="section-pad bg-white">
+    <div class="container-main max-w-3xl mx-auto text-center">
+      <h2 class="section-title mb-5">{tr?.tagline}</h2>
+      <p class="section-subtitle text-lg">{tr?.description}</p>
+    </div>
+  </section>
+
+  {tr?.types && (
+    <section class="section-pad bg-brand-50 pt-0">
+      <div class="container-main">
+        <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {tr.types.map((type: { title: string; body: string }) => (
+            <div class="bg-white rounded-3xl p-7 border border-brand-100 shadow-sm">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-4">
+                <div class="w-2.5 h-2.5 rounded-full bg-brand-600"></div>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-2">{type.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{type.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {tr?.features && (
+    <section class="section-pad bg-white">
+      <div class="container-main max-w-4xl mx-auto">
+        <h2 class="section-title text-center mb-12">{lang === 'es' ? '¿Qué incluye?' : "What's included?"}</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          {tr.features.map((f: string) => (
+            <div class="flex items-start gap-3 p-4 bg-brand-50 rounded-xl">
+              <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700 text-sm">{f}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section-pad bg-brand-600">
+    <div class="container-main text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-white mb-4">
+        {lang === 'es' ? '¿Hablamos de tu empresa?' : "Let's talk about your company?"}
+      </h2>
+      <p class="text-brand-100 text-lg mb-8">
+        {lang === 'es' ? 'Cuéntanos el tamaño de tu equipo y tus objetivos, y diseñamos un programa a medida.' : "Tell us about your team size and goals, and we'll design a tailored programme."}
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={`${base}/contacto`} class="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold py-3.5 px-8 rounded-full hover:bg-brand-50 transition-colors">
+          {t('cta.requestInfo')}
+        </a>
+        <a href="https://wa.me/34667828851" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white font-semibold py-3.5 px-8 rounded-full hover:bg-[#128C7E] transition-colors">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

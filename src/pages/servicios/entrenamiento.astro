@@ -1,0 +1,27 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+import { useTranslations } from '../../i18n/utils';
+import type { Lang } from '../../i18n/utils';
+import { getCollection } from 'astro:content';
+
+const lang = (Astro.currentLocale ?? 'es') as Lang;
+const t = useTranslations(lang);
+
+const services = await getCollection('services');
+const svc = services.find(s => s.id === 'entrenamiento')!;
+const tr = svc.data.translations[lang];
+---
+
+<ServicePage
+  lang={lang}
+  serviceId="entrenamiento"
+  metaTitle={t('meta.entrenamiento.title')}
+  metaDescription={t('meta.entrenamiento.description')}
+  heroEyebrow={t('services.entrenamiento.hero.eyebrow')}
+  heroTitle={t('services.entrenamiento.hero.title')}
+  heroSubtitle={t('services.entrenamiento.hero.subtitle')}
+  description={tr.description}
+  tagline={tr.tagline}
+  features={tr.features}
+  process={tr.process}
+/>

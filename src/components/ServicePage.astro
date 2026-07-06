@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  serviceId: string;
+  metaTitle: string;
+  metaDescription: string;
+  heroEyebrow: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  description: string;
+  features: string[];
+  process?: Array<{ title: string; body: string }>;
+  types?: Array<{ title: string; body: string }>;
+  tagline: string;
+}
+
+const {
+  lang,
+  metaTitle,
+  metaDescription,
+  heroEyebrow,
+  heroTitle,
+  heroSubtitle,
+  description,
+  features,
+  process,
+  types,
+  tagline,
+} = Astro.props;
+
+const t = useTranslations(lang);
+const base = lang === 'en' ? '/en' : '';
+---
+
+<BaseLayout lang={lang} title={metaTitle} description={metaDescription}>
+
+  <!-- Hero -->
+  <section class="bg-brand-950 py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="container-main relative max-w-3xl">
+      <p class="eyebrow-light mb-5">{heroEyebrow}</p>
+      <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">{heroTitle}</h1>
+      <p class="text-brand-200 text-xl leading-relaxed mb-10 max-w-2xl">{heroSubtitle}</p>
+      <div class="flex flex-wrap gap-4">
+        <a href={`${base}/contacto`} class="btn-primary text-base py-3.5 px-8">{t('cta.primary')}</a>
+        <a href="https://wa.me/34667828851" target="_blank" rel="noopener noreferrer" class="btn-ghost-dark text-base py-3.5 px-8">{t('cta.whatsapp')}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description -->
+  <section class="section-pad bg-white">
+    <div class="container-main max-w-3xl mx-auto">
+      <p class="text-xl text-gray-600 leading-relaxed mb-6 font-medium">{tagline}</p>
+      <p class="text-gray-500 leading-relaxed text-lg">{description}</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section-pad bg-brand-50 pt-0">
+    <div class="container-main max-w-4xl mx-auto">
+      <h2 class="section-title text-center mb-12">
+        {lang === 'es' ? '¿Qué incluye?' : 'What\'s included?'}
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {features.map(f => (
+          <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-100 shadow-sm">
+            <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700 text-sm">{f}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process (if provided) -->
+  {process && process.length > 0 && (
+    <section class="section-pad bg-white">
+      <div class="container-main max-w-4xl mx-auto">
+        <h2 class="section-title text-center mb-14">
+          {lang === 'es' ? 'Cómo trabajamos' : 'How we work'}
+        </h2>
+        <div class="grid sm:grid-cols-2 gap-7">
+          {process.map((step, i) => (
+            <div class="flex gap-5">
+              <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold text-sm shrink-0">
+                {i + 1}
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1.5">{step.title}</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">{step.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Types (if provided) -->
+  {types && types.length > 0 && (
+    <section class:list={["section-pad", process ? "bg-brand-50" : "bg-white"]}>
+      <div class="container-main max-w-4xl mx-auto">
+        <h2 class="section-title text-center mb-12">
+          {lang === 'es' ? 'Áreas de especialización' : 'Areas of specialisation'}
+        </h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          {types.map(type => (
+            <div class="bg-white rounded-3xl p-7 border border-brand-100 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center mb-4">
+                <div class="w-2 h-2 rounded-full bg-brand-600"></div>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-2">{type.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{type.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="section-pad bg-brand-600">
+    <div class="container-main text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-white mb-4">
+        {lang === 'es' ? '¿Empezamos?' : 'Ready to start?'}
+      </h2>
+      <p class="text-brand-100 text-lg mb-8">
+        {lang === 'es' ? 'Solicita una valoración gratuita y damos el primer paso juntos.' : 'Request a free assessment and we\'ll take the first step together.'}
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={`${base}/contacto`} class="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold py-3.5 px-8 rounded-full hover:bg-brand-50 transition-colors">
+          {t('cta.primary')}
+        </a>
+        <a href="https://wa.me/34667828851" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-white/20 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-white/30 transition-colors">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
