@@ -1,5 +1,48 @@
 # Salud CBO — Astro Revamp Plan
 
+## Current status (July 2025)
+
+**Live preview:** [https://saludcbo.vercel.app](https://saludcbo.vercel.app) (Vercel project `saludcbo`, static Astro build)
+
+### Done
+
+| Area | Status |
+|---|---|
+| Astro 7 + TypeScript + Tailwind CSS v4 + `@astrojs/sitemap` | ✅ |
+| i18n (ES default at `/`, EN under `/en/`) + `hreflang` + language switcher | ✅ |
+| Design system (green brand palette, Inter, buttons, section utilities) | ✅ |
+| Layout shell (`BaseLayout`, `Header`, `Footer`, floating WhatsApp button) | ✅ |
+| Content layer (`src/content.config.ts` + `src/data/{services,team,centers}.json` via `file()` loader) | ✅ |
+| 29 static pages built and deployed | ✅ |
+| Home, Método, Equipo, Centros, Contacto | ✅ |
+| Service pages (ES + EN): entrenamiento, entrenamiento-online, nutrición, fisioterapia, pilates, empresa saludable | ✅ |
+| Legal pages: `/aviso-legal`, `/privacidad`, `/cookies` + `/en/legal-notice`, `/en/privacy-policy`, `/en/cookie-policy` | ✅ |
+| Blog scaffold (`/blog` route + placeholder collection entry) | ✅ |
+| SEO basics: per-page meta, OG tags, `LocalBusiness` JSON-LD in `BaseLayout` | ✅ |
+| English URL slugs (e.g. `/en/services/training`, `/en/corporate-wellness`) with segment-aware `getAlternatePath()` | ✅ |
+
+### Not done yet
+
+| Area | Notes |
+|---|---|
+| Custom domain (`www.saludcbo.com`) | Point DNS to Vercel when ready to go live |
+| Contact form + Resend API route | Deferred — `/contacto` shows phone/email/WhatsApp CTAs only |
+| Cookie consent banner + consent-gated embeds (Maps, Instagram, Google reviews) | Instagram/reviews are static placeholders or outbound links for now |
+| `/accesibilidad` and `/sitemap` HTML pages | Footer links to legal pages exist; these two pages not built yet |
+| Real assets | Logo, team photos, center photos, confirmed brand colors |
+| Real team/center data | `team.json` has Carlos; other roles are placeholders; Centro 2 address TBC |
+| Testimonials collection | 3 reviews hardcoded on homepage |
+| `@astrojs/vercel` adapter | Not needed until API routes (contact form); site is fully static today |
+| WCAG-AA audit pass | Built with accessibility in mind; formal audit not run |
+| Lead-magnet PDF delivery | CTA links to `/contacto`; no gated download flow yet |
+
+### Repo notes
+
+- Page logic lives in `src/components/pages/*.astro` with thin route stubs in `src/pages/` and `src/pages/en/` (DRY across locales).
+- `nasty-nadir/` is leftover scaffolding from `npm create astro` (random project name). Only contains `.vscode` config — safe to delete.
+
+---
+
 ## Overview
 
 Rebuild [saludcbo.com](https://www.saludcbo.com/) as a clean, minimalist, bilingual (ES/EN) Astro site, deployed on Vercel. The revamp repositions CBO around **2 centers** and a **360º wellness approach** spanning four core services — Entrenamiento Personal, Fisioterapia, Nutrición, and Pilates — with stronger calls to action and a shift in voice from "Berni" (the founder) to **Equipo CBO** (the team), while preserving all current functionality (lead forms, reviews, Instagram feed, Google Maps, lead-magnet PDF download, legal pages). The site will be built accessible (WCAG AA) by default — no accessibility toolbar widget needed.
@@ -38,7 +81,7 @@ The existing site is built on **WordPress + Elementor** (confirmed via markup: `
 
 - **Content management**: developer-managed via Astro **content collections** (Markdown/JSON in the repo) — simplest and fastest; structured so a CMS can be layered on later if needed.
 - **Languages**: **bilingual ES + EN**, ES as default locale at `/`, English under `/en/`, using Astro's built-in i18n routing + `hreflang` tags.
-- **Hosting**: **Vercel**, using `@astrojs/vercel`.
+- **Hosting**: **Vercel** (static deploy). `@astrojs/vercel` adapter deferred until contact API routes are added.
 - **Forms**: current setup is WordPress/Elementor Forms emailing the business inbox. Replacement: a serverless **Astro API route** that sends form submissions via **Resend** (email) to the business inbox, backed up with visible **WhatsApp/phone** CTAs throughout. (Owner to confirm final destination email/WhatsApp number.)
 - **Blog**: not for this phase, but the content model and routing will leave room to add one later (useful given the volume of educational Instagram content that could be repurposed for SEO).
 - **Third-party embeds**: keep **Instagram feed**, **Google reviews**, and **Google Maps**, gated behind a cookie-consent banner (GDPR-friendly since these are EU visitors) with lightweight static fallbacks shown before consent.
@@ -63,8 +106,10 @@ The existing site is built on **WordPress + Elementor** (confirmed via markup: `
 - `/empresa-saludable` — Corporate wellness programs
 - `/centros` — The 2 centers: addresses, photos, parking, maps, which services are offered where
 - `/contacto` — Contact form, WhatsApp/phone, maps, socials
-- Legal: `/aviso-legal`, `/privacidad`, `/cookies`, `/accesibilidad`, `/sitemap` (mirrored under `/en/...`)
+- Legal: `/aviso-legal`, `/privacidad`, `/cookies` (mirrored under `/en/legal-notice`, `/en/privacy-policy`, `/en/cookie-policy`); `/accesibilidad` and `/sitemap` still TBD
 - `/blog` — hidden route + content collection scaffolded, not linked in nav yet
+
+**English mirrors** (under `/en/`): same structure with translated slugs where appropriate — e.g. `/en/services/training`, `/en/corporate-wellness`, `/en/legal-notice`. Pages like `/en/metodo`, `/en/equipo`, `/en/centros`, `/en/contacto` keep the Spanish slug for simplicity.
 
 ```mermaid
 flowchart TD
@@ -82,53 +127,38 @@ flowchart TD
   Home --> Blog["/blog (hidden, future)"]
 ```
 
-## Tech stack
+## Tech stack (as built)
 
-- **Astro** (latest) + **TypeScript**
-- **Tailwind CSS v4** for the design system
-- Output mode `static`, with the **`@astrojs/vercel`** adapter enabling SSR only where required (the contact API route)
-- **Content collections** (`src/content/`): `services`, `team`, `centers`, `testimonials`, `blog` (stub) — each with ES/EN fields or per-locale entries
-- **i18n**: Astro's built-in i18n routing (`es` default, `en` secondary); shared UI copy in `src/i18n/{es,en}.json` dictionaries; a `LangSwitcher` component in header/footer
-- **Contact form**: `src/pages/api/contact.ts` (POST) — validates input, sends via **Resend**, includes a honeypot field and basic rate limiting; works as a plain HTML POST and is progressively enhanced with a small client-side script for inline success/error states
-- **Third-party embeds (consent-gated)**: Google Maps, Instagram feed (official embed or a lightweight widget), Google reviews widget — all deferred behind a cookie-consent banner, with static fallbacks (curated testimonial quotes, a map screenshot) shown by default
-- **Accessibility**: built to WCAG AA by default — semantic HTML, visible focus states, sufficient contrast, descriptive alt text. No accessibility toolbar widget.
-- **SEO**: `@astrojs/sitemap`, per-page meta + Open Graph tags, `hreflang` alternates for ES/EN, `LocalBusiness`/`HealthClub` JSON-LD structured data for **both** centers
+- **Astro 7** + **TypeScript**
+- **Tailwind CSS v4** (`@tailwindcss/vite`) + **`@tailwindcss/typography`** (legal pages)
+- Output mode **`static`** (no SSR/API routes yet)
+- **Content collections** (`src/content.config.ts`): `services`, `team`, `centers`, `blog` (stub) — data in `src/data/*.json` arrays loaded via Astro 7 `file()` loader
+- **i18n**: Astro built-in routing (`es` default, `en` under `/en/`); UI copy in `src/i18n/{es,en}.json`; `getAlternatePath()` translates URL segments between locales (e.g. `servicios/entrenamiento` ↔ `services/training`)
+- **Contact form** *(deferred)*: `src/pages/api/contact.ts` + **Resend**
+- **Third-party embeds** *(deferred)*: consent-gated Maps, Instagram, Google reviews
+- **Accessibility**: semantic HTML, skip link, focus styles — no toolbar widget
+- **SEO**: `@astrojs/sitemap`, per-page meta + OG, `hreflang`, `LocalBusiness` JSON-LD (single center for now)
 
-## Key files/structure to create
+## Key files/structure (actual)
 
 ```
-astro.config.mjs               # i18n, Vercel adapter, sitemap, Tailwind
-src/layouts/BaseLayout.astro   # head/meta/SEO, header, footer, consent
+astro.config.mjs                    # i18n, sitemap, Tailwind
+src/content.config.ts               # Astro 7 content layer (file + glob loaders)
+src/data/{services,team,centers}.json
+src/layouts/BaseLayout.astro        # head/meta/SEO, header, footer, JSON-LD
 src/components/
-  Header.astro                 # sticky nav, primary CTA, services dropdown, lang switcher
-  Footer.astro                 # contact, legal links, socials, EU funding notice
-  Hero.astro
-  ServiceCard.astro
-  CTA.astro
-  TeamGrid.astro
-  CenterCard.astro
-  Reviews.astro
-  InstagramFeed.astro
-  MapEmbed.astro
-  ContactForm.astro             # deferred to a later phase
-  CookieConsent.astro
-  LangSwitcher.astro
-src/content/
-  config.ts
-  services/*.md
-  team/*.md
-  centers/*.md
-  testimonials/*.md
-  blog/*.md (stub)
-src/pages/
-  index.astro, metodo.astro, equipo.astro,
-  servicios/{entrenamiento,entrenamiento-online,nutricion,fisioterapia,pilates}.astro,
-  empresa-saludable.astro, centros.astro, contacto.astro,
-  aviso-legal.astro, privacidad.astro, cookies.astro, accesibilidad.astro, sitemap.astro,
-  en/**                        # mirrored EN routes
-  api/contact.ts                # Resend form handler
-src/i18n/{es,en}.json
+  Header.astro, Footer.astro, WhatsAppButton.astro, ServiceCard.astro, ServicePage.astro
+  pages/                            # shared page components (IndexPage, MetodoPage, etc.)
+src/pages/                          # ES route stubs
+src/pages/en/                       # EN route stubs
+  services/{training,online-training,nutrition,physiotherapy,pilates}.astro
+  corporate-wellness.astro
+  legal-notice.astro, privacy-policy.astro, cookie-policy.astro
+src/i18n/{es,en}.json, utils.ts
+src/styles/global.css
 ```
+
+Still to add: `ContactForm.astro`, `CookieConsent.astro`, `api/contact.ts`, embed components, `/accesibilidad`, `/sitemap`.
 
 ## Information / assets still needed from the owner (non-blocking for scaffolding)
 
@@ -141,20 +171,22 @@ src/i18n/{es,en}.json
 
 ## Build order
 
-1. Scaffold Astro + TypeScript + Tailwind v4 + Vercel adapter + sitemap + i18n config
-2. Design system: colors (green accent + neutrals), type scale, spacing, buttons, CTA component
-3. Layout shell: BaseLayout, Header (sticky CTA, services dropdown, lang switcher), Footer
-4. Content model: define collections and migrate existing copy into ES/EN entries
-5. Build Inicio (home page)
-6. Build service pages: entrenamiento, entrenamiento-online, nutricion, fisioterapia, pilates, empresa-saludable
-7. Build `/metodo` and `/equipo`
-8. Build `/centros` and `/contacto`
-9. *(Deferred)* Implement the contact/lead-magnet API route with Resend — the `/contacto` page will show a simple WhatsApp/phone/email CTA in the meantime
-10. Wire up consent-gated embeds (Instagram, reviews, Maps) + cookie consent banner
-11. Complete ES/EN translations, language switcher, hreflang
-12. WCAG-AA audit pass, legal pages, SEO meta/OG + JSON-LD
-13. Scaffold hidden `/blog` route + collection for future use
-14. Deploy to Vercel, configure Resend env vars, verify forms/embeds/i18n in production
+1. ~~Scaffold Astro + TypeScript + Tailwind v4 + sitemap + i18n config~~ ✅
+2. ~~Design system: colors, type scale, spacing, buttons~~ ✅
+3. ~~Layout shell: BaseLayout, Header, Footer, WhatsApp button~~ ✅
+4. ~~Content model: collections + migrate copy into JSON arrays~~ ✅
+5. ~~Build Inicio (home page)~~ ✅
+6. ~~Build service pages (ES + EN)~~ ✅
+7. ~~Build `/metodo` and `/equipo`~~ ✅
+8. ~~Build `/centros` and `/contacto`~~ ✅
+9. ~~Legal pages (aviso legal, privacidad, cookies)~~ ✅
+10. ~~Scaffold hidden `/blog` route + collection~~ ✅
+11. ~~Deploy to Vercel (preview)~~ ✅ — [saludcbo.vercel.app](https://saludcbo.vercel.app)
+12. **Next:** Gather real assets + team/center data from owner
+13. **Next:** Custom domain `www.saludcbo.com` on Vercel
+14. *(Deferred)* Contact/lead-magnet API route with Resend + `@astrojs/vercel` adapter
+15. *(Deferred)* Consent-gated embeds (Instagram, reviews, Maps) + cookie consent banner
+16. *(Deferred)* `/accesibilidad`, `/sitemap` HTML pages; testimonials collection; WCAG-AA audit; JSON-LD for both centers
 
 ## Open design note
 
