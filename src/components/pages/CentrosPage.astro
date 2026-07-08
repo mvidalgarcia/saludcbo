@@ -1,4 +1,5 @@
 ---
+import { MapPin, ParkingCircle, Phone, Mail, ArrowRight } from 'lucide-astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { useTranslations } from '../../i18n/utils';
 import type { Lang } from '../../i18n/utils';
@@ -13,77 +14,117 @@ const sortedCenters = centers.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <BaseLayout lang={lang} title={t('meta.centros.title')} description={t('meta.centros.description')}>
-
   <section class="bg-brand-50 py-24 lg:py-28 border-b border-brand-100">
     <div class="container-main text-center max-w-3xl mx-auto">
       <p class="eyebrow mb-5">{t('centros.hero.eyebrow')}</p>
-      <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-5">{t('centros.hero.title')}</h1>
+      <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-5">
+        {t('centros.hero.title')}
+      </h1>
       <p class="section-subtitle text-xl">{t('centros.hero.subtitle')}</p>
     </div>
   </section>
 
   <section class="section-pad bg-white">
     <div class="container-main max-w-5xl mx-auto flex flex-col gap-16">
-      {sortedCenters.map((center, i) => {
-        const tr = center.data.translations[lang];
-        const isFirst = i === 0;
-        return (
-          <div class:list={["grid lg:grid-cols-2 gap-10 items-start", !isFirst && "pt-16 border-t border-gray-100"]}>
-            <div class:list={[!isFirst && "lg:order-2"]}>
-              <p class="eyebrow mb-3">Centro {center.data.order}</p>
-              <h2 class="text-3xl font-extrabold text-gray-900 mb-3">{tr.name}</h2>
-              <p class="text-gray-500 leading-relaxed mb-6">{tr.description}</p>
-              <div class="space-y-3 mb-6">
-                <div class="flex items-start gap-3">
-                  <span class="text-brand-600 mt-0.5">📍</span>
-                  <div>
-                    <p class="text-sm font-medium text-gray-900">{center.data.address}</p>
-                    <p class="text-sm text-gray-500">{center.data.city}</p>
+      {
+        sortedCenters.map((center, i) => {
+          const tr = center.data.translations[lang];
+          const isFirst = i === 0;
+          return (
+            <div
+              class:list={[
+                'grid lg:grid-cols-2 gap-10 items-start',
+                !isFirst && 'pt-16 border-t border-gray-100',
+              ]}
+            >
+              <div class:list={[!isFirst && 'lg:order-2']}>
+                <p class="eyebrow mb-3">Centro {center.data.order}</p>
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-3">{tr.name}</h2>
+                <p class="text-gray-500 leading-relaxed mb-6">{tr.description}</p>
+                <div class="space-y-3 mb-6">
+                  <div class="flex items-start gap-3">
+                    <MapPin class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+                    <div>
+                      <p class="text-sm font-medium text-gray-900">{center.data.address}</p>
+                      <p class="text-sm text-gray-500">{center.data.city}</p>
+                    </div>
+                  </div>
+                  <a
+                    href={`tel:${center.data.phone}`}
+                    class="flex items-center gap-3 text-gray-700 hover:text-brand-700 text-sm transition-colors"
+                  >
+                    <Phone class="w-4 h-4 text-brand-600 shrink-0" />
+                    {center.data.phone}
+                  </a>
+                  <a
+                    href={`mailto:${center.data.email}`}
+                    class="flex items-center gap-3 text-gray-700 hover:text-brand-700 text-sm transition-colors"
+                  >
+                    <Mail class="w-4 h-4 text-brand-600 shrink-0" />
+                    {center.data.email}
+                  </a>
+                  {center.data.parking && (
+                    <p class="flex items-center gap-3 text-sm text-gray-500">
+                      <ParkingCircle class="w-4 h-4 text-brand-600 shrink-0" />
+                      {t('centros.parking')}
+                    </p>
+                  )}
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-5 mb-6">
+                  <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">
+                    {t('centros.hours')}
+                  </p>
+                  <div class="space-y-1.5">
+                    {center.data.hours.map((h) => (
+                      <div class="flex justify-between text-sm">
+                        <span class="text-gray-700">{h.days[lang]}</span>
+                        <span class="text-gray-500 font-medium">{h.time}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <a href={`tel:${center.data.phone}`} class="flex items-center gap-3 text-gray-700 hover:text-brand-700 text-sm transition-colors">
-                  <span class="text-brand-600">📞</span>{center.data.phone}
-                </a>
-                <a href={`mailto:${center.data.email}`} class="flex items-center gap-3 text-gray-700 hover:text-brand-700 text-sm transition-colors">
-                  <span class="text-brand-600">✉️</span>{center.data.email}
-                </a>
-                {center.data.parking && (
-                  <p class="flex items-center gap-3 text-sm text-gray-500">
-                    <span class="text-brand-600">🟢</span>{t('centros.parking')}
-                  </p>
+                {center.data.mapUrl && (
+                  <a
+                    href={center.data.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline text-sm"
+                  >
+                    <MapPin class="w-4 h-4" />
+                    {t('centros.directions')}
+                  </a>
                 )}
               </div>
-              <div class="bg-gray-50 rounded-2xl p-5 mb-6">
-                <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">{t('centros.hours')}</p>
-                <div class="space-y-1.5">
-                  {center.data.hours.map(h => (
-                    <div class="flex justify-between text-sm">
-                      <span class="text-gray-700">{h.days[lang]}</span>
-                      <span class="text-gray-500 font-medium">{h.time}</span>
-                    </div>
-                  ))}
+              <div class:list={[!isFirst && 'lg:order-1']}>
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-brand-100 relative group">
+                  {center.data.image ? (
+                    <img
+                      src={center.data.image}
+                      alt={tr.name}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div class="w-full h-full bg-brand-50" />
+                  )}
+                  {center.data.mapUrl && (
+                    <a
+                      href={center.data.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="absolute inset-0 flex items-center justify-center bg-black/0 hover:bg-black/40 transition-colors"
+                    >
+                      <span class="inline-flex items-center gap-1.5 text-white font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity bg-black/60 px-4 py-2 rounded-full">
+                        {t('centros.directions')} <ArrowRight class="w-4 h-4" />
+                      </span>
+                    </a>
+                  )}
                 </div>
               </div>
-              {center.data.mapUrl && (
-                <a href={center.data.mapUrl} target="_blank" rel="noopener noreferrer" class="btn-outline text-sm">
-                  📍 {t('centros.directions')}
-                </a>
-              )}
             </div>
-            <div class:list={[!isFirst && "lg:order-1"]}>
-              <div class="aspect-[4/3] bg-brand-50 rounded-3xl flex items-center justify-center border border-brand-100">
-                {center.data.mapUrl ? (
-                  <a href={center.data.mapUrl} target="_blank" rel="noopener noreferrer" class="text-brand-600 font-semibold text-sm hover:text-brand-700 transition-colors">
-                    {t('centros.directions')} →
-                  </a>
-                ) : (
-                  <p class="text-brand-300 text-sm font-medium">{lang === 'es' ? 'Mapa próximamente' : 'Map coming soon'}</p>
-                )}
-              </div>
-            </div>
-          </div>
-        );
-      })}
+          );
+        })
+      }
     </div>
   </section>
 
@@ -93,12 +134,18 @@ const sortedCenters = centers.sort((a, b) => a.data.order - b.data.order);
         {lang === 'es' ? '¿Necesitas información?' : 'Need more information?'}
       </h2>
       <p class="text-brand-100 text-lg mb-8 max-w-lg mx-auto">
-        {lang === 'es' ? 'Contáctanos y te responderemos lo antes posible.' : "Contact us and we'll get back to you as soon as possible."}
+        {
+          lang === 'es'
+            ? 'Contáctanos y te responderemos lo antes posible.'
+            : "Contact us and we'll get back to you as soon as possible."
+        }
       </p>
-      <a href={`${base}/contacto`} class="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold py-3.5 px-8 rounded-full hover:bg-brand-50 transition-colors">
+      <a
+        href={`${base}/contacto`}
+        class="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold py-3.5 px-8 rounded-full hover:bg-brand-50 transition-colors"
+      >
         {t('cta.requestInfo')}
       </a>
     </div>
   </section>
-
 </BaseLayout>

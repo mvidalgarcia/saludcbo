@@ -8,7 +8,7 @@ const lang = (Astro.currentLocale ?? 'es') as Lang;
 const t = useTranslations(lang);
 
 const services = await getCollection('services');
-const svc = services.find(s => s.id === 'nutricion')!;
+const svc = services.find((s) => s.id === 'nutricion')!;
 const tr = svc.data.translations[lang];
 ---
 
@@ -25,4 +25,5 @@ const tr = svc.data.translations[lang];
   features={tr.features}
   process={tr.process}
   types={tr.types}
+  heroImage="/images/nutrition-app.png"
 />

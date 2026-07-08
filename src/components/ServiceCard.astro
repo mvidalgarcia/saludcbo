@@ -1,4 +1,14 @@
 ---
+import {
+  Dumbbell,
+  Smartphone,
+  Apple,
+  HeartPulse,
+  PersonStanding,
+  Building2,
+  ArrowRight,
+} from 'lucide-astro';
+
 interface Props {
   title: string;
   tagline: string;
@@ -10,53 +20,60 @@ interface Props {
 
 const { title, tagline, href, icon, learnMore, featured = false } = Astro.props;
 
-const iconMap: Record<string, string> = {
-  dumbbell: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8.5h1m0 0V6a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-2.5m0-5h9m0 0h1m0 0V6a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-2.5m0-5h-9"/></svg>`,
-  smartphone: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg>`,
-  apple: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3c0 1.5-1 2.5-2 3h-2c-1-.5-2-1.5-2-3a3 3 0 0 1 3-3z"/><path d="M6.5 8.5C4 10 2 13 2 16.5 2 20 4.5 22 7 22c1.5 0 2.5-.5 3-.5s1.5.5 3 .5c2.5 0 5-2 5-5.5 0-3.5-2-6.5-4.5-8h-7z"/></svg>`,
-  'heart-pulse': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l1.5-3 2 6 1.5-3h6.28"/></svg>`,
-  'person-standing': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>`,
-  'building-2': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>`,
+const iconComponents: Record<string, any> = {
+  dumbbell: Dumbbell,
+  smartphone: Smartphone,
+  apple: Apple,
+  'heart-pulse': HeartPulse,
+  'person-standing': PersonStanding,
+  'building-2': Building2,
 };
 
-const svgIcon = iconMap[icon] ?? iconMap.dumbbell;
+const IconComponent = iconComponents[icon] ?? Dumbbell;
 ---
 
 <a
   href={href}
   class:list={[
-    "group flex flex-col gap-5 p-7 rounded-3xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl",
+    'group flex flex-col gap-5 p-7 rounded-3xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl',
     featured
-      ? "bg-brand-600 border-brand-500 text-white hover:bg-brand-700"
-      : "bg-white border-gray-100 hover:border-brand-200 shadow-sm"
+      ? 'bg-brand-600 border-brand-500 text-white hover:bg-brand-700'
+      : 'bg-white border-gray-100 hover:border-brand-200 shadow-sm',
   ]}
 >
   <!-- Icon -->
-  <div class:list={[
-    "w-12 h-12 rounded-2xl flex items-center justify-center",
-    featured ? "bg-white/20" : "bg-brand-50 text-brand-700"
-  ]}>
-    <div class:list={["w-6 h-6", featured ? "text-white" : "text-brand-700"]} set:html={svgIcon} />
+  <div
+    class:list={[
+      'w-12 h-12 rounded-2xl flex items-center justify-center',
+      featured ? 'bg-white/20' : 'bg-brand-50 text-brand-700',
+    ]}
+  >
+    <IconComponent class:list={['w-6 h-6', featured ? 'text-white' : 'text-brand-700']} />
   </div>
 
   <!-- Content -->
   <div class="flex-1">
-    <h3 class:list={["font-bold text-lg mb-1.5 leading-snug", featured ? "text-white" : "text-gray-900"]}>
+    <h3
+      class:list={[
+        'font-bold text-lg mb-1.5 leading-snug',
+        featured ? 'text-white' : 'text-gray-900',
+      ]}
+    >
       {title}
     </h3>
-    <p class:list={["text-sm leading-relaxed", featured ? "text-brand-100" : "text-gray-500"]}>
+    <p class:list={['text-sm leading-relaxed', featured ? 'text-brand-100' : 'text-gray-500']}>
       {tagline}
     </p>
   </div>
 
   <!-- Arrow link -->
-  <span class:list={[
-    "flex items-center gap-1.5 text-sm font-semibold transition-colors",
-    featured ? "text-white" : "text-brand-600 group-hover:text-brand-700"
-  ]}>
+  <span
+    class:list={[
+      'flex items-center gap-1.5 text-sm font-semibold transition-colors',
+      featured ? 'text-white' : 'text-brand-600 group-hover:text-brand-700',
+    ]}
+  >
     {learnMore}
-    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-    </svg>
+    <ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
   </span>
 </a>

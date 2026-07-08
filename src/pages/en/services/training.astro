@@ -8,9 +8,10 @@ const lang = (Astro.currentLocale ?? 'en') as Lang;
 const t = useTranslations(lang);
 
 const services = await getCollection('services');
-const svc = services.find(s => s.id === 'entrenamiento')!;
+const svc = services.find((s) => s.id === 'entrenamiento')!;
 const tr = svc.data.translations[lang];
 ---
+
 <ServicePage
   lang={lang}
   serviceId="entrenamiento"
@@ -23,4 +24,5 @@ const tr = svc.data.translations[lang];
   tagline={tr.tagline}
   features={tr.features}
   process={tr.process}
+  heroImage="/images/hero-training.jpg"
 />

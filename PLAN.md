@@ -6,35 +6,41 @@
 
 ### Done
 
-| Area | Status |
-|---|---|
-| Astro 7 + TypeScript + Tailwind CSS v4 + `@astrojs/sitemap` | ✅ |
-| i18n (ES default at `/`, EN under `/en/`) + `hreflang` + language switcher | ✅ |
-| Design system (green brand palette, Inter, buttons, section utilities) | ✅ |
-| Layout shell (`BaseLayout`, `Header`, `Footer`, floating WhatsApp button) | ✅ |
-| Content layer (`src/content.config.ts` + `src/data/{services,team,centers}.json` via `file()` loader) | ✅ |
-| 29 static pages built and deployed | ✅ |
-| Home, Método, Equipo, Centros, Contacto | ✅ |
-| Service pages (ES + EN): entrenamiento, entrenamiento-online, nutrición, fisioterapia, pilates, empresa saludable | ✅ |
-| Legal pages: `/aviso-legal`, `/privacidad`, `/cookies` + `/en/legal-notice`, `/en/privacy-policy`, `/en/cookie-policy` | ✅ |
-| Blog scaffold (`/blog` route + placeholder collection entry) | ✅ |
-| SEO basics: per-page meta, OG tags, `LocalBusiness` JSON-LD in `BaseLayout` | ✅ |
-| English URL slugs (e.g. `/en/services/training`, `/en/corporate-wellness`) with segment-aware `getAlternatePath()` | ✅ |
+| Area                                                                                                                   | Status |
+| ---------------------------------------------------------------------------------------------------------------------- | ------ |
+| Astro 7 + TypeScript + Tailwind CSS v4 + `@astrojs/sitemap`                                                            | ✅     |
+| i18n (ES default at `/`, EN under `/en/`) + `hreflang` + language switcher                                             | ✅     |
+| Design system (green brand palette, Inter, buttons, section utilities)                                                 | ✅     |
+| Layout shell (`BaseLayout`, `Header`, `Footer`, floating WhatsApp button)                                              | ✅     |
+| Content layer (`src/content.config.ts` + `src/data/{services,team,centers}.json` via `file()` loader)                  | ✅     |
+| 29 static pages built and deployed                                                                                     | ✅     |
+| Home, Método, Equipo, Centros, Contacto                                                                                | ✅     |
+| Service pages (ES + EN): entrenamiento, entrenamiento-online, nutrición, fisioterapia, pilates, empresa saludable      | ✅     |
+| Legal pages: `/aviso-legal`, `/privacidad`, `/cookies` + `/en/legal-notice`, `/en/privacy-policy`, `/en/cookie-policy` | ✅     |
+| Blog scaffold (`/blog` route + placeholder collection entry)                                                           | ✅     |
+| SEO basics: per-page meta, OG tags, `LocalBusiness` JSON-LD in `BaseLayout`                                            | ✅     |
+| English URL slugs (e.g. `/en/services/training`, `/en/corporate-wellness`) with segment-aware `getAlternatePath()`     | ✅     |
+| Real favicon (`public/favicon.jpg`) from saludcbo.com                                                                 | ✅     |
+| Real logo (`public/logo.svg`) from saludcbo.com, used in Header and Footer                                            | ✅     |
+| Real photography from saludcbo.com WordPress (`public/images/`) — hero, facilities, trainer                            | ✅     |
+| Emoji replaced with `lucide-astro` icons throughout all pages and components                                          | ✅     |
+| CI/CD pipeline (lint, format, typecheck, build) + Vercel deploy with PR previews                                      | ✅     |
+| Pre-commit hook with `husky` + `lint-staged` (ESLint + Prettier on staged files)                                      | ✅     |
 
 ### Not done yet
 
-| Area | Notes |
-|---|---|
-| Custom domain (`www.saludcbo.com`) | Point DNS to Vercel when ready to go live |
-| Contact form + Resend API route | Deferred — `/contacto` shows phone/email/WhatsApp CTAs only |
-| Cookie consent banner + consent-gated embeds (Maps, Instagram, Google reviews) | Instagram/reviews are static placeholders or outbound links for now |
-| `/accesibilidad` and `/sitemap` HTML pages | Footer links to legal pages exist; these two pages not built yet |
-| Real assets | Logo, team photos, center photos, confirmed brand colors |
-| Real team/center data | `team.json` has Carlos; other roles are placeholders; Centro 2 address TBC |
-| Testimonials collection | 3 reviews hardcoded on homepage |
-| `@astrojs/vercel` adapter | Not needed until API routes (contact form); site is fully static today |
-| WCAG-AA audit pass | Built with accessibility in mind; formal audit not run |
-| Lead-magnet PDF delivery | CTA links to `/contacto`; no gated download flow yet |
+| Area                                                                           | Notes                                                                      |
+| ------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| Custom domain (`www.saludcbo.com`)                                             | Point DNS to Vercel when ready to go live                                  |
+| Contact form + Resend API route                                                | Deferred — `/contacto` shows phone/email/WhatsApp CTAs only                |
+| Cookie consent banner + consent-gated embeds (Maps, Instagram, Google reviews) | Instagram/reviews are static placeholders or outbound links for now        |
+| `/accesibilidad` and `/sitemap` HTML pages                                     | Footer links to legal pages exist; these two pages not built yet           |
+| Brand colors / guidelines                                                      | Logo and photos scraped from existing site; official brand guidelines still TBD from owner |
+| Real team/center data                                                          | `team.json` has Carlos; other roles are placeholders; Centro 2 address TBC |
+| Testimonials collection                                                        | 3 reviews hardcoded on homepage                                            |
+| `@astrojs/vercel` adapter                                                      | Not needed until API routes (contact form); site is fully static today     |
+| WCAG-AA audit pass                                                             | Built with accessibility in mind; formal audit not run                     |
+| Lead-magnet PDF delivery                                                       | CTA links to `/contacto`; no gated download flow yet                       |
 
 ### Repo notes
 
@@ -53,17 +59,18 @@ The existing site is built on **WordPress + Elementor** (confirmed via markup: `
 
 ### Pages / functionality inventory
 
-| Page | Content / functionality |
-|---|---|
-| `/` Inicio | Hero + CTA ("Solicitar información"), "Nuestra Experiencia" blurb, "Método CBO" teaser, "App CBO" teaser, budget-request CTA block, phone/email contact strip, Instagram feed embed, Google reviews (Trustindex, 19 reviews), free parking note, "5 Pilares" PDF lead magnet, footer (address, phone, email, legal links, accessibility, social, language switch, EU funding notice) |
-| `/entrenamento-online/` | Entrenamiento personal y readaptación, grupos reducidos, Entrenamiento Online (App CBO) with a 3-step online process |
-| `/nutricion/` | 4-step process (entrevista/valoración, composición corporal, plan dietético vía app, seguimiento continuo), "tipos de nutrición" (pérdida de grasa, rendimiento, educación, salud), online + presencial |
-| `/fisioterapia/` | Terapia manual/kinesiotaping/punción seca, fisioterapia deportiva y traumatológica, ejercicio terapéutico, Pilates individual y en grupos reducidos (bundled in here today) |
-| `/empresa-saludable/` | Corporate wellness programs: jornadas de prevención, consultas 1:1, programas adaptados, contact CTA |
-| `/contacto/` | "¿Quién soy?" (first-person Carlos bio), servicios complementarios (Fisioterapia, Pilates, Boxeo recreativo), contact form, office address/map, QR, socials |
-| Legal/footer | Aviso Legal, Política de privacidad, Política de cookies, Mapa del sitio, Accesibilidad, ES/EN language switcher, EU NextGenerationEU funding notice |
+| Page                    | Content / functionality                                                                                                                                                                                                                                                                                                                                                              |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `/` Inicio              | Hero + CTA ("Solicitar información"), "Nuestra Experiencia" blurb, "Método CBO" teaser, "App CBO" teaser, budget-request CTA block, phone/email contact strip, Instagram feed embed, Google reviews (Trustindex, 19 reviews), free parking note, "5 Pilares" PDF lead magnet, footer (address, phone, email, legal links, accessibility, social, language switch, EU funding notice) |
+| `/entrenamento-online/` | Entrenamiento personal y readaptación, grupos reducidos, Entrenamiento Online (App CBO) with a 3-step online process                                                                                                                                                                                                                                                                 |
+| `/nutricion/`           | 4-step process (entrevista/valoración, composición corporal, plan dietético vía app, seguimiento continuo), "tipos de nutrición" (pérdida de grasa, rendimiento, educación, salud), online + presencial                                                                                                                                                                              |
+| `/fisioterapia/`        | Terapia manual/kinesiotaping/punción seca, fisioterapia deportiva y traumatológica, ejercicio terapéutico, Pilates individual y en grupos reducidos (bundled in here today)                                                                                                                                                                                                          |
+| `/empresa-saludable/`   | Corporate wellness programs: jornadas de prevención, consultas 1:1, programas adaptados, contact CTA                                                                                                                                                                                                                                                                                 |
+| `/contacto/`            | "¿Quién soy?" (first-person Carlos bio), servicios complementarios (Fisioterapia, Pilates, Boxeo recreativo), contact form, office address/map, QR, socials                                                                                                                                                                                                                          |
+| Legal/footer            | Aviso Legal, Política de privacidad, Política de cookies, Mapa del sitio, Accesibilidad, ES/EN language switcher, EU NextGenerationEU funding notice                                                                                                                                                                                                                                 |
 
 ### Key facts to carry forward
+
 - Business: **Salud CBO** (Carlos Bernardo Osoro), Wellness/Fitness, est. ~2022, headquartered Oviedo/Lugones, Asturias.
 - Currently expanding to **2 centers** in Lugones (per LinkedIn: new Pilates Reformer + Fisioterapia center hiring underway).
 - Contact: `+34 667 828 851`, `cbo.salud@gmail.com`, address "P. El Castro, nave 2, Lugones (detrás de Tartiere Auto)".
@@ -134,10 +141,12 @@ flowchart TD
 - Output mode **`static`** (no SSR/API routes yet)
 - **Content collections** (`src/content.config.ts`): `services`, `team`, `centers`, `blog` (stub) — data in `src/data/*.json` arrays loaded via Astro 7 `file()` loader
 - **i18n**: Astro built-in routing (`es` default, `en` under `/en/`); UI copy in `src/i18n/{es,en}.json`; `getAlternatePath()` translates URL segments between locales (e.g. `servicios/entrenamiento` ↔ `services/training`)
-- **Contact form** *(deferred)*: `src/pages/api/contact.ts` + **Resend**
-- **Third-party embeds** *(deferred)*: consent-gated Maps, Instagram, Google reviews
+- **Contact form** _(deferred)_: `src/pages/api/contact.ts` + **Resend**
+- **Third-party embeds** _(deferred)_: consent-gated Maps, Instagram, Google reviews
 - **Accessibility**: semantic HTML, skip link, focus styles — no toolbar widget
 - **SEO**: `@astrojs/sitemap`, per-page meta + OG, `hreflang`, `LocalBusiness` JSON-LD (single center for now)
+- **CI/CD**: GitHub Actions — `ci.yml` (lint, format, typecheck, build) + `deploy.yml` (Vercel preview/production)
+- **Pre-commit**: `husky` + `lint-staged` (ESLint + Prettier on staged files before commit)
 
 ## Key files/structure (actual)
 
@@ -182,12 +191,22 @@ Still to add: `ContactForm.astro`, `CookieConsent.astro`, `api/contact.ts`, embe
 9. ~~Legal pages (aviso legal, privacidad, cookies)~~ ✅
 10. ~~Scaffold hidden `/blog` route + collection~~ ✅
 11. ~~Deploy to Vercel (preview)~~ ✅ — [saludcbo.vercel.app](https://saludcbo.vercel.app)
-12. **Next:** Gather real assets + team/center data from owner
-13. **Next:** Custom domain `www.saludcbo.com` on Vercel
-14. *(Deferred)* Contact/lead-magnet API route with Resend + `@astrojs/vercel` adapter
-15. *(Deferred)* Consent-gated embeds (Instagram, reviews, Maps) + cookie consent banner
-16. *(Deferred)* `/accesibilidad`, `/sitemap` HTML pages; testimonials collection; WCAG-AA audit; JSON-LD for both centers
+12. ~~Scrape real assets from WordPress site~~ ✅ — favicon, logo, hero/facility/trainer photos
+13. ~~Lucide icons replacing emoji throughout~~ ✅
+14. ~~CI/CD + Vercel deploy workflows + pre-commit hooks~~ ✅
+15. **Next:** Custom domain `www.saludcbo.com` on Vercel
+16. _(Deferred)_ Contact/lead-magnet API route with Resend + `@astrojs/vercel` adapter
+17. _(Deferred)_ Consent-gated embeds (Instagram, reviews, Maps) + cookie consent banner
+18. _(Deferred)_ `/accesibilidad`, `/sitemap` HTML pages; testimonials collection; WCAG-AA audit; JSON-LD for both centers
 
 ## Open design note
 
-No brand assets have been provided yet. The initial build will use CBO's existing green ("Elige salud") as the single accent color on a neutral palette, with real logo and photography swapped in once the owner provides them.
+Brand assets have been scraped from the existing WordPress site — the favicon, SVG logo (`negro-cbo.svg`), and photography for hero sections, facilities, and the team page. The green brand palette from the original site has been kept and extended with an amber accent palette for CTA differentiation. Official brand guidelines from the owner are still pending.
+
+## Similar sites
+
+- https://trainingclub.es/
+- https://www.wellcentro.com/
+- https://clubmetropolitan.com/
+- https://www.weonclub.com/
+- https://innerflow.es/
