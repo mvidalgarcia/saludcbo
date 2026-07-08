@@ -8,6 +8,7 @@
     "email": "cbo.salud@gmail.com",
     "mapUrl": "https://maps.google.com/?q=P.+El+Castro+nave+2+Lugones+Asturias",
     "parking": true,
+    "image": "/images/cbo-0001.jpg",
     "services": ["entrenamiento", "entrenamiento-online", "nutricion", "fisioterapia", "pilates", "empresa-saludable"],
     "hours": [
       { "days": { "es": "Lunes a viernes", "en": "Monday to Friday" }, "time": "08:00 – 21:00" },
@@ -33,6 +34,7 @@
     "phone": "+34 667 828 851",
     "email": "cbo.salud@gmail.com",
     "parking": true,
+    "image": "/images/sala-pilates.jpg",
     "services": ["fisioterapia", "pilates"],
     "hours": [
       { "days": { "es": "Lunes a viernes", "en": "Monday to Friday" }, "time": "Por confirmar" },

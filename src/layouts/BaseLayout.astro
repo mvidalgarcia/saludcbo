@@ -37,7 +37,11 @@ const alternateUrl = new URL(alternatePath, Astro.site);
 
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang={lang === 'es' ? 'es-ES' : 'en-US'} href={canonicalUrl} />
-    <link rel="alternate" hreflang={alternateLang === 'es' ? 'es-ES' : 'en-US'} href={alternateUrl} />
+    <link
+      rel="alternate"
+      hreflang={alternateLang === 'es' ? 'es-ES' : 'en-US'}
+      href={alternateUrl}
+    />
     <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
 
     <!-- Open Graph -->
@@ -56,8 +60,8 @@ const alternateUrl = new URL(alternatePath, Astro.site);
     <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+    <link rel="apple-touch-icon" href="/favicon.jpg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,34 +72,41 @@ const alternateUrl = new URL(alternatePath, Astro.site);
     />
 
     <!-- JSON-LD LocalBusiness -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": ["HealthClub", "LocalBusiness"],
-      "name": "Salud CBO",
-      "url": "https://www.saludcbo.com",
-      "logo": "https://www.saludcbo.com/logo.svg",
-      "image": "https://www.saludcbo.com/og-image.jpg",
-      "description": "Centro de entrenamiento personal, fisioterapia, nutrición y pilates en Lugones, Asturias.",
-      "telephone": "+34667828851",
-      "email": "cbo.salud@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "P. El Castro, nave 2",
-        "addressLocality": "Lugones",
-        "addressRegion": "Asturias",
-        "addressCountry": "ES"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 43.44, "longitude": -5.84 },
-      "priceRange": "€€",
-      "sameAs": [
-        "https://www.instagram.com/cbo.salud",
-        "https://www.linkedin.com/company/cbosalud"
-      ]
-    })} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': ['HealthClub', 'LocalBusiness'],
+        name: 'Salud CBO',
+        url: 'https://www.saludcbo.com',
+        logo: 'https://www.saludcbo.com/logo.svg',
+        image: 'https://www.saludcbo.com/og-image.jpg',
+        description:
+          'Centro de entrenamiento personal, fisioterapia, nutrición y pilates en Lugones, Asturias.',
+        telephone: '+34667828851',
+        email: 'cbo.salud@gmail.com',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'P. El Castro, nave 2',
+          addressLocality: 'Lugones',
+          addressRegion: 'Asturias',
+          addressCountry: 'ES',
+        },
+        geo: { '@type': 'GeoCoordinates', latitude: 43.44, longitude: -5.84 },
+        priceRange: '€€',
+        sameAs: [
+          'https://www.instagram.com/cbo.salud',
+          'https://www.linkedin.com/company/cbosalud',
+        ],
+      })}
+    />
   </head>
 
   <body class="flex flex-col min-h-screen">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 btn-primary z-[100]">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 btn-primary z-[100]"
+    >
       {lang === 'es' ? 'Ir al contenido principal' : 'Skip to main content'}
     </a>
 

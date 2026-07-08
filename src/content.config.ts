@@ -42,8 +42,18 @@ const team = defineCollection({
     linkedin: z.string().optional(),
     instagram: z.string().optional(),
     translations: z.object({
-      es: z.object({ name: z.string(), role: z.string(), credentials: z.string(), bio: z.string() }),
-      en: z.object({ name: z.string(), role: z.string(), credentials: z.string(), bio: z.string() }),
+      es: z.object({
+        name: z.string(),
+        role: z.string(),
+        credentials: z.string(),
+        bio: z.string(),
+      }),
+      en: z.object({
+        name: z.string(),
+        role: z.string(),
+        credentials: z.string(),
+        bio: z.string(),
+      }),
     }),
   }),
 });
@@ -58,6 +68,7 @@ const centers = defineCollection({
     phone: z.string(),
     email: z.string(),
     mapUrl: z.string().optional(),
+    image: z.string().optional(),
     parking: z.boolean().default(true),
     services: z.array(z.string()),
     hours: z.array(z.object({ days: translatedText, time: z.string() })),
