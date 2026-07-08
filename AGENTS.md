@@ -1,6 +1,10 @@
 ## Critical Rules
 
 - **NEVER commit or push anything without explicit user confirmation.**
+  - Before any `git commit` or `git push`, stop and ask the user for approval.
+  - Even for small/simple changes. Even if the user just said "go" or "do it".
+  - Wait for a clear affirmative response like "yes, commit" or "go ahead" before proceeding.
+  - `git add` is fine to do autonomously — just don't commit or push without asking first.
 - **Branch is `main`, not `master` — workflows are configured for `main`.**
 
 ## Development
