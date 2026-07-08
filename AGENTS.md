@@ -1,3 +1,8 @@
+## Critical Rules
+
+- **NEVER commit or push anything without explicit user confirmation.**
+- **Branch is `main`, not `master` — workflows are configured for `main`.**
+
 ## Development
 
 When starting the dev server, use background mode:
