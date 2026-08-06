@@ -1,5 +1,5 @@
 ---
-import { MessageCircle, ArrowRight } from 'lucide-astro';
+import { MessageCircle } from 'lucide-astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
@@ -178,8 +178,8 @@ const base = lang === 'en' ? '/en' : '';
       <p class="text-brand-100 text-lg mb-8">
         {
           lang === 'es'
-            ? 'Solicita una valoración gratuita y damos el primer paso juntos.'
-            : "Request a free assessment and we'll take the first step together."
+            ? 'Solicita tu valoración y damos el primer paso juntos.'
+            : "Request your assessment and we'll take the first step together."
         }
       </p>
       <div class="flex flex-wrap justify-center gap-4">
