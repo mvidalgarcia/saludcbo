@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../lib/site';
 
 const lang = 'en' as const;
 ---
@@ -26,8 +27,8 @@ const lang = 'en' as const;
       <ul>
         <li><strong>Controller:</strong> Carlos Bernardo Osoro (Salud CBO)</li>
         <li><strong>Address:</strong> P. El Castro, nave 2, Lugones, Asturias, Spain</li>
-        <li><strong>Email:</strong> cbo.salud@gmail.com</li>
-        <li><strong>Phone:</strong> +34 667 828 851</li>
+        <li><strong>Email:</strong> {SITE.email}</li>
+        <li><strong>Phone:</strong> {SITE.phoneDisplay}</li>
       </ul>
 
       <h2>2. Data we collect and purposes</h2>
@@ -79,8 +80,8 @@ const lang = 'en' as const;
       </ul>
       <p>
         To exercise these rights, send an email to <a
-          href="mailto:cbo.salud@gmail.com"
-          class="text-brand-600 hover:text-brand-700">cbo.salud@gmail.com</a
+          href={`mailto:${SITE.email}`}
+          class="text-brand-600 hover:text-brand-700">{SITE.email}</a
         > with the subject line "GDPR Rights" and indicate the right you wish to exercise. You also have
         the right to lodge a complaint with the <a
           href="https://www.aepd.es"

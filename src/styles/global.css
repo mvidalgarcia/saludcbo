@@ -27,6 +27,9 @@
   --color-accent-800: #715628;
   --color-accent-900: #5c451f;
   --color-accent-950: #3e2f13;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #128c7e;
 }
 
 @layer base {

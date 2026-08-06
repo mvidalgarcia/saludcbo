@@ -81,6 +81,8 @@
   },
   "cta": {
     "primary": "Solicitar valoración gratuita",
+    "book": "Reserva tu valoración",
+    "bookMessage": "Hola, quiero reservar mi valoración inicial en CBO Salud.",
     "secondary": "Conocer el Método CBO",
     "whatsapp": "Escríbenos por WhatsApp",
     "call": "Llámanos",
@@ -142,7 +144,6 @@
     },
     "instagram": {
       "eyebrow": "Síguenos",
-      "title": "@cbo.saludyrendimiento",
       "subtitle": "Contenido educativo sobre nutrición, entrenamiento y salud. Recetas, ejercicios y mucho más."
     },
     "leadMagnet": {

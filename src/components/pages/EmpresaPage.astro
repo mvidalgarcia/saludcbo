@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { useTranslations } from '../../i18n/utils';
 import type { Lang } from '../../i18n/utils';
 import { getCollection } from 'astro:content';
+import { SITE } from '../../lib/site';
 
 const lang = (Astro.currentLocale ?? 'es') as Lang;
 const t = useTranslations(lang);
@@ -125,10 +126,10 @@ const tr = empresa?.data.translations[lang];
           {t('cta.requestInfo')}
         </a>
         <a
-          href="https://wa.me/34667828851"
+          href={SITE.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-2 bg-[#25D366] text-white font-semibold py-3.5 px-8 rounded-full hover:bg-[#128C7E] transition-colors"
+          class="flex items-center gap-2 bg-whatsapp text-white font-semibold py-3.5 px-8 rounded-full hover:bg-whatsapp-dark transition-colors"
         >
           <MessageCircle class="w-5 h-5" /> WhatsApp
         </a>

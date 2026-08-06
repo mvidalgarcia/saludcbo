@@ -3,6 +3,7 @@ import { MessageCircle, ArrowRight } from 'lucide-astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
+import { SITE } from '../lib/site';
 
 interface Props {
   lang: Lang;
@@ -70,7 +71,7 @@ const base = lang === 'en' ? '/en' : '';
         <a href={`${base}/contacto`} class="btn-primary text-base py-3.5 px-8">{t('cta.primary')}</a
         >
         <a
-          href="https://wa.me/34667828851"
+          href={SITE.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           class="btn-ghost-dark text-base py-3.5 px-8">{t('cta.whatsapp')}</a
@@ -189,7 +190,7 @@ const base = lang === 'en' ? '/en' : '';
           {t('cta.primary')}
         </a>
         <a
-          href="https://wa.me/34667828851"
+          href={SITE.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center gap-2 bg-white/20 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-white/30 transition-colors"

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../lib/site';
 
 const lang = 'es' as const;
 ---
@@ -26,8 +27,8 @@ const lang = 'es' as const;
       <ul>
         <li><strong>Responsable:</strong> Carlos Bernardo Osoro (Salud CBO)</li>
         <li><strong>Dirección:</strong> P. El Castro, nave 2, Lugones, Asturias, España</li>
-        <li><strong>Email:</strong> cbo.salud@gmail.com</li>
-        <li><strong>Teléfono:</strong> +34 667 828 851</li>
+        <li><strong>Email:</strong> {SITE.email}</li>
+        <li><strong>Teléfono:</strong> {SITE.phoneDisplay}</li>
       </ul>
 
       <h2>2. Datos que recogemos y finalidades</h2>
@@ -83,8 +84,8 @@ const lang = 'es' as const;
       </ul>
       <p>
         Para ejercer estos derechos, envíe un email a <a
-          href="mailto:cbo.salud@gmail.com"
-          class="text-brand-600 hover:text-brand-700">cbo.salud@gmail.com</a
+          href={`mailto:${SITE.email}`}
+          class="text-brand-600 hover:text-brand-700">{SITE.email}</a
         > con el asunto «Derechos RGPD» e indique el derecho que desea ejercer. Tiene derecho a presentar
         una reclamación ante la <a
           href="https://www.aepd.es"

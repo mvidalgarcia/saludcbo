@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../lib/site';
 
 const lang = 'en' as const;
 ---
@@ -31,8 +32,8 @@ const lang = 'en' as const;
         <li><strong>Owner:</strong> Carlos Bernardo Osoro</li>
         <li><strong>Trading name:</strong> Salud CBO</li>
         <li><strong>Address:</strong> P. El Castro, nave 2, Lugones, Asturias, Spain</li>
-        <li><strong>Contact email:</strong> cbo.salud@gmail.com</li>
-        <li><strong>Phone:</strong> +34 667 828 851</li>
+        <li><strong>Contact email:</strong> {SITE.email}</li>
+        <li><strong>Phone:</strong> {SITE.phoneDisplay}</li>
         <li><strong>Website:</strong> www.saludcbo.com</li>
       </ul>
 

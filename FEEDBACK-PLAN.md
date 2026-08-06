@@ -19,20 +19,19 @@
 The current `brand-*` scale was the bright Tailwind green (`#22c55e` → `#4ade80`), which reads neon/"Matrix".
 - Softened to a calmer, more organic health-green. `--color-brand-*` and `--color-accent-*` updated in `src/styles/global.css` (brand-500 `#51b885`, accent-500 `#b89251`).
 - Hardcoded leftover `#f0fdf4` in `ContactoPage.astro` switched to `bg-brand-50`.
-- Committed in `f2c04c9`.
+- Committed in `ad5685b`.
 
-### T-02 ☐ Always-visible conversion CTA (reserva tu valoración / WhatsApp)
+### T-02 ✅ Always-visible conversion CTA (reserva tu valoración / WhatsApp)
 **Feedback:** *"que constantemente aparezca un CTA de reserva tu valoración inicial o mensaje a nuestro whatsapp."*
-- We already have a floating `WhatsAppButton.astro` and a header CTA.
-- Make the "Reserva tu valoración inicial" CTA **persistent/omnipresent**: sticky header button on scroll, hero primary CTA, end-of-every-service CTA.
-- Decode the current header/hero CTA copy in `src/i18n/{es,en}.json` and standardize wording.
-- Confirm destination WhatsApp number + whether booking goes to a form, WhatsApp deep-link, or both.
+- Built `StickyActionBar.astro`: an always-visible floating pill (centered, all breakpoints) with **"Reserva tu valoración"** (opens WhatsApp with pre-filled `cta.bookMessage`) + a **WhatsApp** button.
+- Replaced the old corner `WhatsAppButton.astro` (deleted) and added bottom padding to `Footer.astro` so content is never hidden behind the bar.
+- Both CTAs use the shared `SITE` contact constants from `src/lib/site.ts`.
 
 ### T-03 ✅ Fix homepage services grid (orphaned last card)
 **Feedback:** *"los servicios no caben en una linea… aparecen 4 en la primera linea y 1 en la segunda. Igual mirar si podemos colocarlo mejor…"*
 - 5 main services are rendered on the homepage (empresa-saludable excluded). The `lg:grid-cols-4` grid produced a 4+1 wrap.
 - Changed to `lg:grid-cols-5` in `src/components/pages/IndexPage.astro` so all 5 fit on one line at desktop; 2 columns on tablet, 1 on mobile. Verified in browser (all 5 in a single row).
-- Committed in `f2c04c9`.
+- Committed in `ad5685b`.
 
 ### T-04 ☐ Upgrade iconography — more visual/aesthetic
 **Feedback:** *"iconografía más visual y estética".*
@@ -92,13 +91,12 @@ The current `brand-*` scale was the bright Tailwind green (`#22c55e` → `#4ade8
 
 ## Suggested execution order
 
-1. ✅ **T-01** palette → ✅ **T-03** grid fix → **T-02** CTA → **T-04** icons
+1. ✅ **T-01** palette → ✅ **T-03** grid fix → ✅ **T-02** CTA → **T-04** icons
 2. **T-10** center names (quick data fix) alongside anything touching `/centros`
 3. **T-07 / T-08 / T-09** once copy + pricing confirmed
 4. **T-05 / T-06 + T-11** once media + Google access provided
 
 ## Open questions for the group
-- Booking flow for the persistent CTA: WhatsApp deep-link, form, or both? Which number/account?
 - Full addresses for both centers + which location is "La Nave" vs "El Centro".
 - Current price list.
 - Review integration provider + access to both Google Business profiles.

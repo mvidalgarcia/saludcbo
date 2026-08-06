@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../lib/site';
 
 const lang = 'en' as const;
 ---
@@ -103,8 +104,8 @@ const lang = 'en' as const;
       <h2>5. More information</h2>
       <p>
         For any questions about our use of cookies, please contact us at <a
-          href="mailto:cbo.salud@gmail.com"
-          class="text-brand-600 hover:text-brand-700">cbo.salud@gmail.com</a
+          href={`mailto:${SITE.email}`}
+          class="text-brand-600 hover:text-brand-700">{SITE.email}</a
         >.
       </p>
       <p>

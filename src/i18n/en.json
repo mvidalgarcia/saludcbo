@@ -81,6 +81,8 @@
   },
   "cta": {
     "primary": "Book free assessment",
+    "book": "Book your assessment",
+    "bookMessage": "Hi, I would like to book my initial assessment at CBO Salud.",
     "secondary": "Learn about the CBO Method",
     "whatsapp": "Chat on WhatsApp",
     "call": "Call us",
@@ -142,7 +144,6 @@
     },
     "instagram": {
       "eyebrow": "Follow us",
-      "title": "@cbo.saludyrendimiento",
       "subtitle": "Educational content on nutrition, training and health. Recipes, exercises and more."
     },
     "leadMagnet": {
