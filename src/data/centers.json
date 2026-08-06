@@ -2,52 +2,69 @@
   {
     "id": "centro-1",
     "order": 1,
-    "address": "P. El Castro, nave 2, Lugones",
+    "address": "Avda de Gijón, 10 bajo",
     "city": "Lugones, Asturias",
     "phone": "+34 667 828 851",
     "email": "cbo.salud@gmail.com",
-    "mapUrl": "https://maps.google.com/?q=P.+El+Castro+nave+2+Lugones+Asturias",
+    "mapUrl": "https://maps.app.goo.gl/gNxqV7Pi9d8a5XFx5",
     "parking": true,
-    "image": "/images/cbo-0001.jpg",
-    "services": ["entrenamiento", "entrenamiento-online", "nutricion", "fisioterapia", "pilates", "empresa-saludable"],
+    "image": "/images/sala-pilates.jpg",
+    "services": ["entrenamiento", "nutricion", "pilates", "fisioterapia"],
     "hours": [
-      { "days": { "es": "Lunes a viernes", "en": "Monday to Friday" }, "time": "08:00 – 21:00" },
-      { "days": { "es": "Sábados", "en": "Saturday" }, "time": "09:00 – 14:00" },
-      { "days": { "es": "Domingos y festivos", "en": "Sundays & public holidays" }, "time": "Cerrado / Closed" }
+      {
+        "days": { "es": "Lunes a viernes", "en": "Monday to Friday" },
+        "time": { "es": "07:00 – 22:00", "en": "07:00 – 22:00" }
+      },
+      {
+        "days": { "es": "Sábados", "en": "Saturday" },
+        "time": { "es": "09:00 – 13:00", "en": "09:00 – 13:00" }
+      },
+      { "days": { "es": "Domingos", "en": "Sunday" }, "time": { "es": "Cerrado", "en": "Closed" } }
     ],
     "translations": {
       "es": {
-        "name": "CBO Health Training Center",
-        "description": "Nuestro centro principal en Lugones, detrás de Tartiere Auto. Equipado con zona de entrenamiento funcional, sala de fisioterapia, consulta de nutrición y estudio de pilates. Aparcamiento gratuito."
+        "name": "CBO Salud. El Centro",
+        "description": "Entrenamiento, Nutrición, Pilates y Fisioterapia en un mismo espacio. Nuevo centro en Lugones (Avda de Gijón, 10 bajo) diseñado para el pilates reformer y la rehabilitación."
       },
       "en": {
-        "name": "CBO Health Training Center",
-        "description": "Our main centre in Lugones, behind Tartiere Auto. Equipped with a functional training area, physiotherapy room, nutrition consultation room and pilates studio. Free parking."
+        "name": "CBO Salud. El Centro",
+        "description": "Training, nutrition, pilates and physiotherapy in one space. New centre in Lugones (Avda de Gijón, 10 bajo) designed for reformer pilates and rehabilitation."
       }
     }
   },
   {
     "id": "centro-2",
     "order": 2,
-    "address": "Lugones (dirección pendiente de confirmar)",
+    "address": "P. El Castro, nave 2, Lugones",
     "city": "Lugones, Asturias",
     "phone": "+34 667 828 851",
     "email": "cbo.salud@gmail.com",
+    "mapUrl": "https://maps.app.goo.gl/fpF74kzScJxqZF536",
     "parking": true,
-    "image": "/images/sala-pilates.jpg",
-    "services": ["fisioterapia", "pilates"],
+    "image": "/images/cbo-0001.jpg",
+    "services": ["entrenamiento", "entrenamiento-online", "nutricion", "empresa-saludable"],
     "hours": [
-      { "days": { "es": "Lunes a viernes", "en": "Monday to Friday" }, "time": "Por confirmar" },
-      { "days": { "es": "Sábados", "en": "Saturday" }, "time": "Por confirmar" }
+      {
+        "days": { "es": "Lunes a viernes", "en": "Monday to Friday" },
+        "time": { "es": "08:00 – 21:00", "en": "08:00 – 21:00" }
+      },
+      {
+        "days": { "es": "Sábados", "en": "Saturday" },
+        "time": { "es": "09:00 – 14:00", "en": "09:00 – 14:00" }
+      },
+      {
+        "days": { "es": "Domingos y festivos", "en": "Sundays & public holidays" },
+        "time": { "es": "Cerrado", "en": "Closed" }
+      }
     ],
     "translations": {
       "es": {
-        "name": "CBO Pilates & Fisioterapia",
-        "description": "Nuevo centro especializado en pilates reformer y fisioterapia. Espacio diseñado específicamente para la práctica del pilates y la rehabilitación. Detalles y horarios próximamente."
+        "name": "CBO Salud. La Nave",
+        "description": "Entrenamiento y Nutrición. Nuestro centro principal en Lugones, detrás de Tartiere Auto, con zona de entrenamiento funcional y consulta de nutrición."
       },
       "en": {
-        "name": "CBO Pilates & Physiotherapy",
-        "description": "New centre specialising in reformer pilates and physiotherapy. Space designed for pilates practice and rehabilitation. Details and opening hours coming soon."
+        "name": "CBO Salud. La Nave",
+        "description": "Training and nutrition. Our main centre in Lugones, behind Tartiere Auto, with a functional training area and nutrition consultation room. Free parking."
       }
     }
   }

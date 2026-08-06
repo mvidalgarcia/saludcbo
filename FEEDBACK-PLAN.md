@@ -72,13 +72,12 @@ The current `brand-*` scale was the bright Tailwind green (`#22c55e` → `#4ade8
 - Add Spanish/English copy in `src/i18n/{es,en}.json` and render on homepage (and possibly `/metodo`).
 - **Needs:** owner confirmation of ES/EN wording.
 
-### T-10 ☐ Rename the two centers
+### T-10 ✅ Rename the two centers
 **Feedback:** *"Centro 1 y Centro 2 son: CBO Salud. La Nave y CBO Salud. El Centro."*
-- Update `src/data/centers.json`:
-  - `centro-1` name → **"CBO Salud. La Nave"**
-  - `centro-2` name → **"CBO Salud. El Centro"**
-- Update both `translations.es.name` and `translations.en.name` (and any hardcoded references).
-- **Needs:** confirm which physical location maps to which name + both full addresses.
+- Order (Centro 1 first): `centro-1` → **"CBO Salud. El Centro"** (`Avda de Gijón, 10 bajo, Lugones` — training, nutrition, pilates & physiotherapy). `centro-2` → **"CBO Salud. La Nave"** (`P. El Castro, nave 2, Lugones` — training & nutrition, main centre behind Tartiere Auto).
+- Updated both `translations.es.name` and `translations.en.name` + `mapUrl` (owner-provided Google Maps short links).
+- Refactored the homepage centres block in `IndexPage.astro` to render from the `centers` collection (removed hardcoded names/"Próximamente"). `/centros` and `/` both sort by `order` (Centro 1 = El Centro).
+- **Needs:** confirm El Centro street address = Avda de Gijón, 10 bajo (matches BORME registry for CBO SALUD FISIOTERAPIA SL).
 
 ## P3 — Structural / technical
 
@@ -92,12 +91,12 @@ The current `brand-*` scale was the bright Tailwind green (`#22c55e` → `#4ade8
 ## Suggested execution order
 
 1. ✅ **T-01** palette → ✅ **T-03** grid fix → ✅ **T-02** CTA → **T-04** icons
-2. **T-10** center names (quick data fix) alongside anything touching `/centros`
+2. ✅ **T-10** center names (quick data fix) alongside anything touching `/centros`
 3. **T-07 / T-08 / T-09** once copy + pricing confirmed
 4. **T-05 / T-06 + T-11** once media + Google access provided
 
 ## Open questions for the group
-- Full addresses for both centers + which location is "La Nave" vs "El Centro".
+- ✅ Full addresses for both centers: **La Nave** = P. El Castro, nave 2, Lugones; **El Centro** = Avda de Gijón, 10 bajo, Lugones (pending owner confirmation of the latter).
 - Current price list.
 - Review integration provider + access to both Google Business profiles.
 - Shareable photo/video assets (URLs preferred).

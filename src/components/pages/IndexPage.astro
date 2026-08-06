@@ -1,13 +1,5 @@
 ---
-import {
-  MapPin,
-  ParkingCircle,
-  Phone,
-  MessageCircle,
-  FileText,
-  ClipboardList,
-  ArrowRight,
-} from 'lucide-astro';
+import { MapPin, ParkingCircle, Phone, MessageCircle, FileText, ArrowRight } from 'lucide-astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ServiceCard from '../ServiceCard.astro';
 import { useTranslations } from '../../i18n/utils';
@@ -23,6 +15,9 @@ const servicesData = await getCollection('services');
 const mainServices = servicesData
   .filter((s) => s.id !== 'empresa-saludable')
   .sort((a, b) => a.data.order - b.data.order);
+
+const centersData = await getCollection('centers');
+const sortedCenters = centersData.sort((a, b) => a.data.order - b.data.order);
 
 const testimonials = [
   {
@@ -222,68 +217,80 @@ const testimonials = [
       </div>
 
       <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-        <div class="bg-brand-950 text-white rounded-3xl p-8">
-          <div class="text-brand-400 font-semibold text-sm uppercase tracking-widest mb-4">
-            Centro 1
-          </div>
-          <h3 class="text-xl font-bold mb-2">CBO Health Training Center</h3>
-          <p class="text-brand-300 text-sm mb-5">
-            P. El Castro, nave 2<br />Lugones, Asturias<br />
-            {lang === 'es' ? 'Detrás de Tartiere Auto' : 'Behind Tartiere Auto'}
-          </p>
-          <p class="flex items-center gap-1.5 text-brand-400 text-xs mb-1">
-            <ParkingCircle class="w-3.5 h-3.5" />{
-              lang === 'es' ? 'Aparcamiento gratuito' : 'Free parking'
-            }
-          </p>
-          <p class="flex items-center gap-1.5 text-brand-400 text-xs mb-6">
-            <ClipboardList class="w-3.5 h-3.5" />{
-              lang === 'es' ? 'Cita previa necesaria' : 'Appointment required'
-            }
-          </p>
-          <div class="flex flex-col gap-2">
-            <a
-              href={SITE.phoneTel}
-              class="flex items-center gap-2 text-brand-300 hover:text-white text-sm transition-colors"
-              ><Phone class="w-4 h-4" /> {SITE.phoneDisplay}</a
-            >
-            <a
-              href="https://maps.google.com/?q=P.+El+Castro+nave+2+Lugones+Asturias"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-2 text-brand-300 hover:text-white text-sm transition-colors"
-            >
-              <MapPin class="w-4 h-4" />{
-                lang === 'es' ? 'Ver en Google Maps' : 'View on Google Maps'
-              }
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white border border-brand-100 rounded-3xl p-8">
-          <div class="text-brand-600 font-semibold text-sm uppercase tracking-widest mb-4">
-            Centro 2
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">
-            CBO Pilates & {lang === 'es' ? 'Fisioterapia' : 'Physiotherapy'}
-          </h3>
-          <p class="text-gray-500 text-sm mb-5">
-            Lugones, Asturias<br />
-            <span class="text-brand-600 font-medium"
-              >{
-                lang === 'es'
-                  ? 'Próximamente — detalles por confirmar'
-                  : 'Coming soon — details to be confirmed'
-              }</span
-            >
-          </p>
-          <p class="flex items-center gap-1.5 text-gray-500 text-xs mb-6">
-            <ParkingCircle class="w-3.5 h-3.5" />{
-              lang === 'es' ? 'Aparcamiento gratuito' : 'Free parking'
-            }
-          </p>
-          <a href={`${base}/centros`} class="btn-outline text-sm py-2.5">{t('home.centers.cta')}</a>
-        </div>
+        {
+          sortedCenters.map((center, i) => {
+            const tr = center.data.translations[lang];
+            const dark = i % 2 === 0;
+            return (
+              <div
+                class:list={[
+                  'rounded-3xl p-8',
+                  dark ? 'bg-brand-950 text-white' : 'bg-white border border-brand-100',
+                ]}
+              >
+                <div
+                  class:list={[
+                    'font-semibold text-sm uppercase tracking-widest mb-4',
+                    dark ? 'text-brand-400' : 'text-brand-600',
+                  ]}
+                >
+                  {lang === 'es' ? `Centro ${center.data.order}` : `Centre ${center.data.order}`}
+                </div>
+                <h3 class:list={['text-xl font-bold mb-2', dark ? '' : 'text-gray-900']}>
+                  {tr.name}
+                </h3>
+                <p class:list={['text-sm mb-5', dark ? 'text-brand-300' : 'text-gray-500']}>
+                  {center.data.address}
+                  <br />
+                  {center.data.city}
+                </p>
+                {center.data.parking && (
+                  <p
+                    class:list={[
+                      'flex items-center gap-1.5 text-xs mb-6',
+                      dark ? 'text-brand-400' : 'text-gray-500',
+                    ]}
+                  >
+                    <ParkingCircle class="w-3.5 h-3.5" />
+                    {t('centros.parking')}
+                  </p>
+                )}
+                <div class="flex flex-col gap-2">
+                  <a
+                    href={`tel:${center.data.phone}`}
+                    class:list={[
+                      'flex items-center gap-2 text-sm transition-colors',
+                      dark
+                        ? 'text-brand-300 hover:text-white'
+                        : 'text-brand-700 hover:text-brand-900',
+                    ]}
+                  >
+                    <Phone class="w-4 h-4" /> {center.data.phone}
+                  </a>
+                  {center.data.mapUrl && (
+                    <a
+                      href={center.data.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class:list={[
+                        'flex items-center gap-2 text-sm transition-colors',
+                        dark
+                          ? 'text-brand-300 hover:text-white'
+                          : 'text-brand-700 hover:text-brand-900',
+                      ]}
+                    >
+                      <MapPin class="w-4 h-4" />
+                      {t('centros.directions')}
+                    </a>
+                  )}
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+      <div class="text-center mt-10">
+        <a href={`${base}/centros`} class="btn-outline text-sm py-2.5">{t('home.centers.cta')}</a>
       </div>
     </div>
   </section>

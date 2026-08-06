@@ -78,7 +78,7 @@ const sortedCenters = centers.sort((a, b) => a.data.order - b.data.order);
                     {center.data.hours.map((h) => (
                       <div class="flex justify-between text-sm">
                         <span class="text-gray-700">{h.days[lang]}</span>
-                        <span class="text-gray-500 font-medium">{h.time}</span>
+                        <span class="text-gray-500 font-medium">{h.time[lang]}</span>
                       </div>
                     ))}
                   </div>
