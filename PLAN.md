@@ -74,7 +74,7 @@ The existing site is built on **WordPress + Elementor** (confirmed via markup: `
 - Business: **Salud CBO** (Carlos Bernardo Osoro), Wellness/Fitness, est. ~2022, headquartered Oviedo/Lugones, Asturias.
 - Currently expanding to **2 centers** in Lugones (per LinkedIn: new Pilates Reformer + Fisioterapia center hiring underway).
 - Contact: `+34 667 828 851`, `cbo.salud@gmail.com`, address "P. El Castro, nave 2, Lugones (detrás de Tartiere Auto)".
-- Social: Instagram `@cbo.saludyrendimiento`, LinkedIn.
+- Social: Instagram `@cbosalud`, LinkedIn.
 - Trust signals: 19 Google reviews ("EXCELENTE"), 10 years / 1000+ people helped.
 - Owner's stated goals: fit the site to "now" (2 centers, 360º health/wellness, EP + Fisio + Nutri + Pilates), cleaner/minimalist, better CTAs, and shift emphasis from Berni personally to **Equipo CBO** for growth.
 
