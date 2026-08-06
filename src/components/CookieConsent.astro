@@ -1,0 +1,63 @@
+---
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const base = lang === 'en' ? '/en' : '';
+---
+
+<div
+  id="cookie-consent-banner"
+  hidden
+  role="dialog"
+  aria-label={t('cookies.banner.title')}
+  class="fixed bottom-24 inset-x-0 z-50 flex justify-center px-4 pointer-events-none"
+>
+  <div
+    class="pointer-events-auto w-full max-w-md bg-white rounded-2xl shadow-2xl border border-gray-100 p-5"
+  >
+    <p class="font-bold text-gray-900 mb-1">{t('cookies.banner.title')}</p>
+    <p class="text-sm text-gray-500 mb-4">{t('cookies.banner.message')}</p>
+    <div class="flex items-center justify-between gap-3">
+      <a
+        href={`${base}/cookies`}
+        class="text-xs text-brand-600 hover:text-brand-700 underline underline-offset-2"
+        >{t('cookies.banner.policy')}</a
+      >
+      <div class="flex gap-2 shrink-0">
+        <button id="cookie-reject" type="button" class="btn-ghost text-xs py-2 px-4">
+          {t('cookies.banner.reject')}
+        </button>
+        <button id="cookie-accept" type="button" class="btn-primary text-xs py-2 px-4">
+          {t('cookies.banner.accept')}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const banner = document.getElementById('cookie-consent-banner');
+    if (!banner || document.cookie.includes('cookie_consent=')) return;
+
+    banner.hidden = false;
+
+    const setConsent = (value: 'accepted' | 'rejected') => {
+      document.cookie = `cookie_consent=${value}; max-age=${60 * 60 * 24 * 365}; path=/`;
+      banner.hidden = true;
+    };
+
+    document
+      .getElementById('cookie-accept')
+      ?.addEventListener('click', () => setConsent('accepted'));
+    document
+      .getElementById('cookie-reject')
+      ?.addEventListener('click', () => setConsent('rejected'));
+  })();
+</script>

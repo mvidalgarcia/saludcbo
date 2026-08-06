@@ -81,9 +81,15 @@ The current `brand-*` scale was the bright Tailwind green (`#22c55e` → `#4ade8
 
 ## P3 — Structural / technical
 
-### T-11 ☐ Cookie consent + consent-gated embeds
+### T-11 ◐ Cookie consent + consent-gated embeds
 - Needed to legally embed Google reviews, Maps, and video (EU GDPR) per the original revamp plan.
-- Build `CookieConsent.astro` + gate the embeds introduced in T-05/T-06.
+- ✅ Built `CookieConsent.astro` (super basic banner, ES/EN via i18n): sets `cookie_consent=accepted|rejected` cookie (12 months, matches `/cookies` policy), no flash, wired into `BaseLayout`.
+- ☐ Gate the embeds introduced in T-05/T-06 (no embeds live yet — maps are plain links).
+- 📌 **Future use of the value (decided 2026-08-06):** nothing currently reads `cookie_consent` — it's write-only (banner just checks existence). When third-party embeds arrive:
+  - `accepted` → load embed. `rejected` / absent → do NOT load; show placeholder ("Acepta cookies para cargar el mapa") or fall back to plain link.
+  - Build a shared helper `src/lib/cookieConsent.ts` (`getConsent()`, `setConsent()`, a `consentChanged` custom event) so the banner + all gated components share one source.
+  - Build a reusable `ConsentGate` wrapper (or `data-consent="third-party"` attribute + one small script) that only renders embeds when `getConsent() === 'accepted'` and listens for `consentChanged` to load mid-session without reload.
+  - The `cookie_consent` technical cookie itself is strictly necessary (no consent needed to store the choice) — consistent with `/cookies` policy.
 - (Deferred from the original build; becomes required once reviews/video are live.)
 
 ---

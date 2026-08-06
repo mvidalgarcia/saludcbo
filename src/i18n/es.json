@@ -316,5 +316,14 @@
         "subtitle": "Programas de entrenamiento y nutrición corporativos para impulsar la salud y el rendimiento de tu equipo."
       }
     }
+  },
+  "cookies": {
+    "banner": {
+      "title": "Este sitio utiliza cookies",
+      "message": "Usamos cookies propias y de terceros para mejorar tu experiencia en la web. Puedes aceptar o rechazar su uso.",
+      "accept": "Aceptar",
+      "reject": "Rechazar",
+      "policy": "Política de cookies"
+    }
   }
 }
