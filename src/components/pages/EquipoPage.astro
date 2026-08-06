@@ -38,7 +38,7 @@ const sortedTeam = team.sort((a, b) => a.data.order - b.data.order);
             const tr = member.data.translations[lang];
             return (
               <div class="bg-white rounded-3xl overflow-hidden border border-brand-100 shadow-sm">
-                <div class="aspect-[4/3] bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center overflow-hidden">
+                <div class="aspect-[3/4] bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center overflow-hidden">
                   {member.data.photo ? (
                     <img
                       src={member.data.photo}
@@ -74,7 +74,7 @@ const sortedTeam = team.sort((a, b) => a.data.order - b.data.order);
             { role: lang === 'es' ? 'Profesora de Pilates' : 'Pilates Instructor', initials: 'PI' },
           ].map((p) => (
             <div class="bg-white rounded-3xl overflow-hidden border border-dashed border-brand-200">
-              <div class="aspect-[4/3] bg-brand-50 flex items-center justify-center">
+              <div class="aspect-[3/4] bg-brand-50 flex items-center justify-center">
                 <div class="text-brand-300 text-5xl font-extrabold">{p.initials}</div>
               </div>
               <div class="p-6">
