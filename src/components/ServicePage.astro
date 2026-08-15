@@ -42,31 +42,24 @@ const base = lang === 'en' ? '/en' : '';
 
 <BaseLayout lang={lang} title={metaTitle} description={metaDescription}>
   <!-- Hero -->
-  <section class="bg-brand-950 py-24 lg:py-32 relative overflow-hidden">
-    <div
-      class="absolute inset-0 bg-gradient-to-r from-brand-950/95 via-brand-950/85 to-brand-950/70 z-10 pointer-events-none"
-    >
-    </div>
+  <section class="bg-white py-24 lg:py-32 relative overflow-hidden">
     {
       heroImage && (
         <img
           src={heroImage}
           alt=""
-          class="absolute inset-0 w-full h-full object-cover"
+          class="absolute inset-0 w-full h-full object-cover opacity-[0.15]"
           aria-hidden="true"
           loading="eager"
         />
       )
     }
-    <div
-      class="absolute inset-0 opacity-[0.06] z-10 pointer-events-none"
-      style="background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 40px 40px;"
-    >
-    </div>
     <div class="container-main relative z-20 max-w-3xl">
-      <p class="eyebrow-light mb-5">{heroEyebrow}</p>
-      <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">{heroTitle}</h1>
-      <p class="text-brand-200 text-xl leading-relaxed mb-10 max-w-2xl">{heroSubtitle}</p>
+      <p class="eyebrow mb-5">{heroEyebrow}</p>
+      <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+        {heroTitle}
+      </h1>
+      <p class="text-gray-500 text-xl leading-relaxed mb-10 max-w-2xl">{heroSubtitle}</p>
       <div class="flex flex-wrap gap-4">
         <a href={`${base}/contacto`} class="btn-primary text-base py-3.5 px-8">{t('cta.primary')}</a
         >
@@ -130,7 +123,7 @@ const base = lang === 'en' ? '/en' : '';
           <div class="grid sm:grid-cols-2 gap-7">
             {process.map((step, i) => (
               <div class="flex gap-5">
-                <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold text-sm shrink-0">
+                <div class="w-10 h-10 rounded-full bg-brand-50 text-brand-700 flex items-center justify-center font-bold text-sm shrink-0 border border-brand-200">
                   {i + 1}
                 </div>
                 <div>
@@ -170,12 +163,12 @@ const base = lang === 'en' ? '/en' : '';
   }
 
   <!-- CTA -->
-  <section class="section-pad bg-brand-600">
+  <section class="section-pad bg-white border-t border-gray-100">
     <div class="container-main text-center max-w-2xl mx-auto">
-      <h2 class="text-3xl font-extrabold text-white mb-4">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-4">
         {lang === 'es' ? '¿Empezamos?' : 'Ready to start?'}
       </h2>
-      <p class="text-brand-100 text-lg mb-8">
+      <p class="text-gray-500 text-lg mb-8">
         {
           lang === 'es'
             ? 'Solicita tu valoración y damos el primer paso juntos.'
@@ -185,7 +178,7 @@ const base = lang === 'en' ? '/en' : '';
       <div class="flex flex-wrap justify-center gap-4">
         <a
           href={`${base}/contacto`}
-          class="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold py-3.5 px-8 rounded-full hover:bg-brand-50 transition-colors"
+          class="inline-flex items-center gap-2 bg-brand-600 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-brand-700 transition-colors"
         >
           {t('cta.primary')}
         </a>
@@ -193,7 +186,7 @@ const base = lang === 'en' ? '/en' : '';
           href={SITE.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-2 bg-white/20 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-white/30 transition-colors"
+          class="flex items-center gap-2 bg-whatsapp text-white font-semibold py-3.5 px-8 rounded-full hover:bg-whatsapp-dark transition-colors"
         >
           <MessageCircle class="w-5 h-5" /> WhatsApp
         </a>

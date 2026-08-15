@@ -58,7 +58,7 @@
   }
 
   .btn-ghost-dark {
-    @apply inline-flex items-center gap-2 text-brand-300 hover:text-white font-semibold py-3 px-5 rounded-full hover:bg-white/10 transition-colors duration-200 whitespace-nowrap;
+    @apply inline-flex items-center gap-2 text-brand-700 hover:text-brand-800 font-semibold py-3 px-5 rounded-full hover:bg-brand-50 transition-colors duration-200 whitespace-nowrap;
   }
 
   .btn-ghost {
@@ -78,7 +78,7 @@
   }
 
   .eyebrow-light {
-    @apply text-brand-300 font-semibold text-sm uppercase tracking-widest;
+    @apply text-brand-600 font-semibold text-sm uppercase tracking-widest;
   }
 
   .section-title {
@@ -86,7 +86,7 @@
   }
 
   .section-title-light {
-    @apply text-3xl lg:text-4xl font-extrabold text-white leading-tight;
+    @apply text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight;
   }
 
   .section-subtitle {
@@ -94,6 +94,6 @@
   }
 
   .section-subtitle-light {
-    @apply text-lg text-brand-200 leading-relaxed;
+    @apply text-lg text-gray-500 leading-relaxed;
   }
 }

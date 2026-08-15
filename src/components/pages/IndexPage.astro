@@ -46,35 +46,27 @@ const testimonials = [
 
 <BaseLayout lang={lang} title={t('meta.home.title')} description={t('meta.home.description')}>
   <!-- ═══════════ HERO ═══════════ -->
-  <section class="relative bg-brand-950 overflow-hidden">
-    <div
-      class="absolute inset-0 bg-gradient-to-r from-brand-950/95 via-brand-950/85 to-brand-950/70 z-10 pointer-events-none"
-    >
-    </div>
+  <section class="relative bg-white overflow-hidden">
     <img
       src="/images/hero-training.jpg"
       alt=""
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-0 w-full h-full object-cover opacity-[0.15]"
       aria-hidden="true"
       loading="eager"
     />
-    <div
-      class="absolute inset-0 opacity-[0.06] z-10 pointer-events-none"
-      style="background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 40px 40px;"
-    >
-    </div>
-
     <div class="container-main relative z-20 py-24 lg:py-36">
       <div class="max-w-3xl">
-        <p class="eyebrow-light mb-6">{t('home.hero.eyebrow')}</p>
+        <p class="eyebrow mb-6">{t('home.hero.eyebrow')}</p>
 
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] mb-8">
+        <h1
+          class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.05] mb-8"
+        >
           {t('home.hero.heading1')}<br />
           {t('home.hero.heading2')}{' '}
-          <span class="text-brand-400">{t('home.hero.headingAccent')}</span>
+          <span class="text-brand-600">{t('home.hero.headingAccent')}</span>
         </h1>
 
-        <p class="text-lg lg:text-xl text-brand-200 leading-relaxed mb-10 max-w-2xl">
+        <p class="text-lg lg:text-xl text-gray-500 leading-relaxed mb-10 max-w-2xl">
           {t('home.hero.subtitle')}
         </p>
 
@@ -95,8 +87,8 @@ const testimonials = [
               { value: t('home.hero.stat3Value'), label: t('home.hero.stat3Label') },
             ].map((stat) => (
               <div>
-                <p class="text-4xl font-extrabold text-white">{stat.value}</p>
-                <p class="text-brand-300 text-sm mt-1">{stat.label}</p>
+                <p class="text-4xl font-extrabold text-gray-900">{stat.value}</p>
+                <p class="text-gray-500 text-sm mt-1">{stat.label}</p>
               </div>
             ))
           }
@@ -220,37 +212,19 @@ const testimonials = [
         {
           sortedCenters.map((center, i) => {
             const tr = center.data.translations[lang];
-            const dark = i % 2 === 0;
             return (
-              <div
-                class:list={[
-                  'rounded-3xl p-8',
-                  dark ? 'bg-brand-950 text-white' : 'bg-white border border-brand-100',
-                ]}
-              >
-                <div
-                  class:list={[
-                    'font-semibold text-sm uppercase tracking-widest mb-4',
-                    dark ? 'text-brand-400' : 'text-brand-600',
-                  ]}
-                >
+              <div class="rounded-3xl p-8 bg-white border border-gray-100 shadow-sm">
+                <div class="font-semibold text-sm uppercase tracking-widest mb-4 text-brand-600">
                   {lang === 'es' ? `Centro ${center.data.order}` : `Centre ${center.data.order}`}
                 </div>
-                <h3 class:list={['text-xl font-bold mb-2', dark ? '' : 'text-gray-900']}>
-                  {tr.name}
-                </h3>
-                <p class:list={['text-sm mb-5', dark ? 'text-brand-300' : 'text-gray-500']}>
+                <h3 class="text-xl font-bold mb-2 text-gray-900">{tr.name}</h3>
+                <p class="text-sm mb-5 text-gray-500">
                   {center.data.address}
                   <br />
                   {center.data.city}
                 </p>
                 {center.data.parking && (
-                  <p
-                    class:list={[
-                      'flex items-center gap-1.5 text-xs mb-6',
-                      dark ? 'text-brand-400' : 'text-gray-500',
-                    ]}
-                  >
+                  <p class="flex items-center gap-1.5 text-xs mb-6 text-gray-500">
                     <ParkingCircle class="w-3.5 h-3.5" />
                     {t('centros.parking')}
                   </p>
@@ -258,12 +232,7 @@ const testimonials = [
                 <div class="flex flex-col gap-2">
                   <a
                     href={`tel:${center.data.phone}`}
-                    class:list={[
-                      'flex items-center gap-2 text-sm transition-colors',
-                      dark
-                        ? 'text-brand-300 hover:text-white'
-                        : 'text-brand-700 hover:text-brand-900',
-                    ]}
+                    class="flex items-center gap-2 text-sm transition-colors text-brand-700 hover:text-brand-900"
                   >
                     <Phone class="w-4 h-4" /> {center.data.phone}
                   </a>
@@ -272,12 +241,7 @@ const testimonials = [
                       href={center.data.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class:list={[
-                        'flex items-center gap-2 text-sm transition-colors',
-                        dark
-                          ? 'text-brand-300 hover:text-white'
-                          : 'text-brand-700 hover:text-brand-900',
-                      ]}
+                      class="flex items-center gap-2 text-sm transition-colors text-brand-700 hover:text-brand-900"
                     >
                       <MapPin class="w-4 h-4" />
                       {t('centros.directions')}
@@ -364,12 +328,12 @@ const testimonials = [
   </section>
 
   <!-- ═══════════ LEAD MAGNET ═══════════ -->
-  <section class="section-pad bg-brand-950">
+  <section class="section-pad bg-white border-t border-gray-100">
     <div class="container-main">
       <div class="max-w-2xl mx-auto text-center">
-        <p class="eyebrow-light mb-4">{t('home.leadMagnet.eyebrow')}</p>
-        <h2 class="section-title-light mb-5">{t('home.leadMagnet.title')}</h2>
-        <p class="text-brand-200 text-lg leading-relaxed mb-8">
+        <p class="eyebrow mb-4">{t('home.leadMagnet.eyebrow')}</p>
+        <h2 class="section-title mb-5">{t('home.leadMagnet.title')}</h2>
+        <p class="text-gray-500 text-lg leading-relaxed mb-8">
           {t('home.leadMagnet.description')}
         </p>
         <a href={`${base}/contacto`} class="btn-primary text-base py-3.5 px-8"
@@ -380,17 +344,17 @@ const testimonials = [
   </section>
 
   <!-- ═══════════ FINAL CTA ═══════════ -->
-  <section class="section-pad bg-brand-600">
+  <section class="section-pad bg-white border-t border-gray-100">
     <div class="container-main text-center">
-      <h2 class="text-3xl lg:text-4xl font-extrabold text-white mb-4">
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">
         {t('home.finalCta.title')}
       </h2>
-      <p class="text-brand-100 text-lg mb-10 max-w-xl mx-auto">{t('home.finalCta.subtitle')}</p>
+      <p class="text-gray-500 text-lg mb-10 max-w-xl mx-auto">{t('home.finalCta.subtitle')}</p>
 
       <div class="flex flex-wrap justify-center gap-4">
         <a
           href={SITE.phoneTel}
-          class="inline-flex items-center gap-2 bg-white text-brand-700 font-semibold py-3 px-7 rounded-full hover:bg-brand-50 transition-colors"
+          class="inline-flex items-center gap-2 bg-brand-600 text-white font-semibold py-3 px-7 rounded-full hover:bg-brand-700 transition-colors"
         >
           <Phone class="w-5 h-5" />{t('home.finalCta.ctaPhone')}
         </a>
@@ -404,7 +368,7 @@ const testimonials = [
         </a>
         <a
           href={`${base}/contacto`}
-          class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold py-3 px-7 rounded-full hover:bg-white/10 transition-colors"
+          class="inline-flex items-center gap-2 border-2 border-brand-600 text-brand-700 font-semibold py-3 px-7 rounded-full hover:bg-brand-50 transition-colors"
         >
           {t('home.finalCta.ctaContact')}
         </a>

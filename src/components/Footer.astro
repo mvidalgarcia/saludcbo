@@ -44,37 +44,37 @@ const legalLinks = [
 ];
 ---
 
-<footer class="bg-brand-950 text-brand-100">
+<footer class="bg-white text-gray-900 border-t border-gray-100">
   <div class="container-main pt-16 lg:pt-20 pb-32 lg:pb-28">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
       <!-- Brand -->
       <div class="lg:col-span-1">
         <a href={base || '/'} class="inline-block mb-4">
-          <img src="/logo.svg" alt="Salud CBO" class="h-12 w-auto brightness-0 invert" />
+          <img src="/logo.svg" alt="Salud CBO" class="h-12 w-auto" />
         </a>
-        <p class="text-brand-300 text-sm leading-relaxed mb-6">{t('footer.tagline')}</p>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">{t('footer.tagline')}</p>
 
         <div class="space-y-2 text-sm">
-          <p class="flex items-center gap-2 text-brand-200">
-            <MapPin class="w-4 h-4 text-brand-400 shrink-0" />
+          <p class="flex items-center gap-2 text-gray-600">
+            <MapPin class="w-4 h-4 text-brand-600 shrink-0" />
             {t('footer.address')}
           </p>
-          <p class="flex items-center gap-2 text-brand-200">
-            <ParkingCircle class="w-4 h-4 text-brand-400 shrink-0" />
+          <p class="flex items-center gap-2 text-gray-600">
+            <ParkingCircle class="w-4 h-4 text-brand-600 shrink-0" />
             {t('footer.freeParking')}
           </p>
           <a
             href={SITE.phoneTel}
-            class="flex items-center gap-2 text-brand-200 hover:text-white transition-colors"
+            class="flex items-center gap-2 text-gray-600 hover:text-brand-700 transition-colors"
           >
-            <Phone class="w-4 h-4 text-brand-400 shrink-0" />
+            <Phone class="w-4 h-4 text-brand-600 shrink-0" />
             {t('footer.phone')}
           </a>
           <a
             href={`mailto:${SITE.email}`}
-            class="flex items-center gap-2 text-brand-200 hover:text-white transition-colors"
+            class="flex items-center gap-2 text-gray-600 hover:text-brand-700 transition-colors"
           >
-            <Mail class="w-4 h-4 text-brand-400 shrink-0" />
+            <Mail class="w-4 h-4 text-brand-600 shrink-0" />
             {t('footer.email')}
           </a>
         </div>
@@ -82,7 +82,7 @@ const legalLinks = [
 
       <!-- Services -->
       <div>
-        <h3 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">
+        <h3 class="text-gray-900 font-semibold text-sm uppercase tracking-widest mb-5">
           {t('footer.services')}
         </h3>
         <ul class="space-y-2.5">
@@ -91,7 +91,7 @@ const legalLinks = [
               <li>
                 <a
                   href={link.href}
-                  class="text-brand-300 hover:text-white text-sm transition-colors"
+                  class="text-gray-500 hover:text-brand-700 text-sm transition-colors"
                 >
                   {link.label}
                 </a>
@@ -103,7 +103,7 @@ const legalLinks = [
 
       <!-- Company -->
       <div>
-        <h3 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">
+        <h3 class="text-gray-900 font-semibold text-sm uppercase tracking-widest mb-5">
           {t('footer.company')}
         </h3>
         <ul class="space-y-2.5">
@@ -112,7 +112,7 @@ const legalLinks = [
               <li>
                 <a
                   href={link.href}
-                  class="text-brand-300 hover:text-white text-sm transition-colors"
+                  class="text-gray-500 hover:text-brand-700 text-sm transition-colors"
                 >
                   {link.label}
                 </a>
@@ -124,7 +124,7 @@ const legalLinks = [
 
       <!-- Social + Legal -->
       <div>
-        <h3 class="text-white font-semibold text-sm uppercase tracking-widest mb-5">
+        <h3 class="text-gray-900 font-semibold text-sm uppercase tracking-widest mb-5">
           {t('footer.followUs')}
         </h3>
         <div class="flex flex-col gap-3 mb-8">
@@ -132,7 +132,7 @@ const legalLinks = [
             href={SITE.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2.5 text-brand-300 hover:text-white text-sm transition-colors"
+            class="flex items-center gap-2.5 text-gray-500 hover:text-brand-700 text-sm transition-colors"
           >
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -145,7 +145,7 @@ const legalLinks = [
             href="https://es.linkedin.com/company/cbosalud"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2.5 text-brand-300 hover:text-white text-sm transition-colors"
+            class="flex items-center gap-2.5 text-gray-500 hover:text-brand-700 text-sm transition-colors"
           >
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -158,7 +158,7 @@ const legalLinks = [
             href={SITE.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2.5 text-brand-300 hover:text-white text-sm transition-colors"
+            class="flex items-center gap-2.5 text-gray-500 hover:text-brand-700 text-sm transition-colors"
           >
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -169,7 +169,7 @@ const legalLinks = [
           </a>
         </div>
 
-        <h3 class="text-white font-semibold text-sm uppercase tracking-widest mb-4">
+        <h3 class="text-gray-900 font-semibold text-sm uppercase tracking-widest mb-4">
           {t('footer.legal')}
         </h3>
         <ul class="space-y-2">
@@ -178,7 +178,7 @@ const legalLinks = [
               <li>
                 <a
                   href={link.href}
-                  class="text-brand-400 hover:text-white text-xs transition-colors"
+                  class="text-gray-400 hover:text-brand-700 text-xs transition-colors"
                 >
                   {link.label}
                 </a>
@@ -191,10 +191,10 @@ const legalLinks = [
 
     <!-- Bottom bar -->
     <div
-      class="border-t border-brand-800 pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
+      class="border-t border-gray-100 pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
     >
-      <p class="text-brand-500 text-xs">{t('footer.copyright')} · {new Date().getFullYear()}</p>
-      <p class="text-brand-600 text-xs max-w-md text-right leading-relaxed">
+      <p class="text-gray-400 text-xs">{t('footer.copyright')} · {new Date().getFullYear()}</p>
+      <p class="text-gray-400 text-xs max-w-md text-right leading-relaxed">
         {t('footer.funding')}
       </p>
     </div>
