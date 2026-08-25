@@ -25,10 +25,6 @@
       "title": "Personal Training & Injury Rehab | Salud CBO",
       "description": "Personal training, injury rehabilitation and small group training in Lugones, Asturias. Fully individualised, evidence-based."
     },
-    "entrenamiento-online": {
-      "title": "Online Training | CBO App | Salud CBO",
-      "description": "Train from anywhere with the CBO App. Individualised programme, continuous monitoring and initial mobility and strength assessment."
-    },
     "nutricion": {
       "title": "Nutrition | Salud CBO",
       "description": "In-person and online nutrition consultations in Lugones, Asturias. Individualised diet plans, body composition testing and continuous follow-up."
@@ -49,7 +45,6 @@
   "nav": {
     "services": "Services",
     "training": "Personal Training",
-    "trainingOnline": "Online Training",
     "nutrition": "Nutrition",
     "physio": "Physiotherapy",
     "pilates": "Pilates",
@@ -264,16 +259,6 @@
         "eyebrow": "Training",
         "title": "Personal Training & Injury Rehab",
         "subtitle": "Evidence-based methodology, 100% adapted to you. In-person, small-group and online training."
-      }
-    },
-    "entrenamiento-online": {
-      "title": "Online Training",
-      "shortTitle": "Online",
-      "tagline": "Train from anywhere, with the same level of support.",
-      "hero": {
-        "eyebrow": "CBO App",
-        "title": "Online Training",
-        "subtitle": "Access your personalised plan from anywhere via the CBO App, with continuous specialist monitoring."
       }
     },
     "nutricion": {

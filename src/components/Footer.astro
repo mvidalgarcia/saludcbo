@@ -17,10 +17,6 @@ const svcSlug = (es: string, en: string) => (lang === 'en' ? en : es);
 
 const serviceLinks = [
   { href: `${svcBase}/${svcSlug('entrenamiento', 'training')}`, label: t('nav.training') },
-  {
-    href: `${svcBase}/${svcSlug('entrenamiento-online', 'online-training')}`,
-    label: t('nav.trainingOnline'),
-  },
   { href: `${svcBase}/${svcSlug('nutricion', 'nutrition')}`, label: t('nav.nutrition') },
   { href: `${svcBase}/${svcSlug('fisioterapia', 'physiotherapy')}`, label: t('nav.physio') },
   { href: `${svcBase}/pilates`, label: t('nav.pilates') },

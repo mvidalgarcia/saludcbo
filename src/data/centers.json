@@ -42,7 +42,7 @@
     "mapUrl": "https://maps.app.goo.gl/fpF74kzScJxqZF536",
     "parking": true,
     "image": "/images/cbo-0001.jpg",
-    "services": ["entrenamiento", "entrenamiento-online", "nutricion", "empresa-saludable"],
+    "services": ["entrenamiento", "nutricion", "empresa-saludable"],
     "hours": [
       {
         "days": { "es": "Lunes a viernes", "en": "Monday to Friday" },

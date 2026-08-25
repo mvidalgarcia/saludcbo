@@ -25,10 +25,6 @@
       "title": "Entrenamiento Personal y Readaptación | Salud CBO",
       "description": "Entrenamiento personal, readaptación de lesiones y grupos reducidos en Lugones, Asturias. Individualizado, basado en evidencia científica."
     },
-    "entrenamiento-online": {
-      "title": "Entrenamiento Online | App CBO | Salud CBO",
-      "description": "Entrena desde donde estés con la App CBO. Planificación individualizada, seguimiento continuo y valoración inicial de movilidad y fuerza."
-    },
     "nutricion": {
       "title": "Nutrición | Salud CBO",
       "description": "Consulta de nutrición presencial y online en Lugones, Asturias. Planes dietéticos individualizados, composición corporal y seguimiento continuo."
@@ -49,7 +45,6 @@
   "nav": {
     "services": "Servicios",
     "training": "Entrenamiento",
-    "trainingOnline": "Entrenamiento Online",
     "nutrition": "Nutrición",
     "physio": "Fisioterapia",
     "pilates": "Pilates",
@@ -264,16 +259,6 @@
         "eyebrow": "Entrenamiento",
         "title": "Entrenamiento Personal y Readaptación",
         "subtitle": "Metodología basada en la evidencia científica, adaptada al 100% a ti. Entrenamiento presencial, en grupos reducidos y online."
-      }
-    },
-    "entrenamiento-online": {
-      "title": "Entrenamiento Online",
-      "shortTitle": "Online",
-      "tagline": "Entrena desde donde estés, con el mismo nivel de seguimiento.",
-      "hero": {
-        "eyebrow": "App CBO",
-        "title": "Entrenamiento Online",
-        "subtitle": "Accede a tu plan personalizado desde cualquier lugar a través de la App CBO, con seguimiento continuo de tu especialista."
       }
     },
     "nutricion": {

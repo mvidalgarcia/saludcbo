@@ -46,7 +46,6 @@ const enToEsSegments: Record<string, string> = Object.fromEntries(
 // Maps ES service slugs → EN service slugs
 const esSlugToEn: Record<string, string> = {
   entrenamiento: 'training',
-  'entrenamiento-online': 'online-training',
   nutricion: 'nutrition',
   fisioterapia: 'physiotherapy',
   pilates: 'pilates',

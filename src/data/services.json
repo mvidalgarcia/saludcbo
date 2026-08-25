@@ -52,58 +52,6 @@
     }
   },
   {
-    "id": "entrenamiento-online",
-    "icon": "smartphone",
-    "order": 2,
-    "slug": { "es": "entrenamiento-online", "en": "online-training" },
-    "translations": {
-      "es": {
-        "title": "Entrenamiento Online",
-        "shortTitle": "Online",
-        "tagline": "Entrena desde donde estés, con el mismo nivel de seguimiento.",
-        "description": "A través de la App CBO llegamos a donde estés. Valoración inicial, planificación personalizada y seguimiento continuo de tu entrenador desde cualquier lugar. La misma calidad que el entrenamiento presencial, adaptada a tu horario y tus posibilidades.",
-        "features": [
-          "Acceso completo a la App CBO",
-          "Valoración inicial de movilidad y fuerza por vídeo",
-          "Programa de entrenamiento completamente personalizado",
-          "Sesiones de cardio, movilidad y fuerza planificadas",
-          "Seguimiento y feedback continuo del entrenador",
-          "Adaptación continua del programa según tu evolución",
-          "Comunicación directa con tu especialista",
-          "Registro de progreso y evolución"
-        ],
-        "process": [
-          { "title": "Contacto inicial", "body": "Nos cuentas tu objetivo y hacemos una valoración inicial a través de un cuestionario y un vídeo." },
-          { "title": "Planificación", "body": "Diseñamos tu programa de entrenamiento personalizado basándonos en los resultados de la valoración y tu objetivo." },
-          { "title": "Entrenamiento con app", "body": "Recibes tu programa en la App CBO con todas las sesiones detalladas: ejercicios, series, repeticiones y vídeos." },
-          { "title": "Seguimiento continuo", "body": "Tu entrenador revisa tu progreso, responde tus dudas y adapta el programa de forma continua." }
-        ]
-      },
-      "en": {
-        "title": "Online Training",
-        "shortTitle": "Online",
-        "tagline": "Train from anywhere, with the same level of support.",
-        "description": "Through the CBO App we reach wherever you are. Initial assessment, personalised planning and continuous trainer monitoring from anywhere. The same quality as in-person training, adapted to your schedule and circumstances.",
-        "features": [
-          "Full access to the CBO App",
-          "Initial mobility and strength assessment via video",
-          "Fully personalised training programme",
-          "Planned cardio, mobility and strength sessions",
-          "Continuous trainer monitoring and feedback",
-          "Continuous programme adaptation based on your progress",
-          "Direct communication with your specialist",
-          "Progress and evolution tracking"
-        ],
-        "process": [
-          { "title": "Initial contact", "body": "You tell us your goal and we do an initial assessment through a questionnaire and a mobility and strength video." },
-          { "title": "Planning", "body": "We design your personalised training programme based on the assessment results and your goal." },
-          { "title": "Training with the app", "body": "You receive your programme on the CBO App with all sessions detailed: exercises, sets, reps and explanatory videos." },
-          { "title": "Continuous monitoring", "body": "Your trainer reviews your progress, answers your questions and continuously adapts the programme." }
-        ]
-      }
-    }
-  },
-  {
     "id": "nutricion",
     "icon": "apple",
     "order": 3,

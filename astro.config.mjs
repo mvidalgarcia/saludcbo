@@ -26,4 +26,8 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  redirects: {
+    '/servicios/entrenamiento-online': '/servicios/entrenamiento',
+    '/en/services/online-training': '/en/services/training',
+  },
 });

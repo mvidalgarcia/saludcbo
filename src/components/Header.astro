@@ -1,5 +1,5 @@
 ---
-import { Dumbbell, Smartphone, Salad, Handshake, PersonStanding, Globe } from 'lucide-astro';
+import { Dumbbell, Salad, Handshake, PersonStanding, Globe } from 'lucide-astro';
 import { useTranslations, getAlternatePath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 
@@ -31,11 +31,6 @@ const services = [
     href: `${svcBase}/${svcSlug('entrenamiento', 'training')}`,
     label: t('nav.training'),
     icon: Dumbbell,
-  },
-  {
-    href: `${svcBase}/${svcSlug('entrenamiento-online', 'online-training')}`,
-    label: t('nav.trainingOnline'),
-    icon: Smartphone,
   },
   {
     href: `${svcBase}/${svcSlug('nutricion', 'nutrition')}`,
