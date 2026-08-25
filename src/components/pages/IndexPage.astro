@@ -214,9 +214,6 @@ const testimonials = [
             const tr = center.data.translations[lang];
             return (
               <div class="rounded-3xl p-8 bg-white border border-gray-100 shadow-sm">
-                <div class="font-semibold text-sm uppercase tracking-widest mb-4 text-brand-600">
-                  {lang === 'es' ? `Centro ${center.data.order}` : `Centre ${center.data.order}`}
-                </div>
                 <h3 class="text-xl font-bold mb-2 text-gray-900">{tr.name}</h3>
                 <p class="text-sm mb-5 text-gray-500">
                   {center.data.address}
@@ -324,22 +321,6 @@ const testimonials = [
         >
         {lang === 'es' ? 'Seguir en Instagram' : 'Follow on Instagram'}
       </a>
-    </div>
-  </section>
-
-  <!-- ═══════════ LEAD MAGNET ═══════════ -->
-  <section class="section-pad bg-white border-t border-gray-100">
-    <div class="container-main">
-      <div class="max-w-2xl mx-auto text-center">
-        <p class="eyebrow mb-4">{t('home.leadMagnet.eyebrow')}</p>
-        <h2 class="section-title mb-5">{t('home.leadMagnet.title')}</h2>
-        <p class="text-gray-500 text-lg leading-relaxed mb-8">
-          {t('home.leadMagnet.description')}
-        </p>
-        <a href={`${base}/contacto`} class="btn-primary text-base py-3.5 px-8"
-          ><FileText class="w-5 h-5" />{t('home.leadMagnet.cta')}</a
-        >
-      </div>
     </div>
   </section>
 
