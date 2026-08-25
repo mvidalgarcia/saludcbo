@@ -310,25 +310,32 @@
           "name": "Personal Training",
           "single": "Single session",
           "pack": "4-session pack",
-          "perSession": "per session"
+          "perSession": "per session",
+          "unit": "/session"
         },
         "physio": {
           "name": "Physiotherapy",
           "single": "Single session",
           "pack": "4-session pack",
           "perSession": "per session",
-          "clientNote": "CBO clients: always 35€ per session, no pack needed"
+          "unit": "/session",
+          "clientNote": "CBO clients: always 35€ per session, no pack needed",
+          "clientPriceLabel": "CBO client price",
+          "clientDescription": "CBO clients. No pack needed.",
+          "nonClient": "Non-client: "
         },
         "nutrition": {
           "name": "Nutrition",
           "first": "First consultation",
-          "followup": "Follow-up"
+          "followup": "Follow-up",
+          "unit": "/consultation"
         },
         "pilates": {
           "name": "Pilates",
           "single": "Single class",
           "pack": "10-class pack",
-          "perSession": "per class"
+          "perSession": "per class",
+          "unit": "/class"
         }
       },
       "clientHighlight": {

@@ -38,7 +38,7 @@ const tariffs = tr.services.tarifas;
           </div>
           <div class="mb-6">
             <span class="text-5xl font-extrabold text-gray-900">40€</span>
-            <span class="text-gray-500 ml-1">/sesión</span>
+            <span class="text-gray-500 ml-1">{tariffs.services.training.unit}</span>
           </div>
           <ul class="space-y-3 mb-8 flex-1">
             <li class="flex items-start gap-3 text-sm text-gray-700">
@@ -47,8 +47,10 @@ const tariffs = tr.services.tarifas;
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-700">
               <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              {tariffs.services.training.pack}: <strong class="text-gray-900">35€</strong>
-              {tariffs.services.training.perSession}
+              <span
+                >{tariffs.services.training.pack}: <strong class="text-gray-900">35€</strong>{' '}
+                {tariffs.services.training.perSession}</span
+              >
             </li>
           </ul>
         </div>
@@ -60,15 +62,25 @@ const tariffs = tr.services.tarifas;
           <span
             class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-full"
           >
-            {lang === 'es' ? 'Clientes CBO: 35€ siempre' : 'CBO clients: always 35€'}
+            {tariffs.services.physio.clientPriceLabel}
           </span>
           <div class="flex items-center gap-3 mb-4">
             <span class="text-2xl">🩺</span>
             <h3 class="text-xl font-bold text-gray-900">{tariffs.services.physio.name}</h3>
           </div>
+          <div class="mb-2">
+            <span class="text-5xl font-extrabold text-brand-700">35€</span>
+            <span class="text-gray-500 ml-1">{tariffs.services.physio.unit}</span>
+          </div>
+          <p class="text-sm text-gray-500 mb-6">
+            {tariffs.services.physio.clientDescription}
+          </p>
           <div class="mb-6">
-            <span class="text-5xl font-extrabold text-gray-900">40€</span>
-            <span class="text-gray-500 ml-1">/sesión</span>
+            <p class="text-sm text-gray-500">
+              {tariffs.services.physio.nonClient}
+              <strong class="text-gray-700">40€</strong>
+              <span class="text-gray-400">{tariffs.services.physio.unit}</span>
+            </p>
           </div>
           <ul class="space-y-3 mb-8 flex-1">
             <li class="flex items-start gap-3 text-sm text-gray-700">
@@ -77,12 +89,10 @@ const tariffs = tr.services.tarifas;
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-700">
               <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              {tariffs.services.physio.pack}: <strong class="text-gray-900">35€</strong>
-              {tariffs.services.physio.perSession}
-            </li>
-            <li class="flex items-start gap-3 text-sm text-brand-700 font-medium">
-              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              {tariffs.services.physio.clientNote}
+              <span
+                >{tariffs.services.physio.pack}: <strong class="text-gray-900">35€</strong>{' '}
+                {tariffs.services.physio.perSession}</span
+              >
             </li>
           </ul>
         </div>
@@ -97,7 +107,7 @@ const tariffs = tr.services.tarifas;
           </div>
           <div class="mb-6">
             <span class="text-5xl font-extrabold text-gray-900">50€</span>
-            <span class="text-gray-500 ml-1">/consulta</span>
+            <span class="text-gray-500 ml-1">{tariffs.services.nutrition.unit}</span>
           </div>
           <ul class="space-y-3 mb-8 flex-1">
             <li class="flex items-start gap-3 text-sm text-gray-700">
@@ -121,7 +131,7 @@ const tariffs = tr.services.tarifas;
           </div>
           <div class="mb-6">
             <span class="text-5xl font-extrabold text-gray-900">15€</span>
-            <span class="text-gray-500 ml-1">/clase</span>
+            <span class="text-gray-500 ml-1">{tariffs.services.pilates.unit}</span>
           </div>
           <ul class="space-y-3 mb-8 flex-1">
             <li class="flex items-start gap-3 text-sm text-gray-700">
@@ -130,8 +140,10 @@ const tariffs = tr.services.tarifas;
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-700">
               <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              {tariffs.services.pilates.pack}: <strong class="text-gray-900">12€</strong>
-              {tariffs.services.pilates.perSession}
+              <span
+                >{tariffs.services.pilates.pack}: <strong class="text-gray-900">12€</strong>{' '}
+                {tariffs.services.pilates.perSession}</span
+              >
             </li>
           </ul>
         </div>

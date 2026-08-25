@@ -310,25 +310,32 @@
           "name": "Entrenamiento Personal",
           "single": "Sesión suelta",
           "pack": "Bono 4 sesiones",
-          "perSession": "por sesión"
+          "perSession": "por sesión",
+          "unit": "/sesión"
         },
         "physio": {
           "name": "Fisioterapia",
           "single": "Sesión suelta",
           "pack": "Bono 4 sesiones",
           "perSession": "por sesión",
-          "clientNote": "Clientes CBO: siempre 35€ por sesión sin necesidad de bono"
+          "unit": "/sesión",
+          "clientNote": "Clientes CBO: siempre 35€ por sesión sin necesidad de bono",
+          "clientPriceLabel": "Precio para clientes CBO",
+          "clientDescription": "Clientes CBO. Sin necesidad de bono.",
+          "nonClient": "No cliente: "
         },
         "nutrition": {
           "name": "Nutrición",
           "first": "Primera consulta",
-          "followup": "Seguimiento"
+          "followup": "Seguimiento",
+          "unit": "/consulta"
         },
         "pilates": {
           "name": "Pilates",
           "single": "Clase suelta",
           "pack": "Bono 10 clases",
-          "perSession": "por clase"
+          "perSession": "por clase",
+          "unit": "/clase"
         }
       },
       "clientHighlight": {
