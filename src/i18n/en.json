@@ -40,6 +40,10 @@
     "empresa": {
       "title": "Corporate Wellness | Salud CBO",
       "description": "Corporate health and wellness programmes in Asturias. Nutrition and training for businesses. Healthier employees, stronger companies."
+    },
+    "tarifas": {
+      "title": "Pricing | Salud CBO",
+      "description": "Discover our pricing for personal training, physiotherapy, nutrition and pilates in Lugones, Asturias. No commitment."
     }
   },
   "nav": {
@@ -52,6 +56,7 @@
     "team": "Team",
     "corporate": "Corporate Wellness",
     "centers": "Centres",
+    "pricing": "Pricing",
     "contact": "Contact",
     "cta": "Book assessment"
   },
@@ -292,6 +297,70 @@
         "eyebrow": "Corporate wellness",
         "title": "Corporate Wellness",
         "subtitle": "Corporate training and nutrition programmes to boost your team's health and performance."
+      }
+    },
+    "tarifas": {
+      "hero": {
+        "eyebrow": "Our prices",
+        "title": "Pricing",
+        "subtitle": "Transparent pricing, no surprises. If you're a client, you get benefits on physiotherapy."
+      },
+      "services": {
+        "training": {
+          "name": "Personal Training",
+          "single": "Single session",
+          "pack": "4-session pack",
+          "perSession": "per session"
+        },
+        "physio": {
+          "name": "Physiotherapy",
+          "single": "Single session",
+          "pack": "4-session pack",
+          "perSession": "per session",
+          "clientNote": "CBO clients: always 35€ per session, no pack needed"
+        },
+        "nutrition": {
+          "name": "Nutrition",
+          "first": "First consultation",
+          "followup": "Follow-up"
+        },
+        "pilates": {
+          "name": "Pilates",
+          "single": "Single class",
+          "pack": "10-class pack",
+          "perSession": "per class"
+        }
+      },
+      "clientHighlight": {
+        "title": "Already a client?",
+        "subtitle": "If you have any active service with us, your physiotherapy sessions are always at the pack price: 35€. No need to buy anything extra."
+      },
+      "faq": {
+        "title": "FAQ",
+        "heading": "Have questions?",
+        "items": [
+          {
+            "q": "What if I'm already a CBO Salud client?",
+            "a": "If you're already a client of any service (training, nutrition or pilates), your physiotherapy sessions always have the pack price: 35€ per session. No need to buy a separate pack."
+          },
+          {
+            "q": "Do packs have an expiration date?",
+            "a": "Packs are valid for 3 months from the purchase date."
+          },
+          {
+            "q": "Can I combine services?",
+            "a": "Yes, you can combine any service. If you're a client of one, you get benefits on physiotherapy."
+          },
+          {
+            "q": "Are prices inclusive of VAT?",
+            "a": "Yes, all our prices include VAT."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to start?",
+        "subtitle": "Write to us and we'll help you choose the best option for you.",
+        "button": "Talk to us"
       }
     }
   },

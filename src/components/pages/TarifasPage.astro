@@ -1,0 +1,141 @@
+---
+import { Check } from 'lucide-astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations } from '../../i18n/utils';
+import type { Lang } from '../../i18n/utils';
+import es from '../../i18n/es.json';
+import en from '../../i18n/en.json';
+
+const lang = (Astro.currentLocale ?? 'es') as Lang;
+const t = useTranslations(lang);
+const tr = lang === 'es' ? es : en;
+const tariffs = tr.services.tarifas;
+---
+
+<BaseLayout lang={lang} title={t('meta.tarifas.title')} description={t('meta.tarifas.description')}>
+  {/* Hero */}
+  <section class="bg-brand-50 py-24 lg:py-28 border-b border-brand-100">
+    <div class="container-main text-center max-w-2xl mx-auto">
+      <p class="eyebrow mb-5">{tariffs.hero.eyebrow}</p>
+      <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-5">
+        {tariffs.hero.title}
+      </h1>
+      <p class="section-subtitle text-xl">{tariffs.hero.subtitle}</p>
+    </div>
+  </section>
+
+  {/* Pricing Cards */}
+  <section class="section-pad bg-white">
+    <div class="container-main max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8">
+        {/* Entrenamiento Personal */}
+        <div
+          class="flex flex-col p-8 rounded-3xl border-2 border-gray-200 hover:border-brand-300 hover:shadow-md transition-all duration-200"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🏋️</span>
+            <h3 class="text-xl font-bold text-gray-900">{tariffs.services.training.name}</h3>
+          </div>
+          <div class="mb-6">
+            <span class="text-5xl font-extrabold text-gray-900">40€</span>
+            <span class="text-gray-500 ml-1">/sesión</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+              {tariffs.services.training.single}
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+              {tariffs.services.training.pack}: <strong class="text-gray-900">35€</strong>
+              {tariffs.services.training.perSession}
+            </li>
+          </ul>
+        </div>
+
+        {/* Fisioterapia */}
+        <div
+          class="relative flex flex-col p-8 rounded-3xl border-2 border-brand-400 bg-brand-50 shadow-lg scale-[1.02]"
+        >
+          <span
+            class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-full"
+          >
+            {lang === 'es' ? 'Clientes CBO: 35€ siempre' : 'CBO clients: always 35€'}
+          </span>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🩺</span>
+            <h3 class="text-xl font-bold text-gray-900">{tariffs.services.physio.name}</h3>
+          </div>
+          <div class="mb-6">
+            <span class="text-5xl font-extrabold text-gray-900">40€</span>
+            <span class="text-gray-500 ml-1">/sesión</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+              {tariffs.services.physio.single}
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+              {tariffs.services.physio.pack}: <strong class="text-gray-900">35€</strong>
+              {tariffs.services.physio.perSession}
+            </li>
+            <li class="flex items-start gap-3 text-sm text-brand-700 font-medium">
+              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+              {tariffs.services.physio.clientNote}
+            </li>
+          </ul>
+        </div>
+
+        {/* Nutrición */}
+        <div
+          class="flex flex-col p-8 rounded-3xl border-2 border-gray-200 hover:border-brand-300 hover:shadow-md transition-all duration-200"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🥗</span>
+            <h3 class="text-xl font-bold text-gray-900">{tariffs.services.nutrition.name}</h3>
+          </div>
+          <div class="mb-6">
+            <span class="text-5xl font-extrabold text-gray-900">50€</span>
+            <span class="text-gray-500 ml-1">/consulta</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+              {tariffs.services.nutrition.first}
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+              {tariffs.services.nutrition.followup}: <strong class="text-gray-900">40€</strong>
+            </li>
+          </ul>
+        </div>
+
+        {/* Pilates */}
+        <div
+          class="flex flex-col p-8 rounded-3xl border-2 border-gray-200 hover:border-brand-300 hover:shadow-md transition-all duration-200"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🧘</span>
+            <h3 class="text-xl font-bold text-gray-900">{tariffs.services.pilates.name}</h3>
+          </div>
+          <div class="mb-6">
+            <span class="text-5xl font-extrabold text-gray-900">15€</span>
+            <span class="text-gray-500 ml-1">/clase</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+              {tariffs.services.pilates.single}
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+              {tariffs.services.pilates.pack}: <strong class="text-gray-900">12€</strong>
+              {tariffs.services.pilates.perSession}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

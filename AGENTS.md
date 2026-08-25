@@ -6,6 +6,7 @@
   - Wait for a clear affirmative response like "yes, commit" or "go ahead" before proceeding.
   - `git add` is fine to do autonomously — just don't commit or push without asking first.
 - **Branch is `main`, not `master` — workflows are configured for `main`.**
+- **Always use i18n files (`src/i18n/es.json`, `src/i18n/en.json`) for all user-facing text.** Never hardcode strings in components — add keys to the JSON files and reference them via `t()`. This includes hero text, feature labels, FAQs, meta tags, and any other visible copy.
 
 ## Development
 

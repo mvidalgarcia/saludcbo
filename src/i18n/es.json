@@ -40,6 +40,10 @@
     "empresa": {
       "title": "Empresa Saludable | Salud CBO",
       "description": "Programas de salud y bienestar corporativo en Asturias. Nutrición y entrenamiento para empresas. Empleados más sanos, empresas más fuertes."
+    },
+    "tarifas": {
+      "title": "Tarifas | Salud CBO",
+      "description": "Descubre nuestras tarifas de entrenamiento personal, fisioterapia, nutrición y pilates en Lugones, Asturias. Sin permanencia."
     }
   },
   "nav": {
@@ -52,6 +56,7 @@
     "team": "Equipo",
     "corporate": "Empresa Saludable",
     "centers": "Centros",
+    "pricing": "Tarifas",
     "contact": "Contacto",
     "cta": "Solicitar valoración"
   },
@@ -292,6 +297,70 @@
         "eyebrow": "Bienestar corporativo",
         "title": "Empresa Saludable",
         "subtitle": "Programas de entrenamiento y nutrición corporativos para impulsar la salud y el rendimiento de tu equipo."
+      }
+    },
+    "tarifas": {
+      "hero": {
+        "eyebrow": "Nuestros precios",
+        "title": "Tarifas",
+        "subtitle": "Precios transparentes, sin sorpresas. Si eres cliente, tienes ventajas en fisioterapia."
+      },
+      "services": {
+        "training": {
+          "name": "Entrenamiento Personal",
+          "single": "Sesión suelta",
+          "pack": "Bono 4 sesiones",
+          "perSession": "por sesión"
+        },
+        "physio": {
+          "name": "Fisioterapia",
+          "single": "Sesión suelta",
+          "pack": "Bono 4 sesiones",
+          "perSession": "por sesión",
+          "clientNote": "Clientes CBO: siempre 35€ por sesión sin necesidad de bono"
+        },
+        "nutrition": {
+          "name": "Nutrición",
+          "first": "Primera consulta",
+          "followup": "Seguimiento"
+        },
+        "pilates": {
+          "name": "Pilates",
+          "single": "Clase suelta",
+          "pack": "Bono 10 clases",
+          "perSession": "por clase"
+        }
+      },
+      "clientHighlight": {
+        "title": "¿Ya eres cliente?",
+        "subtitle": "Si tienes cualquier servicio activo con nosotros, tus sesiones de fisioterapia siempre son a precio de bono: 35€. Sin necesidad de comprar nada extra."
+      },
+      "faq": {
+        "title": "Preguntas frecuentes",
+        "heading": "¿Tienes dudas?",
+        "items": [
+          {
+            "q": "¿Qué pasa si soy cliente de CBO Salud?",
+            "a": "Si ya eres cliente de cualquier servicio (entrenamiento, nutrición o pilates), tus sesiones de fisioterapia siempre tienen el precio de bono: 35€ por sesión. No necesitas comprar un bono aparte."
+          },
+          {
+            "q": "¿Los bonos tienen caducidad?",
+            "a": "Los bonos son válidos durante 3 meses desde la fecha de compra."
+          },
+          {
+            "q": "¿Puedo combinar servicios?",
+            "a": "Sí, puedes combinar cualquier servicio. Si eres cliente de uno, obtienes ventajas en fisioterapia."
+          },
+          {
+            "q": "¿Los precios incluyen IVA?",
+            "a": "Sí, todos nuestros precios incluyen IVA."
+          }
+        ]
+      },
+      "cta": {
+        "title": "¿Listo para empezar?",
+        "subtitle": "Escríbenos y te ayudamos a elegir la mejor opción para ti.",
+        "button": "Habla con nosotros"
       }
     }
   },
