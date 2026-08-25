@@ -86,8 +86,7 @@
     "meetTeam": "Meet the team",
     "seeServices": "See services",
     "ourCenters": "Our centres",
-    "requestInfo": "Request information",
-    "downloadPdf": "Download free PDF"
+    "requestInfo": "Request information"
   },
   "home": {
     "hero": {
@@ -140,12 +139,6 @@
     "instagram": {
       "eyebrow": "Follow us",
       "subtitle": "Educational content on nutrition, training and health. Recipes, exercises and more."
-    },
-    "leadMagnet": {
-      "eyebrow": "Free download",
-      "title": "5 Fundamental Pillars for Burning Fat",
-      "description": "A practical, evidence-based guide. No tricks, no miracle diets. Just what actually works to lose fat and gain health.",
-      "cta": "Download free PDF"
     },
     "finalCta": {
       "title": "Ready to start achieving your goals together?",

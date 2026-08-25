@@ -86,8 +86,7 @@
     "meetTeam": "Conocer el equipo",
     "seeServices": "Ver servicios",
     "ourCenters": "Nuestros centros",
-    "requestInfo": "Solicitar información",
-    "downloadPdf": "Descargar PDF gratuito"
+    "requestInfo": "Solicitar información"
   },
   "home": {
     "hero": {
@@ -140,12 +139,6 @@
     "instagram": {
       "eyebrow": "Síguenos",
       "subtitle": "Contenido educativo sobre nutrición, entrenamiento y salud. Recetas, ejercicios y mucho más."
-    },
-    "leadMagnet": {
-      "eyebrow": "Descarga gratuita",
-      "title": "5 Pilares fundamentales para quemar grasa",
-      "description": "Una guía práctica basada en evidencia científica. Sin trucos, sin dietas milagro. Solo lo que realmente funciona para perder grasa y ganar salud.",
-      "cta": "Descargar PDF gratuito"
     },
     "finalCta": {
       "title": "¿Empezamos a conseguir metas juntos?",
