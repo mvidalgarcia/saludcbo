@@ -1,8 +1,9 @@
 ---
-import { Check } from 'lucide-astro';
+import { Check, ArrowRight } from 'lucide-astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { useTranslations } from '../../i18n/utils';
 import type { Lang } from '../../i18n/utils';
+import { SITE } from '../../lib/site';
 import es from '../../i18n/es.json';
 import en from '../../i18n/en.json';
 
@@ -24,128 +25,136 @@ const tariffs = tr.services.tarifas;
     </div>
   </section>
 
-  {/* Pricing Cards */}
+  {/* Valoración inicial + Entrenamiento personal */}
   <section class="section-pad bg-white">
-    <div class="container-main max-w-5xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-8">
-        {/* Entrenamiento Personal */}
-        <div
-          class="flex flex-col p-8 rounded-3xl border-2 border-gray-200 hover:border-brand-300 hover:shadow-md transition-all duration-200"
-        >
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">🏋️</span>
-            <h3 class="text-xl font-bold text-gray-900">{tariffs.services.training.name}</h3>
-          </div>
-          <div class="mb-6">
-            <span class="text-5xl font-extrabold text-gray-900">40€</span>
-            <span class="text-gray-500 ml-1">{tariffs.services.training.unit}</span>
-          </div>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="flex items-start gap-3 text-sm text-gray-700">
-              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              {tariffs.services.training.single}
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-700">
-              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              <span
-                >{tariffs.services.training.pack}: <strong class="text-gray-900">35€</strong>{' '}
-                {tariffs.services.training.perSession}</span
-              >
-            </li>
-          </ul>
+    <div class="container-main max-w-4xl mx-auto space-y-6">
+      {/* Valoración inicial */}
+      <div
+        class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-8 rounded-3xl border-2 border-gray-200"
+      >
+        <div>
+          <h3 class="text-xl font-bold text-gray-900">{tariffs.initial.name}</h3>
+          <p class="text-gray-500 text-sm mt-1">{tariffs.initial.description}</p>
         </div>
+        <span class="text-2xl font-extrabold text-brand-600">{tariffs.initial.price}</span>
+      </div>
 
-        {/* Fisioterapia */}
-        <div
-          class="relative flex flex-col p-8 rounded-3xl border-2 border-brand-400 bg-brand-50 shadow-lg scale-[1.02]"
-        >
-          <span
-            class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-full"
+      {/* Entrenamiento personal */}
+      <div
+        class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-8 rounded-3xl border-2 border-gray-200"
+      >
+        <div>
+          <h3 class="text-xl font-bold text-gray-900">{tariffs.personalTraining.name}</h3>
+          <p class="text-gray-500 text-sm mt-1">{tariffs.personalTraining.description}</p>
+        </div>
+        <div class="text-right">
+          <span class="text-4xl font-extrabold text-gray-900">{tariffs.personalTraining.price}</span
           >
-            {tariffs.services.physio.clientPriceLabel}
-          </span>
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">🩺</span>
-            <h3 class="text-xl font-bold text-gray-900">{tariffs.services.physio.name}</h3>
-          </div>
-          <div class="mb-2">
-            <span class="text-5xl font-extrabold text-brand-700">35€</span>
-            <span class="text-gray-500 ml-1">{tariffs.services.physio.unit}</span>
-          </div>
-          <p class="text-sm text-gray-500 mb-6">
-            {tariffs.services.physio.clientDescription}
-          </p>
-          <div class="mb-6">
-            <p class="text-sm text-gray-500">
-              {tariffs.services.physio.nonClient}
-              <strong class="text-gray-700">40€</strong>
-              <span class="text-gray-400">{tariffs.services.physio.unit}</span>
-            </p>
-          </div>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="flex items-start gap-3 text-sm text-gray-700">
-              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              {tariffs.services.physio.single}
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-700">
-              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              <span
-                >{tariffs.services.physio.pack}: <strong class="text-gray-900">35€</strong>{' '}
-                {tariffs.services.physio.perSession}</span
-              >
-            </li>
-          </ul>
+          <span class="text-gray-500 ml-1 text-sm">{tariffs.personalTraining.unit}</span>
+        </div>
+      </div>
+
+      {/* Consulta dietista */}
+      <div
+        class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-8 rounded-3xl border-2 border-gray-200"
+      >
+        <div>
+          <h3 class="text-xl font-bold text-gray-900">{tariffs.nutrition.name}</h3>
+          <p class="text-gray-500 text-sm mt-1">{tariffs.nutrition.description}</p>
+        </div>
+        <div class="text-right">
+          <span class="text-4xl font-extrabold text-gray-900">{tariffs.nutrition.price}</span>
+          <span class="text-gray-500 ml-1 text-sm">{tariffs.nutrition.unit}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Grupos */}
+  <section class="section-pad bg-brand-50 border-t border-brand-100">
+    <div class="container-main max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">
+          {tariffs.groups.name}
+        </h2>
+        <p class="text-gray-600 text-lg">{tariffs.groups.subtitle}</p>
+      </div>
+
+      {/* Incluido en tu cuota */}
+      <div class="mb-8">
+        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">{tariffs.included.title}</h3>
+        <div class="grid sm:grid-cols-3 gap-4">
+          {
+            tariffs.included.items.map((item) => (
+              <div class="p-5 rounded-2xl bg-white border border-brand-100">
+                <h4 class="font-bold text-gray-900 mb-1 text-sm">{item.title}</h4>
+                <p class="text-xs text-gray-600">{item.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-gray-200 overflow-hidden">
+        {/* Header */}
+        <div class="grid grid-cols-2 bg-brand-600 text-white text-sm font-bold">
+          <div class="px-6 py-4">{tariffs.groups.sessions}</div>
+          <div class="px-6 py-4 text-right">{tariffs.groups.priceLabel}</div>
         </div>
 
-        {/* Nutrición */}
-        <div
-          class="flex flex-col p-8 rounded-3xl border-2 border-gray-200 hover:border-brand-300 hover:shadow-md transition-all duration-200"
-        >
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">🥗</span>
-            <h3 class="text-xl font-bold text-gray-900">{tariffs.services.nutrition.name}</h3>
-          </div>
-          <div class="mb-6">
-            <span class="text-5xl font-extrabold text-gray-900">50€</span>
-            <span class="text-gray-500 ml-1">{tariffs.services.nutrition.unit}</span>
-          </div>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="flex items-start gap-3 text-sm text-gray-700">
-              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              {tariffs.services.nutrition.first}
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-700">
-              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              {tariffs.services.nutrition.followup}: <strong class="text-gray-900">40€</strong>
-            </li>
-          </ul>
-        </div>
+        {/* Rows */}
+        {
+          tariffs.groups.plans.map((plan, i) => (
+            <div
+              class:list={[
+                'grid grid-cols-2 items-center px-6 py-5',
+                i < tariffs.groups.plans.length - 1 ? 'border-b border-gray-100' : '',
+              ]}
+            >
+              <div>
+                <p class="font-semibold text-gray-900">{plan.freq}</p>
+                <p class="text-sm text-gray-500">({plan.count})</p>
+              </div>
+              <div class="text-right">
+                <span class="text-2xl font-extrabold text-gray-900">{plan.price}</span>
+                <span class="text-gray-500 ml-1 text-sm">{tariffs.groups.monthly}</span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
 
-        {/* Pilates */}
-        <div
-          class="flex flex-col p-8 rounded-3xl border-2 border-gray-200 hover:border-brand-300 hover:shadow-md transition-all duration-200"
-        >
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">🧘</span>
-            <h3 class="text-xl font-bold text-gray-900">{tariffs.services.pilates.name}</h3>
-          </div>
-          <div class="mb-6">
-            <span class="text-5xl font-extrabold text-gray-900">15€</span>
-            <span class="text-gray-500 ml-1">{tariffs.services.pilates.unit}</span>
-          </div>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="flex items-start gap-3 text-sm text-gray-700">
-              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              {tariffs.services.pilates.single}
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-700">
-              <Check class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
-              <span
-                >{tariffs.services.pilates.pack}: <strong class="text-gray-900">12€</strong>{' '}
-                {tariffs.services.pilates.perSession}</span
-              >
-            </li>
-          </ul>
+      {/* Highlights */}
+      <div class="grid sm:grid-cols-3 gap-4 mt-8">
+        {
+          [tariffs.groups.sessionDuration, tariffs.groups.ratio, tariffs.groups.flexible].map(
+            (item) => (
+              <div class="flex items-center gap-2 text-sm text-gray-700">
+                <Check class="w-5 h-5 text-brand-600 shrink-0" />
+                {item}
+              </div>
+            ),
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  {/* Descuentos */}
+  <section class="section-pad bg-white">
+    <div class="container-main max-w-3xl mx-auto grid sm:grid-cols-2 gap-6">
+      <div class="flex items-start gap-4 p-6 rounded-2xl bg-brand-50 border border-brand-100">
+        <Check class="w-6 h-6 text-brand-600 shrink-0 mt-0.5" />
+        <div>
+          <h3 class="font-bold text-gray-900">{tariffs.discount.title}</h3>
+          <p class="text-sm text-gray-600 mt-1">{tariffs.discount.description}</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-6 rounded-2xl bg-gray-50 border border-gray-100">
+        <Check class="w-6 h-6 text-brand-600 shrink-0 mt-0.5" />
+        <div>
+          <h3 class="font-bold text-gray-900">{tariffs.other.title}</h3>
+          <p class="text-sm text-gray-600 mt-1">{tariffs.other.description}</p>
         </div>
       </div>
     </div>

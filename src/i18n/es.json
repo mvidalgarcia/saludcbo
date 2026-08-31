@@ -303,71 +303,64 @@
       "hero": {
         "eyebrow": "Nuestros precios",
         "title": "Tarifas",
-        "subtitle": "Precios transparentes, sin sorpresas. Si eres cliente, tienes ventajas en fisioterapia."
+        "subtitle": "Entrenamiento personal, grupos, nutrición y más. Precios transparentes sin permanencia."
       },
-      "services": {
-        "training": {
-          "name": "Entrenamiento Personal",
-          "single": "Sesión suelta",
-          "pack": "Bono 4 sesiones",
-          "perSession": "por sesión",
-          "unit": "/sesión"
-        },
-        "physio": {
-          "name": "Fisioterapia",
-          "single": "Sesión suelta",
-          "pack": "Bono 4 sesiones",
-          "perSession": "por sesión",
-          "unit": "/sesión",
-          "clientNote": "Clientes CBO: siempre 35€ por sesión sin necesidad de bono",
-          "clientPriceLabel": "Precio para clientes CBO",
-          "clientDescription": "Clientes CBO. Sin necesidad de bono.",
-          "nonClient": "No cliente: "
-        },
-        "nutrition": {
-          "name": "Nutrición",
-          "first": "Primera consulta",
-          "followup": "Seguimiento",
-          "unit": "/consulta"
-        },
-        "pilates": {
-          "name": "Pilates",
-          "single": "Clase suelta",
-          "pack": "Bono 10 clases",
-          "perSession": "por clase",
-          "unit": "/clase"
-        }
+      "initial": {
+        "name": "Valoración inicial",
+        "description": "Presencial. Primera visita para conocerte y diseñar tu plan.",
+        "price": "Gratis"
       },
-      "clientHighlight": {
-        "title": "¿Ya eres cliente?",
-        "subtitle": "Si tienes cualquier servicio activo con nosotros, tus sesiones de fisioterapia siempre son a precio de bono: 35€. Sin necesidad de comprar nada extra."
+      "personalTraining": {
+        "name": "Entrenamiento personal",
+        "description": "Primera y única sesión individual (45–60 min).",
+        "price": "45",
+        "unit": "€ /sesión"
       },
-      "faq": {
-        "title": "Preguntas frecuentes",
-        "heading": "¿Tienes dudas?",
+      "groups": {
+        "name": "Grupos de 3 y 6 personas",
+        "subtitle": "Readaptación de lesiones y entrenamiento personalizado en grupo.",
+        "sessions": "Sesiones por semana",
+        "priceLabel": "Tarifa /persona",
+        "monthly": "€/mes",
+        "sessionDuration": "Sesiones de 55 minutos",
+        "ratio": "Ratio 1:3 y 1:6",
+        "flexible": "Plazas flexibles",
+        "plans": [
+          { "freq": "1 sesión a la semana", "count": "4 al mes", "price": "85" },
+          { "freq": "2 sesiones a la semana", "count": "8 al mes", "price": "145" },
+          { "freq": "3 sesiones a la semana", "count": "12 al mes", "price": "195" }
+        ]
+      },
+      "nutrition": {
+        "name": "Consulta dietista",
+        "description": "Sesión de 45–60 min. Valoración y plan nutricional personalizado.",
+        "price": "55",
+        "unit": "€ /mes"
+      },
+      "included": {
+        "title": "Incluido en tu cuota",
         "items": [
           {
-            "q": "¿Qué pasa si soy cliente de CBO Salud?",
-            "a": "Si ya eres cliente de cualquier servicio (entrenamiento, nutrición o pilates), tus sesiones de fisioterapia siempre tienen el precio de bono: 35€ por sesión. No necesitas comprar un bono aparte."
+            "title": "Entrenamiento online",
+            "description": "Preparación física individualizada, acceso a tu app con ejercicios y seguimiento continuo."
           },
           {
-            "q": "¿Los bonos tienen caducidad?",
-            "a": "Los bonos son válidos durante 3 meses desde la fecha de compra."
+            "title": "1ª consulta dietista",
+            "description": "Valoración y plan nutricional personalizado incluido."
           },
           {
-            "q": "¿Puedo combinar servicios?",
-            "a": "Sí, puedes combinar cualquier servicio. Si eres cliente de uno, obtienes ventajas en fisioterapia."
-          },
-          {
-            "q": "¿Los precios incluyen IVA?",
-            "a": "Sí, todos nuestros precios incluyen IVA."
+            "title": "Descuentos en otros servicios",
+            "description": "Fisioterapia, Pilates Reformer y más. Infórmate en recepción."
           }
         ]
       },
-      "cta": {
-        "title": "¿Listo para empezar?",
-        "subtitle": "Escríbenos y te ayudamos a elegir la mejor opción para ti.",
-        "button": "Habla con nosotros"
+      "discount": {
+        "title": "10% de descuento",
+        "description": "Si vienes en pareja o con familiar de 1er grado."
+      },
+      "other": {
+        "title": "Descuento en el resto de servicios",
+        "description": "Fisioterapia, Pilates Reformer y más. Infórmate en recepción."
       }
     }
   },
