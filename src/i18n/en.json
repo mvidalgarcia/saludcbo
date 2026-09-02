@@ -170,14 +170,16 @@
       "stat3Label": "integrated specialities"
     },
     "pillars": {
-      "eyebrow": "The three pillars",
-      "title": "What the CBO Method is based on",
-      "p1Title": "Scientific evidence",
-      "p1Body": "Our entire practice is grounded in the latest scientific research. We train continuously so that every decision we make is backed by data, not trends.",
-      "p2Title": "Individualisation",
-      "p2Body": "Your plan is yours and nobody else's. We analyse your health history, goals, starting level, preferences and limitations. With all that information, we design a programme completely tailored to you.",
-      "p3Title": "360° monitoring",
-      "p3Body": "The relationship with you doesn't start and end in the centre. We track your progress, carry out periodic reviews, adjust the programme when needed and are available to answer your questions at all times."
+      "eyebrow": "Based on",
+      "title": "The CBO Method",
+      "p1Title": "Initial assessment",
+      "p1Body": "In your first session we do a complete assessment: clinical history, mobility analysis, strength tests and goal setting. With this information we design a totally personalized training plan.",
+      "p2Title": "Professional planning",
+      "p2Body": "We program all your sessions in our CBO SALUD app so you follow an individual plan adapted to your level, objectives, injuries or pathologies, with continuous monitoring by the team.",
+      "p3Title": "Multidisciplinary work",
+      "p3Body": "Training, nutrition and physiotherapy work in a coordinated way to offer you an integral service and achieve the best results.",
+      "p4Title": "Schedule and flexibility",
+      "p4Body": "We have small groups for personal training and injury rehabilitation from 7:00 to 22:00 Monday to Friday, with 1 hour sessions. We have flexible spots in each group to facilitate changes, recoveries and rotations when you need them."
     },
     "process": {
       "eyebrow": "How we work",
@@ -303,64 +305,51 @@
       "hero": {
         "eyebrow": "Our prices",
         "title": "Pricing",
-        "subtitle": "Personal training, groups, nutrition and more. Transparent pricing, no commitment."
+        "subtitle": "Transparent pricing, no commitment."
       },
-      "initial": {
-        "name": "Initial assessment",
-        "description": "In-person. First visit to get to know you and design your plan.",
-        "price": "Free"
-      },
-      "personalTraining": {
-        "name": "Personal training",
-        "description": "First and only individual session (45–60 min).",
-        "price": "45",
-        "unit": "€ /session"
-      },
-      "groups": {
-        "name": "Groups of 3 and 6 people",
-        "subtitle": "Injury rehabilitation and personalised training in small groups.",
-        "sessions": "Sessions per week",
-        "priceLabel": "Price /person",
-        "monthly": "€/month",
-        "sessionDuration": "55-minute sessions",
-        "ratio": "Ratio 1:3 and 1:6",
-        "flexible": "Flexible spots",
-        "plans": [
-          { "freq": "1 session per week", "count": "4 per month", "price": "85" },
-          { "freq": "2 sessions per week", "count": "8 per month", "price": "145" },
-          { "freq": "3 sessions per week", "count": "12 per month", "price": "195" }
-        ]
-      },
-      "nutrition": {
-        "name": "Dietitian consultation",
-        "description": "45–60 min session. Assessment and personalised nutrition plan.",
-        "price": "55",
-        "unit": "€ /month"
-      },
-      "included": {
-        "title": "Included in your membership",
-        "items": [
-          {
-            "title": "Online training",
-            "description": "Individualised physical preparation, access to your app with exercises and continuous follow-up."
+      "categories": {
+        "entrenamiento": {
+          "name": "Personal training",
+          "intro": "Individual personal training and injury rehabilitation session.",
+          "singleSession": "Individual session",
+          "singleSessionDesc": "45–60 min. Initial assessment included.",
+          "singleSessionPrice": "45",
+          "singleSessionUnit": "€ /session",
+          "groups": {
+            "name": "Groups of 3 and 6 people",
+            "subtitle": "Injury rehabilitation and personalised training in small groups.",
+            "sessions": "Sessions per week",
+            "priceLabel": "Price /person",
+            "monthly": "€/month",
+            "sessionDuration": "55-minute sessions",
+            "ratio": "Ratio 1:3 and 1:6",
+            "flexible": "Flexible spots",
+            "plans": [
+              { "freq": "1 session per week", "count": "4 per month", "price": "85" },
+              { "freq": "2 sessions per week", "count": "8 per month", "price": "145" },
+              { "freq": "3 sessions per week", "count": "12 per month", "price": "195" }
+            ]
           },
-          {
-            "title": "1st dietitian consultation",
-            "description": "Assessment and personalised nutrition plan included."
-          },
-          {
-            "title": "Discounts on other services",
-            "description": "Physiotherapy, Reformer Pilates and more. Ask at reception."
+          "discount": {
+            "title": "10% discount",
+            "description": "If you come as a couple or with a first-degree family member."
           }
-        ]
-      },
-      "discount": {
-        "title": "10% discount",
-        "description": "If you come as a couple or with a first-degree family member."
-      },
-      "other": {
-        "title": "Discount on other services",
-        "description": "Physiotherapy, Reformer Pilates and more. Ask at reception."
+        },
+        "pilates": {
+          "name": "Reformer Pilates",
+          "intro": "Coming soon.",
+          "placeholder": "Contact us for more information."
+        },
+        "nutricion": {
+          "name": "Nutrition",
+          "intro": "Coming soon.",
+          "placeholder": "Contact us for more information."
+        },
+        "fisio": {
+          "name": "Physiotherapy",
+          "intro": "Coming soon.",
+          "placeholder": "Contact us for more information."
+        }
       }
     }
   },

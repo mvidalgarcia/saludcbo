@@ -170,14 +170,16 @@
       "stat3Label": "especialidades integradas"
     },
     "pillars": {
-      "eyebrow": "Los tres pilares",
-      "title": "En qué se basa el Método CBO",
-      "p1Title": "Evidencia científica",
-      "p1Body": "Toda nuestra práctica está fundamentada en la investigación científica más actualizada. Nos formamos continuamente para que cada decisión que tomemos esté respaldada por datos, no por tendencias ni por moda.",
-      "p2Title": "Individualización",
-      "p2Body": "Tu plan es tuyo y de nadie más. Analizamos tu historial de salud, tus objetivos, tu nivel de partida, tus preferencias y tus limitaciones. Con toda esa información, diseñamos un programa completamente adaptado a ti.",
-      "p3Title": "Seguimiento 360°",
-      "p3Body": "La relación contigo no empieza y termina en el centro. Monitorizamos tu evolución, hacemos revisiones periódicas, ajustamos el programa cuando hace falta y estamos disponibles para resolver tus dudas en todo momento."
+      "eyebrow": "En qué se basa",
+      "title": "El Método CBO",
+      "p1Title": "Valoración inicial",
+      "p1Body": "En tu primera sesión realizamos una valoración completa: historia clínica, análisis de movilidad, pruebas de fuerza y definición de objetivos. Con esta información diseñamos un plan de entrenamiento totalmente personalizado.",
+      "p2Title": "Planificación profesional",
+      "p2Body": "Programamos todas tus sesiones en nuestra app CBO SALUD para que sigas una planificación individual adaptada a tu nivel, objetivos, lesiones o patologías, con un seguimiento continuo por parte del equipo.",
+      "p3Title": "Trabajo multidisciplinar",
+      "p3Body": "Entrenamiento, nutrición y fisioterapia trabajan de forma coordinada para ofrecerte un servicio integral y conseguir los mejores resultados.",
+      "p4Title": "Horarios y flexibilidad",
+      "p4Body": "Disponemos de grupos reducidos de entrenamiento personal y readaptación de lesiones de 7:00 a 22:00 de lunes a viernes, con sesiones de 1h. Contamos con plazas flexibles en cada grupo para facilitar cambios, recuperaciones y rotaciones cuando lo necesites."
     },
     "process": {
       "eyebrow": "Cómo trabajamos",
@@ -303,64 +305,51 @@
       "hero": {
         "eyebrow": "Nuestros precios",
         "title": "Tarifas",
-        "subtitle": "Entrenamiento personal, grupos, nutrición y más. Precios transparentes sin permanencia."
+        "subtitle": "Precios transparentes sin permanencia."
       },
-      "initial": {
-        "name": "Valoración inicial",
-        "description": "Presencial. Primera visita para conocerte y diseñar tu plan.",
-        "price": "Gratis"
-      },
-      "personalTraining": {
-        "name": "Entrenamiento personal",
-        "description": "Primera y única sesión individual (45–60 min).",
-        "price": "45",
-        "unit": "€ /sesión"
-      },
-      "groups": {
-        "name": "Grupos de 3 y 6 personas",
-        "subtitle": "Readaptación de lesiones y entrenamiento personalizado en grupo.",
-        "sessions": "Sesiones por semana",
-        "priceLabel": "Tarifa /persona",
-        "monthly": "€/mes",
-        "sessionDuration": "Sesiones de 55 minutos",
-        "ratio": "Ratio 1:3 y 1:6",
-        "flexible": "Plazas flexibles",
-        "plans": [
-          { "freq": "1 sesión a la semana", "count": "4 al mes", "price": "85" },
-          { "freq": "2 sesiones a la semana", "count": "8 al mes", "price": "145" },
-          { "freq": "3 sesiones a la semana", "count": "12 al mes", "price": "195" }
-        ]
-      },
-      "nutrition": {
-        "name": "Consulta dietista",
-        "description": "Sesión de 45–60 min. Valoración y plan nutricional personalizado.",
-        "price": "55",
-        "unit": "€ /mes"
-      },
-      "included": {
-        "title": "Incluido en tu cuota",
-        "items": [
-          {
-            "title": "Entrenamiento online",
-            "description": "Preparación física individualizada, acceso a tu app con ejercicios y seguimiento continuo."
+      "categories": {
+        "entrenamiento": {
+          "name": "Entrenamiento personal",
+          "intro": "Sesión individual de entrenamiento personal y readaptación de lesiones.",
+          "singleSession": "Sesión individual",
+          "singleSessionDesc": "45–60 min. Primera valoración incluida.",
+          "singleSessionPrice": "45",
+          "singleSessionUnit": "€ /sesión",
+          "groups": {
+            "name": "Grupos de 3 y 6 personas",
+            "subtitle": "Readaptación de lesiones y entrenamiento personalizado en grupo.",
+            "sessions": "Sesiones por semana",
+            "priceLabel": "Tarifa /persona",
+            "monthly": "€/mes",
+            "sessionDuration": "Sesiones de 55 min",
+            "ratio": "Ratio 1:3 y 1:6",
+            "flexible": "Plazas flexibles",
+            "plans": [
+              { "freq": "1 sesión a la semana", "count": "4 al mes", "price": "85" },
+              { "freq": "2 sesiones a la semana", "count": "8 al mes", "price": "145" },
+              { "freq": "3 sesiones a la semana", "count": "12 al mes", "price": "195" }
+            ]
           },
-          {
-            "title": "1ª consulta dietista",
-            "description": "Valoración y plan nutricional personalizado incluido."
-          },
-          {
-            "title": "Descuentos en otros servicios",
-            "description": "Fisioterapia, Pilates Reformer y más. Infórmate en recepción."
+          "discount": {
+            "title": "10% de descuento",
+            "description": "Si vienes en pareja o con familiar de 1er grado."
           }
-        ]
-      },
-      "discount": {
-        "title": "10% de descuento",
-        "description": "Si vienes en pareja o con familiar de 1er grado."
-      },
-      "other": {
-        "title": "Descuento en el resto de servicios",
-        "description": "Fisioterapia, Pilates Reformer y más. Infórmate en recepción."
+        },
+        "pilates": {
+          "name": "Pilates Reformer",
+          "intro": "Próximamente disponible.",
+          "placeholder": "Consúltanos para más información."
+        },
+        "nutricion": {
+          "name": "Nutrición",
+          "intro": "Próximamente disponible.",
+          "placeholder": "Consúltanos para más información."
+        },
+        "fisio": {
+          "name": "Fisioterapia",
+          "intro": "Próximamente disponible.",
+          "placeholder": "Consúltanos para más información."
+        }
       }
     }
   },

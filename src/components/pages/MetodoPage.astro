@@ -50,12 +50,13 @@ const base = lang === 'en' ? '/en' : '';
         <p class="eyebrow mb-3">{t('metodo.pillars.eyebrow')}</p>
         <h2 class="section-title">{t('metodo.pillars.title')}</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-7 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-7 max-w-5xl mx-auto">
         {
           [
             { num: '01', title: t('metodo.pillars.p1Title'), body: t('metodo.pillars.p1Body') },
             { num: '02', title: t('metodo.pillars.p2Title'), body: t('metodo.pillars.p2Body') },
             { num: '03', title: t('metodo.pillars.p3Title'), body: t('metodo.pillars.p3Body') },
+            { num: '04', title: t('metodo.pillars.p4Title'), body: t('metodo.pillars.p4Body') },
           ].map((p) => (
             <div class="bg-white rounded-3xl p-8 border border-brand-100 shadow-sm">
               <p class="text-5xl font-extrabold text-brand-100 mb-5 leading-none">{p.num}</p>
