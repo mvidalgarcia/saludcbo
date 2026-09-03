@@ -334,13 +334,7 @@ function isActive(href: string): boolean {
       <hr class="my-2 border-gray-100" />
 
       {
-        [
-          ...navLinks,
-          {
-            href: lang === 'en' ? '/en/corporate-wellness' : '/empresa-saludable',
-            label: t('nav.corporate'),
-          },
-        ].map((link) => (
+        navLinks.map((link) => (
           <a
             href={link.href}
             class:list={[

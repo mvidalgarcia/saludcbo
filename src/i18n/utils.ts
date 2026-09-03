@@ -35,7 +35,6 @@ export function useTranslations(lang: Lang) {
 const esToEnSegments: Record<string, string> = {
   servicios: 'services',
   tarifas: 'pricing',
-  'empresa-saludable': 'corporate-wellness',
   aviso: 'legal-notice',
   privacidad: 'privacy-policy',
   cookies: 'cookie-policy',
@@ -50,7 +49,6 @@ const esSlugToEn: Record<string, string> = {
   nutricion: 'nutrition',
   fisioterapia: 'physiotherapy',
   pilates: 'pilates',
-  'empresa-saludable': 'corporate-wellness',
 };
 const enSlugToEs: Record<string, string> = Object.fromEntries(
   Object.entries(esSlugToEn).map(([k, v]) => [v, k]),

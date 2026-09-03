@@ -12,9 +12,7 @@ const t = useTranslations(lang);
 const base = lang === 'en' ? '/en' : '';
 
 const servicesData = await getCollection('services');
-const mainServices = servicesData
-  .filter((s) => s.id !== 'empresa-saludable')
-  .sort((a, b) => a.data.order - b.data.order);
+const mainServices = servicesData.sort((a, b) => a.data.order - b.data.order);
 
 const centersData = await getCollection('centers');
 const sortedCenters = centersData.sort((a, b) => a.data.order - b.data.order);

@@ -218,57 +218,5 @@
         ]
       }
     }
-  },
-  {
-    "id": "empresa-saludable",
-    "icon": "building-2",
-    "order": 6,
-    "slug": { "es": "empresa-saludable", "en": "corporate-wellness" },
-    "translations": {
-      "es": {
-        "title": "Empresa Saludable",
-        "shortTitle": "Empresa",
-        "tagline": "Empleados sanos construyen empresas fuertes.",
-        "description": "Proporcionamos a los empleados las herramientas necesarias para mejorar su bienestar físico y mental a través de jornadas y programas de salud corporativos. Fomentamos, educamos, acompañamos e impulsamos la salud a través de la nutrición y el ejercicio físico.",
-        "features": [
-          "Jornadas de prevención del riesgo cardiovascular y metabólico",
-          "Consultas de nutrición y ejercicio 1:1 con el equipo",
-          "Programas de entrenamiento corporativos adaptados",
-          "Programas de nutrición para el equipo",
-          "Valoraciones de composición corporal colectivas",
-          "Talleres y charlas educativas sobre hábitos saludables",
-          "Adaptación a las necesidades de cada empresa",
-          "Seguimiento y medición de resultados"
-        ],
-        "types": [
-          { "title": "Jornadas de salud", "body": "Jornadas de prevención del riesgo cardiovascular y metabólico, con valoraciones individuales y talleres grupales." },
-          { "title": "Consultas individuales", "body": "Consultas de nutrición y ejercicio 1:1 para cada miembro del equipo, en el centro o en la empresa." },
-          { "title": "Programas de entrenamiento y nutrición", "body": "Programas colectivos adaptados a la oficina, al horario y a las posibilidades del equipo." },
-          { "title": "Formación en hábitos saludables", "body": "Talleres y charlas educativas para empoderar a los empleados con conocimientos sobre nutrición y ejercicio." }
-        ]
-      },
-      "en": {
-        "title": "Corporate Wellness",
-        "shortTitle": "Corporate",
-        "tagline": "Healthy employees build strong companies.",
-        "description": "We provide employees with the tools they need to improve their physical and mental wellbeing through corporate health programmes and events. We promote, educate, accompany and drive health through nutrition and physical exercise.",
-        "features": [
-          "Cardiovascular and metabolic risk prevention events",
-          "1:1 nutrition and exercise consultations for the team",
-          "Adapted corporate training programmes",
-          "Team nutrition programmes",
-          "Group body composition assessments",
-          "Workshops and educational talks on healthy habits",
-          "Adapted to each company's needs",
-          "Monitoring and measurement of results"
-        ],
-        "types": [
-          { "title": "Health events", "body": "Cardiovascular and metabolic risk prevention events, with individual assessments and group workshops." },
-          { "title": "Individual consultations", "body": "1:1 nutrition and exercise consultations for each team member, at our centre or at your company." },
-          { "title": "Training & nutrition programmes", "body": "Group training and nutrition programmes adapted to the office, schedule and team's possibilities." },
-          { "title": "Healthy habits training", "body": "Workshops and educational talks to empower employees with knowledge about nutrition, exercise and health." }
-        ]
-      }
-    }
   }
 ]
