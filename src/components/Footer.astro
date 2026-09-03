@@ -15,10 +15,13 @@ const base = lang === 'en' ? '/en' : '';
 const svcBase = lang === 'en' ? '/en/services' : '/servicios';
 const svcSlug = (es: string, en: string) => (lang === 'en' ? en : es);
 
+const tarifasBase = lang === 'en' ? '/en/pricing' : '/tarifas';
+const tarifasSlug = (es: string, en: string) => (lang === 'en' ? en : es);
+
 const serviceLinks = [
   { href: `${svcBase}/${svcSlug('entrenamiento', 'training')}`, label: t('nav.training') },
-  { href: `${svcBase}/${svcSlug('nutricion', 'nutrition')}`, label: t('nav.nutrition') },
   { href: `${svcBase}/${svcSlug('fisioterapia', 'physiotherapy')}`, label: t('nav.physio') },
+  { href: `${svcBase}/${svcSlug('nutricion', 'nutrition')}`, label: t('nav.nutrition') },
   { href: `${svcBase}/pilates`, label: t('nav.pilates') },
   {
     href: lang === 'en' ? '/en/corporate-wellness' : '/empresa-saludable',
@@ -30,8 +33,17 @@ const companyLinks = [
   { href: `${base}/metodo`, label: t('nav.method') },
   { href: `${base}/equipo`, label: t('nav.team') },
   { href: `${base}/centros`, label: t('nav.centers') },
-  { href: `${base}/tarifas`, label: t('nav.pricing') },
   { href: `${base}/contacto`, label: t('nav.contact') },
+];
+
+const tarifasLinks = [
+  { href: `${tarifasBase}/${tarifasSlug('entrenamiento', 'training')}`, label: t('nav.training') },
+  {
+    href: `${tarifasBase}/${tarifasSlug('fisioterapia', 'physiotherapy')}`,
+    label: t('nav.physio'),
+  },
+  { href: `${tarifasBase}/${tarifasSlug('nutricion', 'nutrition')}`, label: t('nav.nutrition') },
+  { href: `${tarifasBase}/${tarifasSlug('pilates', 'pilates')}`, label: t('nav.pilates') },
 ];
 
 const legalLinks = [
@@ -43,7 +55,7 @@ const legalLinks = [
 
 <footer class="bg-white text-gray-900 border-t border-gray-100">
   <div class="container-main pt-16 lg:pt-20 pb-32 lg:pb-28">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
       <!-- Brand -->
       <div class="lg:col-span-1">
         <a href={base || '/'} class="inline-block mb-4">
@@ -106,6 +118,27 @@ const legalLinks = [
         <ul class="space-y-2.5">
           {
             companyLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-gray-500 hover:text-brand-700 text-sm transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <!-- Tarifas -->
+      <div>
+        <h3 class="text-gray-900 font-semibold text-sm uppercase tracking-widest mb-5">
+          {t('nav.pricing')}
+        </h3>
+        <ul class="space-y-2.5">
+          {
+            tarifasLinks.map((link) => (
               <li>
                 <a
                   href={link.href}

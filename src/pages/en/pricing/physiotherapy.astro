@@ -1,0 +1,17 @@
+---
+import TarifasServicePage from '../../../components/pages/TarifasServicePage.astro';
+import { useTranslations } from '../../../i18n/utils';
+import type { Lang } from '../../../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'es') as Lang;
+const t = useTranslations(lang);
+---
+
+<TarifasServicePage
+  service="fisioterapia"
+  title={t('meta.tarifas.title')}
+  description={t('meta.tarifas.description')}
+  eyebrow={t('nav.physio')}
+  heroTitle={t('services.fisioterapia.title')}
+  heroSubtitle={t('services.fisioterapia.hero.subtitle')}
+/>

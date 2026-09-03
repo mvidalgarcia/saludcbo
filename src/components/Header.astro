@@ -19,11 +19,13 @@ const base = lang === 'en' ? '/en' : '';
 const svcBase = lang === 'en' ? '/en/services' : '/servicios';
 const svcSlug = (es: string, en: string) => (lang === 'en' ? en : es);
 
+const tarifasBase = lang === 'en' ? '/en/pricing' : '/tarifas';
+const tarifasSlug = (es: string, en: string) => (lang === 'en' ? en : es);
+
 const navLinks = [
   { href: `${base}/metodo`, label: t('nav.method') },
   { href: `${base}/equipo`, label: t('nav.team') },
   { href: `${base}/centros`, label: t('nav.centers') },
-  { href: `${base}/tarifas`, label: t('nav.pricing') },
   { href: `${base}/contacto`, label: t('nav.contact') },
 ];
 
@@ -34,16 +36,26 @@ const services = [
     icon: Dumbbell,
   },
   {
-    href: `${svcBase}/${svcSlug('nutricion', 'nutrition')}`,
-    label: t('nav.nutrition'),
-    icon: Salad,
-  },
-  {
     href: `${svcBase}/${svcSlug('fisioterapia', 'physiotherapy')}`,
     label: t('nav.physio'),
     icon: Handshake,
   },
+  {
+    href: `${svcBase}/${svcSlug('nutricion', 'nutrition')}`,
+    label: t('nav.nutrition'),
+    icon: Salad,
+  },
   { href: `${svcBase}/pilates`, label: t('nav.pilates'), icon: PersonStanding },
+];
+
+const tarifasLinks = [
+  { href: `${tarifasBase}/${tarifasSlug('entrenamiento', 'training')}`, label: t('nav.training') },
+  {
+    href: `${tarifasBase}/${tarifasSlug('fisioterapia', 'physiotherapy')}`,
+    label: t('nav.physio'),
+  },
+  { href: `${tarifasBase}/${tarifasSlug('nutricion', 'nutrition')}`, label: t('nav.nutrition') },
+  { href: `${tarifasBase}/${tarifasSlug('pilates', 'pilates')}`, label: t('nav.pilates') },
 ];
 
 function isActive(href: string): boolean {
@@ -101,7 +113,7 @@ function isActive(href: string): boolean {
                   return (
                     <a
                       href={svc.href}
-                      class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-700 transition-colors"
+                      class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-700 transition-colors"
                     >
                       <Icon class="w-5 h-5 text-brand-600 shrink-0" />
                       <span class="font-medium">{svc.label}</span>
@@ -113,22 +125,102 @@ function isActive(href: string): boolean {
           </div>
         </div>
 
-        {
-          navLinks.map((link) => (
-            <a
-              href={link.href}
-              class:list={[
-                'font-medium text-sm px-3 py-2 rounded-lg transition-colors',
-                isActive(link.href)
-                  ? 'text-brand-700 bg-brand-50'
-                  : 'text-gray-700 hover:text-brand-700 hover:bg-brand-50',
-              ]}
-              aria-current={isActive(link.href) ? 'page' : undefined}
+        <!-- Método -->
+        <a
+          href={`${base}/metodo`}
+          class:list={[
+            'font-medium text-sm px-3 py-2 rounded-lg transition-colors',
+            isActive(`${base}/metodo`)
+              ? 'text-brand-700 bg-brand-50'
+              : 'text-gray-700 hover:text-brand-700 hover:bg-brand-50',
+          ]}
+          aria-current={isActive(`${base}/metodo`) ? 'page' : undefined}
+        >
+          {t('nav.method')}
+        </a>
+
+        <!-- Equipo -->
+        <a
+          href={`${base}/equipo`}
+          class:list={[
+            'font-medium text-sm px-3 py-2 rounded-lg transition-colors',
+            isActive(`${base}/equipo`)
+              ? 'text-brand-700 bg-brand-50'
+              : 'text-gray-700 hover:text-brand-700 hover:bg-brand-50',
+          ]}
+          aria-current={isActive(`${base}/equipo`) ? 'page' : undefined}
+        >
+          {t('nav.team')}
+        </a>
+
+        <!-- Centros -->
+        <a
+          href={`${base}/centros`}
+          class:list={[
+            'font-medium text-sm px-3 py-2 rounded-lg transition-colors',
+            isActive(`${base}/centros`)
+              ? 'text-brand-700 bg-brand-50'
+              : 'text-gray-700 hover:text-brand-700 hover:bg-brand-50',
+          ]}
+          aria-current={isActive(`${base}/centros`) ? 'page' : undefined}
+        >
+          {t('nav.centers')}
+        </a>
+
+        <!-- Tarifas dropdown -->
+        <div class="relative group">
+          <button
+            class="flex items-center gap-1 text-gray-700 hover:text-brand-700 font-medium text-sm px-3 py-2 rounded-lg hover:bg-brand-50 transition-colors"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            {t('nav.pricing')}
+            <svg
+              class="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              {link.label}
-            </a>
-          ))
-        }
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <!-- Dropdown panel -->
+          <div
+            class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none group-hover:pointer-events-auto"
+          >
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden w-64">
+              {
+                tarifasLinks.map((link) => (
+                  <a
+                    href={link.href}
+                    class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-700 transition-colors"
+                  >
+                    <span class="font-medium">{link.label}</span>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Contacto -->
+        <a
+          href={`${base}/contacto`}
+          class:list={[
+            'font-medium text-sm px-3 py-2 rounded-lg transition-colors',
+            isActive(`${base}/contacto`)
+              ? 'text-brand-700 bg-brand-50'
+              : 'text-gray-700 hover:text-brand-700 hover:bg-brand-50',
+          ]}
+          aria-current={isActive(`${base}/contacto`) ? 'page' : undefined}
+        >
+          {t('nav.contact')}
+        </a>
       </nav>
 
       <!-- Right side: lang switch + CTA + hamburger -->
@@ -190,7 +282,7 @@ function isActive(href: string): boolean {
     <nav class="container-main py-4 flex flex-col gap-1" aria-label="Menú móvil">
       <!-- Services (flat list on mobile) -->
       <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest px-3 pt-2 pb-1">
-        {t('nav.services')}
+        {lang === 'es' ? 'Servicios' : 'Services'}
       </p>
       {
         services.map((svc) => {
@@ -211,6 +303,32 @@ function isActive(href: string): boolean {
             </a>
           );
         })
+      }
+
+      <hr class="my-2 border-gray-100" />
+
+      <!-- Tarifas (mobile) -->
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest px-3 pt-2 pb-1">
+        {lang === 'es' ? 'Tarifas' : 'Pricing'}
+      </p>
+      {
+        tarifasLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl transition-colors',
+              isActive(link.href)
+                ? 'text-brand-700 bg-brand-50'
+                : 'text-gray-700 hover:bg-brand-50 hover:text-brand-700',
+            ]}
+            aria-current={isActive(link.href) ? 'page' : undefined}
+          >
+            <span class="w-5 h-5 flex items-center justify-center text-brand-600 text-xs font-bold">
+              €
+            </span>
+            <span>{link.label}</span>
+          </a>
+        ))
       }
 
       <hr class="my-2 border-gray-100" />

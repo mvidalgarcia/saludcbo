@@ -51,7 +51,7 @@
     "training": "Entrenamiento",
     "nutrition": "Nutrición",
     "physio": "Fisioterapia",
-    "pilates": "Pilates",
+    "pilates": "Pilates reformer",
     "method": "Método CBO",
     "team": "Equipo",
     "corporate": "Empresa Saludable",
@@ -259,6 +259,31 @@
         "eyebrow": "Entrenamiento",
         "title": "Entrenamiento Personal y Readaptación",
         "subtitle": "Metodología basada en la evidencia científica, adaptada al 100% a ti. Entrenamiento presencial, en grupos reducidos y online."
+      },
+      "tarifas": {
+        "singleSession": "Sesión individual",
+        "singleSessionDesc": "45–60 min. Primera valoración incluida.",
+        "singleSessionPrice": "45",
+        "singleSessionUnit": "€ /sesión",
+        "groups": {
+          "name": "Grupos de 3 y 6 personas",
+          "subtitle": "Readaptación de lesiones y entrenamiento personalizado en grupo.",
+          "sessions": "Sesiones por semana",
+          "priceLabel": "Tarifa /persona",
+          "monthly": "€/mes",
+          "sessionDuration": "Sesiones de 55 min",
+          "ratio": "Ratio 1:3 y 1:6",
+          "flexible": "Plazas flexibles",
+          "plans": [
+            { "freq": "1 sesión a la semana", "count": "4 al mes", "price": "85" },
+            { "freq": "2 sesiones a la semana", "count": "8 al mes", "price": "145" },
+            { "freq": "3 sesiones a la semana", "count": "12 al mes", "price": "195" }
+          ]
+        },
+        "discount": {
+          "title": "10% de descuento",
+          "description": "Si vienes en pareja o con familiar de 1er grado."
+        }
       }
     },
     "nutricion": {
@@ -269,6 +294,9 @@
         "eyebrow": "Nutrición",
         "title": "Consulta de Nutrición",
         "subtitle": "Plan dietético completamente individualizado, adaptado a tus características, preferencias y objetivos. Presencial y online."
+      },
+      "tarifas": {
+        "placeholder": "Próximamente. Consúltanos para más información."
       }
     },
     "fisioterapia": {
@@ -279,6 +307,9 @@
         "eyebrow": "Fisioterapia",
         "title": "Fisioterapia Deportiva y Terapéutica",
         "subtitle": "Tratamiento del dolor, rehabilitación de lesiones, recuperación postquirúrgica y prevención. Para todas las edades."
+      },
+      "tarifas": {
+        "placeholder": "Próximamente. Consúltanos para más información."
       }
     },
     "pilates": {
@@ -289,6 +320,9 @@
         "eyebrow": "Pilates",
         "title": "Pilates Individual y en Grupos Reducidos",
         "subtitle": "Pilates reformer y de suelo. Individual o en grupos muy reducidos para un seguimiento personalizado."
+      },
+      "tarifas": {
+        "placeholder": "Próximamente. Consúltanos para más información."
       }
     },
     "empresa": {
@@ -300,57 +334,13 @@
         "title": "Empresa Saludable",
         "subtitle": "Programas de entrenamiento y nutrición corporativos para impulsar la salud y el rendimiento de tu equipo."
       }
-    },
-    "tarifas": {
-      "hero": {
-        "eyebrow": "Nuestros precios",
-        "title": "Tarifas",
-        "subtitle": "Precios transparentes sin permanencia."
-      },
-      "categories": {
-        "entrenamiento": {
-          "name": "Entrenamiento personal",
-          "intro": "Sesión individual de entrenamiento personal y readaptación de lesiones.",
-          "singleSession": "Sesión individual",
-          "singleSessionDesc": "45–60 min. Primera valoración incluida.",
-          "singleSessionPrice": "45",
-          "singleSessionUnit": "€ /sesión",
-          "groups": {
-            "name": "Grupos de 3 y 6 personas",
-            "subtitle": "Readaptación de lesiones y entrenamiento personalizado en grupo.",
-            "sessions": "Sesiones por semana",
-            "priceLabel": "Tarifa /persona",
-            "monthly": "€/mes",
-            "sessionDuration": "Sesiones de 55 min",
-            "ratio": "Ratio 1:3 y 1:6",
-            "flexible": "Plazas flexibles",
-            "plans": [
-              { "freq": "1 sesión a la semana", "count": "4 al mes", "price": "85" },
-              { "freq": "2 sesiones a la semana", "count": "8 al mes", "price": "145" },
-              { "freq": "3 sesiones a la semana", "count": "12 al mes", "price": "195" }
-            ]
-          },
-          "discount": {
-            "title": "10% de descuento",
-            "description": "Si vienes en pareja o con familiar de 1er grado."
-          }
-        },
-        "pilates": {
-          "name": "Pilates Reformer",
-          "intro": "Próximamente disponible.",
-          "placeholder": "Consúltanos para más información."
-        },
-        "nutricion": {
-          "name": "Nutrición",
-          "intro": "Próximamente disponible.",
-          "placeholder": "Consúltanos para más información."
-        },
-        "fisio": {
-          "name": "Fisioterapia",
-          "intro": "Próximamente disponible.",
-          "placeholder": "Consúltanos para más información."
-        }
-      }
+    }
+  },
+  "tarifas": {
+    "hero": {
+      "eyebrow": "Nuestros precios",
+      "title": "Tarifas",
+      "subtitle": "Precios transparentes sin permanencia."
     }
   },
   "cookies": {

@@ -51,7 +51,7 @@
     "training": "Personal Training",
     "nutrition": "Nutrition",
     "physio": "Physiotherapy",
-    "pilates": "Pilates",
+    "pilates": "Pilates reformer",
     "method": "CBO Method",
     "team": "Team",
     "corporate": "Corporate Wellness",
@@ -259,6 +259,31 @@
         "eyebrow": "Training",
         "title": "Personal Training & Injury Rehab",
         "subtitle": "Evidence-based methodology, 100% adapted to you. In-person, small-group and online training."
+      },
+      "tarifas": {
+        "singleSession": "Individual session",
+        "singleSessionDesc": "45–60 min. Initial assessment included.",
+        "singleSessionPrice": "45",
+        "singleSessionUnit": "€ /session",
+        "groups": {
+          "name": "Groups of 3 and 6 people",
+          "subtitle": "Injury rehabilitation and personalised training in small groups.",
+          "sessions": "Sessions per week",
+          "priceLabel": "Price /person",
+          "monthly": "€/month",
+          "sessionDuration": "55-minute sessions",
+          "ratio": "Ratio 1:3 and 1:6",
+          "flexible": "Flexible spots",
+          "plans": [
+            { "freq": "1 session per week", "count": "4 per month", "price": "85" },
+            { "freq": "2 sessions per week", "count": "8 per month", "price": "145" },
+            { "freq": "3 sessions per week", "count": "12 per month", "price": "195" }
+          ]
+        },
+        "discount": {
+          "title": "10% discount",
+          "description": "If you come as a couple or with a first-degree family member."
+        }
       }
     },
     "nutricion": {
@@ -269,6 +294,9 @@
         "eyebrow": "Nutrition",
         "title": "Nutrition Consultation",
         "subtitle": "Fully individualised diet plan, adapted to your characteristics, preferences and goals. In-person and online."
+      },
+      "tarifas": {
+        "placeholder": "Coming soon. Contact us for more information."
       }
     },
     "fisioterapia": {
@@ -279,6 +307,9 @@
         "eyebrow": "Physiotherapy",
         "title": "Sports & Therapeutic Physiotherapy",
         "subtitle": "Pain treatment, injury rehabilitation, post-surgical recovery and prevention. For all ages."
+      },
+      "tarifas": {
+        "placeholder": "Coming soon. Contact us for more information."
       }
     },
     "pilates": {
@@ -289,6 +320,9 @@
         "eyebrow": "Pilates",
         "title": "Individual & Small-Group Pilates",
         "subtitle": "Reformer and mat pilates. Individual or in very small groups for personalised attention."
+      },
+      "tarifas": {
+        "placeholder": "Coming soon. Contact us for more information."
       }
     },
     "empresa": {
@@ -300,57 +334,13 @@
         "title": "Corporate Wellness",
         "subtitle": "Corporate training and nutrition programmes to boost your team's health and performance."
       }
-    },
-    "tarifas": {
-      "hero": {
-        "eyebrow": "Our prices",
-        "title": "Pricing",
-        "subtitle": "Transparent pricing, no commitment."
-      },
-      "categories": {
-        "entrenamiento": {
-          "name": "Personal training",
-          "intro": "Individual personal training and injury rehabilitation session.",
-          "singleSession": "Individual session",
-          "singleSessionDesc": "45–60 min. Initial assessment included.",
-          "singleSessionPrice": "45",
-          "singleSessionUnit": "€ /session",
-          "groups": {
-            "name": "Groups of 3 and 6 people",
-            "subtitle": "Injury rehabilitation and personalised training in small groups.",
-            "sessions": "Sessions per week",
-            "priceLabel": "Price /person",
-            "monthly": "€/month",
-            "sessionDuration": "55-minute sessions",
-            "ratio": "Ratio 1:3 and 1:6",
-            "flexible": "Flexible spots",
-            "plans": [
-              { "freq": "1 session per week", "count": "4 per month", "price": "85" },
-              { "freq": "2 sessions per week", "count": "8 per month", "price": "145" },
-              { "freq": "3 sessions per week", "count": "12 per month", "price": "195" }
-            ]
-          },
-          "discount": {
-            "title": "10% discount",
-            "description": "If you come as a couple or with a first-degree family member."
-          }
-        },
-        "pilates": {
-          "name": "Reformer Pilates",
-          "intro": "Coming soon.",
-          "placeholder": "Contact us for more information."
-        },
-        "nutricion": {
-          "name": "Nutrition",
-          "intro": "Coming soon.",
-          "placeholder": "Contact us for more information."
-        },
-        "fisio": {
-          "name": "Physiotherapy",
-          "intro": "Coming soon.",
-          "placeholder": "Contact us for more information."
-        }
-      }
+    }
+  },
+  "tarifas": {
+    "hero": {
+      "eyebrow": "Our prices",
+      "title": "Pricing",
+      "subtitle": "Transparent pricing, no commitment."
     }
   },
   "cookies": {

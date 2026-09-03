@@ -34,6 +34,7 @@ export function useTranslations(lang: Lang) {
 // Maps ES path segments → EN path segments (and reverse)
 const esToEnSegments: Record<string, string> = {
   servicios: 'services',
+  tarifas: 'pricing',
   'empresa-saludable': 'corporate-wellness',
   aviso: 'legal-notice',
   privacidad: 'privacy-policy',
