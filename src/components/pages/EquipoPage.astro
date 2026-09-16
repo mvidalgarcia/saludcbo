@@ -13,8 +13,15 @@ const sortedTeam = team.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <BaseLayout lang={lang} title={t('meta.equipo.title')} description={t('meta.equipo.description')}>
-  <section class="bg-white py-24 lg:py-32 border-b border-gray-100">
-    <div class="container-main text-center max-w-3xl mx-auto">
+  <section class="bg-white py-24 lg:py-32 border-b border-gray-100 relative overflow-hidden">
+    <img
+      src="/images/team.jpg"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover object-[center_62%] opacity-[0.12]"
+      aria-hidden="true"
+      loading="eager"
+    />
+    <div class="container-main text-center max-w-3xl mx-auto relative z-20">
       <p class="eyebrow mb-5">{t('equipo.hero.eyebrow')}</p>
       <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6">
         {t('equipo.hero.title')}
