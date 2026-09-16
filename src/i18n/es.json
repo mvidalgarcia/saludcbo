@@ -268,21 +268,25 @@
         "groups": {
           "name": "Grupos de 3 y 6 personas",
           "subtitle": "Readaptación de lesiones y entrenamiento personalizado en grupo.",
+          "discountNote": "10% de descuento por persona si te apuntas en pareja o familiar de 1er grado",
           "sessions": "Sesiones por semana",
           "priceLabel": "Tarifa /persona",
+          "discountPriceLabel": "Con 10% dto.",
           "monthly": "€/mes",
           "sessionDuration": "Sesiones de 55 min",
           "ratio": "Ratio 1:3 y 1:6",
           "flexible": "Plazas flexibles",
           "plans": [
-            { "freq": "1 sesión a la semana", "count": "4 al mes", "price": "85" },
-            { "freq": "2 sesiones a la semana", "count": "8 al mes", "price": "145" },
-            { "freq": "3 sesiones a la semana", "count": "12 al mes", "price": "195" }
+            { "freq": "1 sesión a la semana", "count": "4 al mes", "price": "85", "discountedPrice": "76,5" },
+            { "freq": "2 sesiones a la semana", "count": "8 al mes", "price": "145", "discountedPrice": "130,5" },
+            { "freq": "3 sesiones a la semana", "count": "12 al mes", "price": "200", "discountedPrice": "180" }
           ]
         },
         "discount": {
-          "title": "10% de descuento",
-          "description": "Si vienes en pareja o con familiar de 1er grado."
+          "title": "Combinado de entrenamiento y pilates",
+          "description": "1 sesión entrenamiento + 1 sesión pilates reformer (8 sesiones al mes)",
+          "price": "125",
+          "unit": "€/mes"
         }
       }
     },
@@ -296,7 +300,23 @@
         "subtitle": "Plan dietético completamente individualizado, adaptado a tus características, preferencias y objetivos. Presencial y online."
       },
       "tarifas": {
-        "placeholder": "Próximamente. Consúltanos para más información."
+        "singleSession": "Consulta de nutrición",
+        "singleSessionDesc": "Plan dietético personalizado.",
+        "singleSessionPrice": "95",
+        "singleSessionUnit": "€ /mes",
+        "monthly": "€/mes",
+        "tableTitle": "Nutrición",
+        "tableHeaders": {
+          "service": "Período",
+          "price": "Precio",
+          "detail": "Detalle",
+          "members": "Miembros CBO"
+        },
+        "rows": [
+          { "service": "Primer mes", "price": "95", "detail": "", "members": "" },
+          { "service": "Desde 2º mes", "price": "55", "detail": "", "members": "38,5" }
+        ],
+        "membersLabel": "Miembros de CBO Salud"
       }
     },
     "fisioterapia": {
@@ -309,7 +329,32 @@
         "subtitle": "Tratamiento del dolor, rehabilitación de lesiones, recuperación postquirúrgica y prevención. Para todas las edades."
       },
       "tarifas": {
-        "placeholder": "Próximamente. Consúltanos para más información."
+        "singleSession": "Sesión general individual",
+        "singleSessionDesc": "Primera valoración incluida.",
+        "singleSessionPrice": "39,5",
+        "singleSessionUnit": "€ /sesión",
+        "membersLabel": "Miembros de CBO Salud",
+        "membersPrice": "34,5",
+        "tableTitle": "Fisioterapia",
+        "tableHeaders": {
+          "service": "Tipo de servicio",
+          "price": "Precio",
+          "detail": "Detalle",
+          "members": "Miembros CBO"
+        },
+        "rows": [
+          { "service": "Sesión general individual", "price": "39,5", "detail": "", "members": "34,5" },
+          { "service": "Fisioterapia especializada", "price": "55", "detail": "Suelo pélvico y ATM", "members": "50" },
+          { "service": "Bono 4 sesiones fisioterapia general", "price": "140", "detail": "35€/sesión con bono", "members": "" },
+          { "service": "Bono 4 sesiones fisioterapia especializada", "price": "200", "detail": "50€/sesión con bono", "members": "" }
+        ],
+        "offer": {
+          "title": "Oferta de apertura",
+          "description": "Todas las sesiones de fisioterapia general individual",
+          "price": "32,5",
+          "unit": "€ /sesión",
+          "detail": "Precio de apertura, hasta agotar plazas"
+        }
       }
     },
     "pilates": {
@@ -322,7 +367,30 @@
         "subtitle": "Pilates reformer y de suelo. Individual o en grupos muy reducidos para un seguimiento personalizado."
       },
       "tarifas": {
-        "placeholder": "Próximamente. Consúltanos para más información."
+        "singleSession": "Sesión individual",
+        "singleSessionDesc": "Te la recomendamos si es tu primera vez o necesitas atención específica. Tú decides.",
+        "singleSessionPrice": "45",
+        "singleSessionUnit": "€ /sesión",
+        "groups": {
+          "name": "Grupos de 5 personas",
+          "subtitle": "Clases de pilates reformer en grupos reducidos de max 5 personas",
+          "sessions": "Sesiones / semana",
+          "priceLabel": "Normal",
+          "discountPriceLabel": "Oferta apertura",
+          "monthly": "€/mes",
+          "note": "Precio de apertura, hasta agotar plazas",
+          "plans": [
+            { "freq": "1 sesión a la semana", "count": "4 al mes", "price": "65", "discountedPrice": "55" },
+            { "freq": "2 sesiones a la semana", "count": "8 al mes", "price": "115", "discountedPrice": "95" },
+            { "freq": "3 sesiones a la semana", "count": "12 al mes", "price": "165", "discountedPrice": "145" }
+          ]
+        },
+        "discount": {
+          "title": "Combinado de entrenamiento y pilates",
+          "description": "1 sesión entrenamiento + 1 sesión pilates reformer (8 sesiones al mes)",
+          "price": "125",
+          "unit": "€/mes"
+        }
       }
     },
     "empresa": {

@@ -1,5 +1,5 @@
 ---
-import { Check, ArrowRight } from 'lucide-astro';
+import { Check, ArrowRight, Percent } from 'lucide-astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { useTranslations } from '../../i18n/utils';
 import type { Lang } from '../../i18n/utils';
@@ -22,6 +22,7 @@ const lang = (Astro.currentLocale ?? 'es') as Lang;
 const t = useTranslations(lang);
 const tr = lang === 'es' ? es : en;
 const svc = tr.services[service as keyof typeof tr.services] as any;
+const hasDetail = svc?.tarifas?.rows?.some((row: any) => row.detail) ?? false;
 ---
 
 <BaseLayout lang={lang} title={title} description={description}>
@@ -37,7 +38,7 @@ const svc = tr.services[service as keyof typeof tr.services] as any;
   </section>
 
   {
-    svc?.tarifas?.singleSession ? (
+    svc?.tarifas?.groups ? (
       /* Entrenamiento - full pricing */
       <section class="section-pad bg-white">
         <div class="container-main max-w-4xl mx-auto">
@@ -58,53 +59,219 @@ const svc = tr.services[service as keyof typeof tr.services] as any;
           {/* Grupos */}
           <div class="mb-10">
             <h3 class="text-xl font-bold text-gray-900 mb-1">{svc.tarifas.groups.name}</h3>
-            <p class="text-gray-500 text-sm mb-6">{svc.tarifas.groups.subtitle}</p>
+            <p class="text-gray-500 text-sm mb-6">
+              {svc.tarifas.groups.subtitle}{' '}
+              {svc.tarifas.groups.discountNote && (
+                <span class="text-brand-600 font-medium">({svc.tarifas.groups.discountNote})</span>
+              )}
+            </p>
 
             <div class="bg-white rounded-3xl border border-gray-200 overflow-hidden">
-              <div class="grid grid-cols-2 bg-brand-600 text-white text-sm font-bold">
-                <div class="px-6 py-4">{svc.tarifas.groups.sessions}</div>
-                <div class="px-6 py-4 text-right">{svc.tarifas.groups.priceLabel}</div>
+              <div class="grid grid-cols-3 gap-x-2 bg-brand-600 text-white text-xs sm:text-sm font-bold">
+                <div class="px-3 sm:px-6 py-4">{svc.tarifas.groups.sessions}</div>
+                <div class="px-2 sm:px-6 py-4 text-right">{svc.tarifas.groups.priceLabel}</div>
+                <div class="px-2 sm:px-6 py-4 text-right">
+                  {svc.tarifas.groups.discountPriceLabel}
+                </div>
               </div>
 
               {svc.tarifas.groups.plans.map((plan: any, i: number) => (
                 <div
                   class:list={[
-                    'grid grid-cols-2 items-center px-6 py-5',
+                    'grid grid-cols-3 gap-x-2 items-center px-3 sm:px-6 py-5',
                     i < svc.tarifas.groups.plans.length - 1 ? 'border-b border-gray-100' : '',
                   ]}
                 >
-                  <div>
-                    <p class="font-semibold text-gray-900">{plan.freq}</p>
-                    <p class="text-sm text-gray-500">({plan.count})</p>
+                  <div class="min-w-0">
+                    <p class="font-semibold text-gray-900 text-sm sm:text-base">{plan.freq}</p>
+                    <p class="text-xs sm:text-sm text-gray-500">({plan.count})</p>
                   </div>
-                  <div class="text-right">
-                    <span class="text-2xl font-extrabold text-gray-900">{plan.price}</span>
-                    <span class="text-gray-500 ml-1 text-sm">{svc.tarifas.groups.monthly}</span>
+                  <div class="text-right min-w-0">
+                    <span class="block text-lg sm:text-2xl font-extrabold text-gray-900">
+                      {plan.price}
+                    </span>
+                    <span class="text-gray-500 text-xs sm:text-sm">
+                      {svc.tarifas.groups.monthly}
+                    </span>
+                  </div>
+                  <div class="text-right min-w-0">
+                    <span class="block text-lg sm:text-2xl font-extrabold text-brand-700">
+                      {plan.discountedPrice}
+                    </span>
+                    <span class="text-gray-500 text-xs sm:text-sm">
+                      {svc.tarifas.groups.monthly}
+                    </span>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div class="grid sm:grid-cols-3 gap-4 mt-6">
-              {[
-                svc.tarifas.groups.sessionDuration,
-                svc.tarifas.groups.ratio,
-                svc.tarifas.groups.flexible,
-              ].map((item: string) => (
-                <div class="flex items-center gap-2 text-sm text-gray-700">
-                  <Check class="w-5 h-5 text-brand-600 shrink-0" />
-                  {item}
+            {svc.tarifas.groups.note && (
+              <p class="text-sm text-gray-500 mt-4">{svc.tarifas.groups.note}</p>
+            )}
+
+            {svc.tarifas.groups.sessionDuration && (
+              <div class="grid sm:grid-cols-3 gap-4 mt-6">
+                {[
+                  svc.tarifas.groups.sessionDuration,
+                  svc.tarifas.groups.ratio,
+                  svc.tarifas.groups.flexible,
+                ]
+                  .filter(Boolean)
+                  .map((item: string) => (
+                    <div class="flex items-center gap-2 text-sm text-gray-700">
+                      <Check class="w-5 h-5 text-brand-600 shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+              </div>
+            )}
+          </div>
+          {/* Combinado */}
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-2xl bg-brand-50 border border-brand-100">
+            <div class="flex items-start gap-4">
+              <Percent class="w-6 h-6 text-brand-600 shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-bold text-gray-900">{svc.tarifas.discount.title}</h3>
+                <p class="text-sm text-gray-600 mt-1">{svc.tarifas.discount.description}</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 sm:block sm:text-right pl-10 sm:pl-0">
+              <span class="text-2xl sm:text-3xl font-extrabold text-brand-700">
+                {svc.tarifas.discount.price}
+              </span>
+              <span class="text-gray-500 text-xs sm:text-sm">{svc.tarifas.discount.unit}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    ) : svc?.tarifas?.rows ? (
+      /* Fisioterapia / Nutrición - table pricing */
+      <section class="section-pad bg-white">
+        <div class="container-main max-w-4xl mx-auto">
+          {/* Sesión individual */}
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-8 rounded-3xl border-2 border-gray-200 mb-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">{svc.tarifas.singleSession}</h3>
+              <p class="text-gray-500 text-sm mt-1">{svc.tarifas.singleSessionDesc}</p>
+            </div>
+            <div class="text-right">
+              <span class="text-4xl font-extrabold text-gray-900">
+                {svc.tarifas.singleSessionPrice}
+              </span>
+              <span class="text-gray-500 ml-1 text-sm">{svc.tarifas.singleSessionUnit}</span>
+            </div>
+          </div>
+
+          {/* Tabla de precios */}
+          <div class="mb-10">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">{svc.tarifas.tableTitle}</h3>
+
+            <div class="bg-white rounded-3xl border border-gray-200 overflow-hidden">
+              <div
+                class:list={[
+                  'grid gap-x-2 bg-brand-600 text-white text-xs sm:text-sm font-bold',
+                  hasDetail ? 'grid-cols-4' : 'grid-cols-3',
+                ]}
+              >
+                <div class="px-3 sm:px-6 py-4">{svc.tarifas.tableHeaders.service}</div>
+                <div class="px-2 sm:px-6 py-4 text-right">{svc.tarifas.tableHeaders.price}</div>
+                {hasDetail && (
+                  <div class="px-2 sm:px-6 py-4 text-right hidden sm:block">
+                    {svc.tarifas.tableHeaders.detail}
+                  </div>
+                )}
+                <div class="px-2 sm:px-6 py-4 text-right">{svc.tarifas.tableHeaders.members}</div>
+              </div>
+
+              {svc.tarifas.rows.map((row: any, i: number) => (
+                <div
+                  class:list={[
+                    'gap-x-2 items-center px-3 sm:px-6 py-5',
+                    hasDetail ? 'grid grid-cols-4' : 'grid grid-cols-3',
+                    i < svc.tarifas.rows.length - 1 ? 'border-b border-gray-100' : '',
+                  ]}
+                >
+                  <div class="min-w-0">
+                    <p class="font-semibold text-gray-900 text-sm sm:text-base">{row.service}</p>
+                    {row.detail && (
+                      <p class="text-xs sm:text-sm text-gray-500 sm:hidden">{row.detail}</p>
+                    )}
+                  </div>
+                  <div class="text-right min-w-0">
+                    <span class="text-lg sm:text-2xl font-extrabold text-gray-900">
+                      {row.price}
+                    </span>
+                    <span class="text-gray-500 text-xs sm:text-sm">
+                      {svc.tarifas.monthly || '€'}
+                    </span>
+                  </div>
+                  {hasDetail && (
+                    <div class="text-right min-w-0 hidden sm:block">
+                      {row.detail ? (
+                        <span class="text-sm text-gray-600">{row.detail}</span>
+                      ) : (
+                        <span class="text-gray-300">—</span>
+                      )}
+                    </div>
+                  )}
+                  <div class="text-right min-w-0">
+                    {row.members ? (
+                      <>
+                        <span class="text-lg sm:text-2xl font-extrabold text-brand-700">
+                          {row.members}
+                        </span>
+                        <span class="text-gray-500 text-xs sm:text-sm">
+                          {svc.tarifas.monthly || '€'}
+                        </span>
+                      </>
+                    ) : (
+                      <span class="text-gray-300">—</span>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Descuento */}
-          <div class="flex items-start gap-4 p-6 rounded-2xl bg-brand-50 border border-brand-100">
-            <Check class="w-6 h-6 text-brand-600 shrink-0 mt-0.5" />
-            <div>
-              <h3 class="font-bold text-gray-900">{svc.tarifas.discount.title}</h3>
-              <p class="text-sm text-gray-600 mt-1">{svc.tarifas.discount.description}</p>
+          {/* Oferta de apertura (fisioterapia) */}
+          {svc.tarifas.offer && (
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-2xl bg-brand-50 border border-brand-100">
+              <div class="flex items-start gap-4">
+                <Percent class="w-6 h-6 text-brand-600 shrink-0 mt-0.5" />
+                <div>
+                  <h3 class="font-bold text-gray-900">{svc.tarifas.offer.title}</h3>
+                  <p class="text-sm text-gray-600 mt-1">{svc.tarifas.offer.description}</p>
+                  <p class="text-xs text-gray-500 mt-1">{svc.tarifas.offer.detail}</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 sm:block sm:text-right pl-10 sm:pl-0">
+                <span class="text-2xl sm:text-3xl font-extrabold text-brand-700">
+                  {svc.tarifas.offer.price}
+                </span>
+                <span class="text-gray-500 text-xs sm:text-sm">{svc.tarifas.offer.unit}</span>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+    ) : svc?.tarifas?.discount ? (
+      /* Combined offer (e.g. pilates) */
+      <section class="section-pad bg-white">
+        <div class="container-main max-w-4xl mx-auto">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-8 rounded-3xl border-2 border-gray-200">
+            <div class="flex items-start gap-4">
+              <Percent class="w-6 h-6 text-brand-600 shrink-0 mt-0.5" />
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">{svc.tarifas.discount.title}</h3>
+                <p class="text-gray-500 text-sm mt-1">{svc.tarifas.discount.description}</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 sm:block sm:text-right pl-10 sm:pl-0">
+              <span class="text-3xl sm:text-4xl font-extrabold text-brand-700">
+                {svc.tarifas.discount.price}
+              </span>
+              <span class="text-gray-500 text-sm">{svc.tarifas.discount.unit}</span>
             </div>
           </div>
         </div>

@@ -268,21 +268,25 @@
         "groups": {
           "name": "Groups of 3 and 6 people",
           "subtitle": "Injury rehabilitation and personalised training in small groups.",
+          "discountNote": "10% off per person when signing up as a couple or first-degree family member",
           "sessions": "Sessions per week",
           "priceLabel": "Price /person",
+          "discountPriceLabel": "With 10% off",
           "monthly": "€/month",
           "sessionDuration": "55-minute sessions",
           "ratio": "Ratio 1:3 and 1:6",
           "flexible": "Flexible spots",
           "plans": [
-            { "freq": "1 session per week", "count": "4 per month", "price": "85" },
-            { "freq": "2 sessions per week", "count": "8 per month", "price": "145" },
-            { "freq": "3 sessions per week", "count": "12 per month", "price": "195" }
+            { "freq": "1 session per week", "count": "4 per month", "price": "85", "discountedPrice": "76.5" },
+            { "freq": "2 sessions per week", "count": "8 per month", "price": "145", "discountedPrice": "130.5" },
+            { "freq": "3 sessions per week", "count": "12 per month", "price": "200", "discountedPrice": "180" }
           ]
         },
         "discount": {
-          "title": "10% discount",
-          "description": "If you come as a couple or with a first-degree family member."
+          "title": "Training + Pilates combo",
+          "description": "1 training session + 1 reformer pilates session (8 sessions per month)",
+          "price": "125",
+          "unit": "€/month"
         }
       }
     },
@@ -296,7 +300,23 @@
         "subtitle": "Fully individualised diet plan, adapted to your characteristics, preferences and goals. In-person and online."
       },
       "tarifas": {
-        "placeholder": "Coming soon. Contact us for more information."
+        "singleSession": "Nutrition consultation",
+        "singleSessionDesc": "Personalised diet plan.",
+        "singleSessionPrice": "95",
+        "singleSessionUnit": "€ /month",
+        "monthly": "€/month",
+        "tableTitle": "Nutrition",
+        "tableHeaders": {
+          "service": "Period",
+          "price": "Price",
+          "detail": "Detail",
+          "members": "CBO Members"
+        },
+        "rows": [
+          { "service": "First month", "price": "95", "detail": "", "members": "" },
+          { "service": "From 2nd month", "price": "55", "detail": "", "members": "38.5" }
+        ],
+        "membersLabel": "CBO Salud members"
       }
     },
     "fisioterapia": {
@@ -309,7 +329,32 @@
         "subtitle": "Pain treatment, injury rehabilitation, post-surgical recovery and prevention. For all ages."
       },
       "tarifas": {
-        "placeholder": "Coming soon. Contact us for more information."
+        "singleSession": "Individual general session",
+        "singleSessionDesc": "Initial assessment included.",
+        "singleSessionPrice": "39.5",
+        "singleSessionUnit": "€ /session",
+        "membersLabel": "CBO Salud members",
+        "membersPrice": "34.5",
+        "tableTitle": "Physiotherapy",
+        "tableHeaders": {
+          "service": "Service type",
+          "price": "Price",
+          "detail": "Detail",
+          "members": "CBO Members"
+        },
+        "rows": [
+          { "service": "Individual general session", "price": "39.5", "detail": "", "members": "34.5" },
+          { "service": "Specialised physiotherapy", "price": "55", "detail": "Pelvic floor & TMJ", "members": "50" },
+          { "service": "4-session general physio bundle", "price": "140", "detail": "35€/session with bundle", "members": "" },
+          { "service": "4-session specialised physio bundle", "price": "200", "detail": "50€/session with bundle", "members": "" }
+        ],
+        "offer": {
+          "title": "Opening offer",
+          "description": "All individual general physiotherapy sessions",
+          "price": "32.5",
+          "unit": "€ /session",
+          "detail": "Opening price, until spots last"
+        }
       }
     },
     "pilates": {
@@ -322,7 +367,30 @@
         "subtitle": "Reformer and mat pilates. Individual or in very small groups for personalised attention."
       },
       "tarifas": {
-        "placeholder": "Coming soon. Contact us for more information."
+        "singleSession": "Individual session",
+        "singleSessionDesc": "Recommended if it's your first time or you need specific attention. You decide.",
+        "singleSessionPrice": "45",
+        "singleSessionUnit": "€ /session",
+        "groups": {
+          "name": "Groups of 5 people",
+          "subtitle": "Reformer pilates classes in small groups of max 5 people",
+          "sessions": "Sessions / week",
+          "priceLabel": "Normal",
+          "discountPriceLabel": "Opening offer",
+          "monthly": "€/month",
+          "note": "Opening price, until spots last",
+          "plans": [
+            { "freq": "1 session per week", "count": "4 per month", "price": "65", "discountedPrice": "55" },
+            { "freq": "2 sessions per week", "count": "8 per month", "price": "115", "discountedPrice": "95" },
+            { "freq": "3 sessions per week", "count": "12 per month", "price": "165", "discountedPrice": "145" }
+          ]
+        },
+        "discount": {
+          "title": "Training + Pilates combo",
+          "description": "1 training session + 1 reformer pilates session (8 sessions per month)",
+          "price": "125",
+          "unit": "€/month"
+        }
       }
     },
     "empresa": {
