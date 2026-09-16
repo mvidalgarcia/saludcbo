@@ -91,7 +91,9 @@
     "meetTeam": "Conocer el equipo",
     "seeServices": "Ver servicios",
     "ourCenters": "Nuestros centros",
-    "requestInfo": "Solicitar información"
+    "requestInfo": "Solicitar información",
+    "bookAppointment": "Pide tu cita",
+    "bookPhysio": "Pide tu cita de fisio"
   },
   "home": {
     "hero": {

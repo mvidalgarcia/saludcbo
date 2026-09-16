@@ -91,7 +91,9 @@
     "meetTeam": "Meet the team",
     "seeServices": "See services",
     "ourCenters": "Our centres",
-    "requestInfo": "Request information"
+    "requestInfo": "Request information",
+    "bookAppointment": "Book appointment",
+    "bookPhysio": "Book physio appointment"
   },
   "home": {
     "hero": {

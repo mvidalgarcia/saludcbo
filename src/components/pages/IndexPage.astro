@@ -1,5 +1,5 @@
 ---
-import { MapPin, ParkingCircle, Phone, MessageCircle, ArrowRight } from 'lucide-astro';
+import { MapPin, ParkingCircle, Phone, MessageCircle, ArrowRight, Stethoscope } from 'lucide-astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ServiceCard from '../ServiceCard.astro';
 import { useTranslations } from '../../i18n/utils';
@@ -344,6 +344,14 @@ const testimonials = [
           class="inline-flex items-center gap-2 bg-whatsapp text-white font-semibold py-3 px-7 rounded-full hover:bg-whatsapp-dark transition-colors"
         >
           <MessageCircle class="w-5 h-5" />{t('home.finalCta.ctaWhatsapp')}
+        </a>
+        <a
+          href="https://app.serenna.es/c/cbo-salud"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 border border-brand-200 font-semibold py-3 px-7 rounded-full hover:bg-brand-100 transition-colors"
+        >
+          <Stethoscope class="w-5 h-5" />{t('cta.bookPhysio')}
         </a>
         <a
           href={`${base}/contacto`}

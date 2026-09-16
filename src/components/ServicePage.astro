@@ -1,5 +1,5 @@
 ---
-import { MessageCircle } from 'lucide-astro';
+import { MessageCircle, Stethoscope } from 'lucide-astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
@@ -19,6 +19,7 @@ interface Props {
   types?: Array<{ title: string; body: string }>;
   tagline: string;
   heroImage?: string;
+  bookingUrl?: string;
 }
 
 const {
@@ -34,6 +35,7 @@ const {
   types,
   tagline,
   heroImage,
+  bookingUrl,
 } = Astro.props;
 
 const t = useTranslations(lang);
@@ -61,6 +63,19 @@ const base = lang === 'en' ? '/en' : '';
       </h1>
       <p class="text-gray-500 text-xl leading-relaxed mb-10 max-w-2xl">{heroSubtitle}</p>
       <div class="flex flex-wrap gap-4">
+        {
+          bookingUrl && (
+            <a
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-brand-700 text-white font-semibold text-base py-3.5 px-8 rounded-full hover:bg-brand-800 transition-colors"
+            >
+              <Stethoscope class="w-5 h-5" />
+              {t('cta.bookAppointment')}
+            </a>
+          )
+        }
         <a href={`${base}/contacto`} class="btn-primary text-base py-3.5 px-8">{t('cta.primary')}</a
         >
         <a
@@ -176,6 +191,19 @@ const base = lang === 'en' ? '/en' : '';
         }
       </p>
       <div class="flex flex-wrap justify-center gap-4">
+        {
+          bookingUrl && (
+            <a
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-brand-700 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-brand-800 transition-colors"
+            >
+              <Stethoscope class="w-5 h-5" />
+              {t('cta.bookAppointment')}
+            </a>
+          )
+        }
         <a
           href={`${base}/contacto`}
           class="inline-flex items-center gap-2 bg-brand-600 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-brand-700 transition-colors"
