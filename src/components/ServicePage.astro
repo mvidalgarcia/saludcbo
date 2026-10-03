@@ -1,5 +1,5 @@
 ---
-import { MessageCircle, Stethoscope } from 'lucide-astro';
+import { MessageCircle } from 'lucide-astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
@@ -24,6 +24,7 @@ interface Props {
 
 const {
   lang,
+  serviceId,
   metaTitle,
   metaDescription,
   heroEyebrow,
@@ -40,6 +41,16 @@ const {
 
 const t = useTranslations(lang);
 const base = lang === 'en' ? '/en' : '';
+const featuresTitleKey = `services.${serviceId}.featuresTitle`;
+const featuresTitleResolved = t(featuresTitleKey);
+const featuresTitle =
+  featuresTitleResolved === featuresTitleKey
+    ? t('servicePage.featuresTitle')
+    : featuresTitleResolved;
+const hideAssessmentCta = serviceId === 'fisioterapia';
+const ctaBodyKey = `services.${serviceId}.ctaBody`;
+const ctaBodyResolved = t(ctaBodyKey);
+const ctaBody = ctaBodyResolved === ctaBodyKey ? t('servicePage.ctaBody') : ctaBodyResolved;
 ---
 
 <BaseLayout lang={lang} title={metaTitle} description={metaDescription}>
@@ -69,15 +80,19 @@ const base = lang === 'en' ? '/en' : '';
               href={bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 bg-brand-700 text-white font-semibold text-base py-3.5 px-8 rounded-full hover:bg-brand-800 transition-colors"
+              class="inline-flex items-center bg-brand-700 text-white font-semibold text-base py-3.5 px-8 rounded-full hover:bg-brand-800 transition-colors"
             >
-              <Stethoscope class="w-5 h-5" />
               {t('cta.bookAppointment')}
             </a>
           )
         }
-        <a href={`${base}/contacto`} class="btn-primary text-base py-3.5 px-8">{t('cta.primary')}</a
-        >
+        {
+          !hideAssessmentCta && (
+            <a href={`${base}/contacto`} class="btn-primary text-base py-3.5 px-8">
+              {t('cta.primary')}
+            </a>
+          )
+        }
         <a
           href={SITE.whatsappUrl}
           target="_blank"
@@ -100,7 +115,7 @@ const base = lang === 'en' ? '/en' : '';
   <section class="section-pad bg-brand-50 pt-0">
     <div class="container-main max-w-4xl mx-auto">
       <h2 class="section-title text-center mb-12">
-        {lang === 'es' ? '¿Qué incluye?' : "What's included?"}
+        {featuresTitle}
       </h2>
       <div class="grid sm:grid-cols-2 gap-4">
         {
@@ -183,13 +198,7 @@ const base = lang === 'en' ? '/en' : '';
       <h2 class="text-3xl font-extrabold text-gray-900 mb-4">
         {lang === 'es' ? '¿Empezamos?' : 'Ready to start?'}
       </h2>
-      <p class="text-gray-500 text-lg mb-8">
-        {
-          lang === 'es'
-            ? 'Solicita tu valoración y damos el primer paso juntos.'
-            : "Request your assessment and we'll take the first step together."
-        }
-      </p>
+      <p class="text-gray-500 text-lg mb-8">{ctaBody}</p>
       <div class="flex flex-wrap justify-center gap-4">
         {
           bookingUrl && (
@@ -197,26 +206,30 @@ const base = lang === 'en' ? '/en' : '';
               href={bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 bg-brand-700 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-brand-800 transition-colors"
+              class="inline-flex items-center bg-brand-700 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-brand-800 transition-colors"
             >
-              <Stethoscope class="w-5 h-5" />
               {t('cta.bookAppointment')}
             </a>
           )
         }
-        <a
-          href={`${base}/contacto`}
-          class="inline-flex items-center gap-2 bg-brand-600 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-brand-700 transition-colors"
-        >
-          {t('cta.primary')}
-        </a>
+        {
+          !hideAssessmentCta && (
+            <a
+              href={`${base}/contacto`}
+              class="inline-flex items-center gap-2 bg-brand-600 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-brand-700 transition-colors"
+            >
+              {t('cta.primary')}
+            </a>
+          )
+        }
         <a
           href={SITE.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center gap-2 bg-whatsapp text-white font-semibold py-3.5 px-8 rounded-full hover:bg-whatsapp-dark transition-colors"
         >
-          <MessageCircle class="w-5 h-5" /> WhatsApp
+          <MessageCircle class="w-5 h-5" />
+          {t('footer.whatsapp')}
         </a>
       </div>
     </div>

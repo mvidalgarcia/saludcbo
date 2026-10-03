@@ -9,11 +9,11 @@
         "title": "Entrenamiento Personal y Readaptación",
         "shortTitle": "Entrenamiento",
         "tagline": "Entrena de forma inteligente. Consigue resultados reales.",
-        "description": "Entrenamiento completamente individualizado basado en la evidencia científica. Trabajamos contigo de forma presencial con sesiones de 50 minutos, con seguimiento global online para todo el mes. No solo queremos que vengas a entrenar: también te acompañamos fuera del centro, planificando sesiones online, tareas de movilidad y sesiones aeróbicas. Cuidar tu salud y tu cuerpo en 360° durante todo el proceso.",
+        "description": "Entrenamiento completamente individualizado basado en la evidencia científica. Trabajamos contigo de forma presencial con sesiones de 1 hora, con seguimiento global online para todo el mes. No solo queremos que vengas a entrenar: también te acompañamos fuera del centro, planificando sesiones online, tareas de movilidad y sesiones aeróbicas. Cuidar tu salud y tu cuerpo en 360° durante todo el proceso.",
         "features": [
-          "Valoración funcional inicial de movilidad y fuerza",
+          "Seguimiento de tu progreso y ajuste de ejercicios y cargas",
           "Programa de entrenamiento completamente personalizado",
-          "Sesiones presenciales de 50 minutos",
+          "Sesiones presenciales de 1 hora",
           "Seguimiento global online durante todo el mes",
           "Readaptación de lesiones y ejercicio terapéutico",
           "Planificación de sesiones online, movilidad y cardio",
@@ -31,11 +31,11 @@
         "title": "Personal Training & Injury Rehab",
         "shortTitle": "Training",
         "tagline": "Train intelligently. Get real results.",
-        "description": "Fully individualised training based on scientific evidence. We work with you in person with 50-minute sessions, plus comprehensive online monitoring throughout the month. We don't just want you to come and train — we also accompany you outside the centre, planning online sessions, mobility work and cardio. Looking after your health and your body 360° throughout the entire process.",
+        "description": "Fully individualised training based on scientific evidence. We work with you in person with 1-hour sessions, plus comprehensive online monitoring throughout the month. We don't just want you to come and train — we also accompany you outside the centre, planning online sessions, mobility work and cardio. Looking after your health and your body 360° throughout the entire process.",
         "features": [
-          "Initial functional mobility and strength assessment",
+          "Progress tracking and adjustment of exercises and loads",
           "Fully personalised training programme",
-          "50-minute in-person sessions",
+          "1-hour in-person sessions",
           "Comprehensive online monitoring throughout the month",
           "Injury rehabilitation and therapeutic exercise",
           "Planning of online sessions, mobility work and cardio",
@@ -58,8 +58,8 @@
     "slug": { "es": "nutricion", "en": "nutrition" },
     "translations": {
       "es": {
-        "title": "Nutrición",
-        "shortTitle": "Nutrición",
+        "title": "Consulta Dietista",
+        "shortTitle": "Consulta Dietista",
         "tagline": "Aprende a comer. Consigue tus objetivos sin pasar hambre.",
         "description": "Plan dietético completamente individualizado, presencial y online. Nuestro enfoque se basa en la educación nutricional y la adherencia a largo plazo, no en restricciones insostenibles. Analizamos tu composición corporal, tu historial y tus preferencias para diseñar el plan que realmente funciona para ti.",
         "features": [
@@ -86,8 +86,8 @@
         ]
       },
       "en": {
-        "title": "Nutrition",
-        "shortTitle": "Nutrition",
+        "title": "Dietitian Consultation",
+        "shortTitle": "Dietitian Consultation",
         "tagline": "Learn to eat. Reach your goals without going hungry.",
         "description": "Fully individualised diet plan, in-person and online. Our approach is based on nutritional education and long-term adherence, not unsustainable restrictions.",
         "features": [
@@ -132,7 +132,8 @@
           "Kinesiotaping y vendaje funcional",
           "Punción seca",
           "Fisioterapia deportiva y traumatológica",
-          "Ejercicio terapéutico y rehabilitación",
+          "Fisioterapia de suelo pélvico",
+          "Fisioterapia de mandíbula y ATM (articulación temporomandibular)",
           "Recuperación postquirúrgica",
           "Prevención de lesiones"
         ],
@@ -154,7 +155,8 @@
           "Kinesiotaping and functional bandaging",
           "Dry needling",
           "Sports and traumatological physiotherapy",
-          "Therapeutic exercise and rehabilitation",
+          "Pelvic floor physiotherapy",
+          "Jaw and TMJ physiotherapy (temporomandibular joint)",
           "Post-surgical recovery",
           "Injury prevention"
         ],
@@ -177,20 +179,18 @@
         "title": "Pilates",
         "shortTitle": "Pilates",
         "tagline": "Control, fuerza y movilidad para tu cuerpo y tu mente.",
-        "description": "Clases de pilates individual y en grupos muy reducidos, con reformer y de suelo. Trabajamos el control del movimiento, la fuerza del core, la flexibilidad y la coordinación. Para todas las edades y niveles.",
+        "description": "Clases de pilates individual y en grupos reducidos, con reformer. Trabajamos el control del movimiento, la fuerza del core, la flexibilidad y la coordinación. Para todas las edades y niveles.",
         "features": [
-          "Evaluación postural y de movimiento inicial",
           "Pilates reformer",
-          "Pilates de suelo",
           "Clases individuales completamente personalizadas",
-          "Grupos muy reducidos (máximo 4 personas)",
+          "Grupos reducidos",
           "Para todas las edades y niveles",
           "Coordinación con fisioterapia cuando es necesario",
           "Progresión adaptada a tu evolución"
         ],
         "types": [
           { "title": "Pilates individual", "body": "Atención completamente personalizada. Diseñamos cada sesión en función de tus objetivos, nivel y necesidades." },
-          { "title": "Pilates en grupos reducidos", "body": "La motivación de entrenar en grupo con atención casi individual. Máximo 4 personas." },
+          { "title": "Pilates en grupos reducidos", "body": "La motivación de entrenar en grupo con atención casi individual. Máximo 5 personas." },
           { "title": "Pilates reformer", "body": "Utilizamos el reformer para ampliar las posibilidades de trabajo y añadir resistencia y soporte." },
           { "title": "Pilates terapéutico", "body": "Coordinado con fisioterapia para incorporar el pilates como parte del proceso de rehabilitación." }
         ]
@@ -199,20 +199,18 @@
         "title": "Pilates",
         "shortTitle": "Pilates",
         "tagline": "Control, strength and mobility for your body and mind.",
-        "description": "Individual and very small-group pilates classes, with reformer and mat work. We develop movement control, core strength, flexibility and coordination. For all ages and levels.",
+        "description": "Individual and small-group pilates classes, with reformer. We develop movement control, core strength, flexibility and coordination. For all ages and levels.",
         "features": [
-          "Initial postural and movement assessment",
           "Reformer pilates",
-          "Mat pilates",
           "Fully personalised individual classes",
-          "Very small groups (maximum 4 people)",
+          "Small groups",
           "For all ages and levels",
           "Coordination with physiotherapy when needed",
           "Progression adapted to your evolution"
         ],
         "types": [
           { "title": "Individual pilates", "body": "Completely personalised attention. We design each session according to your goals, level and specific needs." },
-          { "title": "Small-group pilates", "body": "The motivation of group training with almost individual attention. Maximum 4 people per session." },
+          { "title": "Small-group pilates", "body": "The motivation of group training with almost individual attention. Maximum 5 people per session." },
           { "title": "Reformer pilates", "body": "We use the reformer to expand the range of exercises and add resistance and support." },
           { "title": "Therapeutic pilates", "body": "Coordinated with physiotherapy to incorporate pilates as part of the rehabilitation process." }
         ]

@@ -24,11 +24,11 @@
     "translations": {
       "es": {
         "name": "CBO Salud. El Centro",
-        "description": "Entrenamiento, Nutrición, Pilates y Fisioterapia en un mismo espacio. Nuevo centro en Lugones (Avda de Gijón, 10 bajo) diseñado para el pilates reformer y la rehabilitación."
+        "description": "Entrenamiento, Consulta Dietista, Pilates y Fisioterapia en un mismo espacio. Nuevo centro en Lugones (Avda de Gijón, 10 bajo) diseñado para el pilates reformer y la rehabilitación."
       },
       "en": {
         "name": "CBO Salud. El Centro",
-        "description": "Training, nutrition, pilates and physiotherapy in one space. New centre in Lugones (Avda de Gijón, 10 bajo) designed for reformer pilates and rehabilitation."
+        "description": "Training, dietitian consultation, pilates and physiotherapy in one space. New centre in Lugones (Avda de Gijón, 10 bajo) designed for reformer pilates and rehabilitation."
       }
     }
   },
@@ -60,11 +60,11 @@
     "translations": {
       "es": {
         "name": "CBO Salud. La Nave",
-        "description": "Entrenamiento y Nutrición. Nuestro centro principal en Lugones, detrás de Tartiere Auto, con zona de entrenamiento funcional y consulta de nutrición."
+        "description": "Entrenamiento y Consulta Dietista. Nuestro centro principal en Lugones, detrás de Tartiere Auto, con zona de entrenamiento funcional y consulta dietista."
       },
       "en": {
         "name": "CBO Salud. La Nave",
-        "description": "Training and nutrition. Our main centre in Lugones, behind Tartiere Auto, with a functional training area and nutrition consultation room. Free parking."
+        "description": "Training and dietitian consultation. Our main centre in Lugones, behind Tartiere Auto, with a functional training area and dietitian consultation room. Free parking."
       }
     }
   }

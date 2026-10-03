@@ -3,6 +3,7 @@ import ServicePage from '../../components/ServicePage.astro';
 import { useTranslations } from '../../i18n/utils';
 import type { Lang } from '../../i18n/utils';
 import { getCollection } from 'astro:content';
+import { SITE } from '../../lib/site';
 
 const lang = (Astro.currentLocale ?? 'es') as Lang;
 const t = useTranslations(lang);
@@ -25,5 +26,5 @@ const tr = svc.data.translations[lang];
   features={tr.features}
   types={tr.types}
   heroImage="/images/fisio-0002.jpg"
-  bookingUrl="https://app.serenna.es/c/cbo-salud"
+  bookingUrl={SITE.physioBookingUrl}
 />

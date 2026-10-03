@@ -2,8 +2,8 @@
   "meta": {
     "siteName": "Salud CBO",
     "home": {
-      "title": "Salud CBO | Entrenamiento, Fisioterapia, Nutrición y Pilates en Asturias",
-      "description": "Centro de entrenamiento personal, fisioterapia, nutrición y pilates en Lugones, Asturias. Método basado en evidencia científica e individualización total. Dos centros. Presencial y online."
+      "title": "Salud CBO | Entrenamiento, Fisioterapia, Consulta Dietista y Pilates en Asturias",
+      "description": "Centro de entrenamiento personal, fisioterapia, Consulta Dietista y pilates en Lugones, Asturias. Método basado en evidencia científica e individualización total. Dos centros. Presencial y online."
     },
     "metodo": {
       "title": "Método CBO | Salud CBO",
@@ -11,7 +11,7 @@
     },
     "equipo": {
       "title": "Equipo CBO | Salud CBO",
-      "description": "Conoce al equipo de especialistas de Salud CBO: entrenadores, fisioterapeutas, nutricionistas y profesores de pilates en Lugones, Asturias."
+      "description": "Conoce al equipo de especialistas de Salud CBO: entrenadores, fisioterapeutas, dietistas y profesores de pilates en Lugones, Asturias."
     },
     "centros": {
       "title": "Nuestros Centros | Salud CBO",
@@ -19,15 +19,15 @@
     },
     "contacto": {
       "title": "Contacto | Salud CBO",
-      "description": "Contacta con Salud CBO para solicitar información sobre entrenamiento, fisioterapia, nutrición y pilates en Lugones, Asturias."
+      "description": "Contacta con Salud CBO para solicitar información sobre entrenamiento, fisioterapia, Consulta Dietista y pilates en Lugones, Asturias."
     },
     "entrenamiento": {
       "title": "Entrenamiento Personal y Readaptación | Salud CBO",
       "description": "Entrenamiento personal, readaptación de lesiones y grupos reducidos en Lugones, Asturias. Individualizado, basado en evidencia científica."
     },
     "nutricion": {
-      "title": "Nutrición | Salud CBO",
-      "description": "Consulta de nutrición presencial y online en Lugones, Asturias. Planes dietéticos individualizados, composición corporal y seguimiento continuo."
+      "title": "Consulta Dietista | Salud CBO",
+      "description": "Consulta dietista presencial y online en Lugones, Asturias. Planes dietéticos individualizados, composición corporal y seguimiento continuo."
     },
     "fisioterapia": {
       "title": "Fisioterapia | Salud CBO",
@@ -39,17 +39,17 @@
     },
     "empresa": {
       "title": "Empresa Saludable | Salud CBO",
-      "description": "Programas de salud y bienestar corporativo en Asturias. Nutrición y entrenamiento para empresas. Empleados más sanos, empresas más fuertes."
+      "description": "Programas de salud y bienestar corporativo en Asturias. Consulta Dietista y entrenamiento para empresas. Empleados más sanos, empresas más fuertes."
     },
     "tarifas": {
       "title": "Tarifas | Salud CBO",
-      "description": "Descubre nuestras tarifas de entrenamiento personal, fisioterapia, nutrición y pilates en Lugones, Asturias. Sin permanencia."
+      "description": "Descubre nuestras tarifas de entrenamiento personal, fisioterapia, Consulta Dietista y pilates en Lugones, Asturias. Sin permanencia."
     }
   },
   "nav": {
     "services": "Servicios",
     "training": "Entrenamiento",
-    "nutrition": "Nutrición",
+    "nutrition": "Consulta Dietista",
     "physio": "Fisioterapia",
     "pilates": "Pilates reformer",
     "method": "Método CBO",
@@ -61,7 +61,7 @@
     "cta": "Solicitar valoración"
   },
   "footer": {
-    "tagline": "Especialistas en entrenamiento, fisioterapia, nutrición y pilates en Lugones, Asturias.",
+    "tagline": "Especialistas en entrenamiento, fisioterapia, Consulta Dietista y pilates en Lugones, Asturias.",
     "services": "Servicios",
     "company": "La empresa",
     "legal": "Legal",
@@ -95,13 +95,17 @@
     "bookAppointment": "Pide tu cita",
     "bookPhysio": "Pide tu cita de fisio"
   },
+  "servicePage": {
+    "featuresTitle": "¿Qué incluye?",
+    "ctaBody": "Solicita tu valoración y damos el primer paso juntos."
+  },
   "home": {
     "hero": {
       "eyebrow": "Lugones, Asturias · Dos centros · Presencial y Online",
       "heading1": "Especialistas",
       "heading2": "en tu",
       "headingAccent": "salud",
-      "subtitle": "Entrenamiento, fisioterapia, nutrición y pilates. Método basado en la evidencia científica e individualización total para conseguir resultados reales y duraderos.",
+      "subtitle": "Entrenamiento, fisioterapia, Consulta Dietista y pilates. Método basado en la evidencia científica e individualización total para conseguir resultados reales y duraderos.",
       "stat1Value": "+10",
       "stat1Label": "años de experiencia",
       "stat2Value": "+1.000",
@@ -179,7 +183,7 @@
       "p2Title": "Planificación profesional",
       "p2Body": "Organizamos tus sesiones en la app CBO SALUD, adaptadas a tu nivel y necesidades, con seguimiento continuo.",
       "p3Title": "Trabajo multidisciplinar",
-      "p3Body": "Entrenamiento, pilates, nutrición y fisioterapia trabajan de forma coordinada para ofrecerte una atención integral.",
+      "p3Body": "Entrenamiento, pilates, Consulta Dietista y fisioterapia trabajan de forma coordinada para ofrecerte una atención integral.",
       "p4Title": "Horarios y flexibilidad",
       "p4Body": "Grupos reducidos de lunes a viernes, de 7:00 a 22:00, con sesiones de 1 hora y facilidad para realizar cambios y recuperaciones."
     },
@@ -189,7 +193,7 @@
       "step1Title": "Primer contacto",
       "step1Body": "Nos cuentas tu objetivo y hacemos una valoración inicial para entender tu punto de partida.",
       "step2Title": "Diseño del programa",
-      "step2Body": "Diseñamos tu plan de entrenamiento, nutrición o fisioterapia — o la combinación que necesites — a medida.",
+      "step2Body": "Diseñamos a medida tu plan de entrenamiento, tu Consulta Dietista o tu fisioterapia — o la combinación que necesites.",
       "step3Title": "Inicio y seguimiento",
       "step3Body": "Empezamos a trabajar juntos con revisiones periódicas para asegurarnos de que avanzas y ajustar el plan cuando hace falta.",
       "step4Title": "Resultados duraderos",
@@ -209,7 +213,7 @@
     },
     "intro": {
       "title": "Construimos CBO para que pueda crecer contigo",
-      "body": "CBO nació como el proyecto personal de Carlos Bernardo, pero siempre con una visión clara: construir un equipo de especialistas capaz de ofrecer atención integral de la más alta calidad. Hoy somos un equipo de entrenadores, fisioterapeutas, nutricionistas y profesores de pilates que comparten la misma filosofía y el mismo método."
+      "body": "CBO nació como el proyecto personal de Carlos Bernardo, pero siempre con una visión clara: construir un equipo de especialistas capaz de ofrecer atención integral de la más alta calidad. Hoy somos un equipo de entrenadores, fisioterapeutas, dietistas y profesores de pilates que comparten la misma filosofía y el mismo método."
     },
     "values": {
       "eyebrow": "Lo que nos define",
@@ -263,8 +267,8 @@
         "subtitle": "Metodología basada en la evidencia científica, adaptada al 100% a ti. Entrenamiento presencial, en grupos reducidos y online."
       },
       "tarifas": {
-        "singleSession": "Sesión individual",
-        "singleSessionDesc": "45–60 min. Primera valoración incluida.",
+        "singleSession": "Primera valoración",
+        "singleSessionDesc": "1 hora. Primera valoración incluida.",
         "singleSessionPrice": "45",
         "singleSessionUnit": "€ /sesión",
         "groups": {
@@ -275,7 +279,7 @@
           "priceLabel": "Tarifa /persona",
           "discountPriceLabel": "Con 10% dto.",
           "monthly": "€/mes",
-          "sessionDuration": "Sesiones de 55 min",
+          "sessionDuration": "Sesiones de 1 hora",
           "ratio": "Ratio 1:3 y 1:6",
           "flexible": "Plazas flexibles",
           "plans": [
@@ -293,21 +297,21 @@
       }
     },
     "nutricion": {
-      "title": "Nutrición",
-      "shortTitle": "Nutrición",
+      "title": "Consulta Dietista",
+      "shortTitle": "Consulta Dietista",
       "tagline": "Aprende a comer. Consigue tus objetivos sin pasar hambre.",
       "hero": {
-        "eyebrow": "Nutrición",
-        "title": "Consulta de Nutrición",
+        "eyebrow": "Consulta Dietista",
+        "title": "Consulta Dietista",
         "subtitle": "Plan dietético completamente individualizado, adaptado a tus características, preferencias y objetivos. Presencial y online."
       },
       "tarifas": {
-        "singleSession": "Consulta de nutrición",
-        "singleSessionDesc": "Plan dietético personalizado.",
+        "singleSession": "Consulta Dietista",
+        "singleSessionDesc": "Primer mes: 2 consultas incluidas.",
         "singleSessionPrice": "95",
         "singleSessionUnit": "€ /mes",
-        "monthly": "€/mes",
-        "tableTitle": "Nutrición",
+        "monthly": "€",
+        "tableTitle": "Consulta Dietista",
         "tableHeaders": {
           "service": "Período",
           "price": "Precio",
@@ -315,10 +319,11 @@
           "members": "Miembros CBO"
         },
         "rows": [
-          { "service": "Primer mes", "price": "95", "detail": "", "members": "" },
-          { "service": "Desde 2º mes", "price": "55", "detail": "", "members": "38,5" }
+          { "service": "Primer mes", "price": "95", "detail": "2 consultas", "members": "45" },
+          { "service": "Desde 2º mes", "price": "55", "detail": "1 consulta", "members": "38,5" }
         ],
-        "membersLabel": "Miembros de CBO Salud"
+        "membersLabel": "Miembros de EP, Pilates o Boxeo",
+        "membersNote": "Miembros de EP, Pilates o Boxeo: primer mes 45 € con 1 consulta. Revisiones: 38,50 €."
       }
     },
     "fisioterapia": {
@@ -330,13 +335,15 @@
         "title": "Fisioterapia Deportiva y Terapéutica",
         "subtitle": "Tratamiento del dolor, rehabilitación de lesiones, recuperación postquirúrgica y prevención. Para todas las edades."
       },
+      "featuresTitle": "Nuestros servicios",
+      "ctaBody": "Reserva tu cita y damos el primer paso juntos.",
       "tarifas": {
         "singleSession": "Sesión general individual",
         "singleSessionDesc": "Primera valoración incluida.",
         "singleSessionPrice": "39,5",
         "singleSessionUnit": "€ /sesión",
         "membersLabel": "Miembros de CBO Salud",
-        "membersPrice": "34,5",
+        "membersPrice": "35",
         "tableTitle": "Fisioterapia",
         "tableHeaders": {
           "service": "Tipo de servicio",
@@ -345,7 +352,7 @@
           "members": "Miembros CBO"
         },
         "rows": [
-          { "service": "Sesión general individual", "price": "39,5", "detail": "", "members": "34,5" },
+          { "service": "Sesión general individual", "price": "39,5", "detail": "", "members": "35" },
           { "service": "Fisioterapia especializada", "price": "55", "detail": "Suelo pélvico y ATM", "members": "50" },
           { "service": "Bono 4 sesiones fisioterapia general", "price": "140", "detail": "35€/sesión con bono", "members": "" },
           { "service": "Bono 4 sesiones fisioterapia especializada", "price": "200", "detail": "50€/sesión con bono", "members": "" }
@@ -356,7 +363,9 @@
           "price": "32,5",
           "unit": "€ /sesión",
           "detail": "Precio de apertura, hasta agotar plazas"
-        }
+        },
+        "membersBenefitsTitle": "Ser parte de CBO tiene sus ventajas",
+        "membersBenefitsBody": "Si ya eres miembro de CBO Salud, disfruta de tus sesiones de fisioterapia a precio de bono, sin necesidad de comprar uno. Puedes reservar cada sesión por separado y mantener tu tarifa de miembro."
       }
     },
     "pilates": {
@@ -366,7 +375,7 @@
       "hero": {
         "eyebrow": "Pilates",
         "title": "Pilates Individual y en Grupos Reducidos",
-        "subtitle": "Pilates reformer y de suelo. Individual o en grupos muy reducidos para un seguimiento personalizado."
+        "subtitle": "Pilates reformer. Individual o en grupos reducidos para un seguimiento personalizado."
       },
       "tarifas": {
         "singleSession": "Sesión individual",
@@ -402,7 +411,7 @@
       "hero": {
         "eyebrow": "Bienestar corporativo",
         "title": "Empresa Saludable",
-        "subtitle": "Programas de entrenamiento y nutrición corporativos para impulsar la salud y el rendimiento de tu equipo."
+        "subtitle": "Programas corporativos de entrenamiento y Consulta Dietista para impulsar la salud y el rendimiento de tu equipo."
       }
     }
   },

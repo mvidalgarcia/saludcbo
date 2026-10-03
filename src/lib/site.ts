@@ -7,6 +7,7 @@ export const SITE = {
   whatsappUrl: 'https://wa.me/34667828851',
   instagram: 'https://www.instagram.com/cbosalud/',
   instagramHandle: '@cbosalud',
+  physioBookingUrl: 'https://app.serenna.es/c/cbo-salud',
 } as const;
 
 /** Build a WhatsApp deep-link, optionally with a pre-filled message. */

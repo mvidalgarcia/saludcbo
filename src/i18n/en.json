@@ -2,8 +2,8 @@
   "meta": {
     "siteName": "Salud CBO",
     "home": {
-      "title": "Salud CBO | Personal Training, Physiotherapy, Nutrition & Pilates in Asturias",
-      "description": "Personal training, physiotherapy, nutrition and pilates centre in Lugones, Asturias. Evidence-based method, fully individualised. Two centres. In-person and online."
+      "title": "Salud CBO | Personal Training, Physiotherapy, Dietitian Consultation & Pilates in Asturias",
+      "description": "Personal training, physiotherapy, dietitian consultation and pilates centre in Lugones, Asturias. Evidence-based method, fully individualised. Two centres. In-person and online."
     },
     "metodo": {
       "title": "The CBO Method | Salud CBO",
@@ -11,7 +11,7 @@
     },
     "equipo": {
       "title": "Our Team | Salud CBO",
-      "description": "Meet the Salud CBO team of specialists: personal trainers, physiotherapists, nutritionists and pilates instructors in Lugones, Asturias."
+      "description": "Meet the Salud CBO team of specialists: personal trainers, physiotherapists, dietitians and pilates instructors in Lugones, Asturias."
     },
     "centros": {
       "title": "Our Centres | Salud CBO",
@@ -19,15 +19,15 @@
     },
     "contacto": {
       "title": "Contact | Salud CBO",
-      "description": "Get in touch with Salud CBO to request information about personal training, physiotherapy, nutrition and pilates in Lugones, Asturias."
+      "description": "Get in touch with Salud CBO to request information about personal training, physiotherapy, dietitian consultation and pilates in Lugones, Asturias."
     },
     "entrenamiento": {
       "title": "Personal Training & Injury Rehab | Salud CBO",
       "description": "Personal training, injury rehabilitation and small group training in Lugones, Asturias. Fully individualised, evidence-based."
     },
     "nutricion": {
-      "title": "Nutrition | Salud CBO",
-      "description": "In-person and online nutrition consultations in Lugones, Asturias. Individualised diet plans, body composition testing and continuous follow-up."
+      "title": "Dietitian Consultation | Salud CBO",
+      "description": "In-person and online dietitian consultation in Lugones, Asturias. Individualised diet plans, body composition testing and continuous follow-up."
     },
     "fisioterapia": {
       "title": "Physiotherapy | Salud CBO",
@@ -39,17 +39,17 @@
     },
     "empresa": {
       "title": "Corporate Wellness | Salud CBO",
-      "description": "Corporate health and wellness programmes in Asturias. Nutrition and training for businesses. Healthier employees, stronger companies."
+      "description": "Corporate health and wellness programmes in Asturias. Dietitian consultation and training for businesses. Healthier employees, stronger companies."
     },
     "tarifas": {
       "title": "Pricing | Salud CBO",
-      "description": "Discover our pricing for personal training, physiotherapy, nutrition and pilates in Lugones, Asturias. No commitment."
+      "description": "Discover our pricing for personal training, physiotherapy, dietitian consultation and pilates in Lugones, Asturias. No commitment."
     }
   },
   "nav": {
     "services": "Services",
     "training": "Personal Training",
-    "nutrition": "Nutrition",
+    "nutrition": "Dietitian Consultation",
     "physio": "Physiotherapy",
     "pilates": "Pilates reformer",
     "method": "CBO Method",
@@ -61,7 +61,7 @@
     "cta": "Book assessment"
   },
   "footer": {
-    "tagline": "Specialists in personal training, physiotherapy, nutrition and pilates in Lugones, Asturias.",
+    "tagline": "Specialists in personal training, physiotherapy, dietitian consultation and pilates in Lugones, Asturias.",
     "services": "Services",
     "company": "Company",
     "legal": "Legal",
@@ -95,13 +95,17 @@
     "bookAppointment": "Book appointment",
     "bookPhysio": "Book physio appointment"
   },
+  "servicePage": {
+    "featuresTitle": "What's included?",
+    "ctaBody": "Request your assessment and we'll take the first step together."
+  },
   "home": {
     "hero": {
       "eyebrow": "Lugones, Asturias · Two centres · In-person & Online",
       "heading1": "Specialists",
       "heading2": "in your",
       "headingAccent": "health",
-      "subtitle": "Personal training, physiotherapy, nutrition and pilates. Evidence-based method with full individualisation for real, lasting results.",
+      "subtitle": "Personal training, physiotherapy, dietitian consultation and pilates. Evidence-based method with full individualisation for real, lasting results.",
       "stat1Value": "10+",
       "stat1Label": "years of experience",
       "stat2Value": "1,000+",
@@ -179,7 +183,7 @@
       "p2Title": "Professional planning",
       "p2Body": "We organise your sessions in the CBO SALUD app, adapted to your level and needs, with ongoing monitoring.",
       "p3Title": "Multidisciplinary work",
-      "p3Body": "Training, pilates, nutrition and physiotherapy work together to provide you with comprehensive care.",
+      "p3Body": "Training, pilates, dietitian consultation and physiotherapy work together to provide you with comprehensive care.",
       "p4Title": "Schedule and flexibility",
       "p4Body": "Small groups Monday to Friday, 7:00 to 22:00, with 1-hour sessions and easy access to changes and make-up sessions."
     },
@@ -189,7 +193,7 @@
       "step1Title": "First contact",
       "step1Body": "You tell us your goal and we do an initial assessment to understand your starting point.",
       "step2Title": "Programme design",
-      "step2Body": "We design your tailored training, nutrition or physiotherapy plan — or the combination you need.",
+      "step2Body": "We design your tailored training, dietitian consultation or physiotherapy plan — or the combination you need.",
       "step3Title": "Start & monitoring",
       "step3Body": "We start working together with periodic reviews to make sure you're progressing and to adjust the plan when needed.",
       "step4Title": "Lasting results",
@@ -209,7 +213,7 @@
     },
     "intro": {
       "title": "We built CBO so it can grow with you",
-      "body": "CBO started as Carlos Bernardo's personal project, but always with a clear vision: to build a team of specialists capable of offering comprehensive, highest-quality care. Today we are a team of trainers, physiotherapists, nutritionists and pilates instructors who share the same philosophy and the same method."
+      "body": "CBO started as Carlos Bernardo's personal project, but always with a clear vision: to build a team of specialists capable of offering comprehensive, highest-quality care. Today we are a team of trainers, physiotherapists, dietitians and pilates instructors who share the same philosophy and the same method."
     },
     "values": {
       "eyebrow": "What defines us",
@@ -263,8 +267,8 @@
         "subtitle": "Evidence-based methodology, 100% adapted to you. In-person, small-group and online training."
       },
       "tarifas": {
-        "singleSession": "Individual session",
-        "singleSessionDesc": "45–60 min. Initial assessment included.",
+        "singleSession": "Initial assessment",
+        "singleSessionDesc": "1 hour. Initial assessment included.",
         "singleSessionPrice": "45",
         "singleSessionUnit": "€ /session",
         "groups": {
@@ -275,7 +279,7 @@
           "priceLabel": "Price /person",
           "discountPriceLabel": "With 10% off",
           "monthly": "€/month",
-          "sessionDuration": "55-minute sessions",
+          "sessionDuration": "1-hour sessions",
           "ratio": "Ratio 1:3 and 1:6",
           "flexible": "Flexible spots",
           "plans": [
@@ -293,21 +297,21 @@
       }
     },
     "nutricion": {
-      "title": "Nutrition",
-      "shortTitle": "Nutrition",
+      "title": "Dietitian Consultation",
+      "shortTitle": "Dietitian Consultation",
       "tagline": "Learn to eat. Reach your goals without going hungry.",
       "hero": {
-        "eyebrow": "Nutrition",
-        "title": "Nutrition Consultation",
+        "eyebrow": "Dietitian Consultation",
+        "title": "Dietitian Consultation",
         "subtitle": "Fully individualised diet plan, adapted to your characteristics, preferences and goals. In-person and online."
       },
       "tarifas": {
-        "singleSession": "Nutrition consultation",
-        "singleSessionDesc": "Personalised diet plan.",
+        "singleSession": "Dietitian consultation",
+        "singleSessionDesc": "First month: 2 consultations included.",
         "singleSessionPrice": "95",
         "singleSessionUnit": "€ /month",
-        "monthly": "€/month",
-        "tableTitle": "Nutrition",
+        "monthly": "€",
+        "tableTitle": "Dietitian Consultation",
         "tableHeaders": {
           "service": "Period",
           "price": "Price",
@@ -315,10 +319,11 @@
           "members": "CBO Members"
         },
         "rows": [
-          { "service": "First month", "price": "95", "detail": "", "members": "" },
-          { "service": "From 2nd month", "price": "55", "detail": "", "members": "38.5" }
+          { "service": "First month", "price": "95", "detail": "2 consultations", "members": "45" },
+          { "service": "From 2nd month", "price": "55", "detail": "1 consultation", "members": "38.5" }
         ],
-        "membersLabel": "CBO Salud members"
+        "membersLabel": "Training, Pilates or Boxing members",
+        "membersNote": "Training, Pilates or Boxing members: first month €45 with 1 consultation. Reviews: €38.50."
       }
     },
     "fisioterapia": {
@@ -330,13 +335,15 @@
         "title": "Sports & Therapeutic Physiotherapy",
         "subtitle": "Pain treatment, injury rehabilitation, post-surgical recovery and prevention. For all ages."
       },
+      "featuresTitle": "Our services",
+      "ctaBody": "Book your appointment and we'll take the first step together.",
       "tarifas": {
         "singleSession": "Individual general session",
         "singleSessionDesc": "Initial assessment included.",
         "singleSessionPrice": "39.5",
         "singleSessionUnit": "€ /session",
         "membersLabel": "CBO Salud members",
-        "membersPrice": "34.5",
+        "membersPrice": "35",
         "tableTitle": "Physiotherapy",
         "tableHeaders": {
           "service": "Service type",
@@ -345,7 +352,7 @@
           "members": "CBO Members"
         },
         "rows": [
-          { "service": "Individual general session", "price": "39.5", "detail": "", "members": "34.5" },
+          { "service": "Individual general session", "price": "39.5", "detail": "", "members": "35" },
           { "service": "Specialised physiotherapy", "price": "55", "detail": "Pelvic floor & TMJ", "members": "50" },
           { "service": "4-session general physio bundle", "price": "140", "detail": "35€/session with bundle", "members": "" },
           { "service": "4-session specialised physio bundle", "price": "200", "detail": "50€/session with bundle", "members": "" }
@@ -356,7 +363,9 @@
           "price": "32.5",
           "unit": "€ /session",
           "detail": "Opening price, until spots last"
-        }
+        },
+        "membersBenefitsTitle": "Being part of CBO has its advantages",
+        "membersBenefitsBody": "If you are already a CBO Salud member, enjoy physiotherapy sessions at the bundle rate without buying a bundle. You can book each session separately and keep your member price."
       }
     },
     "pilates": {
@@ -366,7 +375,7 @@
       "hero": {
         "eyebrow": "Pilates",
         "title": "Individual & Small-Group Pilates",
-        "subtitle": "Reformer and mat pilates. Individual or in very small groups for personalised attention."
+        "subtitle": "Reformer pilates. Individual or in small groups for personalised attention."
       },
       "tarifas": {
         "singleSession": "Individual session",
@@ -402,7 +411,7 @@
       "hero": {
         "eyebrow": "Corporate wellness",
         "title": "Corporate Wellness",
-        "subtitle": "Corporate training and nutrition programmes to boost your team's health and performance."
+        "subtitle": "Corporate training and dietitian consultation programmes to boost your team's health and performance."
       }
     }
   },
