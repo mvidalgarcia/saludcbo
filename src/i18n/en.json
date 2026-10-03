@@ -1,48 +1,48 @@
 {
   "meta": {
-    "siteName": "Salud CBO",
+    "siteName": "CBO Salud",
     "home": {
-      "title": "Salud CBO | Personal Training, Physiotherapy, Dietitian Consultation & Pilates in Asturias",
+      "title": "CBO Salud | Personal Training, Physiotherapy, Dietitian Consultation & Pilates in Asturias",
       "description": "Personal training, physiotherapy, dietitian consultation and pilates centre in Lugones, Asturias. Evidence-based method, fully individualised. Two centres. In-person and online."
     },
     "metodo": {
-      "title": "The CBO Method | Salud CBO",
+      "title": "The CBO Method | CBO Salud",
       "description": "The CBO Method: evidence-based, fully individualised, 360° monitoring. Over 10 years helping more than 1,000 people reach their health goals."
     },
     "equipo": {
-      "title": "Our Team | Salud CBO",
-      "description": "Meet the Salud CBO team of specialists: personal trainers, physiotherapists, dietitians and pilates instructors in Lugones, Asturias."
+      "title": "Our Team | CBO Salud",
+      "description": "Meet the CBO Salud team of specialists: personal trainers, physiotherapists, dietitians and pilates instructors in Lugones, Asturias."
     },
     "centros": {
-      "title": "Our Centres | Salud CBO",
+      "title": "Our Centres | CBO Salud",
       "description": "Two centres in Lugones, Asturias, 5 minutes from Oviedo. Free parking. In-person and online services."
     },
     "contacto": {
-      "title": "Contact | Salud CBO",
-      "description": "Get in touch with Salud CBO to request information about personal training, physiotherapy, dietitian consultation and pilates in Lugones, Asturias."
+      "title": "Contact | CBO Salud",
+      "description": "Get in touch with CBO Salud to request information about personal training, physiotherapy, dietitian consultation and pilates in Lugones, Asturias."
     },
     "entrenamiento": {
-      "title": "Personal Training & Injury Rehab | Salud CBO",
+      "title": "Personal Training & Injury Rehab | CBO Salud",
       "description": "Personal training, injury rehabilitation and small group training in Lugones, Asturias. Fully individualised, evidence-based."
     },
     "nutricion": {
-      "title": "Dietitian Consultation | Salud CBO",
+      "title": "Dietitian Consultation | CBO Salud",
       "description": "In-person and online dietitian consultation in Lugones, Asturias. Individualised diet plans, body composition testing and continuous follow-up."
     },
     "fisioterapia": {
-      "title": "Physiotherapy | Salud CBO",
+      "title": "Physiotherapy | CBO Salud",
       "description": "Sports physiotherapy, manual therapy and therapeutic exercise in Lugones, Asturias. Pain treatment, rehabilitation and injury prevention."
     },
     "pilates": {
-      "title": "Pilates | Salud CBO",
+      "title": "Pilates | CBO Salud",
       "description": "Individual and small-group pilates classes in Lugones, Asturias. Reformer pilates, movement control and flexibility improvement."
     },
     "empresa": {
-      "title": "Corporate Wellness | Salud CBO",
+      "title": "Corporate Wellness | CBO Salud",
       "description": "Corporate health and wellness programmes in Asturias. Dietitian consultation and training for businesses. Healthier employees, stronger companies."
     },
     "tarifas": {
-      "title": "Pricing | Salud CBO",
+      "title": "Pricing | CBO Salud",
       "description": "Discover our pricing for personal training, physiotherapy, dietitian consultation and pilates in Lugones, Asturias. No commitment."
     }
   },
@@ -71,7 +71,7 @@
     "sitemap": "Sitemap",
     "social": "Social media",
     "followUs": "Follow us",
-    "copyright": "© Salud CBO (Carlos Bernardo Osoro)",
+    "copyright": "© CBO Salud (Carlos Bernardo Osoro)",
     "funding": "Funded by the European Union – NextGenerationEU. Views expressed are solely those of the author and do not reflect those of the EU or the European Commission.",
     "address": "P. El Castro, nave 2, Lugones (behind Tartiere Auto)",
     "phone": "+34 667 828 851",
@@ -167,7 +167,7 @@
     },
     "intro": {
       "title": "There is no perfect programme. There is the perfect programme for you.",
-      "body": "At CBO we don't work with standard protocols or magazine diets. We start with a deep analysis of who you are, where you're starting from and where you want to go. From there, we build your programme from scratch.",
+      "body": "We work with a common methodology and protocols, adapting the plan to each person's goals and needs. We start with a deep analysis of who you are, where you're starting from and where you want to go. From there, we build your programme from scratch.",
       "stat1Value": "10+ years",
       "stat1Label": "developing the method",
       "stat2Value": "1,000+",

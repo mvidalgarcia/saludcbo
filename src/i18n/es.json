@@ -1,48 +1,48 @@
 {
   "meta": {
-    "siteName": "Salud CBO",
+    "siteName": "CBO Salud",
     "home": {
-      "title": "Salud CBO | Entrenamiento, Fisioterapia, Consulta Dietista y Pilates en Asturias",
+      "title": "CBO Salud | Entrenamiento, Fisioterapia, Consulta Dietista y Pilates en Asturias",
       "description": "Centro de entrenamiento personal, fisioterapia, Consulta Dietista y pilates en Lugones, Asturias. Método basado en evidencia científica e individualización total. Dos centros. Presencial y online."
     },
     "metodo": {
-      "title": "Método CBO | Salud CBO",
+      "title": "Método CBO | CBO Salud",
       "description": "El Método CBO: evidencia científica, individualización y seguimiento 360°. Más de 10 años ayudando a más de 1.000 personas a alcanzar sus objetivos de salud."
     },
     "equipo": {
-      "title": "Equipo CBO | Salud CBO",
-      "description": "Conoce al equipo de especialistas de Salud CBO: entrenadores, fisioterapeutas, dietistas y profesores de pilates en Lugones, Asturias."
+      "title": "Equipo CBO | CBO Salud",
+      "description": "Conoce al equipo de especialistas de CBO Salud: entrenadores, fisioterapeutas, dietistas y profesores de pilates en Lugones, Asturias."
     },
     "centros": {
-      "title": "Nuestros Centros | Salud CBO",
+      "title": "Nuestros Centros | CBO Salud",
       "description": "Dos centros en Lugones, Asturias, a 5 minutos del centro de Oviedo. Aparcamiento gratuito. Servicios presenciales y online."
     },
     "contacto": {
-      "title": "Contacto | Salud CBO",
-      "description": "Contacta con Salud CBO para solicitar información sobre entrenamiento, fisioterapia, Consulta Dietista y pilates en Lugones, Asturias."
+      "title": "Contacto | CBO Salud",
+      "description": "Contacta con CBO Salud para solicitar información sobre entrenamiento, fisioterapia, Consulta Dietista y pilates en Lugones, Asturias."
     },
     "entrenamiento": {
-      "title": "Entrenamiento Personal y Readaptación | Salud CBO",
+      "title": "Entrenamiento Personal y Readaptación | CBO Salud",
       "description": "Entrenamiento personal, readaptación de lesiones y grupos reducidos en Lugones, Asturias. Individualizado, basado en evidencia científica."
     },
     "nutricion": {
-      "title": "Consulta Dietista | Salud CBO",
+      "title": "Consulta Dietista | CBO Salud",
       "description": "Consulta dietista presencial y online en Lugones, Asturias. Planes dietéticos individualizados, composición corporal y seguimiento continuo."
     },
     "fisioterapia": {
-      "title": "Fisioterapia | Salud CBO",
+      "title": "Fisioterapia | CBO Salud",
       "description": "Fisioterapia deportiva, terapia manual y ejercicio terapéutico en Lugones, Asturias. Tratamiento del dolor, rehabilitación y prevención de lesiones."
     },
     "pilates": {
-      "title": "Pilates | Salud CBO",
+      "title": "Pilates | CBO Salud",
       "description": "Clases de pilates individual y en grupos reducidos en Lugones, Asturias. Pilates reformer, control del movimiento y mejora de la flexibilidad."
     },
     "empresa": {
-      "title": "Empresa Saludable | Salud CBO",
+      "title": "Empresa Saludable | CBO Salud",
       "description": "Programas de salud y bienestar corporativo en Asturias. Consulta Dietista y entrenamiento para empresas. Empleados más sanos, empresas más fuertes."
     },
     "tarifas": {
-      "title": "Tarifas | Salud CBO",
+      "title": "Tarifas | CBO Salud",
       "description": "Descubre nuestras tarifas de entrenamiento personal, fisioterapia, Consulta Dietista y pilates en Lugones, Asturias. Sin permanencia."
     }
   },
@@ -71,7 +71,7 @@
     "sitemap": "Mapa del sitio",
     "social": "Redes sociales",
     "followUs": "Síguenos",
-    "copyright": "© Salud CBO (Carlos Bernardo Osoro)",
+    "copyright": "© CBO Salud (Carlos Bernardo Osoro)",
     "funding": "Financiado por la Unión Europea – NextGenerationEU. Los puntos de vista expresados son únicamente los del autor y no reflejan los de la UE o la Comisión Europea.",
     "address": "P. El Castro, nave 2, Lugones (detrás de Tartiere Auto)",
     "phone": "+34 667 828 851",
@@ -167,7 +167,7 @@
     },
     "intro": {
       "title": "No existe el programa perfecto. Existe el programa perfecto para ti.",
-      "body": "En CBO no trabajamos con protocolos estándar ni con dietas de revista. Partimos de un análisis profundo de quién eres, cuál es tu punto de partida y a dónde quieres llegar. A partir de ahí, construimos tu programa desde cero.",
+      "body": "Trabajamos con una metodología y protocolos comunes, adaptando la planificación a los objetivos y necesidades de cada persona. Partimos de un análisis profundo de quién eres, cuál es tu punto de partida y a dónde quieres llegar. A partir de ahí, construimos tu programa desde cero.",
       "stat1Value": "+10 años",
       "stat1Label": "desarrollando el método",
       "stat2Value": "+1.000",
