@@ -11,7 +11,7 @@
     },
     "equipo": {
       "title": "Our Team | CBO Salud",
-      "description": "Meet the CBO Salud team of specialists: personal trainers, physiotherapists, dietitians and pilates instructors in Lugones, Asturias."
+      "description": "Meet the CBO Salud team: training, physiotherapy, Reformer Pilates and dietetics in Lugones, Asturias."
     },
     "centros": {
       "title": "Our Centres | CBO Salud",
@@ -208,12 +208,8 @@
   "equipo": {
     "hero": {
       "eyebrow": "The people behind the method",
-      "title": "Team CBO",
-      "subtitle": "A team of highly qualified specialists, working in a coordinated way to give you the comprehensive care you deserve."
-    },
-    "intro": {
-      "title": "We built CBO so it can grow with you",
-      "body": "CBO started as Carlos Bernardo's personal project, but always with a clear vision: to build a team of specialists capable of offering comprehensive, highest-quality care. Today we are a team of trainers, physiotherapists, dietitians and pilates instructors who share the same philosophy and the same method."
+      "title": "The CBO Salud team",
+      "subtitle": "We are a team covering training, physiotherapy, Reformer Pilates and dietetics. We share a working methodology and adapt every service to your needs and goals."
     },
     "values": {
       "eyebrow": "What defines us",

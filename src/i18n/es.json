@@ -11,7 +11,7 @@
     },
     "equipo": {
       "title": "Equipo CBO | CBO Salud",
-      "description": "Conoce al equipo de especialistas de CBO Salud: entrenadores, fisioterapeutas, dietistas y profesores de pilates en Lugones, Asturias."
+      "description": "Conoce al equipo de CBO Salud: entrenamiento, fisioterapia, Pilates Reformer y dietética en Lugones, Asturias."
     },
     "centros": {
       "title": "Nuestros Centros | CBO Salud",
@@ -208,12 +208,8 @@
   "equipo": {
     "hero": {
       "eyebrow": "Las personas detrás del método",
-      "title": "Equipo CBO",
-      "subtitle": "Un equipo de especialistas con formación de primer nivel, trabajando de forma coordinada para ofrecerte la atención integral que mereces."
-    },
-    "intro": {
-      "title": "Construimos CBO para que pueda crecer contigo",
-      "body": "CBO nació como el proyecto personal de Carlos Bernardo, pero siempre con una visión clara: construir un equipo de especialistas capaz de ofrecer atención integral de la más alta calidad. Hoy somos un equipo de entrenadores, fisioterapeutas, dietistas y profesores de pilates que comparten la misma filosofía y el mismo método."
+      "title": "El equipo de CBO Salud",
+      "subtitle": "Somos un equipo de entrenamiento, fisioterapia, Pilates Reformer y dietética. Compartimos una metodología de trabajo y adaptamos cada servicio a tus necesidades y objetivos."
     },
     "values": {
       "eyebrow": "Lo que nos define",

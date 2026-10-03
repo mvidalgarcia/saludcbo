@@ -30,14 +30,7 @@ const sortedTeam = team.sort((a, b) => a.data.order - b.data.order);
     </div>
   </section>
 
-  <section class="section-pad bg-white">
-    <div class="container-main max-w-3xl mx-auto text-center">
-      <h2 class="section-title mb-6">{t('equipo.intro.title')}</h2>
-      <p class="section-subtitle text-lg">{t('equipo.intro.body')}</p>
-    </div>
-  </section>
-
-  <section class="section-pad bg-brand-50 pt-0">
+  <section class="section-pad bg-brand-50">
     <div class="container-main">
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
         {
@@ -66,32 +59,12 @@ const sortedTeam = team.sort((a, b) => a.data.order - b.data.order);
                 <div class="p-6">
                   <h3 class="font-bold text-gray-900 text-lg mb-1">{tr.name}</h3>
                   <p class="text-brand-600 font-semibold text-sm mb-2">{tr.role}</p>
-                  <p class="text-gray-400 text-xs mb-4">{tr.credentials}</p>
+                  {tr.credentials && <p class="text-gray-400 text-xs mb-4">{tr.credentials}</p>}
                   <p class="text-gray-600 text-sm leading-relaxed">{tr.bio}</p>
                 </div>
               </div>
             );
           })
-        }
-
-        {
-          [
-            { role: lang === 'es' ? 'Fisioterapeuta' : 'Physiotherapist', initials: 'FT' },
-            { role: lang === 'es' ? 'Dietista' : 'Dietitian', initials: 'NU' },
-            { role: lang === 'es' ? 'Profesora de Pilates' : 'Pilates Instructor', initials: 'PI' },
-          ].map((p) => (
-            <div class="bg-white rounded-3xl overflow-hidden border border-dashed border-brand-200">
-              <div class="aspect-[3/4] bg-brand-50 flex items-center justify-center">
-                <div class="text-brand-300 text-5xl font-extrabold">{p.initials}</div>
-              </div>
-              <div class="p-6">
-                <p class="text-gray-400 text-sm italic">
-                  {lang === 'es' ? 'Próximamente' : 'Coming soon'}
-                </p>
-                <p class="text-brand-500 font-semibold text-sm mt-1">{p.role}</p>
-              </div>
-            </div>
-          ))
         }
       </div>
     </div>

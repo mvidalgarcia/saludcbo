@@ -1,22 +1,210 @@
 [
   {
-    "id": "carlos",
+    "id": "berni",
     "order": 1,
-    "photo": "/images/carlos.png",
-    "linkedin": "https://www.linkedin.com/in/carlos-bernardo-osoro-597a69241",
-    "instagram": "https://www.instagram.com/cbosalud/",
+    "photo": "/images/team/berni.webp",
     "translations": {
       "es": {
-        "name": "Carlos Bernardo Osoro",
-        "role": "Fundador · Entrenador Personal",
-        "credentials": "Graduado en CAFyD (Col. 67899) · Técnico Superior en Dietética",
-        "bio": "Mi pasión es ayudar a las personas a mejorar y conseguir sus objetivos relacionados con el entrenamiento, la composición corporal y la nutrición, de la forma más eficiente, flexible, científica y segura. Fundé CBO con una misión clara: ofrecer atención integral de la más alta calidad, respaldada por la evidencia científica y adaptada al 100% a cada persona."
+        "name": "Berni",
+        "role": "Fundador y director de CBO Salud · Consulta Dietista",
+        "credentials": "Graduado en Ciencias de la Actividad Física y del Deporte y Técnico Superior en Dietética.",
+        "bio": "Dirige CBO Salud y coordina el trabajo entre sus áreas. En Consulta Dietista, te acompaña con propuestas de alimentación flexibles y seguimiento para ayudarte a construir hábitos que puedas mantener."
       },
       "en": {
-        "name": "Carlos Bernardo Osoro",
-        "role": "Founder · Personal Trainer",
-        "credentials": "Graduate in Sports Sciences (Reg. 67899) · Higher Technician in Dietetics",
-        "bio": "My passion is helping people improve and reach their goals related to training, body composition and nutrition, in the most efficient, flexible, scientific and safe way. I founded CBO with a clear mission: to offer the highest-quality comprehensive care, backed by scientific evidence and 100% tailored to each person."
+        "name": "Berni",
+        "role": "Founder & Director of CBO Salud · Dietitian Consultation",
+        "credentials": "Graduate in Physical Activity and Sport Sciences and Higher Technician in Dietetics.",
+        "bio": "Leads CBO Salud and coordinates the work across its areas. In Dietitian Consultation, you get flexible nutrition plans and follow-up to help you build habits you can keep."
+      }
+    }
+  },
+  {
+    "id": "itziar",
+    "order": 2,
+    "photo": "/images/team/itziar.webp",
+    "translations": {
+      "es": {
+        "name": "Itziar",
+        "role": "Responsable de Entrenamiento Personal · Entrenamiento y readaptación",
+        "credentials": "Graduada en Ciencias de la Actividad Física y del Deporte.",
+        "bio": "Coordina el área de entrenamiento personal y te acompaña en las sesiones. Trabaja la fuerza, el movimiento y la progresión de los ejercicios, adaptando la planificación a tu punto de partida."
+      },
+      "en": {
+        "name": "Itziar",
+        "role": "Head of Personal Training · Training & rehabilitation",
+        "credentials": "Graduate in Physical Activity and Sport Sciences.",
+        "bio": "Coordinates the personal training area and works with you in your sessions, focusing on strength, movement and exercise progression, adapting the plan to your starting point."
+      }
+    }
+  },
+  {
+    "id": "guillermo",
+    "order": 3,
+    "photo": "/images/team/guillermo.webp",
+    "translations": {
+      "es": {
+        "name": "Guillermo",
+        "role": "Responsable de Fisioterapia · Fisioterapeuta",
+        "credentials": "Graduado en Fisioterapia y en Ciencias de la Actividad Física y del Deporte. N.º de colegiado 2342.",
+        "bio": "Coordina el área de fisioterapia y atiende tus necesidades de recuperación. Combina su formación en fisioterapia y actividad física para abordar las molestias y lesiones en relación con tus actividades cotidianas y deportivas."
+      },
+      "en": {
+        "name": "Guillermo",
+        "role": "Head of Physiotherapy · Physiotherapist",
+        "credentials": "Graduate in Physiotherapy and in Physical Activity and Sport Sciences. Reg. no. 2342.",
+        "bio": "Coordinates the physiotherapy area and looks after your recovery needs, combining physiotherapy and physical activity training to address aches and injuries in relation to your everyday and sporting activities."
+      }
+    }
+  },
+  {
+    "id": "alba",
+    "order": 4,
+    "photo": "/images/team/alba.webp",
+    "translations": {
+      "es": {
+        "name": "Alba",
+        "role": "Responsable de Pilates Reformer · Entrenamiento Personal",
+        "credentials": "Técnica Superior en Animación de Actividades Físicas y Deportivas.",
+        "bio": "Coordina el área de Pilates Reformer y participa en entrenamiento personal. Te guía en los ejercicios, ajustando la dificultad y cuidando el control del movimiento durante las sesiones."
+      },
+      "en": {
+        "name": "Alba",
+        "role": "Head of Reformer Pilates · Personal Training",
+        "credentials": "Higher Technician in Physical Activity and Sports Animation.",
+        "bio": "Coordinates the Reformer Pilates area and works in personal training, guiding you through the exercises, adjusting the difficulty and keeping movement control throughout the sessions."
+      }
+    }
+  },
+  {
+    "id": "guti",
+    "order": 5,
+    "photo": "/images/team/guti.webp",
+    "translations": {
+      "es": {
+        "name": "Guti",
+        "role": "Entrenamiento Personal y readaptación",
+        "credentials": "Graduado en Ciencias de la Actividad Física y del Deporte.",
+        "bio": "Te acompaña en el entrenamiento con una planificación adaptada a tus objetivos. Supervisa la técnica y ajusta los ejercicios y las cargas para que avances de forma progresiva."
+      },
+      "en": {
+        "name": "Guti",
+        "role": "Personal Training & rehabilitation",
+        "credentials": "Graduate in Physical Activity and Sport Sciences.",
+        "bio": "Supports your training with a plan adapted to your goals, checking your technique and adjusting exercises and loads so you progress steadily."
+      }
+    }
+  },
+  {
+    "id": "marina",
+    "order": 6,
+    "photo": "/images/team/marina.webp",
+    "translations": {
+      "es": {
+        "name": "Marina",
+        "role": "Fisioterapeuta de suelo pélvico",
+        "credentials": "Graduada en Fisioterapia. N.º de colegiada 2359 · Colegio Profesional de Fisioterapeutas del Principado de Asturias.",
+        "bio": "Atiende el área de fisioterapia de suelo pélvico con una atención individualizada. Para reservar con Marina, contacta con nosotros por teléfono y coordinaremos la cita según su disponibilidad."
+      },
+      "en": {
+        "name": "Marina",
+        "role": "Pelvic Floor Physiotherapist",
+        "credentials": "Graduate in Physiotherapy. Reg. no. 2359 · Official College of Physiotherapists of Asturias.",
+        "bio": "Leads the pelvic floor physiotherapy area with one-to-one care. To book with Marina, contact us by phone and we'll arrange the appointment around her availability."
+      }
+    }
+  },
+  {
+    "id": "manu",
+    "order": 7,
+    "photo": "/images/team/manu.webp",
+    "translations": {
+      "es": {
+        "name": "Manu",
+        "role": "Entrenamiento Personal y readaptación",
+        "credentials": "Técnico Superior en Animación de Actividades Físicas y Deportivas.",
+        "bio": "Te guía durante las sesiones de entrenamiento, adaptando los ejercicios a tu nivel y necesidades. Su trabajo se centra en acompañarte, cuidar la ejecución y ayudarte a mantener la continuidad."
+      },
+      "en": {
+        "name": "Manu",
+        "role": "Personal Training & rehabilitation",
+        "credentials": "Higher Technician in Physical Activity and Sports Animation.",
+        "bio": "Guides you through your training sessions, adapting the exercises to your level and needs, with a focus on supporting you, caring for your execution and helping you stay consistent."
+      }
+    }
+  },
+  {
+    "id": "imanol",
+    "order": 8,
+    "photo": "/images/team/imanol.webp",
+    "translations": {
+      "es": {
+        "name": "Imanol",
+        "role": "Pilates Reformer · Entrenamiento Personal y readaptación",
+        "credentials": "Graduado en Ciencias de la Actividad Física y del Deporte.",
+        "bio": "Participa en las áreas de Pilates Reformer y entrenamiento personal. Te acompaña en el trabajo de fuerza y control del movimiento, ajustando cada sesión a tu nivel y evolución."
+      },
+      "en": {
+        "name": "Imanol",
+        "role": "Reformer Pilates · Personal Training & rehabilitation",
+        "credentials": "Graduate in Physical Activity and Sport Sciences.",
+        "bio": "Works across the Reformer Pilates and personal training areas, supporting your strength and movement control work and adjusting each session to your level and progress."
+      }
+    }
+  },
+  {
+    "id": "daniela",
+    "order": 9,
+    "photo": "/images/team/daniela.webp",
+    "translations": {
+      "es": {
+        "name": "Daniela",
+        "role": "Responsable de Boxeo Recreativo",
+        "credentials": "",
+        "bio": "Coordina las clases de boxeo recreativo y te guía en el aprendizaje de su técnica. Combina práctica y preparación física, adaptando los ejercicios para que puedas participar desde tu nivel."
+      },
+      "en": {
+        "name": "Daniela",
+        "role": "Head of Recreational Boxing",
+        "credentials": "",
+        "bio": "Coordinates the recreational boxing classes and guides you through the technique, combining practice and physical preparation and adapting the exercises so you can take part from your own level."
+      }
+    }
+  },
+  {
+    "id": "dani",
+    "order": 10,
+    "photo": "/images/team/dani.webp",
+    "translations": {
+      "es": {
+        "name": "Dani",
+        "role": "Responsable de Administración y Gestión",
+        "credentials": "",
+        "bio": "Se encarga de la administración y la gestión diaria de CBO Salud. Facilita la organización del centro y la coordinación con el equipo para que tu experiencia sea sencilla desde el primer contacto."
+      },
+      "en": {
+        "name": "Dani",
+        "role": "Head of Administration & Management",
+        "credentials": "",
+        "bio": "Handles the administration and day-to-day management of CBO Salud, keeping the centre organised and coordinating with the team so your experience is simple from the first contact."
+      }
+    }
+  },
+  {
+    "id": "seb",
+    "order": 11,
+    "photo": "/images/team/seb.webp",
+    "translations": {
+      "es": {
+        "name": "Seb",
+        "role": "Socio · Estrategia y Finanzas",
+        "credentials": "",
+        "bio": "Participa en la planificación estratégica y financiera de CBO Salud. Su función se centra en apoyar la organización y el desarrollo de la empresa junto a la dirección."
+      },
+      "en": {
+        "name": "Seb",
+        "role": "Partner · Strategy & Finance",
+        "credentials": "",
+        "bio": "Contributes to the strategic and financial planning of CBO Salud, supporting the organisation and growth of the company alongside the management."
       }
     }
   }
