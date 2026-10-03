@@ -60,9 +60,13 @@ const legalLinks = [
         <p class="text-gray-500 text-sm leading-relaxed mb-6">{t('footer.tagline')}</p>
 
         <div class="space-y-2 text-sm">
-          <p class="flex items-center gap-2 text-gray-600">
-            <MapPin class="w-4 h-4 text-brand-600 shrink-0" />
-            {t('footer.address')}
+          <p class="flex items-start gap-2 text-gray-600">
+            <MapPin class="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
+            <span>
+              {t('footer.address1')}
+              <br />
+              {t('footer.address2')}
+            </span>
           </p>
           <p class="flex items-center gap-2 text-gray-600">
             <ParkingCircle class="w-4 h-4 text-brand-600 shrink-0" />
@@ -220,9 +224,6 @@ const legalLinks = [
       class="border-t border-gray-100 pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
     >
       <p class="text-gray-400 text-xs">{t('footer.copyright')} · {new Date().getFullYear()}</p>
-      <p class="text-gray-400 text-xs max-w-md text-right leading-relaxed">
-        {t('footer.funding')}
-      </p>
     </div>
   </div>
 </footer>

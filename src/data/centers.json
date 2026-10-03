@@ -2,13 +2,13 @@
   {
     "id": "centro-1",
     "order": 1,
-    "address": "Avda de Gijón, 10 bajo",
-    "city": "Lugones, Asturias",
+    "address": "Avenida de Gijón 10",
+    "city": "Lugones, 33420, Siero",
     "phone": "+34 667 828 851",
     "email": "cbo.salud@gmail.com",
     "mapUrl": "https://maps.app.goo.gl/gNxqV7Pi9d8a5XFx5",
     "parking": true,
-    "image": "/images/sala-pilates.jpg",
+    "image": "/images/centro_1010707.webp",
     "services": ["entrenamiento", "nutricion", "pilates", "fisioterapia"],
     "hours": [
       {
@@ -16,27 +16,27 @@
         "time": { "es": "07:00 – 22:00", "en": "07:00 – 22:00" }
       },
       {
-        "days": { "es": "Sábados", "en": "Saturday" },
-        "time": { "es": "09:00 – 13:00", "en": "09:00 – 13:00" }
+        "days": { "es": "Dos sábados al mes", "en": "Two Saturdays a month" },
+        "time": { "es": "09:00 – 12:00", "en": "09:00 – 12:00" }
       },
       { "days": { "es": "Domingos", "en": "Sunday" }, "time": { "es": "Cerrado", "en": "Closed" } }
     ],
     "translations": {
       "es": {
         "name": "CBO Salud. El Centro",
-        "description": "Entrenamiento, Consulta Dietista, Pilates y Fisioterapia en un mismo espacio. Nuevo centro en Lugones (Avda de Gijón, 10 bajo) diseñado para el pilates reformer y la rehabilitación."
+        "description": "Entrenamiento Personal, Consulta Dietista, Pilates Reformer y Fisioterapia en un mismo espacio. Nuestro centro actual en Lugones (Avenida de Gijón 10), diseñado para el pilates reformer y la rehabilitación."
       },
       "en": {
         "name": "CBO Salud. El Centro",
-        "description": "Training, dietitian consultation, pilates and physiotherapy in one space. New centre in Lugones (Avda de Gijón, 10 bajo) designed for reformer pilates and rehabilitation."
+        "description": "Personal training, dietitian consultation, Reformer pilates and physiotherapy in one space. Our current centre in Lugones (Avenida de Gijón 10), designed for reformer pilates and rehabilitation."
       }
     }
   },
   {
     "id": "centro-2",
     "order": 2,
-    "address": "P. El Castro, nave 2, Lugones",
-    "city": "Lugones, Asturias",
+    "address": "El Castro, La Luz 2",
+    "city": "Lugones, 33420, Siero",
     "phone": "+34 667 828 851",
     "email": "cbo.salud@gmail.com",
     "mapUrl": "https://maps.app.goo.gl/fpF74kzScJxqZF536",
@@ -46,11 +46,11 @@
     "hours": [
       {
         "days": { "es": "Lunes a viernes", "en": "Monday to Friday" },
-        "time": { "es": "08:00 – 21:00", "en": "08:00 – 21:00" }
+        "time": { "es": "07:00 – 22:00", "en": "07:00 – 22:00" }
       },
       {
-        "days": { "es": "Sábados", "en": "Saturday" },
-        "time": { "es": "09:00 – 14:00", "en": "09:00 – 14:00" }
+        "days": { "es": "Dos sábados al mes", "en": "Two Saturdays a month" },
+        "time": { "es": "09:00 – 12:00", "en": "09:00 – 12:00" }
       },
       {
         "days": { "es": "Domingos y festivos", "en": "Sundays & public holidays" },
@@ -60,11 +60,11 @@
     "translations": {
       "es": {
         "name": "CBO Salud. La Nave",
-        "description": "Entrenamiento y Consulta Dietista. Nuestro centro principal en Lugones, detrás de Tartiere Auto, con zona de entrenamiento funcional y consulta dietista."
+        "description": "Entrenamiento Personal y Consulta Dietista. Nuestro primer centro en Lugones (El Castro, La Luz 2), con zona de entrenamiento funcional y consulta dietista. CBOXING comparte La Nave como área diferenciada."
       },
       "en": {
         "name": "CBO Salud. La Nave",
-        "description": "Training and dietitian consultation. Our main centre in Lugones, behind Tartiere Auto, with a functional training area and dietitian consultation room. Free parking."
+        "description": "Personal training and dietitian consultation. Our first centre in Lugones (El Castro, La Luz 2), with a functional training area and dietitian consultation room. CBOXING shares La Nave as a separate area. Free parking."
       }
     }
   }

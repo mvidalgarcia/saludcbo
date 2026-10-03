@@ -140,22 +140,41 @@ const t = useTranslations(lang);
           </svg>
         </div>
         <div>
-          <p class="font-bold text-gray-900 mb-1">{t('contacto.address')}</p>
-          <p class="text-gray-600">P. El Castro, nave 2, Lugones, Asturias</p>
-          <p class="flex items-center gap-1.5 text-gray-500 text-sm mt-1">
-            {lang === 'es' ? 'Detrás de Tartiere Auto · ' : 'Behind Tartiere Auto · '}
+          <p class="font-bold text-gray-900 mb-3">{t('contacto.address')}</p>
+          <div class="space-y-3">
+            <div>
+              <p class="text-gray-600">
+                {t('footer.address1')}
+              </p>
+              <a
+                href="https://maps.google.com/?q=Avenida+de+Gijon+10,+Lugones,+33420,+Siero,+Asturias"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 mt-1 text-brand-600 hover:text-brand-700 text-sm font-semibold transition-colors"
+              >
+                {lang === 'es' ? 'Ver en Google Maps' : 'View on Google Maps'}
+                <ArrowRight class="w-4 h-4" />
+              </a>
+            </div>
+            <div>
+              <p class="text-gray-600">
+                {t('footer.address2')}
+              </p>
+              <a
+                href="https://maps.google.com/?q=El+Castro+La+Luz+2,+Lugones,+33420,+Siero,+Asturias"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 mt-1 text-brand-600 hover:text-brand-700 text-sm font-semibold transition-colors"
+              >
+                {lang === 'es' ? 'Ver en Google Maps' : 'View on Google Maps'}
+                <ArrowRight class="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+          <p class="flex items-center gap-1.5 text-gray-500 text-sm mt-3">
             <ParkingCircle class="w-4 h-4 text-brand-600" />
             {lang === 'es' ? 'Aparcamiento gratuito' : 'Free parking'}
           </p>
-          <a
-            href="https://maps.google.com/?q=P.+El+Castro+nave+2+Lugones+Asturias"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 mt-3 text-brand-600 hover:text-brand-700 text-sm font-semibold transition-colors"
-          >
-            {lang === 'es' ? 'Ver en Google Maps' : 'View on Google Maps'}
-            <ArrowRight class="w-4 h-4" />
-          </a>
         </div>
       </div>
     </div>

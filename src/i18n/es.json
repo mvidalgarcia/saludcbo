@@ -72,8 +72,8 @@
     "social": "Redes sociales",
     "followUs": "Síguenos",
     "copyright": "© CBO Salud (Carlos Bernardo Osoro)",
-    "funding": "Financiado por la Unión Europea – NextGenerationEU. Los puntos de vista expresados son únicamente los del autor y no reflejan los de la UE o la Comisión Europea.",
-    "address": "P. El Castro, nave 2, Lugones (detrás de Tartiere Auto)",
+    "address1": "Avenida de Gijón 10, Lugones, 33420, Siero",
+    "address2": "El Castro, La Luz 2, Lugones, 33420, Siero",
     "phone": "+34 667 828 851",
     "email": "cbo.salud@gmail.com",
     "freeParking": "Aparcamiento gratuito",
@@ -237,7 +237,13 @@
     "parking": "Aparcamiento gratuito",
     "directions": "Cómo llegar",
     "services": "Servicios disponibles",
-    "hours": "Horario"
+    "hours": "Horario",
+    "svc": {
+      "entrenamiento": "Entrenamiento Personal",
+      "nutricion": "Consulta Dietista",
+      "pilates": "Pilates Reformer",
+      "fisioterapia": "Fisioterapia"
+    }
   },
   "contacto": {
     "hero": {
