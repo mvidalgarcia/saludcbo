@@ -121,7 +121,7 @@ const alternateUrl = new URL(alternatePath, Astro.site);
       href="#main-content"
       class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 btn-primary z-[100]"
     >
-      {lang === 'es' ? 'Ir al contenido principal' : 'Skip to main content'}
+      {t('a11y.skipToContent')}
     </a>
 
     <Header lang={lang} />

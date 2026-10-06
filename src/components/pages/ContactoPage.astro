@@ -115,7 +115,7 @@ const t = useTranslations(lang);
             <p class="text-gray-500 text-sm">{SITE.instagramHandle}</p>
           </div>
           <span class="text-purple-600 font-semibold text-sm flex items-center gap-1.5">
-            {lang === 'es' ? 'Seguir en Instagram' : 'Follow on Instagram'}
+            {t('social.followInstagram')}
             <ArrowRight class="w-4 h-4" />
           </span>
         </a>
@@ -152,7 +152,7 @@ const t = useTranslations(lang);
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 mt-1 text-brand-600 hover:text-brand-700 text-sm font-semibold transition-colors"
               >
-                {lang === 'es' ? 'Ver en Google Maps' : 'View on Google Maps'}
+                {t('social.viewOnMaps')}
                 <ArrowRight class="w-4 h-4" />
               </a>
             </div>
@@ -166,14 +166,14 @@ const t = useTranslations(lang);
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 mt-1 text-brand-600 hover:text-brand-700 text-sm font-semibold transition-colors"
               >
-                {lang === 'es' ? 'Ver en Google Maps' : 'View on Google Maps'}
+                {t('social.viewOnMaps')}
                 <ArrowRight class="w-4 h-4" />
               </a>
             </div>
           </div>
           <p class="flex items-center gap-1.5 text-gray-500 text-sm mt-3">
             <ParkingCircle class="w-4 h-4 text-brand-600" />
-            {lang === 'es' ? 'Aparcamiento gratuito' : 'Free parking'}
+            {t('footer.freeParking')}
           </p>
         </div>
       </div>

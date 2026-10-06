@@ -147,9 +147,7 @@ const ctaBody = ctaBodyResolved === ctaBodyKey ? t('servicePage.ctaBody') : ctaB
     process && process.length > 0 && (
       <section class="section-pad bg-white">
         <div class="container-main max-w-4xl mx-auto">
-          <h2 class="section-title text-center mb-14">
-            {lang === 'es' ? 'Cómo trabajamos' : 'How we work'}
-          </h2>
+          <h2 class="section-title text-center mb-14">{t('servicePage.howWeWork')}</h2>
           <div class="grid sm:grid-cols-2 gap-7">
             {process.map((step, i) => (
               <div class="flex gap-5">
@@ -173,9 +171,7 @@ const ctaBody = ctaBodyResolved === ctaBodyKey ? t('servicePage.ctaBody') : ctaB
     types && types.length > 0 && (
       <section class:list={['section-pad', process ? 'bg-brand-50' : 'bg-white']}>
         <div class="container-main max-w-4xl mx-auto">
-          <h2 class="section-title text-center mb-12">
-            {lang === 'es' ? 'Áreas de especialización' : 'Areas of specialisation'}
-          </h2>
+          <h2 class="section-title text-center mb-12">{t('servicePage.areasTitle')}</h2>
           <div class="grid sm:grid-cols-2 gap-6">
             {types.map((type) => (
               <div class="bg-white rounded-3xl p-7 border border-brand-100 shadow-sm">
@@ -196,7 +192,7 @@ const ctaBody = ctaBodyResolved === ctaBodyKey ? t('servicePage.ctaBody') : ctaB
   <section class="section-pad bg-white border-t border-gray-100">
     <div class="container-main text-center max-w-2xl mx-auto">
       <h2 class="text-3xl font-extrabold text-gray-900 mb-4">
-        {lang === 'es' ? '¿Empezamos?' : 'Ready to start?'}
+        {t('servicePage.readyToStart')}
       </h2>
       <p class="text-gray-500 text-lg mb-8">{ctaBody}</p>
       <div class="flex flex-wrap justify-center gap-4">

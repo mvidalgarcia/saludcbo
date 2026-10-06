@@ -9,7 +9,7 @@
         "title": "Entrenamiento Personal y Readaptación",
         "shortTitle": "Entrenamiento",
         "tagline": "Entrena de forma inteligente. Consigue resultados reales.",
-        "description": "Entrenamiento completamente individualizado basado en la evidencia científica. Trabajamos contigo de forma presencial con sesiones de 1 hora, con seguimiento global online para todo el mes. No solo queremos que vengas a entrenar: también te acompañamos fuera del centro, planificando sesiones online, tareas de movilidad y sesiones aeróbicas. Cuidar tu salud y tu cuerpo en 360° durante todo el proceso.",
+        "description": "Entrenamiento completamente individualizado basado en la evidencia científica. Trabajamos contigo de forma presencial con sesiones de 1 hora, con seguimiento global online para todo el mes. No solo queremos que vengas a entrenar: también te acompañamos fuera del centro, planificando sesiones online, tareas de movilidad y sesiones aeróbicas. Cuidamos tu salud y tu cuerpo en 360° durante todo el proceso.",
         "features": [
           "Seguimiento de tu progreso y ajuste de ejercicios y cargas",
           "Programa de entrenamiento completamente personalizado",
@@ -18,7 +18,7 @@
           "Readaptación de lesiones y ejercicio terapéutico",
           "Planificación de sesiones online, movilidad y cardio",
           "Revisiones periódicas del programa",
-          "Acceso a la App CBO con todo tu plan"
+          "Acceso a la app CBO con todo tu plan"
         ],
         "process": [
           { "title": "Valoración inicial", "body": "Analizamos tu historial de salud, objetivos, nivel de condición física y posibles lesiones o limitaciones." },
@@ -40,7 +40,7 @@
           "Injury rehabilitation and therapeutic exercise",
           "Planning of online sessions, mobility work and cardio",
           "Periodic programme reviews",
-          "Access to the CBO App with your full plan"
+          "Access to the CBO app with your full plan"
         ],
         "process": [
           { "title": "Initial assessment", "body": "We analyse your health history, goals, fitness level and any injuries or limitations." },
@@ -67,14 +67,14 @@
           "Revisión de análisis de sangre",
           "Pruebas de composición corporal y antropometría",
           "Plan dietético completamente individualizado",
-          "Acceso a la App CBO con tu plan y seguimiento",
+          "Acceso a la app CBO con tu plan y seguimiento",
           "Lista de la compra y preparación de platos",
-          "Revisiones periódicas cada varias semanas",
+          "Revisiones periódicas cada pocas semanas",
           "Seguimiento continuo semana a semana"
         ],
         "process": [
           { "title": "Entrevista y valoración", "body": "Historia clínica, anamnesis nutricional, objetivo y revisión de análisis de sangre." },
-          { "title": "Composición corporal", "body": "Medición de la composición corporal y antropometría. Repetiremos esta valoración cada varias semanas." },
+          { "title": "Composición corporal", "body": "Medición de la composición corporal y antropometría. Repetiremos esta valoración cada pocas semanas." },
           { "title": "Elaboración del plan", "body": "Diseño del tratamiento dietético individualizado con acceso a tu plan, lista de la compra y recetas." },
           { "title": "Supervisión continua", "body": "Revisiones semana a semana para asegurarnos de que todo va bien y ajustar el plan cuando hace falta." }
         ],
@@ -89,13 +89,13 @@
         "title": "Dietitian Consultation",
         "shortTitle": "Dietitian Consultation",
         "tagline": "Learn to eat. Reach your goals without going hungry.",
-        "description": "Fully individualised diet plan, in-person and online. Our approach is based on nutritional education and long-term adherence, not unsustainable restrictions.",
+        "description": "Fully individualised diet plan, in-person and online. Our approach is based on nutritional education and long-term adherence, not unsustainable restrictions. We analyse your body composition, your history and your preferences to design the plan that really works for you.",
         "features": [
           "Full interview and nutritional anamnesis",
           "Blood test review",
           "Body composition and anthropometric testing",
           "Fully individualised diet plan",
-          "CBO App access with your plan and monitoring",
+          "CBO app access with your plan and monitoring",
           "Shopping list and meal preparation guidance",
           "Periodic reviews every few weeks",
           "Continuous week-by-week monitoring"
@@ -124,7 +124,7 @@
       "es": {
         "title": "Fisioterapia",
         "shortTitle": "Fisioterapia",
-        "tagline": "Salud a través del movimiento.",
+        "tagline": "Alivia el dolor. Recupera tu bienestar.",
         "description": "Ayudamos a personas de todas las edades a mejorar su salud y bienestar a través de la fisioterapia. Tratamiento del dolor, rehabilitación de lesiones, recuperación postquirúrgica, mejora de la movilidad y prevención.",
         "features": [
           "Valoración fisioterapéutica completa",
@@ -141,13 +141,15 @@
           { "title": "Terapia manual, kinesiotaping y punción seca", "body": "Técnicas manuales avanzadas para el tratamiento del dolor y la recuperación de la movilidad articular." },
           { "title": "Fisioterapia deportiva y traumatológica", "body": "Recuperación de lesiones deportivas para volver a la actividad en el menor tiempo posible." },
           { "title": "Ejercicio terapéutico y rehabilitación", "body": "Programa de ejercicios específicos para la recuperación de lesiones y la mejora de la función física." },
-          { "title": "Prevención y bienestar", "body": "Evaluación y corrección de patrones de movimiento para prevenir lesiones y mejorar la calidad de vida." }
+          { "title": "Prevención y bienestar", "body": "Evaluación y corrección de patrones de movimiento para prevenir lesiones y mejorar la calidad de vida." },
+          { "title": "Fisioterapia de suelo pélvico", "body": "Atención individualizada para mejorar la función del suelo pélvico, abordar molestias y pérdidas de orina, y acompañarte durante el embarazo y la recuperación posparto." },
+          { "title": "Fisioterapia de mandíbula y ATM", "body": "Tratamiento del dolor y las limitaciones de movimiento de la mandíbula, incluidas las molestias asociadas al bruxismo." }
         ]
       },
       "en": {
         "title": "Physiotherapy",
         "shortTitle": "Physio",
-        "tagline": "Health through movement.",
+        "tagline": "Relieve pain. Recover your wellbeing.",
         "description": "We help people of all ages improve their health and wellbeing through physiotherapy. Pain treatment, injury rehabilitation, post-surgical recovery, mobility improvement and prevention.",
         "features": [
           "Full physiotherapy assessment",
@@ -164,7 +166,9 @@
           { "title": "Manual therapy, kinesiotaping & dry needling", "body": "Advanced manual techniques for pain treatment and restoration of joint mobility." },
           { "title": "Sports & traumatological physiotherapy", "body": "Recovery from sports and traumatological injuries to return to activity as quickly as possible." },
           { "title": "Therapeutic exercise & rehabilitation", "body": "Specific exercise programme for injury recovery and improvement of physical function." },
-          { "title": "Prevention & wellbeing", "body": "Assessment and correction of movement patterns to prevent injuries and improve quality of life." }
+          { "title": "Prevention & wellbeing", "body": "Assessment and correction of movement patterns to prevent injuries and improve quality of life." },
+          { "title": "Pelvic floor physiotherapy", "body": "Individualised care to improve pelvic floor function, address discomfort and urinary incontinence, and support you through pregnancy and postpartum recovery." },
+          { "title": "Jaw & TMJ physiotherapy", "body": "Treatment of pain and movement limitations of the jaw, including discomfort associated with bruxism." }
         ]
       }
     }
@@ -176,12 +180,12 @@
     "slug": { "es": "pilates", "en": "pilates" },
     "translations": {
       "es": {
-        "title": "Pilates",
+        "title": "Pilates Reformer",
         "shortTitle": "Pilates",
         "tagline": "Control, fuerza y movilidad para tu cuerpo y tu mente.",
         "description": "Clases de pilates individual y en grupos reducidos, con reformer. Trabajamos el control del movimiento, la fuerza del core, la flexibilidad y la coordinación. Para todas las edades y niveles.",
         "features": [
-          "Pilates reformer",
+          "Pilates Reformer",
           "Clases individuales completamente personalizadas",
           "Grupos reducidos",
           "Para todas las edades y niveles",
@@ -191,27 +195,27 @@
         "types": [
           { "title": "Pilates individual", "body": "Atención completamente personalizada. Diseñamos cada sesión en función de tus objetivos, nivel y necesidades." },
           { "title": "Pilates en grupos reducidos", "body": "La motivación de entrenar en grupo con atención casi individual. Máximo 5 personas." },
-          { "title": "Pilates reformer", "body": "Utilizamos el reformer para ampliar las posibilidades de trabajo y añadir resistencia y soporte." },
+          { "title": "Pilates Reformer", "body": "Utilizamos el reformer para ampliar las posibilidades de trabajo y añadir resistencia y soporte." },
           { "title": "Pilates terapéutico", "body": "Coordinado con fisioterapia para incorporar el pilates como parte del proceso de rehabilitación." }
         ]
       },
       "en": {
-        "title": "Pilates",
+        "title": "Reformer Pilates",
         "shortTitle": "Pilates",
         "tagline": "Control, strength and mobility for your body and mind.",
         "description": "Individual and small-group pilates classes, with reformer. We develop movement control, core strength, flexibility and coordination. For all ages and levels.",
         "features": [
-          "Reformer pilates",
+          "Reformer Pilates",
           "Fully personalised individual classes",
           "Small groups",
           "For all ages and levels",
           "Coordination with physiotherapy when needed",
-          "Progression adapted to your evolution"
+          "Progression adapted to your progress"
         ],
         "types": [
           { "title": "Individual pilates", "body": "Completely personalised attention. We design each session according to your goals, level and specific needs." },
           { "title": "Small-group pilates", "body": "The motivation of group training with almost individual attention. Maximum 5 people per session." },
-          { "title": "Reformer pilates", "body": "We use the reformer to expand the range of exercises and add resistance and support." },
+          { "title": "Reformer Pilates", "body": "We use the reformer to expand the range of exercises and add resistance and support." },
           { "title": "Therapeutic pilates", "body": "Coordinated with physiotherapy to incorporate pilates as part of the rehabilitation process." }
         ]
       }

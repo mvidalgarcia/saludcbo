@@ -1,5 +1,5 @@
 ---
-import { MapPin, ParkingCircle, Phone, MessageCircle, ArrowRight, Stethoscope } from 'lucide-astro';
+import { MapPin, ParkingCircle, Phone, MessageCircle, ArrowRight } from 'lucide-astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ServiceCard from '../ServiceCard.astro';
 import { useTranslations } from '../../i18n/utils';
@@ -21,27 +21,9 @@ const teamData = await getCollection('team');
 const featuredTeam = teamData.sort((a, b) => a.data.order - b.data.order).slice(0, 4);
 
 const testimonials = [
-  {
-    name: 'ALBA Bermudez Fernandez',
-    text:
-      lang === 'es'
-        ? 'Gran entrenador, profesional, disciplinado, clases amenas y divertidas. Consigues los resultados esperados. Totalmente recomendable.'
-        : 'Great trainer, professional, disciplined, enjoyable and fun classes. You get the expected results. Totally recommended.',
-  },
-  {
-    name: 'Jabato',
-    text:
-      lang === 'es'
-        ? 'Profesional de los pies a la cabeza. Carlos tiene una formación muy avanzada y está al día con los estudios sobre nutrición y ejercicio. Cambios muy notables en pocos meses.'
-        : 'Professional through and through. Carlos has very advanced training and stays up to date with studies on nutrition and exercise. Very noticeable changes in a few months.',
-  },
-  {
-    name: 'Ana Saavedra',
-    text:
-      lang === 'es'
-        ? 'Carlos es muy buen profesional. Te adapta el ejercicio a tus condiciones físicas. Hemos mejorado muchísimo en 6 meses. Lo hacemos online y resulta muy cómodo. Lo recomiendo sin duda.'
-        : 'Carlos is a very good professional. He adapts the exercise to your physical conditions. We improved a lot in 6 months. We do it online and it is very convenient. I definitely recommend it.',
-  },
+  { name: t('home.reviews.testimonials.t1.name'), text: t('home.reviews.testimonials.t1.text') },
+  { name: t('home.reviews.testimonials.t2.name'), text: t('home.reviews.testimonials.t2.text') },
+  { name: t('home.reviews.testimonials.t3.name'), text: t('home.reviews.testimonials.t3.text') },
 ];
 ---
 
@@ -325,7 +307,7 @@ const testimonials = [
             d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
           ></path></svg
         >
-        {lang === 'es' ? 'Seguir en Instagram' : 'Follow on Instagram'}
+        {t('social.followInstagram')}
       </a>
     </div>
   </section>
@@ -359,7 +341,7 @@ const testimonials = [
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 border border-brand-200 font-semibold py-3 px-7 rounded-full hover:bg-brand-100 transition-colors"
         >
-          <Stethoscope class="w-5 h-5" />{t('cta.bookPhysio')}
+          {t('cta.bookPhysio')}
         </a>
         <a
           href={`${base}/contacto`}

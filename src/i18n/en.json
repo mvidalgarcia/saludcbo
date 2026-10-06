@@ -2,8 +2,8 @@
   "meta": {
     "siteName": "CBO Salud",
     "home": {
-      "title": "CBO Salud | Personal Training, Physiotherapy, Dietitian Consultation & Pilates in Asturias",
-      "description": "Personal training, physiotherapy, dietitian consultation and pilates centre in Lugones, Asturias. Evidence-based method, fully individualised. Two centres. In-person and online."
+      "title": "CBO Salud | Personal Training, Physiotherapy, Dietitian Consultation & Reformer Pilates in Asturias",
+      "description": "Reformer Pilates, personal training, physiotherapy and dietitian consultation centre in Lugones, Asturias. Evidence-based method, fully individualised. Two centres. In-person and online."
     },
     "metodo": {
       "title": "The CBO Method | CBO Salud",
@@ -19,7 +19,7 @@
     },
     "contacto": {
       "title": "Contact | CBO Salud",
-      "description": "Get in touch with CBO Salud to request information about personal training, physiotherapy, dietitian consultation and pilates in Lugones, Asturias."
+      "description": "Get in touch with CBO Salud to request information about personal training, physiotherapy, dietitian consultation and Reformer Pilates in Lugones, Asturias."
     },
     "entrenamiento": {
       "title": "Personal Training & Injury Rehab | CBO Salud",
@@ -34,8 +34,8 @@
       "description": "Sports physiotherapy, manual therapy and therapeutic exercise in Lugones, Asturias. Pain treatment, rehabilitation and injury prevention."
     },
     "pilates": {
-      "title": "Pilates | CBO Salud",
-      "description": "Individual and small-group pilates classes in Lugones, Asturias. Reformer pilates, movement control and flexibility improvement."
+      "title": "Reformer Pilates | CBO Salud",
+      "description": "Individual and small-group pilates classes in Lugones, Asturias. Reformer Pilates, movement control and flexibility improvement."
     },
     "empresa": {
       "title": "Corporate Wellness | CBO Salud",
@@ -43,7 +43,7 @@
     },
     "tarifas": {
       "title": "Pricing | CBO Salud",
-      "description": "Discover our pricing for personal training, physiotherapy, dietitian consultation and pilates in Lugones, Asturias. No commitment."
+      "description": "Discover our pricing for personal training, physiotherapy, dietitian consultation and Reformer Pilates in Lugones, Asturias. No commitment."
     }
   },
   "nav": {
@@ -51,27 +51,25 @@
     "training": "Personal Training",
     "nutrition": "Dietitian Consultation",
     "physio": "Physiotherapy",
-    "pilates": "Pilates reformer",
+    "pilates": "Reformer Pilates",
     "method": "CBO Method",
     "team": "Team",
-    "corporate": "Corporate Wellness",
     "centers": "Centres",
     "pricing": "Pricing",
     "contact": "Contact",
     "cta": "Book assessment"
   },
   "footer": {
-    "tagline": "Specialists in personal training, physiotherapy, dietitian consultation and pilates in Lugones, Asturias.",
+    "tagline": "Specialists in Personal Training, Physiotherapy, Dietitian Consultation and Reformer Pilates in Lugones.",
     "services": "Services",
     "company": "Company",
     "legal": "Legal",
     "privacyPolicy": "Privacy policy",
     "legalNotice": "Legal notice",
     "cookiePolicy": "Cookie policy",
-    "sitemap": "Sitemap",
     "social": "Social media",
     "followUs": "Follow us",
-    "copyright": "© CBO Salud (Carlos Bernardo Osoro)",
+    "copyright": "© CBO Salud",
     "address1": "Avenida de Gijón 10, Lugones, 33420, Siero",
     "address2": "El Castro, La Luz 2, Lugones, 33420, Siero",
     "phone": "+34 667 828 851",
@@ -93,19 +91,23 @@
     "ourCenters": "Our centres",
     "requestInfo": "Request information",
     "bookAppointment": "Book appointment",
-    "bookPhysio": "Book physio appointment"
+    "bookPhysio": "Book physio appointment",
+    "talkToUs": "Talk to us"
   },
   "servicePage": {
     "featuresTitle": "What's included?",
-    "ctaBody": "Request your assessment and we'll take the first step together."
+    "ctaBody": "Request your assessment and we'll take the first step together.",
+    "howWeWork": "How we work",
+    "areasTitle": "Areas of specialisation",
+    "readyToStart": "Ready to start?"
   },
   "home": {
     "hero": {
-      "eyebrow": "Lugones, Asturias · Two centres · In-person & Online",
+      "eyebrow": "Lugones, Asturias · Two centres · In-person & online",
       "heading1": "Specialists",
       "heading2": "in your",
       "headingAccent": "health",
-      "subtitle": "Personal training, physiotherapy, dietitian consultation and pilates. Evidence-based method with full individualisation for real, lasting results.",
+      "subtitle": "Personal Training, Physiotherapy, Dietitian Consultation and Reformer Pilates. Evidence-based method with full individualisation for real, lasting results.",
       "stat1Value": "10+",
       "stat1Label": "years of experience",
       "stat2Value": "1,000+",
@@ -145,7 +147,21 @@
       "eyebrow": "Reviews",
       "title": "What our clients say",
       "badge": "EXCELLENT",
-      "reviewCount": "Based on 19 Google reviews"
+      "reviewCount": "Based on more than 100 Google reviews",
+      "testimonials": {
+        "t1": {
+          "name": "ALBA Bermudez Fernandez",
+          "text": "Great trainer, professional, disciplined, enjoyable and fun classes. You get the expected results. Totally recommended."
+        },
+        "t2": {
+          "name": "Jabato",
+          "text": "Professional through and through. Carlos has very advanced training and stays up to date with studies on nutrition and exercise. Very noticeable changes in a few months."
+        },
+        "t3": {
+          "name": "Ana Saavedra",
+          "text": "Carlos is a very good professional. He adapts the exercise to your physical conditions. We improved a lot in 6 months. We do it online and it is very convenient. I definitely recommend it."
+        }
+      }
     },
     "instagram": {
       "eyebrow": "Follow us",
@@ -181,9 +197,9 @@
       "p1Title": "Initial assessment",
       "p1Body": "We analyse your clinical history, mobility, strength and goals to design a personalised plan.",
       "p2Title": "Professional planning",
-      "p2Body": "We organise your sessions in the CBO SALUD app, adapted to your level and needs, with ongoing monitoring.",
+      "p2Body": "We organise your sessions in the CBO app, adapted to your level and needs, with ongoing monitoring.",
       "p3Title": "Multidisciplinary work",
-      "p3Body": "Training, pilates, dietitian consultation and physiotherapy work together to provide you with comprehensive care.",
+      "p3Body": "Training, Reformer Pilates, dietitian consultation and physiotherapy work together to provide you with comprehensive care.",
       "p4Title": "Schedule and flexibility",
       "p4Body": "Small groups Monday to Friday, 7:00 to 22:00, with 1-hour sessions and easy access to changes and make-up sessions."
     },
@@ -202,8 +218,10 @@
     "app": {
       "eyebrow": "CBO App",
       "title": "Your progress, always at hand",
-      "body": "Through the CBO App you'll have access to your personalised plan, track your progress, check your training sessions, review your diet plan and communicate with your specialist. All in one place, from any device."
-    }
+      "body": "Through the CBO app you'll have access to your personalised plan, be able to track your progress, check your training sessions, review your diet plan and communicate with your specialist. All in one place, from any device."
+    },
+    "finalCtaTitle": "Ready to get started?",
+    "finalCtaBody": "Request your assessment and discover how the CBO Method can help you."
   },
   "equipo": {
     "hero": {
@@ -215,7 +233,7 @@
       "eyebrow": "What defines us",
       "title": "Our values",
       "v1Title": "Continuous learning",
-      "v1Body": "We demand of ourselves to always be up to date with the latest scientific evidence in our fields.",
+      "v1Body": "We hold ourselves to staying up to date with the latest scientific evidence in our fields.",
       "v2Title": "Coordinated work",
       "v2Body": "The team's specialists work in a coordinated way so that your care is truly comprehensive.",
       "v3Title": "Closeness & commitment",
@@ -243,7 +261,9 @@
       "nutricion": "Dietitian Consultation",
       "pilates": "Reformer Pilates",
       "fisioterapia": "Physiotherapy"
-    }
+    },
+    "helpTitle": "Need more information?",
+    "helpBody": "Contact us and we'll get back to you as soon as possible."
   },
   "contacto": {
     "hero": {
@@ -261,8 +281,6 @@
   "services": {
     "entrenamiento": {
       "title": "Personal Training & Injury Rehab",
-      "shortTitle": "Training",
-      "tagline": "Train intelligently. Get real results.",
       "hero": {
         "eyebrow": "Training",
         "title": "Personal Training & Injury Rehab",
@@ -270,9 +288,8 @@
       },
       "tarifas": {
         "singleSession": "Initial assessment",
-        "singleSessionDesc": "1 hour. Initial assessment included.",
         "singleSessionPrice": "45",
-        "singleSessionUnit": "€ /session",
+        "singleSessionUnit": "€",
         "groups": {
           "name": "Groups of 3 and 6 people",
           "subtitle": "Injury rehabilitation and personalised training in small groups.",
@@ -291,8 +308,8 @@
           ]
         },
         "discount": {
-          "title": "Training + Pilates combo",
-          "description": "1 training session + 1 reformer pilates session (8 sessions per month)",
+          "title": "Training + Reformer Pilates combo",
+          "description": "1 training session + 1 Reformer Pilates session (8 sessions per month)",
           "price": "125",
           "unit": "€/month"
         }
@@ -300,8 +317,6 @@
     },
     "nutricion": {
       "title": "Dietitian Consultation",
-      "shortTitle": "Dietitian Consultation",
-      "tagline": "Learn to eat. Reach your goals without going hungry.",
       "hero": {
         "eyebrow": "Dietitian Consultation",
         "title": "Dietitian Consultation",
@@ -311,7 +326,7 @@
         "singleSession": "Dietitian consultation",
         "singleSessionDesc": "First month: 2 consultations included.",
         "singleSessionPrice": "95",
-        "singleSessionUnit": "€ /month",
+        "singleSessionUnit": "€/month",
         "monthly": "€",
         "tableTitle": "Dietitian Consultation",
         "tableHeaders": {
@@ -324,14 +339,12 @@
           { "service": "First month", "price": "95", "detail": "2 consultations", "members": "45" },
           { "service": "From 2nd month", "price": "55", "detail": "1 consultation", "members": "38.5" }
         ],
-        "membersLabel": "Training, Pilates or Boxing members",
-        "membersNote": "Training, Pilates or Boxing members: first month €45 with 1 consultation. Reviews: €38.50."
+        "membersBenefitsTitle": "Being part of CBO has its advantages",
+        "membersBenefitsBody": "As a CBO member you get a discount on your Dietitian Consultations."
       }
     },
     "fisioterapia": {
       "title": "Physiotherapy",
-      "shortTitle": "Physio",
-      "tagline": "Health through movement.",
       "hero": {
         "eyebrow": "Physiotherapy",
         "title": "Sports & Therapeutic Physiotherapy",
@@ -343,9 +356,7 @@
         "singleSession": "Individual general session",
         "singleSessionDesc": "Initial assessment included.",
         "singleSessionPrice": "39.5",
-        "singleSessionUnit": "€ /session",
-        "membersLabel": "CBO Salud members",
-        "membersPrice": "35",
+        "singleSessionUnit": "€/session",
         "tableTitle": "Physiotherapy",
         "tableHeaders": {
           "service": "Service type",
@@ -356,14 +367,14 @@
         "rows": [
           { "service": "Individual general session", "price": "39.5", "detail": "", "members": "35" },
           { "service": "Specialised physiotherapy", "price": "55", "detail": "Pelvic floor & TMJ", "members": "50" },
-          { "service": "4-session general physio bundle", "price": "140", "detail": "35€/session with bundle", "members": "" },
-          { "service": "4-session specialised physio bundle", "price": "200", "detail": "50€/session with bundle", "members": "" }
+          { "service": "4-session general physio bundle", "price": "140", "detail": "35 €/session with bundle", "members": "" },
+          { "service": "4-session specialised physio bundle", "price": "200", "detail": "50 €/session with bundle", "members": "" }
         ],
         "offer": {
           "title": "Opening offer",
-          "description": "All individual general physiotherapy sessions",
+          "description": "Your first welcome general physiotherapy session",
           "price": "32.5",
-          "unit": "€ /session",
+          "unit": "€/session",
           "detail": "Opening price, until spots last"
         },
         "membersBenefitsTitle": "Being part of CBO has its advantages",
@@ -371,22 +382,20 @@
       }
     },
     "pilates": {
-      "title": "Pilates",
-      "shortTitle": "Pilates",
-      "tagline": "Control, strength and mobility for your body and mind.",
+      "title": "Reformer Pilates",
       "hero": {
-        "eyebrow": "Pilates",
+        "eyebrow": "Reformer Pilates",
         "title": "Individual & Small-Group Pilates",
-        "subtitle": "Reformer pilates. Individual or in small groups for personalised attention."
+        "subtitle": "Reformer Pilates. Individual or in small groups for personalised attention."
       },
       "tarifas": {
         "singleSession": "Individual session",
         "singleSessionDesc": "Recommended if it's your first time or you need specific attention. You decide.",
         "singleSessionPrice": "45",
-        "singleSessionUnit": "€ /session",
+        "singleSessionUnit": "€/session",
         "groups": {
           "name": "Groups of 5 people",
-          "subtitle": "Reformer pilates classes in small groups of max 5 people",
+          "subtitle": "Reformer Pilates classes in small groups of up to 5 people",
           "sessions": "Sessions / week",
           "priceLabel": "Normal",
           "discountPriceLabel": "Opening offer",
@@ -399,8 +408,8 @@
           ]
         },
         "discount": {
-          "title": "Training + Pilates combo",
-          "description": "1 training session + 1 reformer pilates session (8 sessions per month)",
+          "title": "Training + Reformer Pilates combo",
+          "description": "1 training session + 1 Reformer Pilates session (8 sessions per month)",
           "price": "125",
           "unit": "€/month"
         }
@@ -408,8 +417,6 @@
     },
     "empresa": {
       "title": "Corporate Wellness",
-      "shortTitle": "Corporate",
-      "tagline": "Healthy employees build strong companies.",
       "hero": {
         "eyebrow": "Corporate wellness",
         "title": "Corporate Wellness",
@@ -422,7 +429,27 @@
       "eyebrow": "Our prices",
       "title": "Pricing",
       "subtitle": "Transparent pricing, no commitment."
-    }
+    },
+    "placeholder": "Pricing available on request."
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "mainNav": "Main navigation",
+    "mobileMenu": "Mobile menu",
+    "home": "CBO Salud — Home",
+    "switchLang": "Switch to Spanish"
+  },
+  "social": {
+    "followInstagram": "Follow on Instagram",
+    "viewOnMaps": "View on Google Maps"
+  },
+  "blog": {
+    "title": "Blog | CBO Salud",
+    "description": "Articles on training, nutrition and health based on scientific evidence.",
+    "comingSoon": "Blog — Coming soon",
+    "body": "Educational content on training, nutrition and health. Under construction.",
+    "backHome": "← Back to home"
   },
   "cookies": {
     "banner": {

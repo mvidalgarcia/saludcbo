@@ -19,16 +19,16 @@
         "days": { "es": "Dos sábados al mes", "en": "Two Saturdays a month" },
         "time": { "es": "09:00 – 12:00", "en": "09:00 – 12:00" }
       },
-      { "days": { "es": "Domingos", "en": "Sunday" }, "time": { "es": "Cerrado", "en": "Closed" } }
+      { "days": { "es": "Domingos", "en": "Sundays" }, "time": { "es": "Cerrado", "en": "Closed" } }
     ],
     "translations": {
       "es": {
         "name": "CBO Salud. El Centro",
-        "description": "Entrenamiento Personal, Consulta Dietista, Pilates Reformer y Fisioterapia en un mismo espacio. Nuestro centro actual en Lugones (Avenida de Gijón 10), diseñado para el pilates reformer y la rehabilitación."
+        "description": "Entrenamiento Personal, Consulta Dietista, Pilates Reformer y Fisioterapia en un mismo espacio. Nuestro centro actual en Lugones (Avenida de Gijón 10), diseñado para el Pilates Reformer y la rehabilitación."
       },
       "en": {
         "name": "CBO Salud. El Centro",
-        "description": "Personal training, dietitian consultation, Reformer pilates and physiotherapy in one space. Our current centre in Lugones (Avenida de Gijón 10), designed for reformer pilates and rehabilitation."
+        "description": "Personal training, dietitian consultation, Reformer Pilates and physiotherapy in one space. Our current centre in Lugones (Avenida de Gijón 10), designed for Reformer Pilates and rehabilitation."
       }
     }
   },
@@ -64,7 +64,7 @@
       },
       "en": {
         "name": "CBO Salud. La Nave",
-        "description": "Personal training and dietitian consultation. Our first centre in Lugones (El Castro, La Luz 2), with a functional training area and dietitian consultation room. CBOXING shares La Nave as a separate area. Free parking."
+        "description": "Personal training and dietitian consultation. Our first centre in Lugones (El Castro, La Luz 2), with a functional training area and dietitian consultation room. CBOXING shares La Nave as a separate area."
       }
     }
   }
