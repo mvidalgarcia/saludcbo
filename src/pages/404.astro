@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'es') as Lang;
+const t = useTranslations(lang);
+const base = lang === 'en' ? '/en' : '';
+---
+
+<BaseLayout lang={lang} title={t('notFound.title')} description={t('notFound.body')} noIndex={true}>
+  <section class="section-pad bg-white text-center">
+    <div class="container-main max-w-xl mx-auto">
+      <p class="eyebrow mb-5">404</p>
+      <h1 class="section-title mb-4">{t('notFound.heading')}</h1>
+      <p class="section-subtitle">{t('notFound.body')}</p>
+      <a href={base || '/'} class="btn-outline mt-8 inline-flex">{t('notFound.backHome')}</a>
+    </div>
+  </section>
+</BaseLayout>

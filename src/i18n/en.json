@@ -451,6 +451,12 @@
     "body": "Educational content on training, nutrition and health. Under construction.",
     "backHome": "← Back to home"
   },
+  "notFound": {
+    "title": "Page not found | CBO Salud",
+    "heading": "Page not found",
+    "body": "The page you are looking for does not exist or has moved.",
+    "backHome": "← Back to home"
+  },
   "cookies": {
     "banner": {
       "title": "This site uses cookies",
