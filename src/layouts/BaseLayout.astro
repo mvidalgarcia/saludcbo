@@ -7,7 +7,6 @@ import CookieConsent from '../components/CookieConsent.astro';
 import { useTranslations, getAlternatePath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 import { SITE } from '../lib/site';
-import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   lang: Lang;
@@ -25,6 +24,7 @@ const ogImage = image ?? '/og-image.jpg';
 const alternateLang: Lang = lang === 'es' ? 'en' : 'es';
 const alternatePath = getAlternatePath(Astro.url, alternateLang);
 const alternateUrl = new URL(alternatePath, Astro.site);
+const beaconToken = import.meta.env.PUBLIC_CLOUDFLARE_BEACON_TOKEN;
 ---
 
 <!doctype html>
@@ -112,8 +112,15 @@ const alternateUrl = new URL(alternatePath, Astro.site);
       })}
     />
 
-    <!-- Vercel Analytics -->
-    <Analytics />
+    {
+      beaconToken && (
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: beaconToken })}
+        />
+      )
+    }
   </head>
 
   <body class="flex flex-col min-h-screen">

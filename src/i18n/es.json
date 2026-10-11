@@ -451,6 +451,12 @@
     "body": "Contenido educativo sobre entrenamiento, nutrición y salud. En construcción.",
     "backHome": "← Volver al inicio"
   },
+  "notFound": {
+    "title": "Página no encontrada | CBO Salud",
+    "heading": "Página no encontrada",
+    "body": "La página que buscas no existe o ha cambiado de dirección.",
+    "backHome": "← Volver al inicio"
+  },
   "cookies": {
     "banner": {
       "title": "Este sitio utiliza cookies",
