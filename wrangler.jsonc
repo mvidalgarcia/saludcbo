@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Cloudflare Pages project. Must match the project name in the dashboard.
+  "name": "saludcbo",
+  "pages_build_output_dir": "./dist",
+  // Pure static site with no Functions, so there is nothing to log.
+  "observability": {
+    "enabled": false,
+  },
+}
