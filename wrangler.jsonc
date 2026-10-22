@@ -1,10 +1,20 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  // Cloudflare Pages project. Must match the project name in the dashboard.
+  // Worker name. Must match the project name in the Cloudflare dashboard.
   "name": "saludcbo",
-  "pages_build_output_dir": "./dist",
-  // Pure static site with no Functions, so there is nothing to log.
+  // Workers (Workers Builds) requires a compatibility date; assets-only
+  // Workers still validate it.
+  "compatibility_date": "2026-10-22",
+  "assets": {
+    "directory": "./dist",
+    // Serve dist/404.html (src/pages/404.astro) on unmatched routes.
+    "not_found_handling": "404-page",
+  },
+  // No Worker script, so there are no invocations to log.
   "observability": {
     "enabled": false,
   },
+  // Required by `npx wrangler preview`, which Workers Builds runs on
+  // non-production branches to create a Preview per pull request.
+  "previews": {},
 }
