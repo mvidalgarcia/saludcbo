@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../lib/site';
+
+const lang = 'es' as const;
+---
+
+<BaseLayout
+  lang={lang}
+  title="Accesibilidad | CBO Salud"
+  description="Declaración de accesibilidad del sitio web de CBO Salud: compromiso, medidas adoptadas, estado de conformidad y vías de contacto."
+>
+  <section class="bg-brand-50 py-16 border-b border-brand-100">
+    <div class="container-main max-w-3xl mx-auto">
+      <p class="eyebrow mb-3">Accesibilidad</p>
+      <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
+        Declaración de Accesibilidad
+      </h1>
+      <p class="text-gray-500">Última actualización: octubre de 2026</p>
+    </div>
+  </section>
+
+  <section class="section-pad bg-white">
+    <div
+      class="container-main max-w-3xl mx-auto prose prose-gray prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed max-w-none"
+    >
+      <h2>1. Compromiso</h2>
+      <p>
+        Queremos que cualquier persona pueda consultar la información de este sitio web, con
+        independencia de sus capacidades o de la tecnología que utilice. Trabajamos para que el
+        contenido sea comprensible y operable con lector de pantalla, con el teclado, con zoom o con
+        sistemas de contraste elevado.
+      </p>
+
+      <h2>2. Estado de conformidad</h2>
+      <p>
+        Este sitio web es parcialmente conforme con las Pautas de Accesibilidad para el Contenido
+        Web (WCAG) 2.2, nivel AA. La mayor parte del contenido cumple los criterios, y seguimos
+        revisando y corrigiendo los que todavía no se alcanzan. No disponemos de una certificación
+        externa de conformidad.
+      </p>
+
+      <h2>3. Medidas adoptadas</h2>
+      <ul>
+        <li>
+          Estructura semántica con encabezados jerárquicos, regiones de navegación y listas reales.
+        </li>
+        <li>
+          Texto alternativo en las imágenes con contenido informativo; las imágenes decorativas se
+          ocultan a las tecnologías de asistencia.
+        </li>
+        <li>
+          Enlace «Saltar al contenido» como primer elemento de cada página, para no tener que
+          recorrer el menú al navegar con teclado.
+        </li>
+        <li>Indicador de foco visible en enlaces, botones y controles.</li>
+        <li>Contraste de color revisado tanto en el texto como en los elementos interactivos.</li>
+        <li>Respeto de la preferencia del sistema de movimiento reducido.</li>
+        <li>
+          Diseño adaptable, que mantiene el contenido legible al ampliar la página o utilizar
+          pantallas pequeñas.
+        </li>
+        <li>
+          Idioma de cada página declarado en el código, para que los lectores de pantalla lo
+          pronuncien correctamente.
+        </li>
+      </ul>
+
+      <h2>4. Limitaciones conocidas</h2>
+      <p>
+        Este sitio no incrusta contenido de terceros. Los enlaces a Google Maps, Instagram o a la
+        plataforma de reserva de fisioterapia abren sitios ajenos, cuyo nivel de accesibilidad no
+        depende de nosotros.
+      </p>
+
+      <h2>5. Comentarios y contacto</h2>
+      <p>
+        Si encuentra una barrera de accesibilidad, escríbanos a <a
+          href={`mailto:${SITE.email}`}
+          class="text-brand-600 hover:text-brand-700">{SITE.email}</a
+        > o llame al <a href={SITE.phoneTel} class="text-brand-600 hover:text-brand-700"
+          >{SITE.phoneDisplay}</a
+        >. Indíquenos la página y el problema concreto. Le responderemos en el menor plazo posible
+        y, si el contenido no resulta accesible para usted, se lo facilitaremos por otra vía.
+      </p>
+
+      <h2>6. Revisión</h2>
+      <p>Esta declaración se revisa periódicamente, junto con el resto del contenido del sitio.</p>
+
+      <p>
+        Consulte también nuestro <a href="/aviso-legal" class="text-brand-600 hover:text-brand-700"
+          >Aviso Legal</a
+        >
+        y nuestra <a href="/privacidad" class="text-brand-600 hover:text-brand-700"
+          >Política de Privacidad</a
+        >.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
