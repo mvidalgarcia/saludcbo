@@ -2,7 +2,7 @@
 
 ## Current status (July 2025)
 
-**Live preview:** [https://saludcbo.vercel.app](https://saludcbo.vercel.app) (Vercel project `saludcbo`, static Astro build)
+**Live site:** [https://www.saludcbo.com](https://www.saludcbo.com) (static Astro build hosted on Cloudflare)
 
 ### Done
 
@@ -24,21 +24,21 @@
 | Real logo (`public/logo.svg`) from saludcbo.com, used in Header and Footer                                            | ✅     |
 | Real photography from saludcbo.com WordPress (`public/images/`) — hero, facilities, trainer                            | ✅     |
 | Emoji replaced with `lucide-astro` icons throughout all pages and components                                          | ✅     |
-| CI/CD pipeline (lint, format, typecheck, build) + Vercel deploy with PR previews                                      | ✅     |
+| CI/CD pipeline (lint, format, typecheck, build) + Cloudflare Workers Builds with PR previews                         | ✅     |
 | Pre-commit hook with `husky` + `lint-staged` (ESLint + Prettier on staged files)                                      | ✅     |
 
 ### Not done yet
 
 | Area                                                                           | Notes                                                                      |
 | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| Custom domain (`www.saludcbo.com`)                                             | Point DNS to Vercel when ready to go live                                  |
+| Custom domain (`www.saludcbo.com`)                                             | Point DNS to Cloudflare when ready to go live                              |
 | Contact form + Resend API route                                                | Deferred — `/contacto` shows phone/email/WhatsApp CTAs only                |
 | Cookie consent banner + consent-gated embeds (Maps, Instagram, Google reviews) | Instagram/reviews are static placeholders or outbound links for now        |
 | `/accesibilidad` and `/sitemap` HTML pages                                     | Footer links to legal pages exist; these two pages not built yet           |
 | Brand colors / guidelines                                                      | Logo and photos scraped from existing site; official brand guidelines still TBD from owner |
 | Real team/center data                                                          | `team.json` has Carlos; other roles are placeholders; Centro 2 address TBC |
 | Testimonials collection                                                        | 3 reviews hardcoded on homepage                                            |
-| `@astrojs/vercel` adapter                                                      | Not needed until API routes (contact form); site is fully static today     |
+| `@astrojs/cloudflare` adapter                                                  | Not needed until API routes (contact form); site is fully static today     |
 | WCAG-AA audit pass                                                             | Built with accessibility in mind; formal audit not run                     |
 | Lead-magnet PDF delivery                                                       | CTA links to `/contacto`; no gated download flow yet                       |
 
@@ -51,7 +51,7 @@
 
 ## Overview
 
-Rebuild [saludcbo.com](https://www.saludcbo.com/) as a clean, minimalist, bilingual (ES/EN) Astro site, deployed on Vercel. The revamp repositions CBO around **2 centers** and a **360º wellness approach** spanning four core services — Entrenamiento Personal, Fisioterapia, Nutrición, and Pilates — with stronger calls to action and a shift in voice from "Berni" (the founder) to **Equipo CBO** (the team), while preserving all current functionality (lead forms, reviews, Instagram feed, Google Maps, lead-magnet PDF download, legal pages). The site will be built accessible (WCAG AA) by default — no accessibility toolbar widget needed.
+Rebuild [saludcbo.com](https://www.saludcbo.com/) as a clean, minimalist, bilingual (ES/EN) Astro site, deployed on Cloudflare. The revamp repositions CBO around **2 centers** and a **360º wellness approach** spanning four core services — Entrenamiento Personal, Fisioterapia, Nutrición, and Pilates — with stronger calls to action and a shift in voice from "Berni" (the founder) to **Equipo CBO** (the team), while preserving all current functionality (lead forms, reviews, Instagram feed, Google Maps, lead-magnet PDF download, legal pages). The site will be built accessible (WCAG AA) by default — no accessibility toolbar widget needed.
 
 ## Current site audit
 
@@ -80,7 +80,7 @@ The existing site is built on **WordPress + Elementor** (confirmed via markup: `
 
 ## Why Astro (vs. alternatives considered)
 
-- **Astro** (chosen): ships zero JS by default, best-in-class for content/marketing sites, native Markdown content collections, built-in i18n routing, trivial Vercel deploys, excellent SEO/Core Web Vitals out of the box. Interactivity (form, mobile nav, cookie consent) added only as small islands.
+- **Astro** (chosen): ships zero JS by default, best-in-class for content/marketing sites, native Markdown content collections, built-in i18n routing, trivial Cloudflare deploys, excellent SEO/Core Web Vitals out of the box. Interactivity (form, mobile nav, cookie consent) added only as small islands.
 - Next.js: more capable but overkill — this site is 90% static content, not app logic.
 - WordPress rebuild: would satisfy "team edits content" but the owner and I agreed on developer-managed content for now (see decisions below), so a heavier CMS isn't needed yet; also a full revamp is a good opportunity to leave WP/Elementor bloat behind.
 
@@ -88,7 +88,7 @@ The existing site is built on **WordPress + Elementor** (confirmed via markup: `
 
 - **Content management**: developer-managed via Astro **content collections** (Markdown/JSON in the repo) — simplest and fastest; structured so a CMS can be layered on later if needed.
 - **Languages**: **bilingual ES + EN**, ES as default locale at `/`, English under `/en/`, using Astro's built-in i18n routing + `hreflang` tags.
-- **Hosting**: **Vercel** (static deploy). `@astrojs/vercel` adapter deferred until contact API routes are added.
+- **Hosting**: **Cloudflare** (Workers static assets). `@astrojs/cloudflare` adapter deferred until contact API routes are added.
 - **Forms**: current setup is WordPress/Elementor Forms emailing the business inbox. Replacement: a serverless **Astro API route** that sends form submissions via **Resend** (email) to the business inbox, backed up with visible **WhatsApp/phone** CTAs throughout. (Owner to confirm final destination email/WhatsApp number.)
 - **Blog**: not for this phase, but the content model and routing will leave room to add one later (useful given the volume of educational Instagram content that could be repurposed for SEO).
 - **Third-party embeds**: keep **Instagram feed**, **Google reviews**, and **Google Maps**, gated behind a cookie-consent banner (GDPR-friendly since these are EU visitors) with lightweight static fallbacks shown before consent.
@@ -145,7 +145,7 @@ flowchart TD
 - **Third-party embeds** _(deferred)_: consent-gated Maps, Instagram, Google reviews
 - **Accessibility**: semantic HTML, skip link, focus styles — no toolbar widget
 - **SEO**: `@astrojs/sitemap`, per-page meta + OG, `hreflang`, `LocalBusiness` JSON-LD (single center for now)
-- **CI/CD**: GitHub Actions — `ci.yml` (lint, format, typecheck, build) + `deploy.yml` (Vercel preview/production)
+- **CI/CD**: GitHub Actions — `ci.yml` (lint, format, typecheck, build); deployments handled by Cloudflare Workers Builds
 - **Pre-commit**: `husky` + `lint-staged` (ESLint + Prettier on staged files before commit)
 
 ## Key files/structure (actual)
@@ -190,12 +190,12 @@ Still to add: `ContactForm.astro`, `CookieConsent.astro`, `api/contact.ts`, embe
 8. ~~Build `/centros` and `/contacto`~~ ✅
 9. ~~Legal pages (aviso legal, privacidad, cookies)~~ ✅
 10. ~~Scaffold hidden `/blog` route + collection~~ ✅
-11. ~~Deploy to Vercel (preview)~~ ✅ — [saludcbo.vercel.app](https://saludcbo.vercel.app)
+11. ~~Deploy to production~~ ✅ — [www.saludcbo.com](https://www.saludcbo.com)
 12. ~~Scrape real assets from WordPress site~~ ✅ — favicon, logo, hero/facility/trainer photos
 13. ~~Lucide icons replacing emoji throughout~~ ✅
-14. ~~CI/CD + Vercel deploy workflows + pre-commit hooks~~ ✅
-15. **Next:** Custom domain `www.saludcbo.com` on Vercel
-16. _(Deferred)_ Contact/lead-magnet API route with Resend + `@astrojs/vercel` adapter
+14. ~~CI/CD + Cloudflare Workers Builds + pre-commit hooks~~ ✅
+15. **Next:** Custom domain `www.saludcbo.com` on Cloudflare
+16. _(Deferred)_ Contact/lead-magnet API route with Resend + `@astrojs/cloudflare` adapter
 17. _(Deferred)_ Consent-gated embeds (Instagram, reviews, Maps) + cookie consent banner
 18. _(Deferred)_ `/accesibilidad`, `/sitemap` HTML pages; testimonials collection; WCAG-AA audit; JSON-LD for both centers
 
