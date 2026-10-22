@@ -41,6 +41,8 @@ export default defineConfig({
     '/nutricion': '/servicios/nutricion',
     '/nosotros': '/equipo',
     '/empresa-saludable': '/',
+    '/politica-de-cookies': '/cookies',
+    '/politica-de-privacidad': '/privacidad',
     '/en/training': '/en/services/training',
     '/en/personal-training': '/en/services/training',
     '/en/small-group-training': '/en/services/training',
