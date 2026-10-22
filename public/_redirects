@@ -1,2 +1,58 @@
-/servicios/entrenamiento-online  /servicios/entrenamiento  301
-/en/services/online-training     /en/services/training     301
+# Legacy WordPress URLs -> current Astro URLs.
+#
+# Production has been WordPress with flat paths (/entrenamiento/), while this
+# build nests services under /servicios/. Every indexed legacy URL is listed
+# here so existing rankings, backlinks and printed links survive the cutover.
+#
+# Sources are listed twice, with and without the trailing slash: Cloudflare
+# matches `source` literally, and the slash-less form would otherwise 404.
+# Destinations keep the trailing slash to avoid a second hop.
+#
+# Keep in sync with the `redirects` block in astro.config.mjs, which mirrors
+# these rules for `astro dev` and `astro preview`.
+
+# --- Spanish -------------------------------------------------------------
+
+/entrenamiento                  /servicios/entrenamiento/   301
+/entrenamiento/                 /servicios/entrenamiento/   301
+/entrenamiento-personal         /servicios/entrenamiento/   301
+/entrenamiento-personal/        /servicios/entrenamiento/   301
+/entrenamiento-gruposreducidos  /servicios/entrenamiento/   301
+/entrenamiento-gruposreducidos/ /servicios/entrenamiento/   301
+/entrenamento-online            /servicios/entrenamiento/   301
+/entrenamento-online/           /servicios/entrenamiento/   301
+
+/fisioterapia                   /servicios/fisioterapia/    301
+/fisioterapia/                  /servicios/fisioterapia/    301
+
+/nutricion                      /servicios/nutricion/       301
+/nutricion/                     /servicios/nutricion/       301
+
+/nosotros                       /equipo/                    301
+/nosotros/                      /equipo/                    301
+
+/empresa-saludable              /                           301
+/empresa-saludable/             /                           301
+
+# --- English -------------------------------------------------------------
+
+/en/training                    /en/services/training/       301
+/en/training/                   /en/services/training/       301
+/en/personal-training           /en/services/training/       301
+/en/personal-training/          /en/services/training/       301
+/en/small-group-training        /en/services/training/       301
+/en/small-group-training/       /en/services/training/       301
+/en/online-training             /en/services/training/       301
+/en/online-training/            /en/services/training/       301
+
+/en/physiotherapy               /en/services/physiotherapy/  301
+/en/physiotherapy/              /en/services/physiotherapy/  301
+
+/en/nutrition                   /en/services/nutrition/      301
+/en/nutrition/                  /en/services/nutrition/      301
+
+/en/us                          /en/equipo/                  301
+/en/us/                         /en/equipo/                  301
+
+/en/healthy-company             /en/                         301
+/en/healthy-company/            /en/                         301
