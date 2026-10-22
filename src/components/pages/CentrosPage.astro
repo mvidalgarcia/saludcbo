@@ -1,7 +1,7 @@
 ---
 import { MapPin, ParkingCircle, Phone, Mail, ArrowRight } from 'lucide-astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { useTranslations } from '../../i18n/utils';
+import { useTranslations, sectionPath } from '../../i18n/utils';
 import type { Lang } from '../../i18n/utils';
 import { getCollection } from 'astro:content';
 
@@ -150,7 +150,7 @@ const sortedCenters = centers.sort((a, b) => a.data.order - b.data.order);
         {t('centros.helpBody')}
       </p>
       <a
-        href={`${base}/contacto`}
+        href={sectionPath(lang, 'contacto')}
         class="inline-flex items-center gap-2 bg-brand-600 text-white font-semibold py-3.5 px-8 rounded-full hover:bg-brand-700 transition-colors"
       >
         {t('cta.requestInfo')}

@@ -1,6 +1,6 @@
 ---
 import { MapPin, ParkingCircle, Phone, Mail } from 'lucide-astro';
-import { useTranslations } from '../i18n/utils';
+import { useTranslations, sectionPath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 import { SITE } from '../lib/site';
 
@@ -29,7 +29,7 @@ const companyLinks = [
   { href: `${base}/metodo`, label: t('nav.method') },
   { href: `${base}/equipo`, label: t('nav.team') },
   { href: `${base}/centros`, label: t('nav.centers') },
-  { href: `${base}/contacto`, label: t('nav.contact') },
+  { href: sectionPath(lang, 'contacto'), label: t('nav.contact') },
 ];
 
 const tarifasLinks = [
