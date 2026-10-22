@@ -1,6 +1,6 @@
 ---
 import { Dumbbell, Salad, Handshake, PersonStanding, Globe } from 'lucide-astro';
-import { useTranslations, getAlternatePath } from '../i18n/utils';
+import { useTranslations, getAlternatePath, sectionPath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 
 interface Props {
@@ -26,7 +26,7 @@ const navLinks = [
   { href: `${base}/metodo`, label: t('nav.method') },
   { href: `${base}/equipo`, label: t('nav.team') },
   { href: `${base}/centros`, label: t('nav.centers') },
-  { href: `${base}/contacto`, label: t('nav.contact') },
+  { href: sectionPath(lang, 'contacto'), label: t('nav.contact') },
 ];
 
 const services = [
@@ -206,14 +206,14 @@ function isActive(href: string): boolean {
 
         <!-- Contacto -->
         <a
-          href={`${base}/contacto`}
+          href={sectionPath(lang, 'contacto')}
           class:list={[
             'font-medium text-sm px-3 py-2 rounded-lg transition-colors',
-            isActive(`${base}/contacto`)
+            isActive(sectionPath(lang, 'contacto'))
               ? 'text-brand-700 bg-brand-50'
               : 'text-gray-700 hover:text-brand-700 hover:bg-brand-50',
           ]}
-          aria-current={isActive(`${base}/contacto`) ? 'page' : undefined}
+          aria-current={isActive(sectionPath(lang, 'contacto')) ? 'page' : undefined}
         >
           {t('nav.contact')}
         </a>
@@ -232,7 +232,10 @@ function isActive(href: string): boolean {
         </a>
 
         <!-- CTA -->
-        <a href={`${base}/contacto`} class="hidden sm:inline-flex btn-primary text-sm py-2 px-5">
+        <a
+          href={sectionPath(lang, 'contacto')}
+          class="hidden sm:inline-flex btn-primary text-sm py-2 px-5"
+        >
           {t('nav.cta')}
         </a>
 
@@ -354,7 +357,10 @@ function isActive(href: string): boolean {
           <Globe class="w-4 h-4" />
           {alternateLang.toUpperCase()}
         </a>
-        <a href={`${base}/contacto`} class="w-full justify-center btn-primary text-sm py-3">
+        <a
+          href={sectionPath(lang, 'contacto')}
+          class="w-full justify-center btn-primary text-sm py-3"
+        >
           {t('nav.cta')}
         </a>
       </div>

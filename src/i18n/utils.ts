@@ -38,6 +38,7 @@ const esToEnSegments: Record<string, string> = {
   aviso: 'legal-notice',
   privacidad: 'privacy-policy',
   cookies: 'cookie-policy',
+  contacto: 'contact',
 };
 const enToEsSegments: Record<string, string> = Object.fromEntries(
   Object.entries(esToEnSegments).map(([k, v]) => [v, k]),
@@ -80,4 +81,17 @@ export function getAlternatePath(url: URL, targetLang: Lang): string {
       .map((seg) => translatePathSegment(seg, 'enToEs'))
       .join('/') || '/'
   );
+}
+
+/**
+ * Absolute paths for top-level sections whose slug differs between languages.
+ * Used for internal links, which cannot go through getAlternatePath.
+ */
+const sectionPaths = {
+  contacto: { es: '/contacto', en: '/en/contact' },
+  cookies: { es: '/cookies', en: '/en/cookie-policy' },
+} as const;
+
+export function sectionPath(lang: Lang, section: keyof typeof sectionPaths): string {
+  return sectionPaths[section][lang];
 }
