@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../lib/site';
+
+const lang = 'en' as const;
+---
+
+<BaseLayout
+  lang={lang}
+  title="Accessibility | CBO Salud"
+  description="Accessibility statement for the CBO Salud website: our commitment, measures taken, conformance status and how to contact us."
+>
+  <section class="bg-brand-50 py-16 border-b border-brand-100">
+    <div class="container-main max-w-3xl mx-auto">
+      <p class="eyebrow mb-3">Accessibility</p>
+      <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
+        Accessibility Statement
+      </h1>
+      <p class="text-gray-500">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <section class="section-pad bg-white">
+    <div
+      class="container-main max-w-3xl mx-auto prose prose-gray prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed max-w-none"
+    >
+      <h2>1. Our commitment</h2>
+      <p>
+        We want anyone to be able to read the information on this website, regardless of ability or
+        the technology they use. We work to make the content understandable and operable with a
+        screen reader, with a keyboard, with page zoom or with high-contrast settings.
+      </p>
+
+      <h2>2. Conformance status</h2>
+      <p>
+        This website is partially conformant with the Web Content Accessibility Guidelines (WCAG)
+        2.2, level AA. Most content meets the criteria, and we continue to review and fix those it
+        does not yet meet. We do not hold external certification of conformance.
+      </p>
+
+      <h2>3. Measures taken</h2>
+      <ul>
+        <li>Semantic structure with hierarchical headings, navigation regions and real lists.</li>
+        <li>
+          Alternative text on informative images; decorative images are hidden from assistive
+          technology.
+        </li>
+        <li>
+          A “Skip to content” link as the first element of each page, so keyboard users do not have
+          to tab through the menu.
+        </li>
+        <li>Visible focus indicator on links, buttons and controls.</li>
+        <li>Colour contrast reviewed for both text and interactive elements.</li>
+        <li>The system's reduced-motion preference is respected.</li>
+        <li>
+          Responsive layout that keeps content readable when the page is zoomed or viewed on small
+          screens.
+        </li>
+        <li>
+          Each page declares its language in the markup, so screen readers pronounce it correctly.
+        </li>
+      </ul>
+
+      <h2>4. Known limitations</h2>
+      <p>
+        This site embeds no third-party content. Links to Google Maps, Instagram or the
+        physiotherapy booking platform open external sites, whose accessibility is outside our
+        control.
+      </p>
+
+      <h2>5. Feedback and contact</h2>
+      <p>
+        If you find an accessibility barrier, email us at <a
+          href={`mailto:${SITE.email}`}
+          class="text-brand-600 hover:text-brand-700">{SITE.email}</a
+        > or call <a href={SITE.phoneTel} class="text-brand-600 hover:text-brand-700"
+          >{SITE.phoneDisplay}</a
+        >. Tell us the page and the specific problem. We will reply as soon as possible and, if the
+        content is not accessible to you, we will provide it another way.
+      </p>
+
+      <h2>6. Review</h2>
+      <p>This statement is reviewed periodically, alongside the rest of the site's content.</p>
+
+      <p>
+        See also our <a href="/en/legal-notice" class="text-brand-600 hover:text-brand-700"
+          >Legal Notice</a
+        >
+        and our <a href="/en/privacy-policy" class="text-brand-600 hover:text-brand-700"
+          >Privacy Policy</a
+        >.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

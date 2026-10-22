@@ -39,6 +39,7 @@ const esToEnSegments: Record<string, string> = {
   privacidad: 'privacy-policy',
   cookies: 'cookie-policy',
   contacto: 'contact',
+  accesibilidad: 'accessibility',
 };
 const enToEsSegments: Record<string, string> = Object.fromEntries(
   Object.entries(esToEnSegments).map(([k, v]) => [v, k]),
