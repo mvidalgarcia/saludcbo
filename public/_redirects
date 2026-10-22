@@ -34,6 +34,11 @@
 /empresa-saludable              /                           301
 /empresa-saludable/             /                           301
 
+# The hand-maintained HTML sitemap is gone; sitemap-index.xml is generated at
+# build time. Send visitors looking for the old page to the homepage.
+/mapa-del-sitio                 /                           301
+/mapa-del-sitio/                /                           301
+
 # --- Legal ---------------------------------------------------------------
 
 /politica-de-cookies            /cookies/                   301
