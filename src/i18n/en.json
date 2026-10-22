@@ -1,6 +1,7 @@
 {
   "meta": {
     "siteName": "CBO Salud",
+    "ogImageAlt": "The CBO Salud centre in Lugones, Asturias",
     "home": {
       "title": "CBO Salud | Personal Training, Physiotherapy, Dietitian Consultation & Reformer Pilates in Asturias",
       "description": "Reformer Pilates, personal training, physiotherapy and dietitian consultation centre in Lugones, Asturias. Evidence-based method, fully individualised. Two centres. In-person and online."
@@ -36,10 +37,6 @@
     "pilates": {
       "title": "Reformer Pilates | CBO Salud",
       "description": "Individual and small-group pilates classes in Lugones, Asturias. Reformer Pilates, movement control and flexibility improvement."
-    },
-    "empresa": {
-      "title": "Corporate Wellness | CBO Salud",
-      "description": "Corporate health and wellness programmes in Asturias. Dietitian consultation and training for businesses. Healthier employees, stronger companies."
     },
     "tarifas": {
       "title": "Pricing | CBO Salud",
