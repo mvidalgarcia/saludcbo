@@ -411,14 +411,6 @@
           "unit": "€/mes"
         }
       }
-    },
-    "empresa": {
-      "title": "Empresa Saludable",
-      "hero": {
-        "eyebrow": "Bienestar corporativo",
-        "title": "Empresa Saludable",
-        "subtitle": "Programas corporativos de entrenamiento y Consulta Dietista para impulsar la salud y el rendimiento de tu equipo."
-      }
     }
   },
   "tarifas": {
@@ -453,14 +445,5 @@
     "heading": "Página no encontrada",
     "body": "La página que buscas no existe o ha cambiado de dirección.",
     "backHome": "← Volver al inicio"
-  },
-  "cookies": {
-    "banner": {
-      "title": "Este sitio utiliza cookies",
-      "message": "Usamos cookies propias y de terceros para mejorar tu experiencia en la web. Puedes aceptar o rechazar su uso.",
-      "accept": "Aceptar",
-      "reject": "Rechazar",
-      "policy": "Política de cookies"
-    }
   }
 }
