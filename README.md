@@ -1,43 +1,37 @@
-# Astro Starter Kit: Minimal
+# Salud CBO
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Website for [Salud CBO](https://www.saludcbo.com), a personal training, physiotherapy, nutrition and Reformer Pilates centre in Lugones, Asturias.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+It is a static, bilingual site (Spanish at `/`, English under `/en/`) built with Astro, TypeScript and Tailwind CSS, and hosted on Cloudflare Workers with static assets.
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## Project structure
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+├── pages/        # Routes (ES at the root, EN under en/)
+├── components/   # Shared and page-level Astro components
+├── layouts/      # BaseLayout (head, SEO, header, footer)
+├── data/         # Services, team and centres (JSON content collections)
+├── content/      # Blog posts (Markdown)
+├── i18n/         # es.json / en.json with all user-facing text
+└── styles/       # Global Tailwind CSS
+public/           # Static assets, Cloudflare _redirects and _headers
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Commands
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Requires Node 22 (see `.node-version`). Run from the project root:
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Command             | Action                                          |
+| :------------------ | :---------------------------------------------- |
+| `npm install`       | Install dependencies and the pre-commit hook    |
+| `npm run dev`       | Start the dev server at `localhost:4321`        |
+| `npm run build`     | Build the production site to `./dist/`          |
+| `npm run preview`   | Preview the build locally                       |
+| `npm run lint`      | Run ESLint (`lint:fix` to auto-fix)             |
+| `npm run format`    | Check Prettier formatting (`format:fix` to fix) |
+| `npm run typecheck` | Run `astro check`                               |
 
-## 🧞 Commands
+## CI and deployment
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+GitHub Actions runs lint, format, typecheck and build on every pull request and on pushes to `main`. Cloudflare Workers Builds deploys the site and creates a preview for each pull request (see `wrangler.jsonc`).
