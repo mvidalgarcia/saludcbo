@@ -52,5 +52,12 @@ export default defineConfig({
     '/en/nutrition': '/en/services/nutrition',
     '/en/us': '/en/equipo',
     '/en/healthy-company': '/en',
+    '/feed': '/',
+    '/sitemap_index.xml': '/sitemap-index.xml',
+    '/page-sitemap.xml': '/sitemap-index.xml',
+    '/estrenamos-web': '/',
+    // Wildcard rules for the retired WordPress install (see public/_redirects:
+    // /wp-content/*, /wp-includes/*, /wp-admin/*, /author/*) cannot be
+    // mirrored here because Astro's redirects have no splat syntax.
   },
 });

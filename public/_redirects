@@ -68,3 +68,31 @@
 
 /en/healthy-company             /en/                         301
 /en/healthy-company/            /en/                         301
+
+# --- Retired WordPress ---------------------------------------------------
+#
+# The WordPress install is gone, but its URLs survive in old links, image
+# search results and RSS readers. Splat rules can only live here: Astro's
+# `redirects` block has no wildcard syntax, so `astro dev` will 404 these.
+
+/wp-content/*                   /                            301
+/wp-includes/*                  /                            301
+/wp-admin                       /                            301
+/wp-admin/*                     /                            301
+/wp-login.php                   /                            301
+/xmlrpc.php                     /                            301
+
+/feed                           /                            301
+/feed/                          /                            301
+
+/author/*                       /equipo/                     301
+/en/author/*                    /en/equipo/                  301
+
+# Yoast's sitemaps; the underscore one is still in the old Search Console.
+/sitemap_index.xml              /sitemap-index.xml           301
+/page-sitemap.xml               /sitemap-index.xml           301
+
+# Old blog post. The new blog is a noindex placeholder, so send visitors to
+# the homepage instead of a dead end.
+/estrenamos-web                 /                            301
+/estrenamos-web/                /                            301
