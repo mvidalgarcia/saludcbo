@@ -84,9 +84,9 @@ const beaconToken = import.meta.env.PUBLIC_CLOUDFLARE_BEACON_TOKEN;
         '@context': 'https://schema.org',
         '@type': ['HealthClub', 'LocalBusiness'],
         name: 'CBO Salud',
-        url: 'https://www.saludcbo.com',
-        logo: 'https://www.saludcbo.com/logo.svg',
-        image: 'https://www.saludcbo.com/og-image.jpg',
+        url: new URL('/', Astro.site).href,
+        logo: new URL('/logo.svg', Astro.site).href,
+        image: new URL('/og-image.jpg', Astro.site).href,
         description:
           'Centro de entrenamiento personal, fisioterapia, nutrición y pilates en Lugones, Asturias.',
         telephone: SITE.phoneTel.replace('tel:', ''),
