@@ -1,6 +1,6 @@
 # Salud CBO
 
-Website for [Salud CBO](https://www.saludcbo.com), a personal training, physiotherapy, nutrition and Reformer Pilates centre in Lugones, Asturias.
+Website for [Salud CBO](https://cbosalud.es), a personal training, physiotherapy, nutrition and Reformer Pilates centre in Lugones, Asturias.
 
 It is a static, bilingual site (Spanish at `/`, English under `/en/`) built with Astro, TypeScript and Tailwind CSS, and hosted on Cloudflare Workers with static assets.
 
